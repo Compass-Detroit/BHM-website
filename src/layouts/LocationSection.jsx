@@ -46,7 +46,7 @@ function LocationSection() {
 
         <div className="w-full lg:w-1/2">
           <iframe
-            title="Little Caesars Global Resource Center"
+            title="MotorCity Casino Hotel"
             className="h-64 w-full lg:h-auto"
             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d5043.696479671668!2d-83.07032016920797!3d42.33888511227875!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x883b2d4d71da8bb1%3A0xe4a8072514ccbe55!2sMotorCity%20Casino%20Hotel!5e1!3m2!1sen!2sus!4v1757466338342!5m2!1sen!2sus"
             allowFullScreen
