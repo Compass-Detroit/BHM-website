@@ -20,6 +20,8 @@ const convertTo24Hour = (time) => {
     .padStart(2, '0')}`
 }
 
+// TODO: Abstract this logic into a more reusable component
+// This will allow us to reset the years, sessions, etc... more easily
 function SessionsSection() {
   const [activeTab, setActiveTab] = useState(0)
   const tabs = ['AI/ML', 'Mobile', 'Fullstack', 'Miscellaneous']
@@ -56,7 +58,7 @@ function SessionsSection() {
     >
       <div className="flex w-full justify-between px-8 pt-6 sm:px-10 sm:pt-8 md:px-14 md:pt-12 lg:px-16 lg:pt-14">
         <header className="w-full text-center font-russell text-4xl md:text-5xl lg:text-6xl">
-          Sessions
+          2024 Sessions
         </header>
         <img
           src={SessionsLogo}
