@@ -1,8 +1,8 @@
-# Michigan DevFest 2023
+# Michigan DevFest website
 
 ## To Run
 
-```
-npm install
+```shell
+npm i
 npm run dev
 ```
