@@ -9,6 +9,9 @@ import SessionsSection from '@/layouts/SessionsSection'
 import SpeakersSection from '@/layouts/SpeakersSection'
 import SponsorsSection from '@/layouts/SponsorsSection'
 
+import { SpeakersData } from '@/data/speakers'
+import { SpeakersData as Speakers2024 } from '@/data/2024/speakers'
+
 function Home() {
   return (
     <main>
@@ -16,7 +19,16 @@ function Home() {
       <LandingSection />
       <LocationSection />
       <SessionsSection />
-      <SpeakersSection />
+      <SpeakersSection
+        year={2025}
+        speakersData={SpeakersData}
+        defaultExpanded={true}
+      />
+      <SpeakersSection
+        year={2024}
+        speakersData={Speakers2024}
+        defaultExpanded={false}
+      />
       <SponsorsSection />
       <OrganizersSection />
       <FacilitatorsSection />
