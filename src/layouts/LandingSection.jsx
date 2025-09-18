@@ -23,7 +23,7 @@ function LandingSection() {
             <p className="text-justify text-sm font-normal lg:text-base xl:text-lg">
               The Detroit and Ann Arbor Google Developer Groups (GDG) are
               teaming up once again to bring you the 10th Michigan DevFest on
-              November 22, 2025, at the Little Caesar&apos;s Global. With our
+              November 22, 2025, at Motor City Casino. With our
               10th DevFest, we aim to put together a great day of networking and
               knowledge sharing for all involved.
             </p>
