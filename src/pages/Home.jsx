@@ -18,7 +18,16 @@ function Home() {
       <Navbar />
       <LandingSection />
       <LocationSection />
-      <SessionsSection />
+      <SessionsSection
+        year={2025}
+        speakersData={SpeakersData}
+        tracks={['AI/ML', 'Mobile', 'Fullstack', 'Miscellaneous']}
+      />
+      <SessionsSection
+        year={2024}
+        speakersData={Speakers2024}
+        tracks={['AI/ML', 'Mobile', 'Fullstack', 'Miscellaneous']}
+      />
       <SpeakersSection
         year={2025}
         speakersData={SpeakersData}
