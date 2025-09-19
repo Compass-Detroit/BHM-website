@@ -24,7 +24,7 @@ const convertTo24Hour = (time) => {
 const SessionsSection = ({
   speakersData,
   year = new Date().getFullYear(),
-  tracks = ['AI/ML', 'Mobile', 'Fullstack', 'Miscellaneous'],
+  tracks = [],
 }) => {
   const [activeTab, setActiveTab] = useState(0)
   const tabs = [...tracks]
@@ -97,27 +97,47 @@ const SessionsSection = ({
           </React.Fragment>
         ))}
       </div>
-      <ul className="grid w-5/6 grid-cols-1 gap-10 py-7">
-        {combinedSpeakerData
-          .filter((session) => session.track === tabs[activeTab])
-          .sort((a, b) => {
-            const timeA = convertTo24Hour(a.sessionTime)
-            const timeB = convertTo24Hour(b.sessionTime)
-            return timeA < timeB ? -1 : 1
-          })
-          .map((session) => (
-            <li key={session.id}>
-              <SessionCard
-                speakers={session.speakers}
-                speakerAvatars={session.speakerAvatars}
-                sessionTitle={session.sessionTitle}
-                sessionDesc={session.sessionDesc}
-                sessionTime={session.sessionTime}
-                sessionRoom={session.sessionRoom}
-              />
-            </li>
-          ))}
-      </ul>
+
+      {combinedSpeakerData && combinedSpeakerData.length ? (
+        <ul className="grid w-5/6 grid-cols-1 gap-10 py-7">
+          {combinedSpeakerData
+            .filter((session) => session.track === tabs[activeTab])
+            .sort((a, b) => {
+              const timeA = convertTo24Hour(a.sessionTime)
+              const timeB = convertTo24Hour(b.sessionTime)
+              return timeA < timeB ? -1 : 1
+            })
+            .map((session) => (
+              <li key={session.id}>
+                <SessionCard
+                  speakers={session.speakers}
+                  speakerAvatars={session.speakerAvatars}
+                  sessionTitle={session.sessionTitle}
+                  sessionDesc={session.sessionDesc}
+                  sessionTime={session.sessionTime}
+                  sessionRoom={session.sessionRoom}
+                />
+              </li>
+            ))}
+        </ul>
+      ) : (
+        <div className="col-span-1 my-4 flex flex-col items-center justify-center space-y-8 text-center text-lg leading-relaxed">
+          <p>
+            We are currently looking for speakers and will update the list of
+            sessions once we have more information. If you are interested in
+            speaking, sign up with the link below.
+          </p>
+          <a
+            href="https://www.papercall.io/midevfest2025"
+            target="_blank"
+            className="flex items-center rounded bg-sky-900 px-8 py-5 text-primary-400 shadow-xl transition delay-75 duration-100 ease-in-out hover:-translate-y-1 hover:scale-110 hover:cursor-pointer"
+            rel="noreferrer"
+          >
+            {' '}
+            APPLY TO SPEAK
+          </a>
+        </div>
+      )}
     </section>
   )
 }
