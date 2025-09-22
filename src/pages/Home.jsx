@@ -15,8 +15,13 @@ function Home() {
       <Navbar />
       <LandingSection />
       <LocationSection />
-      <SessionsSection year={2025} speakersData={[]} tracks={[]} />
-      <SpeakersSection year={2025} speakersData={[]} defaultExpanded={true} />
+      <SessionsSection
+        year={2025}
+        speakersData={[]}
+        tracks={[]}
+        defaultExpanded
+      />
+      <SpeakersSection year={2025} speakersData={[]} defaultExpanded />
       <SponsorsSection />
       <OrganizersSection />
       <FacilitatorsSection />

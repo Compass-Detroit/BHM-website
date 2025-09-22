@@ -4,6 +4,9 @@ import PropTypes from 'prop-types'
 import SessionsLogo from '@/assets/images/sessions-logo.png'
 import SessionCard from '@/components/sessions/SessionCard'
 
+import { DIRECTION } from '@/constants/directions'
+import { IoChevronDown } from 'react-icons/io5'
+
 const convertTo24Hour = (time) => {
   const [hour, minute] = time.split(':').map(Number)
 
@@ -20,14 +23,24 @@ const convertTo24Hour = (time) => {
     .padStart(2, '0')}`
 }
 
-// TODO: Make SessionsSection collapsible like SpeakersSection
 const SessionsSection = ({
   speakersData,
   year = new Date().getFullYear(),
   tracks = [],
+  defaultExpanded = true,
 }) => {
   const [activeTab, setActiveTab] = useState(0)
+  const [isExpanded, setIsExpanded] = useState(defaultExpanded)
+  const [direction, setDirection] = useState(
+    defaultExpanded === true ? DIRECTION.TOP : DIRECTION.BOTTOM
+  )
+  
   const tabs = [...tracks]
+
+  const toggleExpanded = () => {
+    setIsExpanded(!isExpanded)
+    setDirection(isExpanded ? DIRECTION.BOTTOM : DIRECTION.TOP)
+  }
 
   let combinedSpeakerData = []
 
@@ -68,8 +81,18 @@ const SessionsSection = ({
           alt="Sessions"
           className="h-12 md:h-14 lg:h-16"
         />
+        <button
+          onClick={toggleExpanded}
+          className="flex cursor-pointer items-center hover:text-gray-600"
+        >
+          <IoChevronDown
+            className={`h-10 w-10 shrink-0 sm:h-14 sm:w-14 md:h-16 md:w-16 lg:h-20 lg:w-20 ${
+              direction === DIRECTION.TOP && '-scale-y-100'
+            } transition-transform duration-100 ease-linear`}
+          />
+        </button>
       </div>
-      <div className="mt-4 inline-flex w-5/6 items-center justify-between rounded-md bg-black md:w-auto">
+      <div className={`mt-4 inline-flex w-5/6 items-center justify-between rounded-md bg-black md:w-auto ${ isExpanded ? 'max-h-none opacity-100' : 'max-h-0 opacity-0' }`}>
         {tabs.map((tab, index) => (
           <React.Fragment key={tab}>
             {index !== 0 && (
@@ -98,6 +121,7 @@ const SessionsSection = ({
         ))}
       </div>
 
+      <div className={`flex items-center justify-center ${ isExpanded ? 'max-h-none opacity-100' : 'max-h-0 opacity-0' }`}>
       {combinedSpeakerData && combinedSpeakerData.length ? (
         <ul className="grid w-5/6 grid-cols-1 gap-10 py-7">
           {combinedSpeakerData
@@ -138,6 +162,7 @@ const SessionsSection = ({
           </a>
         </div>
       )}
+      </div>
     </section>
   )
 }
@@ -159,9 +184,7 @@ SessionsSection.propTypes = {
   ).isRequired,
   year: PropTypes.number,
   tracks: PropTypes.arrayOf(PropTypes.string),
-  sectionId: PropTypes.string,
-  logo: PropTypes.string,
-  backgroundColor: PropTypes.string,
+  defaultExpanded: PropTypes.bool,
 }
 
 export default SessionsSection

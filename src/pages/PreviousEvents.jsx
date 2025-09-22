@@ -33,21 +33,23 @@ const PreviousEvents = () => {
         year={2024}
         speakersData={Speakers2024}
         tracks={['AI/ML', 'Mobile', 'Fullstack', 'Miscellaneous']}
+        defaultExpanded
       />
       <SpeakersSection
         year={2024}
         speakersData={Speakers2024}
-        defaultExpanded={true}
+        defaultExpanded
       />
       <SessionsSection
         year={2023}
         speakersData={Speakers2023}
         tracks={['AI/ML', 'Mobile', 'Fullstack', 'Miscellaneous']}
+        defaultExpanded
       />
       <SpeakersSection
         year={2023}
         speakersData={Speakers2023}
-        defaultExpanded={true}
+        defaultExpanded
       />
     </PageLayout>
   )
