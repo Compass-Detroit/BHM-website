@@ -21,10 +21,10 @@ function Home() {
         tracks={[]}
         defaultExpanded
       />
-      <SpeakersSection year={2025} speakersData={[]} defaultExpanded />
       <SponsorsSection />
       <OrganizersSection />
       <FacilitatorsSection />
+      <SpeakersSection year={2025} speakersData={[]} defaultExpanded />
       <DevTeamSection />
       <Footer />
     </main>
