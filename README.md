@@ -54,17 +54,66 @@ export default defineConfig({
 })
 ```
 
+## Docker
+
+This application can be containerized using Docker for easy deployment and consistent environments.
+
+### Prerequisites
+
+- Docker installed on your system
+- Basic understanding of Docker commands
+
+### Building the Docker Image
+
+1. Build the Docker image:
+
+```bash
+docker build -t michigan-devfest-website .
+```
+
+2. Run the container:
+
+```bash
+docker run -p 3000:3000 michigan-devfest-website
+```
+
+3. Open your browser and navigate to `http://localhost:3000`
+
+### Docker Commands
+
+| Command                                                                  | Description                                     |
+| ------------------------------------------------------------------------ | ----------------------------------------------- |
+| `docker build -t michigan-devfest-website .`                             | Build the Docker image                          |
+| `docker run -p 3000:3000 michigan-devfest-website`                       | Run the container on port 3000                  |
+| `docker run -d -p 3000:3000 --name devfest-app michigan-devfest-website` | Run container in detached mode with custom name |
+| `docker stop devfest-app`                                                | Stop the running container                      |
+| `docker rm devfest-app`                                                  | Remove the container                            |
+| `docker images`                                                          | List all Docker images                          |
+| `docker rmi michigan-devfest-website`                                    | Remove the Docker image                         |
+
+### Environment Variables
+
+Currently, no environment variables are required to run the application. The application uses static data and doesn't require external services.
+
+### Docker Features
+
+- **Alpine Linux base**: Lightweight and secure
+- **Non-root user**: Enhanced security by running as non-root user
+- **Multi-stage optimization**: Efficient image size
+- **Production-ready**: Uses Vite preview for serving the built application
+
 ## Development Scripts
 
-| Command              | Description                                                   |
-| -------------------- | ------------------------------------------------------------- |
-| `npm run dev`        | Start the development server via Vite                         |
-| `npm run build`      | Build the project for production                              |
-| `npm run preview`    | Create a preview of the production build locally              |
-| `npm run lint`       | Check code for linting errors (includes Tailwind class order) |
-| `npm run lint:fix`   | Automatically fix linting errors                              |
-| `npm run format`     | Check code formatting with Prettier                           |
-| `npm run format:fix` | Automatically format code with Prettier                       |
+| Command                | Description                                                   |
+| ---------------------- | ------------------------------------------------------------- |
+| `npm run dev`          | Start the development server via Vite                         |
+| `npm run build`        | Build the project for production                              |
+| `npm run preview`      | Create a preview of the production build locally              |
+| `npm run lint`         | Check code for linting errors (includes Tailwind class order) |
+| `npm run lint:fix`     | Automatically fix linting errors                              |
+| `npm run format`       | Format code with Prettier                                     |
+| `npm run format:check` | Check code formatting with Prettier                           |
+| `npm run commitlint`   | Validate commit message format                                |
 
 ## Project Structure
 
@@ -85,8 +134,75 @@ src/
 This project uses ESLint and Prettier for code quality and formatting:
 
 - Run `npm run lint` to check for linting issues
-- Run `npm run format` to check code formatting
-- Use `npm run lint:fix` and `npm run format:fix` to automatically fix issues
+- Run `npm run format:check` to check code formatting
+- Use `npm run lint:fix` and `npm run format` to automatically fix issues
+
+### Git Hooks
+
+This project uses Husky and lint-staged to automatically enforce code quality:
+
+- **Pre-commit hook** - Automatically runs ESLint and Prettier on staged files before each commit
+- **Automatic formatting** - Code is automatically formatted and linted before commits
+- **No manual intervention** - The hooks will fix issues automatically when possible
+
+**How it works:**
+
+1. When you run `git commit`, the pre-commit hook triggers
+2. lint-staged runs ESLint and Prettier on only the files you're committing
+3. If there are fixable issues, they're automatically resolved
+4. If there are unfixable issues, the commit is blocked until you fix them manually
+5. Once all issues are resolved, the commit proceeds
+
+### Conventional Commits
+
+This project enforces the [Conventional Commits](https://www.conventionalcommits.org/) specification for clear, consistent commit messages:
+
+- **Commit-msg hook** - Automatically validates commit message format before each commit
+- **Consistent history** - All commits follow a standardized format
+- **Automation ready** - Enables automated changelog generation and semantic versioning
+
+**Commit Message Format:**
+
+```
+<type>[optional scope]: <description>
+
+[optional body]
+
+[optional footer(s)]
+```
+
+**Supported Types:**
+
+- `feat` - A new feature
+- `fix` - A bug fix
+- `docs` - Documentation changes
+- `style` - Formatting, missing semicolons, etc.
+- `refactor` - Code change that neither fixes a bug nor adds a feature
+- `test` - Adding or correcting tests
+- `chore` - Maintenance
+- `perf` - Performance improvements
+- `ci` - CI/CD changes
+- `build` - Build system changes
+- `revert` - Revert a previous commit
+
+**Examples:**
+
+```bash
+feat: add user authentication
+fix: resolve memory leak in data processing
+docs: update API documentation
+style: fix code formatting issues
+refactor: simplify user validation logic
+test: add unit tests for payment module
+chore: update dependencies
+```
+
+**How it works:**
+
+1. When you run `git commit`, the commit-msg hook triggers
+2. commitlint validates your commit message against the conventional format
+3. If the message is invalid, the commit is blocked with helpful error messages
+4. If the message is valid, the commit proceeds normally
 
 ### Accessibility
 
@@ -131,8 +247,6 @@ This project uses a **manual class ordering** approach for optimal control and r
 - ❌ **Debugging complexity** - Hard to troubleshoot when sorting doesn't work as expected
 - ❌ **Tool conflicts** - Can interfere with other formatting rules
 - ✅ **Manual control** - Developers maintain full control over class organization
-
-<!-- TODO: This project will likely use Husky for Git hooks in the future. Add configuration for Husky. Ensure Husky is run before commits are made to keep the codebase clean and consistent. -->
 
 ### Building for Production
 
