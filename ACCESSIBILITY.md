@@ -208,13 +208,38 @@ npm run lint:a11y
 - **Browser Tools**: Use browser accessibility inspectors
 - **Color Contrast**: Use tools like WebAIM's contrast checker
 
-### 4. Automated Testing (Future)
+### 4. Automated Testing (Current)
 
-Consider integrating accessibility testing into CI/CD pipeline:
+Accessibility testing is integrated into our git workflow:
 
-- Run `npm run lint:a11y` in CI
-- Add accessibility tests to test suite
-- Use tools like axe-core in automated testing
+- **Pre-commit**: Runs accessibility linting on staged files via lint-staged
+- **Pre-push**: Runs full accessibility audit before pushing
+- **CI/CD**: Ready for integration with continuous integration
+
+#### Git Hooks
+
+**Pre-commit Hook** (`.husky/pre-commit`):
+- Runs `lint-staged` which includes accessibility checks
+- Automatically fixes issues where possible
+- Prevents commits with accessibility violations
+
+**Pre-push Hook** (`.husky/pre-push`):
+- Runs full accessibility audit on all files
+- Blocks push if accessibility issues are found
+- Provides clear error messages and guidance
+
+#### Available Scripts
+
+```bash
+# Run accessibility checks on all files
+npm run a11y:check
+
+# Run accessibility checks on staged files only
+npm run a11y:check:staged
+
+# Run lint-staged (includes accessibility checks)
+npx lint-staged
+```
 
 ## Common Issues and Solutions
 
