@@ -10,7 +10,6 @@ const EventList = () => {
     <main>
       <PreviousEventsNavbar />
 
-      {/* Header Section */}
       <section className="mt-16 bg-primary-100">
         <div className="flex flex-col items-center justify-center px-8 py-12 sm:px-10 sm:py-16 md:px-14 md:py-20 lg:px-16 lg:py-24">
           <h1 className="mb-8 text-center font-russell text-4xl font-bold text-primary-800 md:text-5xl lg:text-6xl">
@@ -35,7 +34,6 @@ const EventList = () => {
         </div>
       </section>
 
-      {/* Events Grid Section */}
       <section className="flex flex-col items-center justify-center bg-white py-16">
         <div className="w-full px-8 sm:px-10 md:px-14 lg:px-16">
           <h2 className="mb-12 text-center font-russell text-3xl font-bold text-primary-800 md:text-4xl">

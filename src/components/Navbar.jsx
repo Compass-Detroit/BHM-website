@@ -9,12 +9,6 @@ function Navbar() {
 
   const navRef = useRef(null)
 
-  // TODO: Update navigation once Aaron's PR is merged
-  // TODO: Customize navigation if it's the previous-events route
-  // Add a link to previous-events
-  // Don't need the links to the different sections
-  // Need a link back to the home page
-  // Create a separate component for the previous-events navbar?
   const sections = useMemo(
     () => [
       { id: 'landing', text: 'Landing' },
@@ -36,33 +30,25 @@ function Navbar() {
   )
 
   useEffect(() => {
-    // Function to set the active link based on scroll position
     const handleScroll = () => {
-      // Initialize the active section and its IoU
       let activeIoU = 0
 
-      // For each section
       sections.forEach((section) => {
         const target = document.querySelector(`#${section.id}`)
 
-        // Check if the target element exists
         if (!target) return
 
-        // Get the bounding rectangle of the section
         const rect = target.getBoundingClientRect()
 
-        // Calculate the intersection height
         const intersectionHeight = Math.max(
           0,
           Math.min(rect.bottom, window.innerHeight) - Math.max(rect.top, 0)
         )
 
-        // Calculate the IoU
         const IoU =
           intersectionHeight /
           (rect.height + window.innerHeight - intersectionHeight)
 
-        // If this section's IoU is higher than the current active section's IoU, update the active section
         if (IoU > activeIoU) {
           setActiveLink(section.id)
           activeIoU = IoU
@@ -70,10 +56,8 @@ function Navbar() {
       })
     }
 
-    // Attach the scroll event listener
     window.addEventListener('scroll', handleScroll)
 
-    // Clean up the event listener when the component unmounts
     return () => {
       window.removeEventListener('scroll', handleScroll)
     }
@@ -88,17 +72,14 @@ function Navbar() {
   }
 
   useEffect(() => {
-    // Function to close the nav when the user clicks outside of it
     const handleClickOutside = (event) => {
       if (navRef.current && !navRef.current.contains(event.target)) {
         setIsNavVisible(false)
       }
     }
 
-    // Attach the click event listener
     document.addEventListener('click', handleClickOutside)
 
-    // Clean up the event listener when the component unmounts
     return () => {
       document.removeEventListener('click', handleClickOutside)
     }

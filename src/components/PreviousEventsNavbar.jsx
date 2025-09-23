@@ -9,17 +9,14 @@ function PreviousEventsNavbar() {
   const location = useLocation()
 
   useEffect(() => {
-    // Function to close the nav when the user clicks outside of it
     const handleClickOutside = (event) => {
       if (navRef.current && !navRef.current.contains(event.target)) {
         setIsNavVisible(false)
       }
     }
 
-    // Attach the click event listener
     document.addEventListener('click', handleClickOutside)
 
-    // Clean up the event listener when the component unmounts
     return () => {
       document.removeEventListener('click', handleClickOutside)
     }
