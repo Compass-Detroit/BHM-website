@@ -6,6 +6,10 @@ This document outlines the accessibility standards and practices for the DevFest
 
 We have implemented comprehensive accessibility tooling and guidelines to ensure our website meets WCAG 2.1 AA standards. This includes both static analysis and runtime testing to catch accessibility issues during development.
 
+## Standards
+
+We follow the [Web Content Accessibility Guidelines (WCAG) 2.1](https://www.w3.org/WAI/WCAG21/quickref/) at the AA level.
+
 ## Tooling
 
 ### Static Analysis (ESLint)
@@ -219,11 +223,13 @@ Accessibility testing is integrated into our git workflow:
 #### Git Hooks
 
 **Pre-commit Hook** (`.husky/pre-commit`):
+
 - Runs `lint-staged` which includes accessibility checks
 - Automatically fixes issues where possible
 - Prevents commits with accessibility violations
 
 **Pre-push Hook** (`.husky/pre-push`):
+
 - Runs full accessibility audit on all files
 - Blocks push if accessibility issues are found
 - Provides clear error messages and guidance
@@ -231,7 +237,7 @@ Accessibility testing is integrated into our git workflow:
 #### Available Scripts
 
 ```bash
-# Run accessibility checks on all files
+# Run full accessibility check (linting + automated testing)
 npm run a11y:check
 
 # Run accessibility checks on staged files only
