@@ -8,6 +8,7 @@ import OrganizersSection from '@/layouts/OrganizersSection'
 import SessionsSection from '@/layouts/SessionsSection'
 import SpeakersSection from '@/layouts/SpeakersSection'
 import SponsorsSection from '@/layouts/SponsorsSection'
+import ReturnToTopButton from '@/components/ui/ReturnToTopButton'
 
 function Home() {
   return (
@@ -27,6 +28,7 @@ function Home() {
       <SpeakersSection year={2025} speakersData={[]} defaultExpanded />
       <DevTeamSection />
       <Footer />
+      <ReturnToTopButton />
     </main>
   )
 }
