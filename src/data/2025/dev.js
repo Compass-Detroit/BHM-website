@@ -61,6 +61,7 @@ export const devTeamData = [
   },
   {
     name: 'Justin Beaudry',
+    linkedin: 'https://www.linkedin.com/in/justinbeaudry/',
     github: 'https://github.com/justinbeaudry',
     university: '',
     organization: 'Actual Reality Technologies + Toledo Codes',
