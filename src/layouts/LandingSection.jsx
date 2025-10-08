@@ -2,6 +2,13 @@
 
 import datePng from '@/assets/images/date2025.png'
 import dateWebp from '@/assets/images/date2025.webp'
+// Responsive date images
+import date200Png from '@/assets/images/date2-200x71.png'
+import date200Webp from '@/assets/images/date2-200x71.webp'
+import date300Png from '@/assets/images/date2-300x100.png'
+import date300Webp from '@/assets/images/date2-300x100.webp'
+import date400Png from '@/assets/images/date2-400x141.png'
+import date400Webp from '@/assets/images/date2-400x141.webp'
 import DevFestLogoPng from '@/assets/images/DevFestLogo2025.png'
 import DevFestLogoWebp from '@/assets/images/DevFestLogo2025.webp'
 import ResponsiveImage from '@/components/ui/ResponsiveImage'
@@ -25,6 +32,9 @@ function LandingSection() {
               className="w-[570px] max-w-full"
               webpSrc={dateWebp}
               pngSrc={datePng}
+              webpSrcSet={`${date200Webp} 200w, ${date300Webp} 300w, ${date400Webp} 400w`}
+              pngSrcSet={`${date200Png} 200w, ${date300Png} 300w, ${date400Png} 400w`}
+              sizes="(max-width: 570px) 100vw, 570px"
               alt="November 21-22, 2025 event dates with red circular badge"
             />
 
