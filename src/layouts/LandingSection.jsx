@@ -2,6 +2,7 @@
 
 import datePng from '@/assets/images/date2025.png'
 import dateWebp from '@/assets/images/date2025.webp'
+import eventLogoSvg from '@/assets/images/midevfest2025.svg'
 // Responsive date images
 import date200Png from '@/assets/images/date2-200x71.png'
 import date200Webp from '@/assets/images/date2-200x71.webp'
@@ -9,24 +10,23 @@ import date300Png from '@/assets/images/date2-300x100.png'
 import date300Webp from '@/assets/images/date2-300x100.webp'
 import date400Png from '@/assets/images/date2-400x141.png'
 import date400Webp from '@/assets/images/date2-400x141.webp'
-import DevFestLogoPng from '@/assets/images/DevFestLogo2025.png'
-import DevFestLogoWebp from '@/assets/images/DevFestLogo2025.webp'
 import ResponsiveImage from '@/components/ui/ResponsiveImage'
 
 function LandingSection() {
   return (
-    <section id="landing" className="mt-16">
-      <div className="flex flex-wrap bg-black">
-        <div className="flex w-full items-center justify-center p-12 lg:w-1/2">
-          <ResponsiveImage
-            className="w-full"
-            webpSrc={DevFestLogoWebp}
-            pngSrc={DevFestLogoPng}
-            alt="Michigan DevFest 2025 logo with Detroit skyline and developer graphics"
+    <section id="landing" className="mt-16 bg-black">
+      <div className="mx-auto flex max-w-screen-lg flex-wrap ">
+        <div className="mt-4 flex w-full items-center justify-center p-12 lg:mt-0 lg:w-1/2">
+          <img
+            rel="preload"
+            src={eventLogoSvg}
+            alt="Michigan DevFest 2025 logo"
+            width={400}
+            height={400}
           />
         </div>
 
-        <div className="flex w-full flex-col justify-between bg-primary-400 lg:w-1/2">
+        <div className="flex w-full flex-col justify-between bg-primary-400 text-black lg:w-1/2">
           <div className="flex grow flex-col items-center justify-center space-y-8 p-10">
             <ResponsiveImage
               className="w-[570px] max-w-full"
