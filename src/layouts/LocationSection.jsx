@@ -4,7 +4,7 @@ function LocationSection() {
   return (
     <section
       id="location"
-      className="flex h-auto items-center justify-center bg-slate-100 py-16 md:py-28"
+      className="flex h-auto items-center justify-center bg-slate-100 py-16 text-black md:py-28"
       aria-labelledby="location-heading"
     >
       <div className="mx-4 flex flex-col space-y-8 sm:mx-6 lg:mx-8">
