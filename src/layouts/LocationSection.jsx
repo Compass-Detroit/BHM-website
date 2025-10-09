@@ -35,13 +35,13 @@ function LocationSection() {
                 dateTime="2025-11-21T09:00:00-05:00/2025-11-21T17:00:00-05:00"
                 className="block"
               >
-                Friday: 9:00 AM - 5:00 PM
+                Friday : 9:00 AM - 9:00 PM
               </time>
               <time
                 dateTime="2025-11-22T09:00:00-05:00/2025-11-22T21:00:00-05:00"
                 className="block"
               >
-                Saturday: 9:00 AM - 9:00 PM
+                Saturday: 9:00 AM - 5:00 PM
               </time>
             </div>
           </div>
@@ -64,8 +64,9 @@ function LocationSection() {
             </div>
             <div className="ml-16">
               <h4 className="mb-2 text-base font-semibold text-gray-800">
-                Friday, November 21st - IBM Agentic AI Hackathon
+                IBM Agentic AI Hackathon
               </h4>
+              <p>Friday, November 21st - 9:00 AM - 9:00 PM</p>
               <dl>
                 <dt className="sr-only">Venue</dt>
                 <dd className="font-medium">
@@ -80,7 +81,7 @@ function LocationSection() {
                     className="not-italic"
                     aria-label="Hackathon venue address"
                   >
-                    Detroit, MI
+                    5105 Anthony Wayne Dr, Detroit, MI 48202
                   </address>
                 </dd>
               </dl>
@@ -127,8 +128,9 @@ function LocationSection() {
             </div>
             <div className="ml-16">
               <h4 className="mb-2 text-base font-semibold text-gray-800">
-                Saturday, November 22nd - Main DevFest Event
+                Michigan DevFest Event
               </h4>
+              <p>Saturday, November 22nd - 9:00 AM - 5:00 PM</p>
               <dl>
                 <dt className="sr-only">Venue</dt>
                 <dd className="font-medium xl:whitespace-nowrap">
