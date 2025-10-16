@@ -104,7 +104,7 @@ const PartnersSection = ({
             {year && isCurrentYear && (
               <a
                 href="mailto:sponsors@midevfest.com"
-                className="mb-4 mt-3 inline-flex items-center rounded bg-sky-900 px-8 py-5 text-primary-50 shadow-xl transition delay-75 duration-100 ease-in-out hover:-translate-y-1 hover:scale-110 hover:cursor-pointer focus:outline-none focus:ring-2 focus:ring-primary-400 focus:ring-offset-2"
+                className="mb-4 mt-3 inline-flex items-center rounded-lg bg-blue-600 px-8 py-5 text-white shadow-xl transition-all duration-200 hover:-translate-y-1 hover:scale-105 hover:bg-blue-700 hover:shadow-xl focus:outline-none focus:ring-2 focus:ring-blue-400 focus:ring-offset-2"
               >
                 Become a Partner
               </a>

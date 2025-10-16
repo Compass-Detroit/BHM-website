@@ -68,7 +68,7 @@ We are committed to significantly improving the lives of as many people as possi
       logo: '', // Logo to be added
       desc: 'Google Developer Group Detroit is a community of developers interested in Google technologies.',
       url: 'https://gdg.community.dev/gdg-detroit/',
-      tier: 'Partner',
+      tier: 'Organization',
     },
     {
       id: 8,
@@ -76,7 +76,7 @@ We are committed to significantly improving the lives of as many people as possi
       logo: '', // Logo to be added
       desc: 'Google Developer Group Ann Arbor is a community of developers interested in Google technologies.',
       url: 'https://gdg.community.dev/gdg-ann-arbor/',
-      tier: 'Partner',
+      tier: 'Organization',
     },
     {
       id: 9,
@@ -84,7 +84,7 @@ We are committed to significantly improving the lives of as many people as possi
       logo: '', // Logo to be added
       desc: 'Google Developer Group Toledo is a community of developers interested in Google technologies.',
       url: 'https://gdg.community.dev/gdg-toledo/',
-      tier: 'Partner',
+      tier: 'Organization',
     },
     {
       id: 10,
@@ -92,7 +92,7 @@ We are committed to significantly improving the lives of as many people as possi
       logo: '', // Logo to be added
       desc: 'Google Developer Group Windsor is a community of developers interested in Google technologies.',
       url: 'https://gdg.community.dev/gdg-windsor/',
-      tier: 'Partner',
+      tier: 'Organization',
     },
     {
       id: 11,
@@ -100,7 +100,7 @@ We are committed to significantly improving the lives of as many people as possi
       logo: '', // Logo to be added
       desc: 'Google Developer Group at University of Michigan-Dearborn is a student chapter interested in Google technologies.',
       url: 'https://gdg.community.dev/gdg-uofm-dearborn/',
-      tier: 'Partner',
+      tier: 'Organization',
     },
     {
       id: 12,
@@ -108,7 +108,7 @@ We are committed to significantly improving the lives of as many people as possi
       logo: '', // Logo to be added
       desc: 'Google Developer Group at Wayne State University is a student chapter interested in Google technologies.',
       url: 'https://gdg.community.dev/gdg-wsu/',
-      tier: 'Partner',
+      tier: 'Organization',
     },
     {
       id: 13,
@@ -116,7 +116,7 @@ We are committed to significantly improving the lives of as many people as possi
       logo: '', // Logo to be added
       desc: 'Women Techmakers is a global program providing visibility, community, and resources for women in technology.',
       url: 'https://www.womentechmakers.com/',
-      tier: 'Partner',
+      tier: 'Organization',
     },
     {
       id: 14,
@@ -124,7 +124,7 @@ We are committed to significantly improving the lives of as many people as possi
       logo: '', // Logo to be added
       desc: 'National Society of Black Engineers Detroit Professional Chapter supports Black engineers and their communities.',
       url: 'https://www.nsbedetroit.org/',
-      tier: 'Partner',
+      tier: 'Organization',
     },
     {
       id: 15,
@@ -132,7 +132,7 @@ We are committed to significantly improving the lives of as many people as possi
       logo: '', // Logo to be added
       desc: 'Society of Hispanic Professional Engineers Detroit chapter empowers the Hispanic community to realize their full potential.',
       url: 'https://www.shpe.org/',
-      tier: 'Partner',
+      tier: 'Organization',
     },
   ],
 }
