@@ -1,6 +1,7 @@
 import PropTypes from 'prop-types'
 
 import Kite from '@/assets/images/icn-kite.png'
+import CTAButton from '@/components/ui/CTAButton'
 
 const PartnersSection = ({
   partnersData = {},
@@ -47,7 +48,7 @@ const PartnersSection = ({
                 <h4 className="mb-2 text-xl font-semibold md:text-2xl">
                   {partner.name}
                 </h4>
-                <p className="overflow-y-auto text-justify text-sm md:text-base">
+                <p className="overflow-y-auto text-left text-sm md:text-base">
                   {partner.desc}
                 </p>
               </div>
@@ -85,12 +86,11 @@ const PartnersSection = ({
 
             {year && isCurrentYear && (
               <div className="mt-8 flex justify-center">
-                <a
+                <CTAButton
                   href="mailto:sponsors@midevfest.com"
-                  className="rounded-lg bg-blue-600 px-8 py-4 text-white shadow-lg transition-all duration-200 hover:-translate-y-1 hover:scale-105 hover:bg-blue-700 hover:shadow-xl"
-                >
-                  Become a Partner
-                </a>
+                  label="Become a Partner"
+                  target="_self"
+                />
               </div>
             )}
           </>
@@ -102,12 +102,11 @@ const PartnersSection = ({
                 : 'We are currently looking for partners for this event.'}
             </p>
             {year && isCurrentYear && (
-              <a
+              <CTAButton
                 href="mailto:sponsors@midevfest.com"
-                className="mb-4 mt-3 inline-flex items-center rounded-lg bg-blue-600 px-8 py-5 text-white shadow-xl transition-all duration-200 hover:-translate-y-1 hover:scale-105 hover:bg-blue-700 hover:shadow-xl focus:outline-none focus:ring-2 focus:ring-blue-400 focus:ring-offset-2"
-              >
-                Become a Partner
-              </a>
+                label="Become a Partner"
+                target="_self"
+              />
             )}
           </div>
         )}
