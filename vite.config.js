@@ -30,7 +30,6 @@ export default defineConfig({
   ],
   build: {
     sourcemap: true,
-    // rollupOptions: { /* if you actually need rollup config, put it here */ }
   },
   base: './',
 })
