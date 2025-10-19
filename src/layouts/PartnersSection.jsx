@@ -16,15 +16,31 @@ const PartnersSection = ({
     (partnersData.gold && partnersData.gold.length > 0) ||
     (partnersData.organizations && partnersData.organizations.length > 0)
 
-  const renderPartnerTier = (tierName, partners) => {
+  const renderPartnerTier = (
+    tierName,
+    partners,
+    isSideBySide = false,
+    useFourColumns = false,
+    useSingleColumn = false
+  ) => {
     if (!partners || partners.length === 0) return null
 
     return (
       <div className="mb-12">
-        <h3 className="mb-6 text-center font-russell text-2xl text-black md:text-3xl">
+        <h3 className="mb-6 py-4 text-center font-russell text-5xl text-black">
           {tierName}
         </h3>
-        <div className="grid grid-cols-1 gap-8 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
+        <div
+          className={`grid gap-8 ${
+            useSingleColumn
+              ? 'grid-cols-1 justify-items-center'
+              : useFourColumns
+                ? 'grid-cols-1 justify-items-stretch sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4'
+                : isSideBySide
+                  ? 'grid-cols-1 justify-items-center sm:grid-cols-2'
+                  : 'grid-cols-1 justify-items-center sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4'
+          }`}
+        >
           {partners.map((partner) => (
             <button
               key={partner.id}
@@ -35,7 +51,7 @@ const PartnersSection = ({
                 <img
                   src={partner.logo}
                   alt={partner.name}
-                  className="h-24 object-contain transition-opacity duration-200 group-hover:opacity-90"
+                  className="h-24 w-full max-w-[18rem] object-contain transition-opacity duration-200 group-hover:opacity-90"
                 />
               ) : (
                 <div className="flex h-24 items-center justify-center rounded-lg border-2 border-gray-300 bg-gray-50 px-6">
@@ -64,14 +80,14 @@ const PartnersSection = ({
       id="partners"
       className="flex flex-col justify-center bg-white p-8 sm:px-10 md:px-14 lg:px-16"
     >
-      <div className="flex w-full justify-between pt-0">
+      <div className="relative w-full pt-0">
         <h2 className="w-full text-center font-russell text-4xl text-black md:text-5xl lg:text-6xl">
           {year && !isCurrentYear ? `${year} ` : ''}Partners
         </h2>
         <img
           src={Kite}
           alt="Partners"
-          className="h-10 sm:h-12 md:h-14 lg:h-16"
+          className="absolute right-0 top-0 h-10 sm:h-12 md:h-14 lg:h-16"
           loading="lazy"
         />
       </div>
@@ -79,9 +95,33 @@ const PartnersSection = ({
       <div className="mt-8 overflow-hidden transition-all duration-500 ease-in-out sm:mt-10 md:mt-14 lg:mt-16">
         {hasPartners ? (
           <>
-            {renderPartnerTier('Platinum Sponsor', partnersData.platinum)}
-            {renderPartnerTier('Diamond Sponsors', partnersData.diamond)}
-            {renderPartnerTier('Gold Sponsors', partnersData.gold)}
+            {renderPartnerTier(
+              'Platinum Sponsor',
+              partnersData.platinum,
+              false,
+              false,
+              true
+            )}
+
+            {/* Diamond and Gold sponsors side by side */}
+            <div className="mb-12 grid grid-cols-1 gap-8 lg:grid-cols-2">
+              <div className="flex flex-col items-center">
+                {renderPartnerTier(
+                  'Diamond Sponsors',
+                  partnersData.diamond,
+                  true
+                )}
+              </div>
+              <div className="flex flex-col items-center">
+                {renderPartnerTier(
+                  'Gold Sponsors',
+                  partnersData.gold,
+                  false,
+                  true
+                )}
+              </div>
+            </div>
+
             {renderPartnerTier('Organizations', partnersData.organizations)}
 
             {year && isCurrentYear && (
