@@ -125,7 +125,7 @@ export const devTeamData = [
     university: '',
     bio: ``,
     organization: 'Shrinkray Interactive + GDG Toledo + Toledo Codes',
-    role: 'SeniorUX Engineer',
+    role: 'Senior UX Engineer + Frontend',
     avatar: GregMiller,
   },
   {
