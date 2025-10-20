@@ -53,7 +53,7 @@ const DevTeamSection = () => {
   return (
     <section
       id="devteam"
-      className="flex flex-wrap items-center justify-center bg-primary-50 p-8 sm:px-10 md:px-14 lg:px-16"
+      className=" bg-primary-50 p-8 sm:px-10 md:px-14 lg:px-16"
     >
       <div className="flex w-full justify-center pt-0">
         <h2 className="mb-4 w-full text-center font-russell text-4xl text-black md:mb-6 md:text-5xl lg:text-6xl">
@@ -66,12 +66,14 @@ const DevTeamSection = () => {
           loading="lazy"
         />
       </div>
-      <div className="mx-auto max-w-2xl lg:mx-0">
-        <p className="prose mt-6 text-lg/8 text-gray-600">
+
+      <div className="mx-auto flex max-w-full justify-center lg:mx-0">
+        <p className="prose mt-6 max-w-2xl text-start text-lg/8 text-gray-600">
           Our team of 14 includes GDG organizers, session facilitators, and web
-          developers— a mix of university students and industry professionals
-          from companies like IBM, Little Caesars, and local tech agencies.
-          Together, we are bringing DevFest Michigan 2025 to life.
+          developers—a mix of university students and industry professionals
+          from companies like IBM, Little Caesars, and tech entrepreneurs with
+          deep expertise in the tech industry. Together, we are bringing{' '}
+          <strong>DevFest Michigan</strong> to life.
         </p>
       </div>
 
@@ -115,6 +117,7 @@ const DevTeamSection = () => {
                         {dev.twitter && (
                           <TwitterHandle
                             handle={dev.twitter}
+                            name={dev.name}
                             absolute={false}
                           />
                         )}
