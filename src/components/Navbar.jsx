@@ -351,9 +351,9 @@ function Navbar() {
           }}
         >
           {isNavVisible ? (
-            <FaTimes className="h-6 w-6" />
+            <FaTimes className="size-6" />
           ) : (
-            <FaBars className="h-6 w-6" />
+            <FaBars className="size-6" />
           )}
         </button>
 

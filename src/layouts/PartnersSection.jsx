@@ -51,7 +51,7 @@ const PartnersSection = ({
                 <img
                   src={partner.logo}
                   alt={partner.name}
-                  className="h-24 w-full max-w-[18rem] object-contain transition-opacity duration-200 group-hover:opacity-90"
+                  className="h-24 w-full max-w-72 object-contain transition-opacity duration-200 group-hover:opacity-90"
                 />
               ) : (
                 <div className="flex h-24 items-center justify-center rounded-lg border-2 border-gray-300 bg-gray-50 px-6">
@@ -60,7 +60,7 @@ const PartnersSection = ({
                   </p>
                 </div>
               )}
-              <div className="invisible absolute left-0 top-0 flex h-full w-full flex-col items-center justify-center overflow-y-hidden rounded bg-black/50 p-4 text-white backdrop-blur-sm transition-all duration-200 group-hover:visible">
+              <div className="invisible absolute left-0 top-0 flex size-full flex-col items-center justify-center overflow-y-hidden rounded bg-black/50 p-4 text-white backdrop-blur-sm transition-all duration-200 group-hover:visible">
                 <h4 className="mb-2 text-xl font-semibold md:text-2xl">
                   {partner.name}
                 </h4>
