@@ -1,5 +1,5 @@
 import { PageLayout } from '@/layouts/PageLayout'
-import DevTeamSection from '@/layouts/DevTeamSection'
+import TeamSection from '@/layouts/TeamSection'
 import LandingSection from '@/layouts/LandingSection'
 import LocationSection from '@/layouts/LocationSection'
 import PartnersSection from '@/layouts/PartnersSection'
@@ -29,7 +29,7 @@ function Home() {
         speakersData={Speakers2025}
         defaultExpanded
       />
-      <DevTeamSection />
+      <TeamSection />
     </PageLayout>
   )
 }
