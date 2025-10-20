@@ -99,7 +99,7 @@ const SessionsSection = ({
         />
       </div>
       <div
-        className={`mt-4 inline-flex w-5/6 items-center justify-between rounded-md bg-black md:w-auto ${
+        className={`mt-4 inline-flex w-5/6 items-center justify-between rounded-md bg-black md:w-full ${
           isExpanded ? 'max-h-none opacity-100' : 'max-h-0 opacity-0'
         }`}
       >
@@ -115,7 +115,7 @@ const SessionsSection = ({
 
             <button
               key={tab}
-              className={`relative grow rounded-md px-1 py-2 text-lg font-medium transition-colors duration-300 focus:outline-none md:w-40 lg:w-56 ${
+              className={`relative grow rounded-md px-1 py-2 text-lg font-medium transition-colors duration-300 focus:outline-none md:w-20 lg:w-36 ${
                 activeTab === index
                   ? 'bg-primary-400 text-black'
                   : 'bg-black text-white'
