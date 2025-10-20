@@ -244,12 +244,24 @@ export const SpeakersData = [
   },
   {
     name: 'W.E. Da’Cruz',
-    email: null,
+    email: 'wedacruz@thevgcgroup.com',
     avatar: WEDaCruz,
-    bio: null,
+    bio: `
+      Wendy Ekua (W.E.) Da’Cruz is widely recognized as The Digital Diplomat™ a global speaker, advisor, & strategist leading at the intersection of entrepreneurship, innovation, and strategy. Currently a doctoral candidate at the University of Michigan-Flint, she is writing her dissertation on nonmarket strategy to explore how influence beyond capital shapes people, policies, and processes in the marketplace.
+
+      As a sought-after global voice, W.E. Da’Cruz has spoken on economic development, innovation, and digital trade at high-level convenings such as the U.S.-Africa Business Summit (Mozambique), World Export Development Forum (Ethiopia), Africa Fintech Summit (Ethiopia), and DHL eCommerce Conference (Ghana). Through the U.S. Department of State’s U.S. Speaker Program, she has led workshops for the Academy of Women Entrepreneurs (AWE) and provided training in Uganda, Kenya, Rwanda, Zimbabwe, Kuwait, & South Africa, helping thousands of entrepreneurs navigate people, policies, & processes in global business.
+
+      She is the co-founder of The Virtual Global Consultant (VGC) Group, a global IT consultancy that helps businesses leverage digital tools to access new revenue and value-producing opportunities. Under her leadership, VGC has generated millions in digital sales and at-will donations for entrepreneurs and organizations, particularly across the U.S. and Africa.
+
+      During the COVID-19 pandemic, she and her husband launched The Mushroom Angel Company, a tech-forward consumer-packaged goods (CPG) food manufacturer based in Detroit. Their flagship product, Mushroom Burgers, is now available in over 100 retail locations across the Midwest. 
+
+      Da’Cruz’s influence extends into policy and advisory roles. She was appointed by the U.S. Secretary of Commerce to serve on the District Export Council for Eastern Michigan and elected as an At-Large Board Member for its national association. She was also appointed by the U.S. Secretary of Agriculture to the Agricultural Technical Advisory Committee for Trade in Processed Foods, and selected as a Next Gen Global Leader with the U.S. Global Leadership Coalition, where she continues to shape foreign policy conversations around trade, food, and technology.
+
+      A proud Ghanaian-American, wife, and mother of three, Da’Cruz resides in Detroit, Michigan. She is a member of Delta Sigma Theta Sorority, Inc., and a lecturer at the University of Michigan - Dearborn.
+    `,
     twitter: null,
     linkedIn: 'https://www.linkedin.com/in/wedacruz/',
-    url: null,
+    url: ['https://thevgcgroup.com/', 'https://thedigitaldiplomat.com/home'],
     organization: 'The Virtual Global Consultant Group',
     position: 'Cofounder',
     session: {
