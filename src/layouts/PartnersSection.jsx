@@ -35,10 +35,10 @@ const PartnersSection = ({
             useSingleColumn
               ? 'grid-cols-1 justify-items-center'
               : useFourColumns
-                ? 'grid-cols-1 justify-items-stretch sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4'
+                ? 'grid-cols-1 justify-items-stretch sm:grid-cols-2 md:grid-cols-2'
                 : isSideBySide
                   ? 'grid-cols-1 justify-items-center sm:grid-cols-2'
-                  : 'grid-cols-1 justify-items-center sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4'
+                  : 'grid-cols-1 justify-items-center sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3'
           }`}
         >
           {partners.map((partner) => (
