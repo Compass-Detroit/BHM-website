@@ -124,15 +124,18 @@ const PartnersSection = ({
 
             {renderPartnerTier('Organizations', partnersData.organizations)}
 
-            {year && isCurrentYear && (
-              <div className="mt-8 flex justify-center">
+            <div className="col-span-1 my-8 flex flex-col items-center justify-center space-y-6 text-center text-lg leading-relaxed">
+              <p className="text-gray-600">
+                We are currently looking for partners for this event.
+              </p>
+              {year && isCurrentYear && (
                 <CTAButton
                   href="mailto:sponsors@midevfest.com"
                   label="Become a Partner"
                   target="_self"
                 />
-              </div>
-            )}
+              )}
+            </div>
           </>
         ) : (
           <div className="col-span-1 my-8 flex flex-col items-center justify-center space-y-6 text-center text-lg leading-relaxed">
