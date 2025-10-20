@@ -22,7 +22,15 @@ function Home() {
       <SessionsSection
         year={2025}
         speakersData={Speakers2025}
-        tracks={['AI/ML', 'Mobile', 'Fullstack', 'Miscellaneous']}
+        tracks={[
+          'Hackathon',
+          'Build with AI',
+          'Tech+Design',
+          'Innovation',
+          'Level Up',
+          'Startup',
+          'Workshops',
+        ]}
         defaultExpanded
       />
       <SponsorsSection year={2025} sponsorsData={sponsorsData} />
