@@ -243,15 +243,15 @@ export const SpeakersData = [
     },
   },
   {
-    name: 'W.E. Da’ Cruz',
+    name: 'W.E. Da’Cruz',
     email: null,
     avatar: WEDaCruz,
     bio: null,
     twitter: null,
     linkedIn: 'https://www.linkedin.com/in/wedacruz/',
     url: null,
-    organization: 'The Digital Diplomat',
-    position: 'Entrepreneur',
+    organization: 'The Virtual Global Consultant Group',
+    position: 'Cofounder',
     session: {
       title: 'Women Shaping the Future Panel',
       abstract:
