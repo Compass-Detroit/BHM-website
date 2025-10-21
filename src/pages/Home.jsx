@@ -1,6 +1,7 @@
 import { PageLayout } from '@/layouts/PageLayout'
 import DevTeamSection from '@/layouts/DevTeamSection'
 import FacilitatorsSection from '@/layouts/FacilitatorsSection'
+import JobBoardSection from '@/layouts/JobBoardSection'
 import LandingSection from '@/layouts/LandingSection'
 import LocationSection from '@/layouts/LocationSection'
 import OrganizersSection from '@/layouts/OrganizersSection'
@@ -34,6 +35,7 @@ function Home() {
         defaultExpanded
       />
       <SponsorsSection year={2025} sponsorsData={sponsorsData} />
+      <JobBoardSection year={2025} />
       <OrganizersSection />
       <FacilitatorsSection />
       <SpeakersSection
