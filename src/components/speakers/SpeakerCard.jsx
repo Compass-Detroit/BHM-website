@@ -2,18 +2,20 @@ import PropTypes from 'prop-types'
 import { useContext, useEffect, useRef } from 'react'
 
 import SpeakerDetails from '@/components/speakers/SpeakerDetails'
-import GenericCard from '@/components/ui/GenericCard'
+import ProfileCard from '@/components/ui/ProfileCard'
 import { SpeakerContext } from './SpeakerContext'
 
 const SpeakerCard = ({
   id,
   name,
   twitter,
+  linkedin,
   avatar,
   organization,
   position,
   bio,
   sessionTitle,
+  track,
 }) => {
   const { isModalOpen, openModal, closeModal, setSpeakerID, speakerID } =
     useContext(SpeakerContext)
@@ -63,8 +65,15 @@ const SpeakerCard = ({
 
   return (
     <>
-      <GenericCard
-        {...{ name, twitter, avatar, organization, position, onOpen: open }}
+      <ProfileCard
+        name={name}
+        avatar={avatar}
+        organization={organization}
+        position={position}
+        track={track}
+        twitter={twitter}
+        linkedin={linkedin}
+        onViewBioOrDetails={open}
       />
 
       {isModalOpen && id === speakerID && (
@@ -110,11 +119,13 @@ SpeakerCard.propTypes = {
   id: PropTypes.number.isRequired,
   name: PropTypes.string.isRequired,
   twitter: PropTypes.string,
+  linkedin: PropTypes.string,
   avatar: PropTypes.string.isRequired,
   organization: PropTypes.string.isRequired,
   position: PropTypes.string.isRequired,
   bio: PropTypes.string.isRequired,
   sessionTitle: PropTypes.string.isRequired,
+  track: PropTypes.string,
 }
 
 export default SpeakerCard
