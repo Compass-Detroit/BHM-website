@@ -91,6 +91,7 @@ export const SpeakersData = [
     },
   },
   {
+    id: 4,
     name: 'W. Scott Richardson',
     email: 'zurielseven@gmail.com',
     avatar: WScottRichardson,
@@ -125,6 +126,7 @@ export const SpeakersData = [
     },
   },
   {
+    id: 5,
     name: 'Hafeez Jimoh',
     email: 'jimohafeezco@gmail.com',
     avatar: HafeezJimoh,
@@ -160,6 +162,7 @@ export const SpeakersData = [
     },
   },
   {
+    id: 6,
     name: 'Madona S. Wambua',
     email: 'syombuamadona@gmail.com',
     avatar: MadonaSWambua,
@@ -182,6 +185,7 @@ export const SpeakersData = [
     },
   },
   {
+    id: 7,
     name: 'Kavitha Bangalore',
     email: 'kavibcmh21@gmail.com',
     bio: `
@@ -221,6 +225,7 @@ export const SpeakersData = [
     },
   },
   {
+    id: 8,
     name: 'Bandhan Kaur',
     email: 'kaur@bandhan.dev',
     bio: 'Bandhan (pronounced bun-done) works as a Data and AI Engineer at EA, Google Ambassador for Women Techmakers, x-volunteer AP computer science teacher for Microsoft TEALS at Detroit International Academy for Young Women and Cass Tech. Bandhan has been coding for the last 10 years, loves building code using several languages and learning new tech while sharing her code processes via Medium articles. Certified as a Google Cloud Digital Leader, she combines her deep technical expertise in Google Cloud Platform and AI/ML model development with profound and sustained commitment to global mentorship, community leadership, and advancing diversity, equity, and inclusion in technology.',
@@ -243,6 +248,7 @@ export const SpeakersData = [
     },
   },
   {
+    id: 9,
     name: 'W.E. Da’Cruz',
     email: 'wedacruz@thevgcgroup.com',
     avatar: WEDaCruz,
@@ -277,6 +283,7 @@ export const SpeakersData = [
     },
   },
   {
+    id: 10,
     name: 'Jeseekia Vaughn',
     email: null,
     avatar: JeseekiaVaughn,
@@ -299,6 +306,7 @@ export const SpeakersData = [
     },
   },
   {
+    id: 11,
     name: 'Stephanie Frantz',
     email: null,
     avatar: StephanieFrantz,
@@ -321,6 +329,7 @@ export const SpeakersData = [
     },
   },
   {
+    id: 12,
     name: 'Cynthia Respert',
     email: null,
     avatar: CynthiaRespert,
@@ -343,6 +352,7 @@ export const SpeakersData = [
     },
   },
   {
+    id: 13,
     name: 'JC Escalante',
     email: 'jcskalant@gmail.com',
     avatar: JC_Escalante,
