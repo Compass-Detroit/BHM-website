@@ -276,7 +276,7 @@ function Navbar() {
             className={`block rounded-lg px-4 py-3 text-center transition-colors hover:bg-gray-100 dark:hover:bg-primary-400 ${
               activeLink === section.id
                 ? 'bg-primary-100 font-semibold text-primary-700'
-                : 'text-gray-700 dark:text-white'
+                : 'text-gray-700 dark:text-white dark:hover:text-gray-900'
             }`}
           >
             {section.text}
@@ -287,7 +287,7 @@ function Navbar() {
         <li key={link.to}>
           <Link
             to={link.to}
-            className="block rounded-lg px-4 py-3 text-center text-gray-700 transition-colors hover:bg-gray-100 dark:text-white dark:hover:bg-primary-400"
+            className="block rounded-lg px-4 py-3 text-center text-gray-700 transition-colors hover:bg-gray-100 dark:text-white dark:hover:bg-primary-400 dark:hover:text-gray-900"
           >
             {link.text}
           </Link>
