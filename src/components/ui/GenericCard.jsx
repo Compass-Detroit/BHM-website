@@ -36,7 +36,12 @@ const GenericCard = ({
               />
               {twitter && (
                 <div className="absolute inset-x-0 bottom-0">
-                  <TwitterHandle handle={twitter} name={name} />
+                  <TwitterHandle
+                    handle={twitter}
+                    name={name}
+                    variant="avatar"
+                    absolute={false}
+                  />
                 </div>
               )}
             </div>

@@ -1,7 +1,7 @@
 import PropTypes from 'prop-types'
 import LinkedInHandle from '@/components/ui/LinkedInHandle'
 import GithubHandle from '@/components/ui/GithubHandle'
-import TwitterHandle from '@/components/ui/TwitterHandleDev'
+import TwitterHandle from '@/components/ui/TwitterHandle'
 
 const ProfileCard = ({
   name,
@@ -49,7 +49,12 @@ const ProfileCard = ({
               )}
               {github && <GithubHandle handle={github} absolute={false} />}
               {twitter && (
-                <TwitterHandle handle={twitter} name={name} absolute={false} />
+                <TwitterHandle
+                  handle={twitter}
+                  name={name}
+                  variant="default"
+                  absolute={false}
+                />
               )}
             </div>
           </div>
