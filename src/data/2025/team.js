@@ -160,7 +160,7 @@ export const teamData = [
     devfest: 'devteam',
     university: '',
     bio: `
-      Shugmi Shumunov is a software developer who believes code is the ultimate storytelling medium. With a primary focus on the JavaScript ecosystem within e-commerce, I've enjoyed working across the stack in various industries. I'm always seeking beautiful, elegant, and performant solutions while collaborating with talented, curious, and passionate engineers and tech enthusiasts.
+      Shugmi Shumunov is a software developer who believes code is the ultimate storytelling medium. With a primary focus on the JavaScript ecosystem within e-commerce, working across the stack in various industries. Always seeking beautiful, elegant, and performant solutions while collaborating with talented, curious, and passionate engineers and tech enthusiasts.
 
       When the terminal is closed and his hands are off the keyboard, you'll find him lifting weights, adventuring outdoors, exploring new places, or immersed in the worlds of manga or a good book
     `,
