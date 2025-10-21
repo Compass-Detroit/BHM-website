@@ -1,7 +1,7 @@
 import PropTypes from 'prop-types'
 import { FaClock } from 'react-icons/fa'
 
-const NoSessionsAvailable = ({ tabs, activeTab }) => {
+const NoSessionsAvailable = ({ currentSession }) => {
   return (
     <li className="w-full">
       <div className="rounded-xl border-2 border-dashed border-gray-300 bg-white p-8 text-center shadow-md md:p-12 dark:border-gray-600 dark:bg-gray-800">
@@ -14,7 +14,7 @@ const NoSessionsAvailable = ({ tabs, activeTab }) => {
           Coming Soon!
         </h3>
         <p className="mb-4 text-lg text-gray-600 dark:text-gray-400">
-          Watch for updates on {tabs[activeTab]} sessions
+          Watch for updates on {currentSession} sessions
         </p>
         <p className="text-sm text-gray-500 dark:text-gray-500">
           We&apos;re working hard to bring you exciting content. Stay tuned for
@@ -28,6 +28,5 @@ const NoSessionsAvailable = ({ tabs, activeTab }) => {
 export default NoSessionsAvailable
 
 NoSessionsAvailable.propTypes = {
-  tabs: PropTypes.arrayOf(PropTypes.string).isRequired,
-  activeTab: PropTypes.number.isRequired,
+  currentSession: PropTypes.string.isRequired,
 }

@@ -57,6 +57,7 @@ const SessionsSection = ({
   )
 
   const tabs = [...tracks]
+  const currentSession = tabs[activeTab]
 
   const toggleExpanded = () => {
     setIsExpanded(!isExpanded)
@@ -90,7 +91,7 @@ const SessionsSection = ({
 
   // Get sessions for current track
   const currentTrackSessions = combinedSpeakerData.filter(
-    (session) => session.track === tabs[activeTab]
+    (session) => session.track === currentSession
   )
 
   const hasSessionsForTrack = currentTrackSessions.length > 0
@@ -126,10 +127,10 @@ const SessionsSection = ({
       </div>
 
       {/* Track Description */}
-      {isExpanded && tabs[activeTab] && trackDescriptions[tabs[activeTab]] && (
+      {isExpanded && currentSession && trackDescriptions[currentSession] && (
         <div className="mt-6 w-full max-w-4xl text-center">
           <p className="text-base leading-relaxed text-gray-700 md:text-lg">
-            {trackDescriptions[tabs[activeTab]]}
+            {trackDescriptions[currentSession]}
           </p>
         </div>
       )}
@@ -201,7 +202,7 @@ const SessionsSection = ({
                   </li>
                 ))
             ) : (
-              <NoSessionsAvailable tabs={tabs} activeTab={activeTab} />
+              <NoSessionsAvailable currentSession={currentSession} />
             )}
           </ul>
         ) : (
