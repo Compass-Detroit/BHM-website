@@ -131,7 +131,7 @@ const ProfileCard = ({
   )
 
   const renderSocialLinks = (linkedin || github || twitter) && (
-    <ul className={`flex ${cardIsVertical ? 'mt-6' : 'mt-2'}`}>
+    <div className={`flex ${cardIsVertical ? 'ml-4 mt-6' : 'mt-2'}`}>
       {linkedin && <LinkedInHandle handle={linkedin} absolute={false} />}
       {github && <GithubHandle handle={github} absolute={false} />}
       {twitter && (
@@ -142,7 +142,7 @@ const ProfileCard = ({
           absolute={false}
         />
       )}
-    </ul>
+    </div>
   )
 
   const renderInfo = (
