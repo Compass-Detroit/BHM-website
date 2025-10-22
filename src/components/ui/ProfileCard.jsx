@@ -3,6 +3,9 @@ import LinkedInHandle from '@/components/ui/LinkedInHandle'
 import GithubHandle from '@/components/ui/GithubHandle'
 import TwitterHandle from '@/components/ui/TwitterHandle'
 
+import GDEIcon from '@/assets/images/icon-gde.png'
+import WTMLogo from '@/assets/images/organizations/wtm_logo.svg'
+
 const ProfileCard = ({
   name,
   avatar,
@@ -16,6 +19,8 @@ const ProfileCard = ({
   twitter,
   onViewBioOrDetails,
   showBioButton = true,
+  isWTM = false,
+  isGDE = false,
 }) => {
   const getRibbonColor = (type) => {
     // Team members
@@ -112,6 +117,25 @@ const ProfileCard = ({
     </>
   )
 
+  const renderGDEBadge = isGDE && (
+    <span className="inline-block bg-white p-1">
+      <img width="40" height="40" src={GDEIcon} alt="Google Developer Expert" />
+    </span>
+  )
+
+  const renderWTMBadge = isWTM && (
+    <span className="inline-block bg-white p-1">
+      <img width="40" height="40" src={WTMLogo} alt="Women Techmakers" />
+    </span>
+  )
+
+  const renderSpecialBadges = (
+    <div className="absolute left-5 top-5 z-10 flex flex-col gap-1">
+      {renderGDEBadge}
+      {renderWTMBadge}
+    </div>
+  )
+
   const renderBadgeAndGradient = ribbonLabel && (
     <>
       {renderImageGradient}
@@ -206,6 +230,7 @@ const ProfileCard = ({
           loading="lazy"
         />
         {renderBadgeAndGradient}
+        {renderSpecialBadges}
       </div>
       <div className="mt-3 flex flex-col justify-between px-2">
         {renderInfo}
@@ -257,6 +282,8 @@ ProfileCard.propTypes = {
   twitter: PropTypes.string,
   onViewBioOrDetails: PropTypes.func,
   showBioButton: PropTypes.bool,
+  isWTM: PropTypes.bool,
+  isGDE: PropTypes.bool,
 }
 
 export default ProfileCard

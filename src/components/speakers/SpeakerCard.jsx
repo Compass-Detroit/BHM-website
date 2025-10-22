@@ -16,6 +16,8 @@ const SpeakerCard = ({
   bio,
   sessionTitle,
   track,
+  isGDE,
+  isWTM,
 }) => {
   const { isModalOpen, openModal, closeModal, setSpeakerID, speakerID } =
     useContext(SpeakerContext)
@@ -74,6 +76,8 @@ const SpeakerCard = ({
         twitter={twitter}
         linkedin={linkedin}
         onViewBioOrDetails={open}
+        isGDE={isGDE}
+        isWTM={isWTM}
       />
 
       {isModalOpen && id === speakerID && (
@@ -126,6 +130,8 @@ SpeakerCard.propTypes = {
   bio: PropTypes.string.isRequired,
   sessionTitle: PropTypes.string.isRequired,
   track: PropTypes.string,
+  isGDE: PropTypes.bool,
+  isWTM: PropTypes.bool,
 }
 
 export default SpeakerCard

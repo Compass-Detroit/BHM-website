@@ -80,6 +80,8 @@ const SpeakersContent = ({ year, defaultExpanded }) => {
           bio={speaker.bio}
           sessionTitle={speaker.session.title}
           track={speaker.session.track}
+          isGDE={speaker.isGDE}
+          isWTM={speaker.isWTM}
         />
       ))}
     </div>

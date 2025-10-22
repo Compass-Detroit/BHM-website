@@ -50,6 +50,8 @@ export const SpeakersData = [
       time: '',
       room: '',
     },
+    isWTM: false,
+    isGDE: false,
   },
   {
     id: 2,
@@ -72,6 +74,8 @@ export const SpeakersData = [
       time: '',
       room: '',
     },
+    isWTM: false,
+    isGDE: false,
   },
   {
     id: 3,
@@ -94,6 +98,8 @@ export const SpeakersData = [
       time: '',
       room: '',
     },
+    isWTM: false,
+    isGDE: false,
   },
   {
     id: 4,
@@ -129,6 +135,8 @@ export const SpeakersData = [
       time: '',
       room: '',
     },
+    isWTM: false,
+    isGDE: false,
   },
   {
     id: 5,
@@ -165,6 +173,8 @@ export const SpeakersData = [
       time: '',
       room: '',
     },
+    isWTM: false,
+    isGDE: false,
   },
   {
     id: 6,
@@ -188,6 +198,8 @@ export const SpeakersData = [
       time: '',
       room: '',
     },
+    isWTM: false,
+    isGDE: true,
   },
   {
     id: 7,
@@ -228,6 +240,8 @@ export const SpeakersData = [
       time: '',
       room: '',
     },
+    isWTM: false,
+    isGDE: false,
   },
   {
     id: 8,
@@ -251,6 +265,8 @@ export const SpeakersData = [
       time: '',
       room: '',
     },
+    isWTM: true,
+    isGDE: false,
   },
   {
     id: 9,
@@ -286,6 +302,8 @@ export const SpeakersData = [
       time: '',
       room: '',
     },
+    isWTM: true,
+    isGDE: false,
   },
   {
     id: 10,
@@ -309,6 +327,8 @@ export const SpeakersData = [
       time: '',
       room: '',
     },
+    isWTM: true,
+    isGDE: false,
   },
   {
     id: 11,
@@ -332,6 +352,8 @@ export const SpeakersData = [
       time: '',
       room: '',
     },
+    isWTM: true,
+    isGDE: false,
   },
   {
     id: 12,
@@ -355,6 +377,8 @@ export const SpeakersData = [
       time: '',
       room: '',
     },
+    isWTM: true,
+    isGDE: false,
   },
   {
     id: 13,
@@ -398,6 +422,8 @@ export const SpeakersData = [
       time: '',
       room: '',
     },
+    isWTM: false,
+    isGDE: true,
   },
   {
     id: 14,
@@ -433,6 +459,8 @@ export const SpeakersData = [
       time: '',
       room: '',
     },
+    isWTM: false,
+    isGDE: true,
   },
   {
     id: 15,
@@ -497,6 +525,8 @@ export const SpeakersData = [
       time: '',
       room: '',
     },
+    isWTM: false,
+    isGDE: true,
   },
   {
     id: 16,
@@ -555,6 +585,8 @@ export const SpeakersData = [
       time: '',
       room: '',
     },
+    isWTM: false,
+    isGDE: true,
   },
   {
     id: 17,
@@ -600,6 +632,8 @@ export const SpeakersData = [
       time: '',
       room: '',
     },
+    isWTM: false,
+    isGDE: true,
   },
   {
     id: 18,
@@ -631,5 +665,7 @@ export const SpeakersData = [
       time: '',
       room: '',
     },
+    isWTM: false,
+    isGDE: true,
   },
 ]
