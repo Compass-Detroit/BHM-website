@@ -296,8 +296,8 @@ export const SpeakersData = [
     twitter: null,
     linkedIn: 'https://www.linkedin.com/in/jeseekiavaughn/',
     url: null,
-    organization: 'Detroit Black Tech and 313 Connect at TechTown',
-    position: null,
+    organization: 'Detroit Black Tech and TechTown Detroit',
+    position: 'Tech Strategist',
     session: {
       title: 'Women Shaping the Future Panel',
       abstract:
