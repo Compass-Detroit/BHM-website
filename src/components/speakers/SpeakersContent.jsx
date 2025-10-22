@@ -57,7 +57,7 @@ const SpeakersContent = ({ year, defaultExpanded }) => {
       >
         {uniqueSpeakersSortedByFirstName &&
         uniqueSpeakersSortedByFirstName.length ? (
-          <ul className="mx-auto my-8 grid max-w-2xl grid-cols-1 gap-8 text-center lg:mx-0 lg:max-w-none lg:grid-cols-2 xl:grid-cols-3">
+          <div className="mx-auto my-8 grid max-w-2xl grid-cols-1 gap-8 text-center sm:grid-cols-2 md:grid-cols-3 lg:mx-0 lg:max-w-none lg:grid-cols-4 xl:grid-cols-5">
             {uniqueSpeakersSortedByFirstName.map((speaker, index) => (
               <SpeakerCard
                 key={speaker.id || `speaker-${index}`}
@@ -73,7 +73,7 @@ const SpeakersContent = ({ year, defaultExpanded }) => {
                 track={speaker.session.track}
               />
             ))}
-          </ul>
+          </div>
         ) : (
           <div className="col-span-1 my-4 flex flex-col items-center justify-center space-y-8 text-center text-lg leading-relaxed">
             <p>

@@ -221,10 +221,10 @@ const ProfileCard = ({
   )
 
   return (
-    <li className="relative rounded-xl border border-gray-200 bg-white shadow-lg dark:border-gray-700 dark:bg-gray-800">
+    <div className="relative rounded-xl border border-gray-200 bg-white shadow-lg dark:border-gray-700 dark:bg-gray-800">
       {cardIsVertical ? renderSpeakerCard : renderTeamMemberCard}
       {renderButton}
-    </li>
+    </div>
   )
 }
 
