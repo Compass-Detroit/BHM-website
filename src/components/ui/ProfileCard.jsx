@@ -55,7 +55,7 @@ const ProfileCard = ({
   const ribbonLabel = getRibbonLabel()
 
   const isSpeaker = Boolean(track)
-  const teamBioColors = `bg-primary-500 hover:bg-primary-600`
+  const teamBioColors = `bg-primary-500 hover:bg-primary-600 text-white`
   const speakerDetailColors = `bg-white text-sky-800 border-[1px] border-sky-900 shadow-xl hover:bg-primary-400 hover:border-primary-900 hover:text-sky-900`
 
   const cardIsVertical = isSpeaker
@@ -214,7 +214,7 @@ const ProfileCard = ({
         cardIsVertical
           ? 'my-3 inline-flex items-center rounded-lg px-4 py-2'
           : 'absolute -bottom-3 left-1/2 -translate-x-1/2 rounded-full px-4 py-1.5'
-      } text-sm font-medium text-white shadow-md transition-colors dark:text-black ${
+      } text-sm font-medium shadow-md transition-colors dark:text-black ${
         isSpeaker ? speakerDetailColors : teamBioColors
       }`}
       onClick={onViewBioOrDetails}
