@@ -1,9 +1,10 @@
 import PropTypes from 'prop-types'
 import { useCallback, useContext, useEffect } from 'react'
 import {
-  IoClose,
   IoChevronBack,
   IoChevronForward,
+  IoClose,
+  IoLinkOutline,
   IoLogoTwitter,
 } from 'react-icons/io5'
 
@@ -19,6 +20,7 @@ function SpeakerDetails({
   onClose,
   position,
   id,
+  url,
 }) {
   const {
     speakerID,
@@ -26,6 +28,15 @@ function SpeakerDetails({
     numSpeakers,
     uniqueSpeakersSortedByFirstName,
   } = useContext(SpeakerContext)
+
+  const getUrlArray = () => {
+    if (!url) return []
+    return Array.isArray(url) ? url : [url]
+  }
+
+  const urls = getUrlArray()
+
+  console.log('SpeakerDetails URLs:', urls)
 
   const goToPreviousSpeaker = useCallback(() => {
     const currentIndex = uniqueSpeakersSortedByFirstName.findIndex(
@@ -136,17 +147,36 @@ function SpeakerDetails({
           )}
           {organization && <p className="text-blue-200">{organization}</p>}
 
-          {twitter && (
-            <a
-              href={`https://twitter.com/${twitter}`}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="mt-4 inline-flex items-center rounded-full bg-white/20 px-4 py-2 text-sm font-medium text-white transition-all hover:bg-white/30"
-              onClick={(e) => e.stopPropagation()}
-            >
-              <IoLogoTwitter className="mr-2 size-4" />@{twitter}
-            </a>
-          )}
+          <div className="mt-4 flex flex-wrap items-center justify-center gap-3">
+            {twitter && (
+              <a
+                href={`https://twitter.com/${twitter}`}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center rounded-full bg-white/20 px-4 py-2 text-sm font-medium text-white transition-all hover:bg-white/30"
+                onClick={(e) => e.stopPropagation()}
+              >
+                <IoLogoTwitter className="mr-2 size-4" />@{twitter}
+              </a>
+            )}
+            {urls.length > 0 &&
+              urls.map((link, index) => {
+                const domain = new URL(link).hostname.replace('www.', '')
+                return (
+                  <a
+                    key={index}
+                    href={link}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center rounded-full bg-white/20 px-4 py-2 text-sm font-medium text-white transition-all hover:bg-white/30"
+                    onClick={(e) => e.stopPropagation()}
+                  >
+                    <IoLinkOutline className="mr-2 size-4" />
+                    {domain}
+                  </a>
+                )
+              })}
+          </div>
         </div>
       </div>
 
@@ -241,6 +271,10 @@ SpeakerDetails.propTypes = {
   sessionTitle: PropTypes.string.isRequired,
   onClose: PropTypes.func.isRequired,
   id: PropTypes.number.isRequired,
+  url: PropTypes.oneOfType([
+    PropTypes.string,
+    PropTypes.arrayOf(PropTypes.string),
+  ]),
 }
 
 export default SpeakerDetails

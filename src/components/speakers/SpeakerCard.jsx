@@ -18,6 +18,7 @@ const SpeakerCard = ({
   track,
   isGDE,
   isWTM,
+  url,
 }) => {
   const { isModalOpen, openModal, closeModal, setSpeakerID, speakerID } =
     useContext(SpeakerContext)
@@ -110,6 +111,7 @@ const SpeakerCard = ({
                 onClose={closeModal}
                 position={position}
                 id={id}
+                url={url}
               />
             </div>
           </div>
@@ -132,6 +134,10 @@ SpeakerCard.propTypes = {
   track: PropTypes.string,
   isGDE: PropTypes.bool,
   isWTM: PropTypes.bool,
+  url: PropTypes.oneOfType([
+    PropTypes.string,
+    PropTypes.arrayOf(PropTypes.string),
+  ]),
 }
 
 export default SpeakerCard

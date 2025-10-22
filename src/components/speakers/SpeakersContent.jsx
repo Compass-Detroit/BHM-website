@@ -82,6 +82,7 @@ const SpeakersContent = ({ year, defaultExpanded }) => {
           track={speaker.session.track}
           isGDE={speaker.isGDE}
           isWTM={speaker.isWTM}
+          url={speaker.url}
         />
       ))}
     </div>
