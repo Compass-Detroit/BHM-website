@@ -56,7 +56,7 @@ const ProfileCard = ({
 
   const isSpeaker = Boolean(track)
   const teamBioColors = `bg-primary-500 hover:bg-primary-600`
-  const speakerDetailColors = `bg-white text-sky-950 border-[1px] border-sky-900 shadow-xl hover:bg-primary-400 hover:border-primary-900 hover:text-sky-900`
+  const speakerDetailColors = `bg-white text-sky-800 border-[1px] border-sky-900 shadow-xl hover:bg-primary-400 hover:border-primary-900 hover:text-sky-900`
 
   const cardIsVertical = isSpeaker
 
@@ -154,7 +154,11 @@ const ProfileCard = ({
   )
 
   const renderSocialLinks = (linkedin || github || twitter) && (
-    <div className={`flex ${cardIsVertical ? 'ml-4 mt-6' : 'mt-2'}`}>
+    <div
+      className={`${
+        cardIsVertical ? 'inline-flex items-center gap-2' : 'mt-2 flex'
+      }`}
+    >
       {linkedin && <LinkedInHandle handle={linkedin} absolute={false} />}
       {github && <GithubHandle handle={github} absolute={false} />}
       {twitter && (
@@ -183,14 +187,14 @@ const ProfileCard = ({
       <div
         className={`mt-1 text-left ${
           cardIsVertical ? 'line-clamp-2 text-base' : 'text-sm'
-        } text-gray-600 dark:text-gray-400`}
+        } text-gray-600 dark:text-white`}
       >
         {organization || '\u00A0'}
       </div>
       <div
         className={`mt-1 text-left ${
           cardIsVertical ? 'line-clamp-2 text-base' : 'text-base/7'
-        } text-gray-600 dark:text-gray-400`}
+        } text-gray-600 dark:text-white`}
       >
         {position || '\u00A0'}
       </div>
@@ -210,7 +214,7 @@ const ProfileCard = ({
         cardIsVertical
           ? 'my-3 inline-flex items-center rounded-lg px-4 py-2'
           : 'absolute -bottom-3 left-1/2 -translate-x-1/2 rounded-full px-4 py-1.5'
-      } text-sm font-medium text-white shadow-md transition-colors ${
+      } text-sm font-medium text-white shadow-md transition-colors dark:text-black ${
         isSpeaker ? speakerDetailColors : teamBioColors
       }`}
       onClick={onViewBioOrDetails}
@@ -234,27 +238,33 @@ const ProfileCard = ({
       </div>
       <div className="mt-3 flex flex-col justify-between px-2">
         {renderInfo}
-        {renderSocialLinks}
+        <div className="m-4 mt-6 flex items-center justify-between gap-2">
+          {renderSocialLinks}
+          {renderButton}
+        </div>
       </div>
     </>
   )
 
   const renderTeamMemberCard = (
-    <div className="relative overflow-hidden rounded-xl p-4 pb-12">
-      {renderRibbon}
-      <div className="flex">
-        <div className="flex w-24 shrink-0 flex-col items-center">
-          <img
-            alt=""
-            src={avatar}
-            className="size-24 rounded-full outline outline-1 -outline-offset-1 outline-black/5 dark:outline-white/10"
-            loading="lazy"
-          />
-          {renderSocialLinks}
+    <>
+      <div className="relative overflow-hidden rounded-xl p-4 pb-12">
+        {renderRibbon}
+        <div className="flex">
+          <div className="flex w-24 shrink-0 flex-col items-center">
+            <img
+              alt=""
+              src={avatar}
+              className="size-24 rounded-full outline outline-1 -outline-offset-1 outline-black/5 dark:outline-white/10"
+              loading="lazy"
+            />
+            {renderSocialLinks}
+          </div>
+          {renderInfo}
         </div>
-        {renderInfo}
       </div>
-    </div>
+      {renderButton}
+    </>
   )
 
   return (
@@ -264,7 +274,6 @@ const ProfileCard = ({
       } border border-gray-200 bg-white shadow-lg dark:border-gray-700 dark:bg-gray-800`}
     >
       {cardIsVertical ? renderSpeakerCard : renderTeamMemberCard}
-      {renderButton}
     </div>
   )
 }
