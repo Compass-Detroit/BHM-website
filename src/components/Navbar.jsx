@@ -300,7 +300,7 @@ function Navbar() {
     <nav
       ref={navRef}
       aria-label="Main navigation"
-      className={`fixed left-0 top-0 z-10 w-full ${
+      className={`max-w-screen fixed left-0 top-0 z-10 w-screen overflow-hidden ${
         activeLink === 'landing'
           ? 'bg-primary-400 text-sky-900'
           : 'bg-white text-gray-700 shadow-lg dark:bg-gray-700 dark:text-gray-100'
@@ -313,10 +313,13 @@ function Navbar() {
             sections.find((s) => s.id === activeLink)?.text
           } section`}
       </div>
-      <div className="flex items-center justify-between p-4">
+      <div
+        className="grid w-full min-w-0 max-w-full grid-cols-[1fr_auto] items-center gap-2 overflow-hidden p-2 sm:p-4"
+        style={{ width: '100%', maxWidth: '100%' }}
+      >
         <Link
           to="/"
-          className="transition-opacity hover:opacity-80"
+          className="min-w-0 transition-opacity hover:opacity-80"
           onClick={handleHomeNavigation}
           aria-label="Go to home page"
         >
@@ -324,7 +327,7 @@ function Navbar() {
             textColor={
               isDarkMode && activeLink !== 'landing' ? '#FFFFFF' : '#0c4a6e'
             }
-            className="h-16"
+            className="h-12 sm:h-16"
           />
         </Link>
 
@@ -335,7 +338,7 @@ function Navbar() {
           aria-label={isNavVisible ? 'Close Main Menu' : 'Open Main Menu'}
           aria-expanded={isNavVisible}
           aria-controls="mobile-navigation"
-          className={`touch-manipulation rounded border-2 px-4 py-2 transition-colors xl:hidden ${
+          className={`touch-manipulation rounded border-2 p-2 transition-colors sm:px-4 xl:hidden ${
             activeLink === 'landing'
               ? 'border-sky-900 hover:bg-primary-300 active:bg-primary-200'
               : 'border-gray-300 hover:bg-gray-100 active:bg-gray-200 dark:text-gray-100 dark:hover:bg-primary-400'
@@ -374,7 +377,7 @@ function Navbar() {
       </div>
 
       {/* Mobile Navigation */}
-      <div className="w-full xl:hidden">
+      <div className="w-full max-w-full overflow-hidden xl:hidden">
         {isNavVisible && (
           <div
             id="mobile-navigation"
