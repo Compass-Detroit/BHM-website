@@ -110,7 +110,7 @@ function LocationSection() {
               >
                 <p>
                   Interactive map showing Wayne State University - Saint
-                  Andrew`&apos;`s Memorial Episcopal Church location.
+                  Andrew&apos;s Memorial Episcopal Church location.
                   <a
                     href="https://www.google.com/maps/dir//Saint+Andrew's+Memorial+Episcopal+Church,+Detroit,+MI/@42.355556,-83.0730112,881m/data=!3m2!1e3!4b1!4m6!3m5!1s0x8824d2a41779eb09:0xee199848d652faba!8m2!3d42.355556!4d-83.0730112!16s%2Fm%2F04f4ds4?entry=ttu"
                     target="_blank"

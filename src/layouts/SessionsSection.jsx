@@ -147,7 +147,7 @@ const SessionsSection = ({
         {tabs.map((tab, index) => (
           <React.Fragment key={tab}>
             {index !== 0 && ![activeTab, activeTab + 1].includes(index) && (
-              <div className="hidden h-5 w-0 bg-primary-400 xs:w-0.5 md:block md:w-1" />
+              <div className="hidden h-5 w-0 bg-primary-400 sm:w-0.5 md:block md:w-1" />
             )}
 
             <button

@@ -137,7 +137,7 @@ CTAButton.propTypes = {
 
   /**
    * Icon element to display with the button text
-   * Pass a React Icons component (e.g., <FaTicketAlt />)
+   * Pass a React Icons component (e.g., <FaTicket />)
    */
   icon: PropTypes.node,
 

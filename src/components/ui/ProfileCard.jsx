@@ -22,14 +22,7 @@ const ProfileCard = ({
   isWTM = false,
   isGDE = false,
 }) => {
-  const getRibbonColor = (type) => {
-    // Team members
-    const roleColors = {
-      organizer: 'bg-blue-600',
-      facilitator: 'bg-green-600',
-      devteam: 'bg-amber-500',
-    }
-
+  const getRibbonColor = () => {
     // Speakers
     const trackColors = {
       'Build with AI': 'bg-purple-800',
@@ -40,8 +33,7 @@ const ProfileCard = ({
       Workshops: 'bg-orange-900',
     }
 
-    if (track) return trackColors[track] || 'bg-sky-800'
-    if (role) return roleColors[type] || 'bg-primary-500'
+    if (track) return trackColors[track] || 'bg-sky-400'
     return 'bg-gray-600'
   }
 
@@ -62,20 +54,26 @@ const ProfileCard = ({
 
   const getGradientColors = (bgColor) => {
     const colorMap = {
-      'bg-purple-800': 'from-purple-500/80 via-purple-500/10',
-      'bg-primary-800': 'from-primary-500/80 via-primary-500/10',
-      'bg-emerald-800': 'from-emerald-500/80 via-emerald-500/10',
-      'bg-red-800': 'from-red-500/80 via-red-500/10',
-      'bg-orange-800': 'from-orange-500/80 via-orange-500/10',
-      'bg-blue-700': 'from-blue-500/80 via-blue-500/10',
-      'bg-green-700': 'from-green-500/80 via-green-500/10',
-      'bg-amber-700': 'from-amber-400/80 via-amber-400/10',
-      'bg-sky-800': 'from-sky-500/80 via-sky-500/10',
-      'bg-primary-500': 'from-primary-400/80 via-primary-400/10',
-      'bg-gray-700': 'from-gray-500/80 via-gray-500/10',
+      // Speaker track colors - lighter gradients for subtle image overlays
+      'bg-purple-800': 'from-purple-400/60 via-purple-400/5',
+      'bg-primary-900': 'from-primary-400/60 via-primary-400/5',
+      'bg-emerald-800': 'from-emerald-400/60 via-emerald-400/5',
+      'bg-sky-800': 'from-sky-400/60 via-sky-400/5',
+      'bg-red-800': 'from-red-400/60 via-red-400/5',
+      'bg-orange-900': 'from-orange-400/60 via-orange-400/5',
+
+      // Legacy/fallback colors
+      'bg-primary-300': 'from-primary-300/60 via-primary-300/5',
+      'bg-primary-500': 'from-primary-300/60 via-primary-300/5',
+      'bg-blue-500': 'from-blue-400/60 via-blue-400/5',
+      'bg-green-500': 'from-green-400/60 via-green-400/5',
+      'bg-amber-500': 'from-amber-400/60 via-amber-400/5',
+      'bg-gray-500': 'from-gray-400/60 via-gray-400/5',
+      'bg-gray-600': 'from-gray-400/60 via-gray-400/5',
+      'bg-gray-700': 'from-gray-400/60 via-gray-400/5',
     }
 
-    return colorMap[bgColor] || 'from-gray-600/90 via-gray-600/30'
+    return colorMap[bgColor] || 'from-gray-400/60 via-gray-400/5'
   }
 
   const renderBadge = ribbonLabel && (
