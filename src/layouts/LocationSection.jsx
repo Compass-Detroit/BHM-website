@@ -1,4 +1,4 @@
-import { FaMapMarkerAlt, FaClock } from 'react-icons/fa'
+import { FaMapPin, FaClock } from 'react-icons/fa6'
 
 function LocationSection() {
   return (
@@ -27,13 +27,13 @@ function LocationSection() {
             <div className="mt-2 space-y-1">
               <time
                 dateTime="2025-11-21T09:00:00-05:00/2025-11-21T21:00:00-05:00"
-                className="block"
+                className="block text-xl font-semibold"
               >
                 Friday: 9:00 AM - 9:00 PM
               </time>
               <time
                 dateTime="2025-11-22T09:00:00-05:00/2025-11-22T17:00:00-05:00"
-                className="block"
+                className="block text-xl font-semibold"
               >
                 Saturday: 9:00 AM - 5:00 PM
               </time>
@@ -47,10 +47,7 @@ function LocationSection() {
           <div className="mb-4 flex flex-col lg:mb-0 lg:w-1/2">
             <div className="mb-4 flex items-center">
               <div className="mx-2 flex size-11 items-center justify-center rounded-full bg-yellow-500">
-                <FaMapMarkerAlt
-                  className="size-6 text-white"
-                  aria-hidden="true"
-                />
+                <FaMapPin className="size-6 text-white" aria-hidden="true" />
               </div>
               <h3 className="text-lg font-semibold md:text-xl lg:text-2xl">
                 Friday Location
@@ -82,7 +79,7 @@ function LocationSection() {
               <a
                 href="https://www.google.com/maps/dir//Saint+Andrew's+Memorial+Episcopal+Church,+Detroit,+MI/@42.355556,-83.0730112,881m/data=!3m2!1e3!4b1!4m6!3m5!1s0x8824d2a41779eb09:0xee199848d652faba!8m2!3d42.355556!4d-83.0730112!16s%2Fm%2F04f4ds4?entry=ttu"
                 target="_blank"
-                className="mb-4 mt-3 inline-flex items-center rounded bg-sky-900 px-8 py-5 text-primary-50 shadow-xl transition delay-75 duration-100 ease-in-out hover:-translate-y-1 hover:scale-110 hover:cursor-pointer focus:outline-none focus:ring-2 focus:ring-primary-400 focus:ring-offset-2"
+                className="mb-4 mt-3 inline-flex items-center whitespace-nowrap rounded bg-sky-900 px-8 py-5 text-primary-50 shadow-xl transition delay-75 duration-100 ease-in-out hover:-translate-y-1 hover:scale-110 hover:cursor-pointer focus:outline-none focus:ring-2 focus:ring-primary-400 focus:ring-offset-2"
                 rel="noreferrer"
                 aria-label="Get directions to Wayne State University Saint Andrew's Memorial Episcopal Church (opens in new tab)"
               >
@@ -99,6 +96,7 @@ function LocationSection() {
             <div className="">
               <iframe
                 title="Wayne State University - Saint Andrew's Memorial Episcopal Church"
+                aria-label="Interactive map showing Wayne State University - Saint Andrew's Memorial Episcopal Church location"
                 className="aspect-[4/3]  rounded-lg border-8 border-sky-200"
                 style={{
                   maxWidth: '95%',
@@ -107,7 +105,21 @@ function LocationSection() {
                 }}
                 src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2948.5!2d-83.0730112!3d42.355556!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8824d2a41779eb09%3A0xee199848d652faba!2sSaint%20Andrew%27s%20Memorial%20Episcopal%20Church!5e1!3m2!1sen!2sus!4v1757466338342!5m2!1sen!2sus"
                 allowFullScreen
-              ></iframe>
+                loading="lazy"
+                sandbox="allow-scripts allow-same-origin allow-popups allow-popups-to-escape-sandbox"
+              >
+                <p>
+                  Interactive map showing Wayne State University - Saint
+                  Andrew`&apos;`s Memorial Episcopal Church location.
+                  <a
+                    href="https://www.google.com/maps/dir//Saint+Andrew's+Memorial+Episcopal+Church,+Detroit,+MI/@42.355556,-83.0730112,881m/data=!3m2!1e3!4b1!4m6!3m5!1s0x8824d2a41779eb09:0xee199848d652faba!8m2!3d42.355556!4d-83.0730112!16s%2Fm%2F04f4ds4?entry=ttu"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    Open in Google Maps
+                  </a>
+                </p>
+              </iframe>
             </div>
           </div>
         </div>
@@ -118,10 +130,7 @@ function LocationSection() {
           <div className="mb-4 flex flex-col lg:mb-0 lg:w-1/2">
             <div className="mb-4 flex items-center">
               <div className="mx-2 flex size-11 items-center justify-center rounded-full bg-yellow-500">
-                <FaMapMarkerAlt
-                  className="size-6 text-white"
-                  aria-hidden="true"
-                />
+                <FaMapPin className="size-6 text-white" aria-hidden="true" />
               </div>
               <h3 className="text-lg font-semibold md:text-xl lg:text-2xl">
                 Saturday Location
@@ -150,7 +159,7 @@ function LocationSection() {
               <a
                 href="https://www.google.com/maps/dir//2901+Grand+River+Ave,+Detroit,+MI+48201/@42.3388889,-83.0703527,1162m/data=!3m2!1e3!5s0x883b2d527a607d6f:0xe075cfc124b83793!4m20!1m10!3m9!1s0x883b2d4d71da8bb1:0xe4a8072514ccbe55!2sMotorCity+Casino+Hotel!5m2!4m1!1i2!8m2!3d42.3388889!4d-83.0677778!16zL20vMDdtMmN3!3m8!1s0x883b2d4d71da8bb1:0xe4a8072514ccbe55!5m2!4m1!1i2!8m2!3d42.3388889!4d-83.0677778!16zL20vMDdtMmN3?entry=ttu"
                 target="_blank"
-                className="mb-4 mt-3 inline-flex items-center rounded bg-sky-900 px-8 py-5 text-primary-50 shadow-xl transition delay-75 duration-100 ease-in-out hover:-translate-y-1 hover:scale-110 hover:cursor-pointer focus:outline-none focus:ring-2 focus:ring-primary-400 focus:ring-offset-2"
+                className="mb-4 mt-3 inline-flex items-center whitespace-nowrap rounded bg-sky-900 px-8 py-5 text-primary-50 shadow-xl transition delay-75 duration-100 ease-in-out hover:-translate-y-1 hover:scale-110 hover:cursor-pointer focus:outline-none focus:ring-2 focus:ring-primary-400 focus:ring-offset-2"
                 rel="noreferrer"
                 aria-label="Get directions to MotorCity Casino Hotel (opens in new tab)"
               >
@@ -167,6 +176,7 @@ function LocationSection() {
             <div className="">
               <iframe
                 title="MotorCity Casino Hotel"
+                aria-label="Interactive map showing MotorCity Casino Hotel location"
                 className="aspect-[4/3] rounded-lg border-8 border-sky-200"
                 style={{
                   maxWidth: '95%',
@@ -175,7 +185,20 @@ function LocationSection() {
                 }}
                 src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d5043.696479671668!2d-83.07032016920797!3d42.33888511227875!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x883b2d4d71da8bb1%3A0xe4a8072514ccbe55!2sMotorCity%20Casino%20Hotel!5e1!3m2!1sen!2sus!4v1757466338342!5m2!1sen!2sus"
                 allowFullScreen
-              ></iframe>
+                loading="lazy"
+                sandbox="allow-scripts allow-same-origin allow-popups allow-popups-to-escape-sandbox"
+              >
+                <p>
+                  Interactive map showing MotorCity Casino Hotel location.
+                  <a
+                    href="https://www.google.com/maps/dir//2901+Grand+River+Ave,+Detroit,+MI+48201/@42.3388889,-83.0703527,1162m/data=!3m2!1e3!5s0x883b2d527a607d6f:0xe075cfc124b83793!4m20!1m10!3m9!1s0x883b2d4d71da8bb1:0xe4a8072514ccbe55!2sMotorCity+Casino+Hotel!5m2!4m1!1i2!8m2!3d42.3388889!4d-83.0677778!16zL20vMDdtMmN3!3m8!1s0x883b2d4d71da8bb1:0xe4a8072514ccbe55!5m2!4m1!1i2!8m2!3d42.3388889!4d-83.0677778!16zL20vMDdtMmN3?entry=ttu"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    Open in Google Maps
+                  </a>
+                </p>
+              </iframe>
             </div>
           </div>
         </div>

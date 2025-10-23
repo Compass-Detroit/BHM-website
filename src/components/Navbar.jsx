@@ -1,5 +1,5 @@
 import { useEffect, useMemo, useRef, useState } from 'react'
-import { FaBars, FaTimes } from 'react-icons/fa'
+import { FaBars, FaXmark } from 'react-icons/fa6'
 import { Link } from 'react-router-dom'
 import GDGDetroitLogo from './ui/GDGDetroitLogo'
 
@@ -363,7 +363,7 @@ function Navbar() {
           }}
         >
           {isNavVisible ? (
-            <FaTimes className="size-6" />
+            <FaXmark className="size-6" />
           ) : (
             <FaBars className="size-6" />
           )}

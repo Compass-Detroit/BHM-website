@@ -1,5 +1,5 @@
 import PropTypes from 'prop-types'
-import { FaClock } from 'react-icons/fa'
+import { FaClock } from 'react-icons/fa6'
 
 const NoSessionsAvailable = ({ currentSession }) => {
   return (

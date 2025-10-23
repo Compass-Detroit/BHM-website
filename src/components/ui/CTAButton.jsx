@@ -10,7 +10,7 @@ import PropTypes from 'prop-types'
  * @component
  * @example
  * // With an icon from react-icons
- * import { FaTicketAlt } from 'react-icons/fa'
+ * import { FaTicketAlt } from 'react-icons/fa6'
  *
  * <CTAButton
  *   href="https://bit.ly/midevfest25"
@@ -93,7 +93,7 @@ function CTAButton({
   }
 
   const baseStyles =
-    'flex items-center justify-center rounded px-8 py-5 font-medium transition-all delay-75 duration-100 ease-in-out hover:-translate-y-1 hover:scale-105 hover:cursor-pointer focus:outline-none focus:ring-2 focus:ring-primary-300 focus:ring-offset-2'
+    'flex items-center justify-center rounded px-8 py-5 font-medium transition-all delay-75 duration-100 ease-in-out hover:-translate-y-1 hover:scale-105 hover:cursor-pointer focus:outline-none focus:ring-2 focus:ring-primary-300 focus:ring-offset-2 whitespace-nowrap'
 
   return (
     <a

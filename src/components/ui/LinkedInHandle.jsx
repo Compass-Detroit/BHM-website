@@ -1,5 +1,5 @@
 import PropTypes from 'prop-types'
-import { FaLinkedinIn } from 'react-icons/fa'
+import { FaLinkedinIn } from 'react-icons/fa6'
 
 const LinkedInHandle = ({ handle, absolute = true }) => (
   <a

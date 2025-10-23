@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react'
-import { FaArrowUp } from 'react-icons/fa'
+import { FaArrowUp } from 'react-icons/fa6'
 
 const ReturnToTopButton = () => {
   const [isVisible, setIsVisible] = useState(false)
