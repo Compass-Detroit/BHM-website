@@ -135,10 +135,11 @@ const SessionsSection = ({
         </div>
       )}
 
-      <div
+      <nav
         className={`mt-4 flex w-full flex-wrap items-center justify-between rounded-md bg-black md:inline-flex md:flex-nowrap ${
           isExpanded ? 'max-h-none opacity-100' : 'max-h-0 opacity-0'
         }`}
+        aria-label="Session track navigation"
       >
         {tabs.map((tab, index) => (
           <React.Fragment key={tab}>
@@ -152,7 +153,7 @@ const SessionsSection = ({
 
             <button
               key={tab}
-              className={`relative rounded-md px-1 py-2 text-sm font-medium transition-colors duration-300 focus:outline-none md:w-20 lg:w-36 lg:text-lg ${
+              className={`relative rounded-md px-1 py-2 text-sm font-bold transition-colors duration-300 focus:outline-none md:w-20 lg:w-36 lg:text-lg ${
                 activeTab === index
                   ? 'bg-primary-400 text-black'
                   : 'bg-black text-white'
@@ -173,7 +174,7 @@ const SessionsSection = ({
             </button>
           </React.Fragment>
         ))}
-      </div>
+      </nav>
 
       <div
         className={`flex w-full  items-center justify-center px-[2.5%] md:px-[5%] ${
