@@ -1,7 +1,7 @@
 import { ReactComponent as EventLogoSvg } from '@/assets/images/midevfest2025.svg'
 import { ReactComponent as DateSvg } from '@/assets/images/2025date.svg'
 import CTAButton from '@/components/ui/CTAButton'
-import { FaTicketAlt, FaPenAlt } from 'react-icons/fa'
+import { FaTicket, FaPenToSquare } from 'react-icons/fa6'
 
 function LandingSection() {
   return (
@@ -37,13 +37,13 @@ function LandingSection() {
               <CTAButton
                 href="https://bit.ly/midevfest25"
                 label="GET TICKETS"
-                icon={<FaTicketAlt />}
+                icon={<FaTicket />}
                 ariaLabel="Get your tickets today for Michigan DevFest 2025"
               />
               <CTAButton
                 href="https://www.papercall.io/midevfest2025"
                 label="APPLY TO SPEAK"
-                icon={<FaPenAlt />}
+                icon={<FaPenToSquare />}
                 variant="secondary"
                 ariaLabel="Apply to speak at Michigan DevFest 2025"
               />

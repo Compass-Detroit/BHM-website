@@ -99,7 +99,7 @@ const SessionsSection = ({
   return (
     <section
       id="sessions"
-      className="flex flex-col items-center justify-center bg-primary-100 p-4 sm:px-10 md:px-14 lg:px-16"
+      className="flex flex-col items-center justify-start bg-primary-100 p-4 sm:px-10 md:px-14 lg:px-16"
     >
       <div className="flex w-full justify-between pt-0">
         <button
@@ -120,8 +120,10 @@ const SessionsSection = ({
         </h2>
         <img
           src={SessionsLogo}
-          alt="Sessions"
+          alt=""
           className="h-10 sm:h-12 md:h-14 lg:h-16"
+          width={82}
+          height={69}
           loading="lazy"
         />
       </div>
@@ -135,27 +137,27 @@ const SessionsSection = ({
         </div>
       )}
 
-      <div
-        className={`mt-4 flex w-full flex-wrap items-center justify-between rounded-md bg-black md:inline-flex md:flex-nowrap ${
+      <nav
+        id="sessions-nav"
+        className={`mt-4 flex w-full flex-wrap items-center justify-center gap-1 rounded-md bg-black md:inline-flex md:flex-nowrap ${
           isExpanded ? 'max-h-none opacity-100' : 'max-h-0 opacity-0'
         }`}
+        aria-label="Session track navigation"
       >
         {tabs.map((tab, index) => (
           <React.Fragment key={tab}>
-            {index !== 0 && (
-              <div
-                className={`hidden h-5 w-1 bg-primary-400 md:block ${
-                  [activeTab, activeTab + 1].includes(index) && 'invisible'
-                }`}
-              />
+            {index !== 0 && ![activeTab, activeTab + 1].includes(index) && (
+              <div className="hidden h-5 w-0 bg-primary-400 sm:w-0.5 md:block md:w-1" />
             )}
 
             <button
               key={tab}
-              className={`relative rounded-md px-1 py-2 text-sm font-medium transition-colors duration-300 focus:outline-none md:w-20 lg:w-36 lg:text-lg ${
+              className={`leading-tightest relative whitespace-normal rounded-md px-0.5 py-2 text-sm font-black uppercase transition-colors duration-300 focus:outline-none md:w-20 lg:w-36 lg:text-lg ${
+                tab === 'Innovation' ? 'mx-1 py-5 md:w-24 lg:w-40' : ''
+              } ${tab === 'Startup' ? 'py-5' : ''} ${
                 activeTab === index
                   ? 'bg-primary-400 text-black'
-                  : 'bg-black text-white'
+                  : 'bg-gray-900 text-white hover:bg-gray-800'
               }`}
               onClick={() => setActiveTab(index)}
             >
@@ -163,6 +165,36 @@ const SessionsSection = ({
                 <>
                   <span className="inline max-xs:hidden">Miscellaneous</span>
                   <span className="hidden max-xs:inline">Misc</span>
+                </>
+              ) : tab === 'Hackathon' ? (
+                <>
+                  Hack-
+                  <br />
+                  athon
+                </>
+              ) : tab === 'Tech+Design' ? (
+                <>
+                  Tech+
+                  <br />
+                  Design
+                </>
+              ) : tab === 'Level Up' ? (
+                <>
+                  Level
+                  <br />
+                  Up
+                </>
+              ) : tab === 'Build with AI' ? (
+                <>
+                  Build
+                  <br />
+                  with AI
+                </>
+              ) : tab === 'Workshops' ? (
+                <>
+                  Work-
+                  <br />
+                  shops
                 </>
               ) : (
                 tab
@@ -173,10 +205,10 @@ const SessionsSection = ({
             </button>
           </React.Fragment>
         ))}
-      </div>
+      </nav>
 
       <div
-        className={`flex w-full  items-center justify-center px-[2.5%] md:px-[5%] ${
+        className={`flex min-h-[800px] w-full items-start justify-start px-[2.5%] md:px-[5%] ${
           isExpanded ? 'max-h-none opacity-100' : 'max-h-0 opacity-0'
         }`}
       >

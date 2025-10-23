@@ -52,6 +52,7 @@ const PartnersSection = ({
                   src={partner.logo}
                   alt={partner.name}
                   className="size-full object-contain transition-opacity duration-200 group-hover:opacity-90"
+                  loading="lazy"
                 />
               ) : (
                 <div className="flex h-24 items-center justify-center rounded-lg border-2 border-gray-300 bg-gray-50 px-6">
@@ -60,11 +61,11 @@ const PartnersSection = ({
                   </p>
                 </div>
               )}
-              <div className="invisible absolute left-0 top-0 flex size-full flex-col items-center justify-center overflow-y-hidden rounded bg-black/50 p-4 text-white backdrop-blur-sm transition-all duration-200 group-hover:visible">
-                <h4 className="mb-2 text-xl font-semibold md:text-2xl">
+              <div className="invisible absolute left-0 top-0 flex size-full flex-col items-center justify-center overflow-y-hidden rounded bg-sky-900/80 p-8 text-center text-white backdrop-blur-lg transition-all duration-200 group-hover:visible">
+                <h4 className="mb-2 text-xl font-bold md:text-2xl">
                   {partner.name}
                 </h4>
-                <p className="overflow-y-auto text-left text-sm md:text-base">
+                <p className="overflow-y-auto text-left text-lg font-bold md:text-xl">
                   {partner.desc}
                 </p>
               </div>

@@ -3,8 +3,8 @@ import LinkedInHandle from '@/components/ui/LinkedInHandle'
 import GithubHandle from '@/components/ui/GithubHandle'
 import TwitterHandle from '@/components/ui/TwitterHandle'
 
-import GDEIcon from '@/assets/images/icon-gde.png'
-import WTMLogo from '@/assets/images/organizations/wtm_logo.svg'
+import GDEIcon from '@/assets/images/icons/gdge.svg'
+import WTMLogo from '@/assets/images/icons/wtm.svg'
 
 const ProfileCard = ({
   name,
@@ -22,26 +22,18 @@ const ProfileCard = ({
   isWTM = false,
   isGDE = false,
 }) => {
-  const getRibbonColor = (type) => {
-    // Team members
-    const roleColors = {
-      organizer: 'bg-blue-600',
-      facilitator: 'bg-green-600',
-      devteam: 'bg-amber-500',
-    }
-
+  const getRibbonColor = () => {
     // Speakers
     const trackColors = {
-      'Build with AI': 'bg-purple-600',
-      Innovation: 'bg-primary-600',
-      'Level Up': 'bg-emerald-600',
-      Startups: 'bg-sky-600',
-      'Tech+Design': 'bg-red-600',
-      Workshops: 'bg-orange-600',
+      'Build with AI': 'bg-purple-800',
+      Innovation: 'bg-primary-900',
+      'Level Up': 'bg-emerald-800',
+      Startups: 'bg-sky-800',
+      'Tech+Design': 'bg-red-800',
+      Workshops: 'bg-orange-900',
     }
 
-    if (track) return trackColors[track] || 'bg-sky-600'
-    if (role) return roleColors[type] || 'bg-primary-500'
+    if (track) return trackColors[track] || 'bg-sky-400'
     return 'bg-gray-600'
   }
 
@@ -62,28 +54,54 @@ const ProfileCard = ({
 
   const getGradientColors = (bgColor) => {
     const colorMap = {
-      'bg-purple-600': 'from-purple-600/100 via-purple-600/15',
-      'bg-primary-600': 'from-primary-600/100 via-primary-600/15',
-      'bg-emerald-600': 'from-emerald-600/100 via-emerald-600/15',
-      'bg-red-600': 'from-red-600/100 via-red-600/15',
-      'bg-orange-600': 'from-orange-600/100 via-orange-600/15',
-      'bg-blue-600': 'from-blue-600/100 via-blue-600/15',
-      'bg-green-600': 'from-green-600/100 via-green-600/15',
-      'bg-amber-500': 'from-amber-500/100 via-amber-500/15',
-      'bg-sky-600': 'from-sky-600/100 via-sky-600/15',
-      'bg-primary-500': 'from-primary-500/100 via-primary-500/15',
-      'bg-gray-600': 'from-gray-600/100 via-gray-600/15',
+      // Speaker track colors - lighter gradients for subtle image overlays
+      'bg-purple-800': 'from-purple-400/60 via-purple-400/5',
+      'bg-primary-900': 'from-primary-400/60 via-primary-400/5',
+      'bg-emerald-800': 'from-emerald-400/60 via-emerald-400/5',
+      'bg-sky-800': 'from-sky-400/60 via-sky-400/5',
+      'bg-red-800': 'from-red-400/60 via-red-400/5',
+      'bg-orange-900': 'from-orange-400/60 via-orange-400/5',
+
+      // Legacy/fallback colors
+      'bg-primary-300': 'from-primary-300/60 via-primary-300/5',
+      'bg-primary-500': 'from-primary-300/60 via-primary-300/5',
+      'bg-blue-500': 'from-blue-400/60 via-blue-400/5',
+      'bg-green-500': 'from-green-400/60 via-green-400/5',
+      'bg-amber-500': 'from-amber-400/60 via-amber-400/5',
+      'bg-gray-500': 'from-gray-400/60 via-gray-400/5',
+      'bg-gray-600': 'from-gray-400/60 via-gray-400/5',
+      'bg-gray-700': 'from-gray-400/60 via-gray-400/5',
     }
 
-    return colorMap[bgColor] || 'from-gray-600/90 via-gray-600/30'
+    return colorMap[bgColor] || 'from-gray-400/60 via-gray-400/5'
   }
 
   const renderBadge = ribbonLabel && (
-    <div className="absolute right-5 top-5 z-0">
+    <div className="absolute bottom-5 right-5 z-0">
       <span
-        className={`inline-block rounded-xl ${ribbonColor} px-3 py-1.5 text-xs font-bold uppercase tracking-wider text-white shadow-lg`}
+        className={`inline-flex items-center gap-2 rounded-xl ${ribbonColor} px-3 py-1.5 text-sm font-bold uppercase tracking-wider text-white shadow-lg`}
       >
         {ribbonLabel}
+        {isGDE && (
+          <img
+            src={GDEIcon}
+            alt="GDE"
+            className="size-6"
+            loading="lazy"
+            width={24}
+            height={24}
+          />
+        )}
+        {isWTM && (
+          <img
+            src={WTMLogo}
+            alt="WTM"
+            className="size-5"
+            loading="lazy"
+            width={20}
+            height={20}
+          />
+        )}
       </span>
     </div>
   )
@@ -117,25 +135,6 @@ const ProfileCard = ({
     </>
   )
 
-  const renderGDEBadge = isGDE && (
-    <span className="inline-block bg-white p-1">
-      <img width="40" height="40" src={GDEIcon} alt="Google Developer Expert" />
-    </span>
-  )
-
-  const renderWTMBadge = isWTM && (
-    <span className="inline-block bg-white p-1">
-      <img width="40" height="40" src={WTMLogo} alt="Women Techmakers" />
-    </span>
-  )
-
-  const renderSpecialBadges = (
-    <div className="absolute left-5 top-5 z-0 flex flex-col gap-1">
-      {renderGDEBadge}
-      {renderWTMBadge}
-    </div>
-  )
-
   const renderBadgeAndGradient = ribbonLabel && (
     <>
       {renderImageGradient}
@@ -143,7 +142,7 @@ const ProfileCard = ({
     </>
   )
 
-  const renderRibbon = ribbonLabel && (
+  const renderTeamRibbon = ribbonLabel && (
     <div
       className={`${
         devfest ? `ribbon-${devfest}` : `ribbon-${track}`
@@ -214,7 +213,7 @@ const ProfileCard = ({
         cardIsVertical
           ? 'my-3 inline-flex items-center rounded-lg px-4 py-2'
           : 'absolute -bottom-3 left-1/2 -translate-x-1/2 rounded-full px-4 py-1.5'
-      } text-sm font-medium shadow-md transition-colors dark:text-black ${
+      } whitespace-nowrap text-sm font-medium shadow-md transition-colors dark:text-black ${
         isSpeaker ? speakerDetailColors : teamBioColors
       }`}
       onClick={onViewBioOrDetails}
@@ -234,11 +233,10 @@ const ProfileCard = ({
           loading="lazy"
         />
         {renderBadgeAndGradient}
-        {renderSpecialBadges}
       </div>
       <div className="mt-3 flex flex-col justify-between px-2">
         {renderInfo}
-        <div className="m-4 mt-6 flex items-center justify-between gap-2">
+        <div className="m-4 mt-6 flex flex-wrap items-center justify-between gap-2">
           {renderSocialLinks}
           {renderButton}
         </div>
@@ -249,7 +247,7 @@ const ProfileCard = ({
   const renderTeamMemberCard = (
     <>
       <div className="relative overflow-hidden rounded-xl p-4 pb-12">
-        {renderRibbon}
+        {renderTeamRibbon}
         <div className="flex">
           <div className="flex w-24 shrink-0 flex-col items-center">
             <img

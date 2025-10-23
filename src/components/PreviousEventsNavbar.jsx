@@ -1,5 +1,5 @@
 import { useState, useRef, useEffect } from 'react'
-import { FaBars, FaTimes } from 'react-icons/fa'
+import { FaBars, FaXmark } from 'react-icons/fa6'
 import { Link, useLocation } from 'react-router-dom'
 import gdgDetroitLogo from '@/assets/images/gdg-detroit-logo.svg'
 
@@ -78,7 +78,7 @@ function PreviousEventsNavbar() {
           }}
         >
           {isNavVisible ? (
-            <FaTimes className="size-6" />
+            <FaXmark className="size-6" />
           ) : (
             <FaBars className="size-6" />
           )}

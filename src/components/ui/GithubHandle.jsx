@@ -1,5 +1,5 @@
 import PropTypes from 'prop-types'
-import { FaGithubAlt } from 'react-icons/fa'
+import { FaGithubAlt } from 'react-icons/fa6'
 
 const GithubHandle = ({ handle, absolute = true }) => (
   <a

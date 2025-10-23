@@ -1,5 +1,5 @@
 import PropTypes from 'prop-types'
-import { FaClock } from 'react-icons/fa'
+import { FaClock } from 'react-icons/fa6'
 
 const NoSessionsAvailable = ({ currentSession }) => {
   return (
@@ -13,10 +13,10 @@ const NoSessionsAvailable = ({ currentSession }) => {
         <h3 className="mb-2 text-2xl font-bold text-gray-900 dark:text-white">
           Coming Soon!
         </h3>
-        <p className="mb-4 text-lg text-gray-600 dark:text-gray-400">
+        <p className="mb-4 text-lg text-gray-600 dark:text-gray-200">
           Watch for updates on {currentSession} sessions
         </p>
-        <p className="text-sm text-gray-500 dark:text-gray-500">
+        <p className="text-sm text-gray-500 dark:font-bold dark:text-gray-200">
           We&apos;re working hard to bring you exciting content. Stay tuned for
           announcements!
         </p>
