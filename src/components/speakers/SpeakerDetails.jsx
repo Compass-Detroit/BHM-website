@@ -29,14 +29,21 @@ function SpeakerDetails({
     uniqueSpeakersSortedByFirstName,
   } = useContext(SpeakerContext)
 
+  const validateUrl = (url) => {
+    try {
+      new URL(url)
+      return url
+    } catch {
+      return null
+    }
+  }
+
   const getUrlArray = () => {
-    if (!url) return []
-    return Array.isArray(url) ? url : [url]
+    const urlList = Array.isArray(url) ? url : [url]
+    return urlList.map(validateUrl).filter(Boolean)
   }
 
   const urls = getUrlArray()
-
-  console.log('SpeakerDetails URLs:', urls)
 
   const goToPreviousSpeaker = useCallback(() => {
     const currentIndex = uniqueSpeakersSortedByFirstName.findIndex(
