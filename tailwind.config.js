@@ -26,6 +26,8 @@ export default {
       },
       fontFamily: {
         russell: ['Russell', 'cursive'],
+        orbitron: ['Orbitron', 'monospace'],
+        asimovian: ['Asimovian', 'serif'],
       },
     },
   },
