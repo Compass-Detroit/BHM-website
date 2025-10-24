@@ -12,13 +12,13 @@ const Yoda404 = () => {
   }, [])
 
   return (
-    <div className="flex min-h-screen flex-col items-center justify-center gap-8 bg-gradient-to-br from-emerald-50 to-primary-50 p-8 text-center">
+    <div className="flex min-h-screen flex-col items-center justify-center gap-8 bg-gradient-to-br from-emerald-50 to-primary-100 p-8 text-center">
       {/* 404 Error Display */}
       <div className="mb-4">
-        <h1 className="font-russell text-8xl font-bold text-emerald-600">
+        <h1 className="font-russell text-8xl font-bold text-emerald-800">
           404
         </h1>
-        <p className="mt-2 text-2xl text-gray-700">Page Not Found</p>
+        <h2 className="mt-2 text-2xl text-gray-800">Page Not Found</h2>
       </div>
 
       {/* Yoda Character Container */}
@@ -42,8 +42,11 @@ const Yoda404 = () => {
         <div className="flex size-48 items-center justify-center">
           <img
             src="/src/assets/images/yodahead.webp"
-            alt="Yoda"
+            alt="Yoda-like head"
             className="size-full object-contain"
+            loading="eager"
+            width="192"
+            height="192"
           />
         </div>
       </div>
@@ -52,7 +55,7 @@ const Yoda404 = () => {
       <div className="mt-8 flex flex-col gap-4 sm:flex-row">
         <Link
           to="/"
-          className="rounded-lg bg-emerald-600 px-8 py-3 font-semibold text-white shadow-lg transition-colors duration-200 hover:bg-emerald-700 hover:shadow-xl"
+          className="rounded-lg bg-emerald-800 px-8 py-3 font-semibold text-white shadow-lg transition-colors duration-200 hover:bg-emerald-900 hover:shadow-xl"
         >
           Return to Home
         </Link>
@@ -70,7 +73,7 @@ const Yoda404 = () => {
 
       {/* Additional Help Text */}
       <div className="mt-8 max-w-lg">
-        <p className="text-sm text-gray-600">
+        <p className="text-sm text-gray-800">
           The page you&apos;re looking for doesn&apos;t exist. Use the
           navigation above to find what you need, or return to our homepage to
           explore Michigan DevFest 2025.
