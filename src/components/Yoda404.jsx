@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react'
 import { Link } from 'react-router-dom'
 import { yodaQuotes } from '@/data/yodaQuotes'
+import yodaHead from '@/assets/images/yodahead.webp'
 
 const Yoda404 = () => {
   const [randomQuote, setRandomQuote] = useState('')
@@ -27,7 +28,7 @@ const Yoda404 = () => {
         <div className="relative mb-6 max-w-md">
           {/* Speech bubble */}
           <div className="rounded-2xl border-2 border-emerald-200 bg-white p-6 shadow-xl">
-            <p className="prose font-asimovian text-2xl font-medium italic leading-relaxed text-emerald-800">
+            <p className="prose font-asimovian text-xl font-medium italic leading-relaxed text-emerald-800">
               &quot;{randomQuote}&quot;
             </p>
           </div>
@@ -41,7 +42,7 @@ const Yoda404 = () => {
         {/* Yoda Character */}
         <div className="flex size-48 items-center justify-center">
           <img
-            src="/src/assets/images/yodahead.webp"
+            src={yodaHead}
             alt="Yoda-like head"
             className="size-full object-contain"
             loading="eager"
@@ -61,8 +62,14 @@ const Yoda404 = () => {
         </Link>
         <button
           onClick={() => {
+            // Filter out the current quote to ensure we get a different one
+            const availableQuotes = yodaQuotes.filter(
+              (quote) => quote !== randomQuote
+            )
             const newQuote =
-              yodaQuotes[Math.floor(Math.random() * yodaQuotes.length)]
+              availableQuotes[
+                Math.floor(Math.random() * availableQuotes.length)
+              ]
             setRandomQuote(newQuote)
           }}
           className="rounded-lg bg-primary-500 px-8 py-3 font-semibold text-black shadow-lg transition-colors duration-200 hover:bg-primary-600 hover:shadow-xl"

@@ -27,7 +27,13 @@ export default {
       fontFamily: {
         russell: ['Russell', 'cursive'],
         orbitron: ['Orbitron', 'monospace'],
-        asimovian: ['Asimovian', 'serif'],
+        asimovian: [
+          'Asimovian',
+          'serif',
+          'Georgia',
+          'Times New Roman',
+          'serif',
+        ],
       },
     },
   },
