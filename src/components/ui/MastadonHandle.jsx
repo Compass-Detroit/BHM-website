@@ -1,5 +1,5 @@
 import PropTypes from 'prop-types'
-import { FaMastodon } from 'react-icons/fa'
+import { FaMastodon } from 'react-icons/fa6'
 
 const MastodonHandle = ({ handle, absolute = true }) => (
   <a

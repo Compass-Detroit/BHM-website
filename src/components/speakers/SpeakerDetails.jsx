@@ -7,7 +7,7 @@ import {
   IoLinkOutline,
   IoLogoTwitter,
 } from 'react-icons/io5'
-import { FaMastodon } from 'react-icons/fa'
+import { FaMastodon } from 'react-icons/fa6'
 
 import { SpeakerContext } from './SpeakerContext'
 
