@@ -11,15 +11,15 @@ import {
 import { SpeakerContext } from './SpeakerContext'
 
 function SpeakerDetails({
-  name,
-  bio,
-  organization,
   avatar,
-  twitter,
-  sessionTitle,
-  onClose,
-  position,
+  bio,
   id,
+  name,
+  onClose,
+  organization,
+  position,
+  sessionTitle,
+  twitter,
   url,
 }) {
   const {
@@ -269,15 +269,15 @@ function SpeakerDetails({
 }
 
 SpeakerDetails.propTypes = {
-  name: PropTypes.string.isRequired,
-  bio: PropTypes.string.isRequired,
-  twitter: PropTypes.string,
   avatar: PropTypes.string.isRequired,
-  organization: PropTypes.string.isRequired,
-  position: PropTypes.string.isRequired,
-  sessionTitle: PropTypes.string.isRequired,
-  onClose: PropTypes.func.isRequired,
+  bio: PropTypes.string,
+  name: PropTypes.string.isRequired,
   id: PropTypes.number.isRequired,
+  onClose: PropTypes.func.isRequired,
+  organization: PropTypes.string,
+  position: PropTypes.string,
+  sessionTitle: PropTypes.string.isRequired,
+  twitter: PropTypes.string,
   url: PropTypes.oneOfType([
     PropTypes.string,
     PropTypes.arrayOf(PropTypes.string),
