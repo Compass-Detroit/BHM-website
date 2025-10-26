@@ -8,18 +8,18 @@ import GDEIcon from '@/assets/images/icons/gdge.svg'
 import WTMLogo from '@/assets/images/icons/wtm.svg'
 
 const ProfileCard = ({
-  name,
   avatar,
+  github,
+  isGDE = false,
+  isWTM = false,
+  linkedin,
+  mastodon,
+  name,
+  onViewDetails,
   organization,
   position,
   track,
-  linkedin,
-  mastodon,
-  github,
   twitter,
-  onViewDetails,
-  isWTM = false,
-  isGDE = false,
 }) => {
   const getBadgeColor = () => {
     const trackColors = {
@@ -201,18 +201,18 @@ const ProfileCard = ({
 }
 
 ProfileCard.propTypes = {
-  name: PropTypes.string.isRequired,
   avatar: PropTypes.string.isRequired,
+  github: PropTypes.string,
+  isGDE: PropTypes.bool,
+  isWTM: PropTypes.bool,
+  linkedin: PropTypes.string,
+  onViewDetails: PropTypes.func,
+  mastodon: PropTypes.string,
+  name: PropTypes.string.isRequired,
   organization: PropTypes.string,
   position: PropTypes.string,
   track: PropTypes.string, // For speakers: 'Build with AI', 'Innovation', etc.
-  linkedin: PropTypes.string,
-  github: PropTypes.string,
   twitter: PropTypes.string,
-  onViewDetails: PropTypes.func,
-  isWTM: PropTypes.bool,
-  isGDE: PropTypes.bool,
-  mastodon: PropTypes.string,
 }
 
 export default ProfileCard
