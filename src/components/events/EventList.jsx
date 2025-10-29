@@ -1,10 +1,23 @@
+import { useState, useEffect } from 'react'
 import { getAllEventsMetadata } from '@/utils/eventData'
 import EventCard from './EventCard'
+import Loading from '@/components/ui/Loading'
 import PreviousEventsNavbar from '@/components/PreviousEventsNavbar'
 import Footer from '@/layouts/Footer'
 
 const EventList = () => {
-  const events = getAllEventsMetadata()
+  const [events, setEvents] = useState([])
+  const [loading, setLoading] = useState(true)
+
+  useEffect(() => {
+    const loadEvents = async () => {
+      const eventsData = await getAllEventsMetadata()
+      setEvents(eventsData)
+      setLoading(false)
+    }
+
+    loadEvents()
+  }, [])
 
   return (
     <>
@@ -54,7 +67,9 @@ const EventList = () => {
               Explore Past Events
             </h2>
 
-            {events.length === 0 ? (
+            {loading ? (
+              <Loading />
+            ) : events.length === 0 ? (
               <div className="flex flex-col items-center justify-center py-16 text-center">
                 <p className="text-lg text-gray-600">
                   No previous events found.
