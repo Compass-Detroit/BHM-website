@@ -7,6 +7,7 @@ import ChrisDemars from '@/assets/images/speakers/Chris_Demars.jpg'
 import CynthiaRespert from '@/assets/images/speakers/Cynthia_Respert.jpeg'
 import DavidGiard from '@/assets/images/speakers/David_Giard.jpeg'
 import HafeezJimoh from '@/assets/images/speakers/Hafeez_Jimoh.png'
+import HodaSolati from '@/assets/images/speakers/Hoda_Solati.jpg'
 import JC_Escalante from '@/assets/images/speakers/JC_Escalante.jpeg'
 import JayWhitsitt from '@/assets/images/speakers/Jay_Whitsitt.jpeg'
 import JeseekiaVaughn from '@/assets/images/speakers/Jeseekia_Vaughn.jpeg'
@@ -15,6 +16,7 @@ import KavithaBangalore from '@/assets/images/speakers/Kavitha_Bangalore.jpg'
 import MadonaSWambua from '@/assets/images/speakers/Madona_S_Wambua.jpeg'
 import MichaelBower from '@/assets/images/speakers/Michael_Bower.jpg'
 import NileshPatel from '@assets/images/speakers/Nilesh_Patel.jpg'
+import ShimaSolati from '@/assets/images/speakers/Shima_Solati.jpg'
 import StephanieFrantz from '@/assets/images/speakers/Stephanie_Frantz.jpeg'
 import StephenWylie from '@/assets/images/speakers/Stephen_Wylie.jpeg'
 import WEDaCruz from '@/assets/images/speakers/WE_Da_Cruz.jpeg'
@@ -779,6 +781,63 @@ export const SpeakersData = [
         'Generative AI',
       ],
       track: 'Level Up',
+      time: '',
+      room: '',
+    },
+    isWTM: false,
+    isGDE: false,
+    mastodon: null,
+  },
+  {
+    id: 22,
+    name: 'Hoda Solati',
+    email: null,
+    avatar: HodaSolati,
+    bio: `
+      Hoda Solati is an award-winning UX designer working at BraunAbility blending creativity, technology, and innovation to craft inclusive, user-centered experiences. With advanced degrees in UX Design and Animation, she explores cutting-edge technologies such as VR, AR, and robotics to solve complex design challenges. Recognized at global events including DDX’25 NYC, IEEE Smart Mobility, and Ars Electronica, Hoda is passionate about redefining the future of user experience through innovation and accessibility.
+    `,
+    twitter: null,
+    linkedIn: 'https://www.linkedin.com/in/hoda-solati',
+    url: null,
+    organization: 'BraunAbility',
+    position: 'UX Designer',
+    session: {
+      title:
+        'Experience Innovation: Designing for Engagement in Immersive Environments',
+      abstract: null,
+      description: `Design is no longer just about aesthetics or usability, it’s about crafting memorable and meaningful experiences. As immersive technologies like AR and VR evolve, designers are challenged to think beyond screens and start shaping how people feel within digital spaces. This session introduces the concept of Experience Innovation, a mindset that blends creativity, empathy, and strategy to design experiences that are not only functional but emotionally engaging and deeply human. 
+      
+      We’ll explore the core principles of experience innovation and how they can transform the way we design for immersive environments. Attendees will learn how to use these principles to create interactions that feel natural, intuitive, and inspiring, while balancing novelty with user comfort.`,
+      tags: ['Design', 'User Experience', 'User Interface', 'AR', 'VR'],
+      track: 'Tech+Design',
+      time: '',
+      room: '',
+    },
+    isWTM: false,
+    isGDE: false,
+    mastodon: null,
+  },
+  {
+    id: 23,
+    name: 'Shima Solati',
+    email: null,
+    avatar: ShimaSolati,
+    bio: `
+      Shima Solati is an award-winning UX/UI designer and researcher at BraunAbility, leading efforts to advance mobility and accessibility through innovative, user-centered design. With a Master’s in User Experience Design from the College for Creative Studies and dual degrees in fashion and textiles, Shima brings a rare multidisciplinary perspective to solving complex challenges. Her expertise spans immersive and assistive technologies, VR, AR, robotics, and her portfolio includes impactful work for KUKA Robotics, the Augmented Reality Center, General Motors, and Ford. Passionate about inclusive design and emerging technologies, Shima is dedicated to creating intuitive solutions that empower all users.
+    `,
+    twitter: null,
+    linkedIn: 'https://www.linkedin.com/in/shima-solati/',
+    url: null,
+    organization: 'BraunAbility',
+    position: 'UX/UI Designer and Researcher',
+    session: {
+      title:
+        'Designing for the Mind: Bridging Human Experience and Emerging Technologies',
+      abstract: null,
+      description: `The boundary between the physical and digital worlds is fading, AI and immersive environments are transforming how people interact, learn, and connect. Yet, when these systems overlook human experience, even the most advanced technologies can feel distant or uncomfortable. Building on the principles of Experience Innovation, this session explores how UX design can bridge the gap between human behavior and emerging technologies. The focus is on creating experiences that prioritize comfort, emotional resonance, and intuitive interaction, ensuring that technology adapts to people, not the other way around. Through examples and design insights, we’ll look at how to use AI and human-centered design principles to make immersive systems more adaptive, personalized, and emotionally intelligent.`,
+      tags: ['Design', 'User Experience', 'User Interface'],
+
+      track: 'Tech+Design',
       time: '',
       room: '',
     },
