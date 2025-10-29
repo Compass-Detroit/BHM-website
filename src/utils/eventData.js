@@ -50,7 +50,10 @@ export const getEventMetadata = (year) => {
 
   const tracks = [
     ...new Set(
-      speakers.map((speaker) => speaker.session?.track).filter(Boolean)
+      speakers
+        .map((speaker) => speaker.session?.track)
+        .filter(Boolean)
+        .map((track) => (track === 'Miscellaneous' ? 'Misc' : track))
     ),
   ]
 
