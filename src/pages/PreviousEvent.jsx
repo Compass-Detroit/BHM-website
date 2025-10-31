@@ -1,47 +1,17 @@
-import { useState, useEffect } from 'react'
 import { useParams, Link } from 'react-router-dom'
 import SessionsSection from '@/layouts/SessionsSection'
 import SpeakersSection from '@/layouts/SpeakersSection'
 import SponsorsSection from '@/layouts/SponsorsSection'
 import TeamSection from '@/layouts/TeamSection'
-import { getEventData, getEventMetadata, getTeamData } from '@/utils/eventData'
+import { getEventData, getEventMetadata } from '@/utils/eventData'
 import PreviousEventsNavbar from '@/components/PreviousEventsNavbar'
-import Loading from '@/components/ui/Loading'
 import Footer from '@/layouts/Footer'
 
 const PreviousEvent = () => {
   const { year } = useParams()
   const yearNumber = parseInt(year, 10)
-
-  const [eventMetadata, setEventMetadata] = useState(null)
-  const [teamData, setTeamData] = useState([])
-  const [loading, setLoading] = useState(true)
-
   const eventData = getEventData(yearNumber)
-
-  useEffect(() => {
-    const loadData = async () => {
-      const [metadata, team] = await Promise.all([
-        getEventMetadata(yearNumber),
-        getTeamData(yearNumber),
-      ])
-      setEventMetadata(metadata)
-      setTeamData(team)
-      setLoading(false)
-    }
-
-    loadData()
-  }, [yearNumber])
-
-  if (loading) {
-    return (
-      <>
-        <PreviousEventsNavbar />
-        <Loading />
-        <Footer />
-      </>
-    )
-  }
+  const eventMetadata = getEventMetadata(yearNumber)
 
   if (!eventData || !eventMetadata.available) {
     return (
@@ -80,6 +50,7 @@ const PreviousEvent = () => {
 
   const speakersData = eventData.speakers
   const sponsorsData = eventData.sponsors || []
+  const teamData = eventData.team || []
 
   return (
     <>
