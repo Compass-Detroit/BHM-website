@@ -8,6 +8,7 @@ import { SpeakerContext } from './SpeakerContext'
 const SpeakerCard = ({
   avatar,
   bio,
+  github,
   id,
   isGDE,
   isWTM,
@@ -71,6 +72,7 @@ const SpeakerCard = ({
     <>
       <ProfileCard
         avatar={avatar}
+        github={github}
         isGDE={isGDE}
         isWTM={isWTM}
         linkedin={linkedin}
@@ -127,6 +129,7 @@ const SpeakerCard = ({
 SpeakerCard.propTypes = {
   avatar: PropTypes.string.isRequired,
   bio: PropTypes.string,
+  github: PropTypes.string,
   id: PropTypes.number.isRequired,
   isGDE: PropTypes.bool,
   isWTM: PropTypes.bool,

@@ -73,20 +73,21 @@ const SpeakersContent = ({ year, defaultExpanded }) => {
       {uniqueSpeakersSortedByFirstName.map((speaker, index) => (
         <SpeakerCard
           key={speaker.id || `speaker-${index}`}
-          id={speaker.id}
-          name={speaker.name}
-          twitter={speaker.twitter}
-          linkedin={speaker.linkedIn}
           avatar={speaker.avatar}
-          organization={speaker.organization}
-          position={speaker.position}
           bio={speaker.bio}
-          sessionTitle={speaker.session.title}
-          track={speaker.session.track}
+          github={speaker.github}
+          id={speaker.id}
           isGDE={speaker.isGDE}
           isWTM={speaker.isWTM}
-          url={speaker.url}
+          linkedin={speaker.linkedIn}
           mastodon={speaker.mastodon}
+          name={speaker.name}
+          organization={speaker.organization}
+          position={speaker.position}
+          sessionTitle={speaker.session.title}
+          track={speaker.session.track}
+          twitter={speaker.twitter}
+          url={speaker.url}
         />
       ))}
     </div>

@@ -842,6 +842,7 @@ export const SpeakersData = [
     twitter: null,
     linkedIn: 'https://www.linkedin.com/in/shugmishumunov/',
     url: null,
+    github: 'https://github.com/ShugKnight24',
     organization: 'Shumunov Solutions',
     position: 'Developer',
     session: {
