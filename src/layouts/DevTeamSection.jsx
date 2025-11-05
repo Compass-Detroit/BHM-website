@@ -1,8 +1,13 @@
+import { useMemo } from 'react'
 import DevLogo from '@/assets/images/icn-dev.png'
 import DevTeamCard from '@/components/dev/DevTeamCard'
 import { devTeamData } from '@/data/dev'
 
 const DevTeamSection = () => {
+  const sortedDevTeamData = useMemo(() => {
+    return [...devTeamData].sort((a, b) => a.name.localeCompare(b.name))
+  }, [])
+
   return (
     <section
       id="devteam"
@@ -22,7 +27,7 @@ const DevTeamSection = () => {
         />
       </div>
       <div className="mt-32 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5">
-        {devTeamData.map((dev) => (
+        {sortedDevTeamData.map((dev) => (
           <DevTeamCard
             key={`dev-${dev.id}`}
             id={dev.id}
