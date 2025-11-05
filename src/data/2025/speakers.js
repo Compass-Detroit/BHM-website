@@ -9,6 +9,7 @@ import BrianMcKeiver from '@/assets/images/speakers/Brian_McKeiver.png'
 import ChrisDemars from '@/assets/images/speakers/Chris_Demars.jpg'
 import CynthiaRespert from '@/assets/images/speakers/Cynthia_Respert.jpeg'
 import DavidGiard from '@/assets/images/speakers/David_Giard.jpeg'
+import DaveKoziol from '@/assets/images/speakers/Dave_Koziol.png'
 import HafeezJimoh from '@/assets/images/speakers/Hafeez_Jimoh.png'
 import HodaSolati from '@/assets/images/speakers/Hoda_Solati.jpg'
 import IdaByrdHill from '@/assets/images/speakers/Ida_Byrd-Hill.jpeg'
@@ -604,7 +605,7 @@ export const SpeakersData = [
         'Google Cloud',
         'Generative AI',
       ],
-      track: 'Level Up',
+      track: 'Build with AI',
       time: '',
       room: '',
     },
@@ -865,6 +866,30 @@ export const SpeakersData = [
         'innovation',
         'organizational-development',
       ],
+      track: 'Level Up',
+      time: '',
+      room: '',
+    },
+    isWTM: false,
+    isGDE: false,
+    mastodon: null,
+  },
+  {
+    id: 31,
+    name: 'Dave Koziol',
+    email: 'dave@davekoziol.com',
+    avatar: DaveKoziol,
+    bio: `GDG-A2 & Detroit Co-Organizer, and Director, Software Engineering IT Innovation & Back of House at Little Caesars. Prior to joining Little Caesars Dave spent over 25 years in the Software Consulting world. His teams have submitted over 250 apps to the app stores, but he now leads teams focused on web development, embedded development and software administration. He's been helping run community organizations and conferences for decades and has spoken in a number of different states and countries.`,
+    twitter: 'DaveKoziol',
+    linkedIn: 'https://www.linkedin.com/in/davekoziol/',
+    url: 'https://www.autoworkz.org/',
+    organization: 'Little Caesars',
+    position: 'Director, Software Engineering IT Innovation & Back of House',
+    session: {
+      title: 'Strategies & Tips for Growing Your Career',
+      abstract: `Dave has been a hiring manager in the tech industry for over 30 years and in this talk he will share his tips and strategies for growing your career not just with advise but with the stories that support the advice. This talk is intended for all audience levels interested in their career.`,
+      description: `Dave has been a hiring manager in the tech industry for over 30 years and in this talk he will share his tips and strategies for growing your career not just with advise but with the stories that support the advice. This talk is intended for all audience levels interested in their career.`,
+      tags: ['Career Growth', 'Networking', 'Community', 'Servant Leadership'],
       track: 'Level Up',
       time: '',
       room: '',
