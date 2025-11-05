@@ -887,8 +887,8 @@ export const SpeakersData = [
     position: 'Director, Software Engineering IT Innovation & Back of House',
     session: {
       title: 'Strategies & Tips for Growing Your Career',
-      abstract: `Dave has been a hiring manager in the tech industry for over 30 years and in this talk he will share his tips and strategies for growing your career not just with advise but with the stories that support the advice. This talk is intended for all audience levels interested in their career.`,
-      description: `Dave has been a hiring manager in the tech industry for over 30 years and in this talk he will share his tips and strategies for growing your career not just with advise but with the stories that support the advice. This talk is intended for all audience levels interested in their career.`,
+      abstract: `Dave has been a hiring manager in the tech industry for over 30 years and in this talk he will share his tips and strategies for growing your career not just with advice but with the stories that support the advice. This talk is intended for all audience levels interested in their career.`,
+      description: `Dave has been a hiring manager in the tech industry for over 30 years and in this talk he will share his tips and strategies for growing your career not just with advice but with the stories that support the advice. This talk is intended for all audience levels interested in their career.`,
       tags: ['Career Growth', 'Networking', 'Community', 'Servant Leadership'],
       track: 'Level Up',
       time: '',
