@@ -4,6 +4,7 @@ import PropTypes from 'prop-types'
 import SessionsLogo from '@/assets/images/icn-sessions.png'
 import NoSessionsAvailable from '@/components/sessions/NoSessionsAvailable'
 import SessionCard from '@/components/sessions/SessionCard'
+import HackathonSchedule from '@/components/sessions/HackathonSchedule'
 
 import { DIRECTION } from '@/constants/directions'
 import { IoChevronDown } from 'react-icons/io5'
@@ -217,7 +218,9 @@ const SessionsSection = ({
             isExpanded ? 'max-h-none opacity-100' : 'max-h-0 opacity-0'
           }`}
         >
-          {combinedSpeakerData && combinedSpeakerData.length ? (
+          {currentSession === 'Hackathon' ? (
+            <HackathonSchedule />
+          ) : combinedSpeakerData && combinedSpeakerData.length ? (
             <ul className="grid w-full grid-cols-1 gap-10 py-7">
               {hasSessionsForTrack ? (
                 currentTrackSessions
