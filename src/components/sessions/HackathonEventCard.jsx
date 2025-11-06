@@ -3,7 +3,7 @@ import PropTypes from 'prop-types'
 const HackathonEventCard = ({ title, description, alignRight = false }) => {
   return (
     <div
-      className={`group relative w-full cursor-pointer rounded-lg bg-white p-4 shadow-md transition-all duration-300 hover:shadow-xl md:w-5/12 ${
+      className={`group relative w-full rounded-lg bg-white p-4 shadow-md transition-all duration-300 hover:shadow-xl md:w-5/12 ${
         alignRight ? 'md:ml-auto md:pl-12' : 'md:mr-auto md:pr-12'
       }`}
     >

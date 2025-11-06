@@ -882,7 +882,7 @@ export const SpeakersData = [
     bio: `GDG-A2 & Detroit Co-Organizer, and Director, Software Engineering IT Innovation & Back of House at Little Caesars. Prior to joining Little Caesars Dave spent over 25 years in the Software Consulting world. His teams have submitted over 250 apps to the app stores, but he now leads teams focused on web development, embedded development and software administration. He's been helping run community organizations and conferences for decades and has spoken in a number of different states and countries.`,
     twitter: 'DaveKoziol',
     linkedIn: 'https://www.linkedin.com/in/davekoziol/',
-    url: 'https://www.autoworkz.org/',
+    url: null,
     organization: 'Little Caesars',
     position: 'Director, Software Engineering IT Innovation & Back of House',
     session: {

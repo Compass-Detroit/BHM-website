@@ -107,7 +107,8 @@ const SessionsSection = ({
       <a
         href="https://www.papercall.io/midevfest2025"
         target="_blank"
-        className="flex items-center rounded bg-sky-900 px-8 py-5 text-primary-50 shadow-xl transition delay-75 duration-100 ease-in-out hover:-translate-y-1 hover:scale-110 hover:cursor-pointer"
+        aria-label="Apply to speak at Michigan DevFest 2025 - opens in new tab"
+        className="flex items-center rounded bg-sky-900 px-8 py-5 text-primary-50 shadow-xl transition delay-75 duration-100 ease-in-out hover:-translate-y-1 hover:scale-110 hover:cursor-pointer focus:outline-none focus:ring-2 focus:ring-primary-500 focus:ring-offset-2"
         rel="noreferrer"
       >
         APPLY TO SPEAK

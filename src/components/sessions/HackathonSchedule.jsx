@@ -103,24 +103,24 @@ export const HackathonSchedule = () => {
 
                 {/* Events for this time */}
                 <div className="ml-24 space-y-4 md:ml-0">
-                  {timeSlot.events.length === 1 ? (
+                  {timeSlot?.events.length === 1 ? (
                     // Single event - alternate sides
                     <HackathonEventCard
-                      title={timeSlot.events[0].title}
-                      description={timeSlot.events[0].description}
+                      title={timeSlot?.events[0]?.title}
+                      description={timeSlot?.events[0]?.description}
                       alignRight={timeIndex % 2 !== 0}
                     />
                   ) : (
                     // Multiple events for a single time slot - show on both sides
                     <div className="flex flex-col gap-4 md:flex-row md:justify-between md:gap-8">
                       <HackathonEventCard
-                        title={timeSlot.events[0].title}
-                        description={timeSlot.events[0].description}
+                        title={timeSlot?.events[0]?.title}
+                        description={timeSlot?.events[0]?.description}
                         alignRight={false}
                       />
                       <HackathonEventCard
-                        title={timeSlot.events[1].title}
-                        description={timeSlot.events[1].description}
+                        title={timeSlot?.events[1]?.title}
+                        description={timeSlot?.events[1]?.description}
                         alignRight={true}
                       />
                     </div>
