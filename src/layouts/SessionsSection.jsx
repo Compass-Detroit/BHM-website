@@ -220,7 +220,7 @@ const SessionsSection = ({
         >
           {currentSession === 'Hackathon' ? (
             <HackathonSchedule />
-          ) : combinedSpeakerData && combinedSpeakerData.length ? (
+          ) : currentTrackSessions.length > 0 ? (
             <ul className="grid w-full grid-cols-1 gap-10 py-7">
               {hasSessionsForTrack ? (
                 currentTrackSessions

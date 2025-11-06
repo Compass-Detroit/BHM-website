@@ -25,7 +25,7 @@ export const HackathonSchedule = () => {
           <div className="space-y-8">
             {hackathonSchedule.map((item, index) => (
               <div
-                key={index}
+                key={item.title}
                 className="relative flex items-center md:justify-center"
               >
                 {/* Time badge */}
