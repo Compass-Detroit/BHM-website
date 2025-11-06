@@ -1,7 +1,6 @@
 import AdonaiVera from '@/assets/images/speakers/Adonai_Vera.png'
 import AlexPatterson from '@/assets/images/speakers/Alex_Patterson.png'
 import AnkitaGuha from '@/assets/images/speakers/Ankita_Guha.jpg'
-import AnnieHedgpeth from '@/assets/images/speakers/Annie_Hedgpeth.png'
 import BandhanKaur from '@/assets/images/speakers/Bandhan_Kaur.jpeg'
 import BernadetteAtanga from '@/assets/images/speakers/Bernadette_Atanga.jpeg'
 import BorisWilfriedNyasse from '@/assets/images/speakers/Boris_Wilfried_Nyasse.png'
@@ -748,32 +747,6 @@ export const SpeakersData = [
   },
   {
     id: 27,
-    name: 'Annie Hedgpeth',
-    email: 'annie@hedge-ops.com',
-    avatar: AnnieHedgpeth,
-    bio: `From film to engineering, Annie's career has seen many iterations. She is a keen observer of what works and what doesn't, striving always to make the right thing to do the easy thing to do. Annie and her husband, Michael, are raising their three teenagers in Boulder, CO. She's currently working on software that empowers folks with the people side of their jobs. Find out more at people-work.io.`,
-    twitter: 'anniehedgie',
-    linkedIn: null,
-    url: 'https://people-work.io/',
-    organization: 'People Work',
-    position: null,
-    session: {
-      title:
-        'Firewalls and Friendships: Building a Balanced Professional Network',
-      abstract:
-        'In this uncertain economy, our authentic human networks remain our most powerful asset. In networking, we engineer systems with purpose—the same approach works for professional connections.',
-      description: `Many technology professionals excel at designing technical systems but struggle with intentionally designing their professional networks. Some find networking overwhelming or inauthentic. Others maintain relationships only with their immediate circle. Some become "takers" rather than "givers," while others fear asking for anything. When AI can write your Terraform configs, what makes you invaluable is your ability to influence, collaborate, and navigate complex human systems.\n\nI'll demonstrate how to apply systems networking concepts to professional relationship-building through three key phases:\n\n**1. Define & Segment:**\n\n* System architecture goals => career objectives\n\n* Subnetting by function => relationship categories (Stakeholders, First Team, Direct Reports, Base)\n\n* Principle of least privilege => intentional relationship investment\n\n* Case studies of "The Builder," "The Anchor," "The Advocate," and other common patterns\n\n**2. Firewall & Automate:**\n\n* Setting inbound/outbound rules => establishing interaction patterns\n\n* Creating automated checks => systematic relationship maintenance\n\n* Building CI/CD pipelines => scheduling regular check-ins\n\n* Avoiding the boundary deficit (saying "no") and just-in-time networking traps\n\n* Communication fidelity: when Slack isn't enough\n\n**3. Monitor & Adjust:**\n\n* Tracking system health => relationship health metrics\n\n* Monitoring threats => identifying reciprocity imbalances\n\n* Analyzing performance patterns => energy and influence flows\n\n* Creating a simple non-weird system for relationship data collection\n\n* Internal vs. external network balance`,
-      tags: ['devops', 'platform engineering', 'culture'],
-      track: 'Tech+Design',
-      time: '',
-      room: '',
-    },
-    isWTM: false,
-    isGDE: false,
-    mastodon: null,
-  },
-  {
-    id: 28,
     name: 'Lorrena Black',
     email: 'lorrena@lorrenablack.com',
     avatar: LorrenaBlack,
@@ -809,7 +782,7 @@ export const SpeakersData = [
     mastodon: null,
   },
   {
-    id: 29,
+    id: 28,
     name: 'Shugmi Shumunov',
     email: null,
     avatar: ShugmiShumunov,
@@ -842,7 +815,7 @@ export const SpeakersData = [
     mastodon: null,
   },
   {
-    id: 30,
+    id: 29,
     name: 'Ida Byrd-Hill',
     email: 'ida@autoworkz.org',
     avatar: IdaByrdHill,
@@ -875,7 +848,7 @@ export const SpeakersData = [
     mastodon: null,
   },
   {
-    id: 31,
+    id: 30,
     name: 'Dave Koziol',
     email: 'dave@davekoziol.com',
     avatar: DaveKoziol,
