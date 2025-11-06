@@ -1,12 +1,11 @@
-import { useMemo } from 'react'
 import DevLogo from '@/assets/images/icn-dev.png'
 import DevTeamCard from '@/components/dev/DevTeamCard'
 import { devTeamData } from '@/data/dev'
 
 const DevTeamSection = () => {
-  const sortedDevTeamData = useMemo(() => {
-    return [...devTeamData].sort((a, b) => a.name.localeCompare(b.name))
-  }, [])
+  const sortedDevTeamData = [...devTeamData].sort((a, b) =>
+    a.name.localeCompare(b.name)
+  )
 
   return (
     <section

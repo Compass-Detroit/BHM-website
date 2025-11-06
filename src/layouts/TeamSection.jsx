@@ -1,4 +1,4 @@
-import { useState, useEffect, useRef, useMemo } from 'react'
+import { useState, useEffect, useRef } from 'react'
 import PropTypes from 'prop-types'
 import DevLogo from '@/assets/images/icn-dev.png'
 import LinkedInHandle from '@/components/ui/LinkedInHandle'
@@ -10,9 +10,9 @@ const TeamSection = ({ teamData, year }) => {
   const modalRef = useRef(null)
   const closeButtonRef = useRef(null)
 
-  const sortedTeamData = useMemo(() => {
-    return [...teamData].sort((a, b) => a.name.localeCompare(b.name))
-  }, [teamData])
+  const sortedTeamData = [...teamData].sort((a, b) =>
+    a.name.localeCompare(b.name)
+  )
 
   // Get ribbon color based on role
   const getRibbonColor = (role) => {
