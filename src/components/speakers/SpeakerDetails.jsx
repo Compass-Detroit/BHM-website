@@ -324,11 +324,20 @@ function SpeakerDetails({
         <div className="grid gap-8 lg:grid-cols-5">
           <div className="lg:col-span-3">
             {name && (
-              <h3 className="mb-4 text-2xl font-bold text-gray-900">
+              <h3
+                id={`speaker-modal-about-${id}`}
+                className="mb-4 text-2xl font-bold text-gray-900"
+              >
                 About {name.split(' ')[0]}
               </h3>
             )}
-            <div className="max-h-64 overflow-y-auto pr-4">
+            <div
+              className="max-h-64 overflow-y-auto rounded-xl pr-4 focus:outline-none focus-visible:ring-2 focus-visible:ring-primary-500 focus-visible:ring-offset-2"
+              tabIndex={0}
+              role="textbox"
+              aria-readonly="true"
+              aria-labelledby={`speaker-modal-about-${id}`}
+            >
               {bio && (
                 <p
                   id={`speaker-modal-bio-${id}`}
