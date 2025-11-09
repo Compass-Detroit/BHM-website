@@ -19,6 +19,7 @@ const TRACK_THEMES = {
     fallbackColor: '#0b132b',
     badgeBorder: 'rgba(147,197,253,0.55)',
     badgeText: '#ffffff',
+    focusColor: '#60a5fa',
   },
   'Build with AI': {
     gradient: 'linear-gradient(135deg, #7c3aed 0%, #5b21b6 52%, #1e1b4b 100%)',
@@ -27,6 +28,7 @@ const TRACK_THEMES = {
     fallbackColor: '#1e1b4b',
     badgeBorder: 'rgba(216,180,254,0.6)',
     badgeText: '#ffffff',
+    focusColor: '#c084fc',
   },
   Innovation: {
     gradient:
@@ -36,6 +38,7 @@ const TRACK_THEMES = {
     fallbackColor: '#422006',
     badgeBorder: 'rgba(253,230,138,0.6)',
     badgeText: '#ffffff',
+    focusColor: '#fcd34d',
   },
   'Tech+Design': {
     gradient:
@@ -45,6 +48,7 @@ const TRACK_THEMES = {
     fallbackColor: '#3b0764',
     badgeBorder: 'rgba(251,113,133,0.55)',
     badgeText: '#ffffff',
+    focusColor: '#f472b6',
   },
   Workshops: {
     gradient:
@@ -54,6 +58,7 @@ const TRACK_THEMES = {
     fallbackColor: '#431407',
     badgeBorder: 'rgba(254,215,170,0.58)',
     badgeText: '#ffffff',
+    focusColor: '#fb923c',
   },
   'Level Up': {
     gradient:
@@ -63,6 +68,7 @@ const TRACK_THEMES = {
     fallbackColor: '#022c22',
     badgeBorder: 'rgba(187,247,208,0.5)',
     badgeText: '#ffffff',
+    focusColor: '#34d399',
   },
   Startups: {
     gradient:
@@ -72,6 +78,7 @@ const TRACK_THEMES = {
     fallbackColor: '#082f49',
     badgeBorder: 'rgba(191,219,254,0.55)',
     badgeText: '#ffffff',
+    focusColor: '#38bdf8',
   },
 }
 
@@ -135,6 +142,13 @@ function SpeakerDetails({
     () => ({
       borderColor: trackTheme.badgeBorder,
       color: trackTheme.badgeText,
+    }),
+    [trackTheme]
+  )
+
+  const bioFocusStyle = useMemo(
+    () => ({
+      outlineColor: trackTheme.focusColor,
     }),
     [trackTheme]
   )
@@ -332,11 +346,12 @@ function SpeakerDetails({
               </h3>
             )}
             <div
-              className="max-h-64 overflow-y-auto rounded-xl pr-4 focus:outline-none focus-visible:ring-2 focus-visible:ring-primary-500 focus-visible:ring-offset-2"
+              className="max-h-64 overflow-y-auto rounded-xl pr-4 focus:outline-none focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2"
               tabIndex={0}
               role="textbox"
               aria-readonly="true"
               aria-labelledby={`speaker-modal-about-${id}`}
+              style={bioFocusStyle}
             >
               {bio && (
                 <p
