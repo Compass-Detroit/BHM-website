@@ -445,7 +445,7 @@ function SpeakerDetails({
                   <div className="flex flex-wrap gap-2">
                     {tags.map((tag, index) => (
                       <span
-                        key={index}
+                        key={`${tag}-${index}`}
                         className="rounded-full px-3 py-1 text-xs font-bold text-white shadow-sm"
                         style={{
                           backgroundColor: `${trackTheme.focusColor}`,
