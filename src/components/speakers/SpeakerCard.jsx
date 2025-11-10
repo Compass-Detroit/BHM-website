@@ -19,6 +19,7 @@ const SpeakerCard = ({
   position,
   sessionDescription,
   sessionTitle,
+  tags,
   track,
   twitter,
   url,
@@ -133,6 +134,7 @@ const SpeakerCard = ({
                 position={position}
                 sessionDescription={sessionDescription}
                 sessionTitle={sessionTitle}
+                tags={tags}
                 track={track}
                 twitter={twitter}
                 url={url}
@@ -159,6 +161,7 @@ SpeakerCard.propTypes = {
   position: PropTypes.string,
   sessionDescription: PropTypes.string,
   sessionTitle: PropTypes.string.isRequired,
+  tags: PropTypes.arrayOf(PropTypes.string),
   track: PropTypes.string,
   twitter: PropTypes.string,
   url: PropTypes.oneOfType([

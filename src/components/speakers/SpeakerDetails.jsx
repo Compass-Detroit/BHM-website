@@ -103,6 +103,7 @@ function SpeakerDetails({
   position,
   sessionTitle,
   sessionDescription,
+  tags,
   track,
   twitter,
   url,
@@ -418,14 +419,31 @@ function SpeakerDetails({
                   )}
                 </div>
               </button>
-              {sessionExpanded && sessionDescription && (
+              {sessionDescription && (
                 <div
-                  id={`session-description-${id}`}
-                  className="mt-3 max-h-48 overflow-y-auto rounded-xl bg-white p-4 shadow-sm"
+                  className={`overflow-hidden transition-all duration-300 ease-in-out ${
+                    sessionExpanded
+                      ? 'mt-3 max-h-48 opacity-100'
+                      : 'max-h-0 opacity-0'
+                  }`}
                 >
-                  <p className="whitespace-pre-wrap text-left text-sm leading-relaxed text-gray-700">
-                    {sessionDescription}
-                  </p>
+                  <div className="max-h-48 overflow-y-auto rounded-xl bg-white p-4 shadow-sm">
+                    <p className="whitespace-pre-wrap text-left text-sm leading-relaxed text-gray-700">
+                      {sessionDescription}
+                    </p>
+                  </div>
+                </div>
+              )}
+              {tags && tags.length > 0 && (
+                <div className="mt-4 flex flex-wrap justify-center gap-1">
+                  {tags.map((tag, index) => (
+                    <span
+                      key={index}
+                      className="rounded-full bg-blue-600 px-3 py-1 text-xs font-bold text-white"
+                    >
+                      {tag}
+                    </span>
+                  ))}
                 </div>
               )}
             </div>
@@ -496,6 +514,7 @@ SpeakerDetails.propTypes = {
   sessionTitle: PropTypes.string.isRequired,
   sessionDescription: PropTypes.string,
   track: PropTypes.string,
+  tags: PropTypes.arrayOf(PropTypes.string),
   twitter: PropTypes.string,
   url: PropTypes.oneOfType([
     PropTypes.string,

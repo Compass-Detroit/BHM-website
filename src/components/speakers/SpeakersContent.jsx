@@ -87,6 +87,7 @@ const SpeakersContent = ({ year, defaultExpanded }) => {
           position={speaker.position}
           sessionDescription={speaker.session.description}
           sessionTitle={speaker.session.title}
+          tags={speaker.session.tags}
           track={speaker.session.track}
           twitter={speaker.twitter}
           url={speaker.url}
