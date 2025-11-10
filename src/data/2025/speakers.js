@@ -10,6 +10,7 @@ import ChrisDemars from '@/assets/images/speakers/Chris_Demars.jpg'
 import CynthiaRespert from '@/assets/images/speakers/Cynthia_Respert.jpeg'
 import DaveKoziol from '@/assets/images/speakers/Dave.webp'
 import DavidGiard from '@/assets/images/speakers/David_Giard.jpeg'
+import DeloraGreen from '@/assets/images/speakers/Delora_Green.webp'
 import ErikBlancas from '@/assets/images/speakers/ErikBlancas.webp'
 import HafeezJimoh from '@/assets/images/speakers/Hafeez_Jimoh.png'
 import HodaSolati from '@/assets/images/speakers/Hoda_Solati.jpg'
@@ -18,6 +19,7 @@ import JC_Escalante from '@/assets/images/speakers/JC_Escalante.jpeg'
 import JayWhitsitt from '@/assets/images/speakers/Jay_Whitsitt.jpeg'
 import JeseekiaVaughn from '@/assets/images/speakers/Jeseekia_Vaughn.jpeg'
 import JoelVasallo from '@/assets/images/speakers/Joel_Vasallo.jpg'
+import KamilleTynes from '@/assets/images/speakers/Kamille_Tynes.jpeg'
 import KavithaBangalore from '@/assets/images/speakers/Kavitha_Bangalore.webp'
 import LorrenaBlack from '@/assets/images/speakers/Lorrena_Black.jpeg'
 import MadonaSWambua from '@/assets/images/speakers/Madona_S_Wambua.jpeg'
@@ -32,7 +34,9 @@ import ShugmiShumunov from '@/data/2025/assets/images/dev/shugmi_shumunov.webp'
 import StephanieFrantz from '@/assets/images/speakers/Stephanie_Frantz.jpeg'
 import StephenWylie from '@/assets/images/speakers/Stephen_Wylie.jpeg'
 import TriviaBarnes from '@/assets/images/speakers/TriviaBarnes.webp'
+import UmeloOnyejiaka from '@/assets/images/speakers/Umelo_Onyejiaka.webp'
 import WEDaCruz from '@/assets/images/speakers/WE_Da_Cruz.jpeg'
+import WilliamBowen from '@/assets/images/speakers/William_Bowen.webp'
 import WScottRichardson from '@/assets/images/speakers/W_Scott_Richardson.jpeg'
 
 export const SpeakersData = [
@@ -1049,6 +1053,138 @@ export const SpeakersData = [
 \nRepresentation & Visibility: Why it matters to see yourself in the industry—and how we widen that path
 \nCommunity & Support Networks: The impact of SHPE, NSBE, ERGs, mentorship, and family on personal and professional growth
 \nShaping the Future of STEM: Preparing the next generation and driving meaningful change in organizations and communities`,
+      tags: [],
+      track: 'Level Up',
+      time: '',
+      room: '',
+    },
+    isWTM: false,
+    isGDE: false,
+    mastodon: null,
+  },
+  {
+    id: 38,
+    name: 'William Bowen',
+    email: 'wbowen05@gmail.com',
+    avatar: WilliamBowen,
+    bio: `I am an IT specialist and fitness instructor with a passion for both technology and health. In my IT role, I manage service orders, telecommunication contracts, and iOS device support while auditing software for compliance. I have also taught multiple classes in computer programming and information assurance. My expertise extends to mentoring through the National Society of Black Engineers (NSBE) and the Cyber Patriot program, where I deliver talks and tutorials on technology and computers. As a fitness enthusiast, I have led boot camp classes that blend strength and cardio training, competed in powerlifting meets with UPA and USAPL, and participated in NPC physique competitions.`,
+    twitter: '',
+    linkedIn: 'https://www.linkedin.com/in/william-bowen-a7216610/',
+    url: '',
+    organization: '',
+    position: 'IT Specialist & Fitness Instructor',
+    session: {
+      title: 'Fitness Yoga',
+      abstract: `Ignite your body and mind with our Fitness Yoga class — a dynamic blend of yoga, strength training, and cardio designed to build power, flexibility, and endurance. Move with intention, break a sweat, and leave feeling strong, centered, and fully recharged.`,
+      description: `This fitness yoga class blends traditional yoga poses with strength training and cardiovascular movements for a balanced, full-body workout. Participants will improve flexibility, build lean muscle, and boost endurance through flowing sequences, bodyweight exercises, and dynamic movement. The class is designed to enhance both physical strength and mindfulness, leaving you energized, focused, and refreshed.`,
+      tags: [
+        'Fitness',
+        'Yoga',
+        'Strength',
+        'Cardio',
+        'Mindfulness',
+        'Wellness',
+        'Health',
+      ],
+      track: 'Hackathon',
+      time: '',
+      room: '',
+    },
+    isWTM: false,
+    isGDE: false,
+    mastodon: null,
+  },
+  {
+    id: 39,
+    name: 'Umelo Onyejiaka ',
+    email: 'kingmellow08@gmail.com',
+    avatar: UmeloOnyejiaka,
+    bio: `Umelo Onyejiaka is a Cloud Solutions Engineer at Continental AG and the founder of DevOps Detroit, a nonprofit dedicated to empowering Detroit’s tech community through education, mentorship, and collaboration. His journey into tech began in an unexpected place, accounting. After earning his degree and working in finance, Umelo discovered his passion for cloud computing and made a bold pivot into technology, teaching himself automation, DevOps, and cloud architecture from the ground up.\n\nWith five years of experience in cloud engineering, he now designs and manages scalable systems using AWS, Kubernetes, Terraform, and Ansible, helping enterprises automate and innovate with confidence. He also holds multiple certifications including AWS Solutions Architect – Professional, AWS DevOps Engineer – Professional, Certified Kubernetes Administrator (CKA), and Terraform Associate.\n\nThrough DevOps Detroit, Umelo is helping others break into tech, balance growth with purpose, and turn community impact into a collective advantage for Detroit’s tech ecosystem.`,
+    twitter: '',
+    linkedIn: 'https://www.linkedin.com/in/umelo-onyejiaka-84213524b/',
+    url: 'https://www.devopsdetroit.io/',
+    organization: 'DevOps Detroit',
+    position: 'Cloud Solutions Engineer',
+    session: {
+      title: 'From Meetups to Mastery: Balancing Growth and Community',
+      abstract: `Balancing a tech career, constant upskilling, and community leadership isn’t easy. This talk shares lessons from building DevOps Detroit—how learning, leading, and giving back can coexist without burnout while creating real impact in your local tech ecosystem.`,
+      description: `Balancing a demanding tech career, continuous upskilling, and community leadership is one of the hardest challenges in today’s fast-moving industry. In this talk, I’ll share the lessons learned from building DevOps Detroit, a growing nonprofit that bridges tech education, mentorship, and collaboration in the Detroit tech scene, while still leveling up as a cloud engineer.\n\nAttendees will gain practical strategies for learning efficiently, staying consistent without burning out, and using personal growth as fuel for community impact. This session explores how building community can actually accelerate your own mastery, not compete with it.\n\nWhether you’re an engineer trying to grow your skills, an organizer looking to create meaningful meetups, or a leader building culture in your company, you’ll leave with actionable insights, fresh motivation, and a renewed sense of purpose.\n\nThis is more than a talk about balance, it’s a movement about building together, growing smarter, and creating impact that lasts.`,
+      tags: [
+        'DevOps',
+        'Cloud',
+        'AWS',
+        'Kubernetes',
+        'Terraform',
+        'Career Growth',
+        'Community Building',
+        'Upskilling',
+        'Tech Leadership',
+        'Burnout Prevention',
+        'Mentorship',
+        'Detroit Tech',
+        'Cloud Engineering',
+        'Personal Development',
+        'Work-Life Balance',
+      ],
+      track: 'Level Up',
+      time: '',
+      room: '',
+    },
+    isWTM: false,
+    isGDE: false,
+    mastodon: null,
+  },
+  {
+    id: 40,
+    name: 'Kamille Tynes',
+    email: 'kamille@konnectedwithcare.us',
+    avatar: KamilleTynes,
+    bio: `Kamille Tynes is the Founder & CEO of Konnected with Care, a social impact tech company bridging gaps between human services and the communities they serve. A Techstars alum, Fulbright Scholar, and STEEP NSF Award recipient, Kamille’s work blends technology, empathy, and design to make care systems more accessible and equitable.
+Drawing from her lived experience as a former foster youth and her professional background in social work, law, and innovation, Kamille leads conversations at the intersection of AI, inclusion, and social entrepreneurship. Her mission: to build tech that helps people believe in their limitless possibilities again.\n\nWhen she’s not scaling solutions or mentoring founders, Kamille advocates for inclusive innovation and teaches others how to turn purpose into power.`,
+    twitter: '',
+    linkedIn: 'https://www.linkedin.com/in/kamille-tynes/',
+    url: '',
+    organization: 'Konnected with Care (Konnected)',
+    position: 'Founder & CEO',
+    session: {
+      title:
+        'Solving a Problem to Create Innovative Change: Turning Pain into Purpose, Profit, Impact, and Power',
+      abstract: `Your pain can be your power. Learn how to transform personal and systemic challenges into innovation, purpose, and profit to create change that lasts.`,
+      description: `Innovation often begins with pain. The frustration, barriers, and inequities we experience can fuel world-changing ideas.\n\n* In this powerful and motivational session, Kamille Tynes, Founder & CEO of Konnected with Care, shares how she turned her lived experience as a former foster youth and social worker into a scalable tech solution addressing equity in care systems.\n* Through storytelling and strategy, Kamille helps attendees:\n* Identify the problems they’re uniquely positioned to solve\n* Use pain points as innovation fuel\n* Build tech solutions rooted in empathy and real-world impact\n* Align purpose, profit, and progress for long-term growth\n* This session blends inspiration with actionable frameworks for anyone who’s ever asked: “How can I make a difference and make a living doing it?”`,
+      tags: [
+        'Innovation',
+        'Leadership',
+        'Purpose',
+        'Entrepreneurship',
+        'Social Impact',
+        'Motivation',
+      ],
+      track: 'Level Up',
+      time: '',
+      room: '',
+    },
+    isWTM: false,
+    isGDE: false,
+    mastodon: null,
+  },
+  {
+    id: 41,
+    name: 'Delora Green',
+    email: 'deloragreenconfidencecoach@gmail.com',
+    avatar: DeloraGreen,
+    bio: `Delora Green is a natural-born creative and lifelong learner who has spent the last eight years building businesses, designing fashion, and creating content that empowers women to show up with confidence. Known as the CEO of Confidence, she helps professionals move from survival mode to center stage teaching them how to own their skills, command presence, and lead beyond the job description.\n\nBut Delora isn’t all work she’s also a Law & Order: SVU binge-watcher, a confessed peanut butter addict (rehab pending), and a believer in living life out loud. Whether she’s sketching denim designs, editing videos, or coaching leaders, her mission is the same: to help people step fully into the lives they were designed to lead.`,
+    twitter: '',
+    linkedIn: 'https://www.linkedin.com/in/delora-green-53b356231/',
+    url: 'https://boldjourney.com/meet-delora-green-3',
+    organization: 'The Caged Juelz Collection & Juelz Denim Collections',
+    position: 'The CEO of Confidence',
+    session: {
+      title: 'The Confidence Multiplier: How to Lead Beyond Skills',
+      abstract: `Your skills got you in the room confidence keeps you there. Learn how to own your expertise, show up with commanding presence, and break survival-mode patterns holding back your growth. A mind-shift session for pros ready to lead, not just work.`,
+      description: `Your résumé lists your skills. Your confidence decides how far those skills take you.\n\nThis high-energy session introduces The Confidence Multiplier Framework, a game-changing approach to professional growth. Delora Green—The CEO of Confidence—shows attendees how to flip the switch from invisible to undeniable by combining inner belief with outer presence.\n\nHere’s what’s inside:
+ \n• Turn Skills into Currency – Stop questioning your value and start cashing in on your expertise.
+ \n• Master the Silent Résumé – Posture, voice, and style that tell your story before you speak a word.
+ \n• Break Free from Survival Mode – Ditch the overworking, shrinking, and people-pleasing patterns that stall careers.\n\nThis isn’t a pep talk. It’s a career intervention. Attendees will walk away with a playbook to show up, stand out, and scale up. It’s time to lead beyond skills and step into the influence your career deserves.`,
       tags: [],
       track: 'Level Up',
       time: '',
