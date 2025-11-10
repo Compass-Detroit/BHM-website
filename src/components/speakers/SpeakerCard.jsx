@@ -123,12 +123,15 @@ const SpeakerCard = ({
                 avatar={avatar}
                 bio={bio}
                 id={id}
+                isGDE={isGDE}
+                isWTM={isWTM}
                 mastodon={mastodon}
                 name={name}
                 organization={organization}
                 onClose={closeModal}
                 position={position}
                 sessionTitle={sessionTitle}
+                track={track}
                 twitter={twitter}
                 url={url}
               />
