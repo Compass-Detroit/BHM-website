@@ -37,7 +37,7 @@ import StephenWylie from '@/assets/images/speakers/Stephen_Wylie.jpeg'
 import TriviaBarnes from '@/assets/images/speakers/TriviaBarnes.webp'
 import UmeloOnyejiaka from '@/assets/images/speakers/Umelo_Onyejiaka.webp'
 import WEDaCruz from '@/assets/images/speakers/WE_Da_Cruz.jpeg'
-import WilliamBowen from '@/assets/images/speakers/William_Bowen2.webp'
+import WilliamBowen from '@/assets/images/speakers/William_Bowen.webp'
 import WScottRichardson from '@/assets/images/speakers/W_Scott_Richardson.jpeg'
 
 export const SpeakersData = [
@@ -1151,7 +1151,7 @@ Drawing from her lived experience as a former foster youth and her professional 
       title:
         'Solving a Problem to Create Innovative Change: Turning Pain into Purpose, Profit, Impact, and Power',
       abstract: `Your pain can be your power. Learn how to transform personal and systemic challenges into innovation, purpose, and profit to create change that lasts.`,
-      description: `Innovation often begins with pain. The frustration, barriers, and inequities we experience can fuel world-changing ideas.\n\n* In this powerful and motivational session, Kamille Tynes, Founder & CEO of Konnected with Care, shares how she turned her lived experience as a former foster youth and social worker into a scalable tech solution addressing equity in care systems.\n* Through storytelling and strategy, Kamille helps attendees:\n* Identify the problems they’re uniquely positioned to solve\n* Use pain points as innovation fuel\n* Build tech solutions rooted in empathy and real-world impact\n* Align purpose, profit, and progress for long-term growth\n* This session blends inspiration with actionable frameworks for anyone who’s ever asked: “How can I make a difference and make a living doing it?”`,
+      description: `Innovation often begins with pain. The frustration, barriers, and inequities we experience can fuel world-changing ideas.\n\nIn this powerful and motivational session, Kamille Tynes, Founder & CEO of Konnected with Care, shares how she turned her lived experience as a former foster youth and social worker into a scalable tech solution addressing equity in care systems.\n\nThrough storytelling and strategy, Kamille helps attendees:\n\n- Identify the problems they’re uniquely positioned to solve\n\n- Use pain points as innovation fuel\n\n- Build tech solutions rooted in empathy and real-world impact\n\n- Align purpose, profit, and progress for long-term growth\n\nThis session blends inspiration with actionable frameworks for anyone who’s ever asked: “How can I make a difference and make a living doing it?”`,
       tags: [
         'Innovation',
         'Leadership',
@@ -1183,14 +1183,7 @@ Drawing from her lived experience as a former foster youth and her professional 
       title: 'The Confidence Multiplier: How to Lead Beyond Skills',
       abstract: `Your skills got you in the room confidence keeps you there. Learn how to own your expertise, show up with commanding presence, and break survival-mode patterns holding back your growth. A mind-shift session for pros ready to lead, not just work.`,
       description: `Your résumé lists your skills. Your confidence decides how far those skills take you.
-This high-energy session introduces The Confidence Multiplier Framework, a game-changing approach to professional growth. Delora Green—The CEO of Confidence—shows attendees how to flip the switch from invisible to undeniable by combining inner belief with outer presence.
-
-Here’s what’s inside:
-- Turn Skills into Currency – Stop questioning your value and start cashing in on your expertise.
-- Master the Silent Résumé – Posture, voice, and style that tell your story before you speak a word.
-- Break Free from Survival Mode – Ditch the overworking, shrinking, and people-pleasing patterns that stall careers.
-
-This isn’t a pep talk. It’s a career intervention. Attendees will walk away with a playbook to show up, stand out, and scale up. It’s time to lead beyond skills and step into the influence your career deserves.`,
+This high-energy session introduces The Confidence Multiplier Framework, a game-changing approach to professional growth. Delora Green—The CEO of Confidence—shows attendees how to flip the switch from invisible to undeniable by combining inner belief with outer presence.\n\nHere’s what’s inside:\n\n- Turn Skills into Currency – Stop questioning your value and start cashing in on your expertise.\n\n- Master the Silent Résumé – Posture, voice, and style that tell your story before you speak a word.\n\n- Break Free from Survival Mode\n\n– Ditch the overworking, shrinking, and people-pleasing patterns that stall careers.\n\nThis isn’t a pep talk. It’s a career intervention. Attendees will walk away with a playbook to show up, stand out, and scale up. It’s time to lead beyond skills and step into the influence your career deserves.`,
       tags: [],
       track: 'Level Up',
       time: '',
