@@ -28,7 +28,7 @@ function Home() {
           'Tech+Design',
           'Innovation',
           'Level Up',
-          'Startup',
+          'Leadership',
           'Workshops',
         ]}
         defaultExpanded
