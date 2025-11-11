@@ -1,4 +1,5 @@
 import AdonaiVera from '@/assets/images/speakers/Adonai_Vera.png'
+import AlexisSeiler from '@/assets/images/speakers/Alexis_Seiler.webp'
 import AlexPatterson from '@/assets/images/speakers/Alex_Patterson.png'
 import AngelPorras from '@/assets/images/speakers/AngelPorras.webp'
 import AnkitaGuha from '@/assets/images/speakers/Ankita_Guha.jpg'
@@ -22,7 +23,7 @@ import JoelVasallo from '@/assets/images/speakers/Joel_Vasallo.jpg'
 import KamilleTynes from '@/assets/images/speakers/Kamille_Tynes.webp'
 import KavithaBangalore from '@/assets/images/speakers/Kavitha_Bangalore.webp'
 import LorrenaBlack from '@/assets/images/speakers/Lorrena_Black.jpeg'
-import MadonaSWambua from '@/assets/images/speakers/Madona_S_Wambua.jpeg'
+import MadonaSWambua from '@/assets/images/speakers/Madona_S_Wambua.webp'
 import MaridyMazaira from '@/assets/images/speakers/MaridyMazaira.webp'
 import MartezColeman from '@/assets/images/speakers/MartezColeman.webp'
 import MichaelBower from '@/assets/images/speakers/Michael_Bower.jpg'
@@ -36,7 +37,7 @@ import StephenWylie from '@/assets/images/speakers/Stephen_Wylie.jpeg'
 import TriviaBarnes from '@/assets/images/speakers/TriviaBarnes.webp'
 import UmeloOnyejiaka from '@/assets/images/speakers/Umelo_Onyejiaka.webp'
 import WEDaCruz from '@/assets/images/speakers/WE_Da_Cruz.jpeg'
-import WilliamBowen from '@/assets/images/speakers/William_Bowen.webp'
+import WilliamBowen from '@/assets/images/speakers/William_Bowen2.webp'
 import WScottRichardson from '@/assets/images/speakers/W_Scott_Richardson.jpeg'
 
 export const SpeakersData = [
@@ -68,7 +69,7 @@ export const SpeakersData = [
         'communication',
         'leadership',
       ],
-      track: 'Build with AI',
+      track: 'Leadership',
       time: '',
       room: '',
     },
@@ -257,7 +258,7 @@ export const SpeakersData = [
       description:
         'This panel offers an opportunity for everyone in tech to learn from the experiences of leaders, engineers, entrepreneurs who are driving change in the industry. We’ll discuss strategies for overcoming obstacles, fostering diversity, and creating inclusive environments where all voices are heard. Whether you’re an ally, a mentor, or someone navigating your own career path, you’ll gain valuable insights on how to build a more equitable and innovative tech community.',
       tags: [],
-      track: 'Level Up',
+      track: 'Leadership',
       time: '',
       room: '',
     },
@@ -308,7 +309,7 @@ export const SpeakersData = [
       description:
         'This panel offers an opportunity for everyone in tech to learn from the experiences of leaders, engineers, entrepreneurs who are driving change in the industry. We’ll discuss strategies for overcoming obstacles, fostering diversity, and creating inclusive environments where all voices are heard. Whether you’re an ally, a mentor, or someone navigating your own career path, you’ll gain valuable insights on how to build a more equitable and innovative tech community.',
       tags: [],
-      track: 'Level Up',
+      track: 'Leadership',
       time: '',
       room: '',
     },
@@ -336,7 +337,7 @@ export const SpeakersData = [
       description:
         'This panel offers an opportunity for everyone in tech to learn from the experiences of leaders, engineers, entrepreneurs who are driving change in the industry. We’ll discuss strategies for overcoming obstacles, fostering diversity, and creating inclusive environments where all voices are heard. Whether you’re an ally, a mentor, or someone navigating your own career path, you’ll gain valuable insights on how to build a more equitable and innovative tech community.',
       tags: [],
-      track: 'Level Up',
+      track: 'Leadership',
       time: '',
       room: '',
     },
@@ -362,7 +363,7 @@ export const SpeakersData = [
       description:
         'This panel offers an opportunity for everyone in tech to learn from the experiences of leaders, engineers, entrepreneurs who are driving change in the industry. We’ll discuss strategies for overcoming obstacles, fostering diversity, and creating inclusive environments where all voices are heard. Whether you’re an ally, a mentor, or someone navigating your own career path, you’ll gain valuable insights on how to build a more equitable and innovative tech community.',
       tags: [],
-      track: 'Level Up',
+      track: 'Leadership',
       time: '',
       room: '',
     },
@@ -747,7 +748,7 @@ export const SpeakersData = [
         'psychological-safety',
         'empathy',
       ],
-      track: 'Level Up',
+      track: 'Leadership',
       time: '',
       room: '',
     },
@@ -849,7 +850,7 @@ export const SpeakersData = [
         'innovation',
         'organizational-development',
       ],
-      track: 'Level Up',
+      track: 'Leadership',
       time: '',
       room: '',
     },
@@ -1086,7 +1087,7 @@ export const SpeakersData = [
         'Wellness',
         'Health',
       ],
-      track: 'Hackathon',
+      track: '',
       time: '',
       room: '',
     },
@@ -1159,7 +1160,7 @@ Drawing from her lived experience as a former foster youth and her professional 
         'Social Impact',
         'Motivation',
       ],
-      track: 'Level Up',
+      track: 'Leadership',
       time: '',
       room: '',
     },
@@ -1191,6 +1192,30 @@ Drawing from her lived experience as a former foster youth and her professional 
       room: '',
     },
     isWTM: false,
+    isGDE: false,
+    mastodon: null,
+  },
+  {
+    id: 42,
+    name: 'Alexis Seiler',
+    email: '',
+    avatar: AlexisSeiler,
+    bio: `As a Cyber Security Business Professional, I spend a majority of my time working with ISO 27001 and NIST 800-53. I have two degrees, one in Cyber Security and one for Networking Specialist. My current goal is to become ISO 27001 Lead Auditor Certified and assist clients with continuously improving their ISMS. I enjoy meeting new people and building new relationships. I hope that one day I will be able to implement ISO across the globe.`,
+    twitter: '',
+    linkedIn: 'https://www.linkedin.com/in/alexisseiler/',
+    url: 'https://www.stratascale.com/',
+    organization: 'Stratascale',
+    position: 'Senior Integrated Risk Management and Compliance Analyst',
+    session: {
+      title: 'Women Shaping the Future Panel',
+      abstract: `Join us as we spotlight the powerful role of women in technology. This panel will feature inspiring stories of overcoming challenges, driving innovation, and shaping a more inclusive tech landscape. Gain insights, build connections, and leave empowered to push boundaries in your career!`,
+      description: `This panel offers an opportunity for everyone in tech to learn from the experiences of leaders, engineers, entrepreneurs who are driving change in the industry. We’ll discuss strategies for overcoming obstacles, fostering diversity, and creating inclusive environments where all voices are heard. Whether you’re an ally, a mentor, or someone navigating your own career path, you’ll gain valuable insights on how to build a more equitable and innovative tech community.`,
+      tags: [],
+      track: 'Leadership',
+      time: '',
+      room: '',
+    },
+    isWTM: true,
     isGDE: false,
     mastodon: null,
   },

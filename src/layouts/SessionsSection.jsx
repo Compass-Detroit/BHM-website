@@ -37,7 +37,7 @@ const trackDescriptions = {
     'Discover groundbreaking ideas and emerging technologies that are shaping the future. Join us for sessions that challenge conventional thinking and inspire creativity.',
   'Level Up':
     'Advance your career and personal growth. From mentorship to leadership, explore sessions that help you level up professionally and personally in tech.',
-  Startup:
+  Leadership:
     'Discover insights from founders and entrepreneurs building the next generation of tech companies. Learn about startup strategies, funding, product-market fit, and scaling from idea to execution.',
   'Tech+Design':
     'Where technology meets user experience. Dive into sessions covering frontend development, design systems, accessibility, and creating delightful user interfaces.',
@@ -179,7 +179,7 @@ const SessionsSection = ({
                 key={tab}
                 className={`relative whitespace-normal rounded-md px-0.5 py-2 text-sm font-black uppercase !leading-5 transition-colors duration-300 focus:outline-none md:w-20 lg:w-36 lg:text-lg ${
                   tab === 'Innovation' ? 'mx-1 py-5 md:w-24 lg:w-40' : ''
-                } ${tab === 'Startup' ? 'py-5' : ''} ${
+                } ${tab === 'Leadership' ? 'py-5' : ''} ${
                   activeTab === index
                     ? 'bg-primary-400 text-black'
                     : 'bg-gray-900 text-white hover:bg-gray-800'
@@ -208,6 +208,12 @@ const SessionsSection = ({
                     Level
                     <br />
                     Up
+                  </>
+                ) : tab === 'Leadership' ? (
+                  <>
+                    Leader
+                    <br />
+                    ship
                   </>
                 ) : tab === 'Build with AI' ? (
                   <>
