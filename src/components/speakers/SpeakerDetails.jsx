@@ -372,9 +372,11 @@ function SpeakerDetails({
                   {tags.map((tag, index) => (
                     <span
                       key={`${tag}-${index}`}
-                      className="rounded-full px-3 py-1.5 text-xs font-medium text-white shadow-sm"
+                      className="rounded-full border-2 px-3 py-1.5 text-xs font-semibold shadow-sm"
                       style={{
-                        backgroundColor: trackTheme.focusColor,
+                        backgroundColor: `${trackTheme.focusColor}15`,
+                        borderColor: trackTheme.focusColor,
+                        color: trackTheme.focusColor,
                       }}
                     >
                       {tag}
