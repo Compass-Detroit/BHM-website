@@ -1,5 +1,5 @@
 import PropTypes from 'prop-types'
-import { useCallback, useContext, useEffect, useMemo, useRef } from 'react'
+import { useCallback, useContext, useEffect, useState } from 'react'
 import {
   IoChevronBack,
   IoChevronForward,
@@ -101,6 +101,8 @@ function SpeakerDetails({
   organization,
   position,
   sessionTitle,
+  sessionDescription,
+  tags,
   track,
   twitter,
   url,
@@ -111,6 +113,8 @@ function SpeakerDetails({
     numSpeakers,
     uniqueSpeakersSortedByFirstName,
   } = useContext(SpeakerContext)
+
+  const [showFullDescription, setShowFullDescription] = useState(false)
 
   const validateUrl = (url) => {
     try {
@@ -128,52 +132,32 @@ function SpeakerDetails({
 
   const urls = getUrlArray()
 
-  const trackTheme = useMemo(() => {
-    return TRACK_THEMES[track] ?? TRACK_THEMES.default
-  }, [track])
+  const trackTheme = TRACK_THEMES[track] ?? TRACK_THEMES.default
 
-  const heroStyle = useMemo(() => {
-    const backgroundImage = [trackTheme.pattern, trackTheme.gradient].join(', ')
+  const heroStyle = {
+    backgroundImage: [trackTheme.pattern, trackTheme.gradient].join(', '),
+    backgroundColor: trackTheme.fallbackColor,
+    backgroundBlendMode: 'overlay, normal',
+    backgroundSize: 'auto, cover',
+    backgroundRepeat: 'repeat, no-repeat',
+    backgroundPosition: 'center, center',
+  }
 
-    return {
-      backgroundImage,
-      backgroundColor: trackTheme.fallbackColor,
-      backgroundBlendMode: 'overlay, normal',
-      backgroundSize: 'auto, cover',
-      backgroundRepeat: 'repeat, no-repeat',
-      backgroundPosition: 'center, center',
-    }
-  }, [trackTheme])
+  const trackBadgeStyle = {
+    borderColor: trackTheme.badgeBorder,
+    color: trackTheme.badgeText,
+  }
 
-  const trackBadgeStyle = useMemo(
-    () => ({
-      borderColor: trackTheme.badgeBorder,
-      color: trackTheme.badgeText,
-    }),
-    [trackTheme]
-  )
-
-  const bioFocusStyle = useMemo(
-    () => ({
-      outlineColor: trackTheme.focusColor,
-    }),
-    [trackTheme]
-  )
-
-  const interactiveFocusVars = useMemo(
-    () => ({
-      '--tw-ring-color': trackTheme.focusColor,
-      '--tw-ring-offset-color': trackTheme.focusRingOffset,
-    }),
-    [trackTheme]
-  )
+  const interactiveFocusVars = {
+    '--tw-ring-color': trackTheme.focusColor,
+    '--tw-ring-offset-color': trackTheme.focusRingOffset,
+  }
 
   const goToPreviousSpeaker = useCallback(() => {
     const currentIndex = uniqueSpeakersSortedByFirstName.findIndex(
       (speaker) => speaker.id === speakerID
     )
 
-    // If no speaker is currently selected, default to the last speaker
     if (currentIndex === -1) {
       setSpeakerID(
         uniqueSpeakersSortedByFirstName[
@@ -195,7 +179,6 @@ function SpeakerDetails({
       (speaker) => speaker.id === speakerID
     )
 
-    // If no speaker is currently selected, default to the first speaker
     if (currentIndex === -1) {
       setSpeakerID(uniqueSpeakersSortedByFirstName[0]?.id)
       return
@@ -232,10 +215,17 @@ function SpeakerDetails({
     (speaker) => speaker.id === speakerID
   )
   const displayPosition = currentIndex + 1
-  const bioRegionRef = useRef(null)
+
+  // Truncate description for preview
+  const descriptionPreviewLength = 200
+  const needsTruncation =
+    sessionDescription && sessionDescription.length > descriptionPreviewLength
+  const descriptionPreview = needsTruncation
+    ? sessionDescription.slice(0, descriptionPreviewLength) + '...'
+    : sessionDescription
 
   return (
-    <div className="relative max-h-[90vh] w-full max-w-4xl overflow-hidden rounded-3xl bg-white shadow-2xl">
+    <div className="relative max-h-[90vh] w-full max-w-4xl overflow-y-auto rounded-3xl bg-white shadow-2xl">
       <div className="relative px-8 py-12 text-white" style={heroStyle}>
         <div className="absolute inset-0 bg-gradient-to-b from-white/20 via-white/10 to-transparent mix-blend-soft-light"></div>
         <div className="absolute inset-0 bg-gradient-to-t from-black/45 via-black/20 to-transparent"></div>
@@ -357,51 +347,92 @@ function SpeakerDetails({
       <div className="p-8">
         <div className="grid gap-8 lg:grid-cols-5">
           <div className="lg:col-span-3">
-            {name && (
-              <h3
-                id={`speaker-modal-about-${id}`}
-                className="mb-4 text-2xl font-bold text-gray-900"
+            <h2
+              id={`speaker-modal-about-${id}`}
+              className="mb-4 text-2xl font-bold text-gray-900"
+            >
+              About {name.split(' ')[0]}
+            </h2>
+
+            {bio && (
+              <p
+                className="mb-6 whitespace-pre-line text-left leading-relaxed text-gray-700"
+                style={{ maxWidth: '65ch', lineHeight: '1.6' }}
               >
-                About {name.split(' ')[0]}
-              </h3>
+                {bio}
+              </p>
             )}
-            <button
-              type="button"
-              className="sr-only rounded px-2 py-1 ring-2 ring-offset-2 focus:not-sr-only focus:mb-2"
-              onClick={() => bioRegionRef.current?.focus()}
-              aria-controls={`speaker-modal-bio-region-${id}`}
-            >
-              Skip to biography
-            </button>
-            <section
-              id={`speaker-modal-bio-region-${id}`}
-              ref={bioRegionRef}
-              className="max-h-64 overflow-y-auto rounded-xl pr-4 focus:outline-none focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2"
-              aria-labelledby={`speaker-modal-about-${id}`}
-              style={bioFocusStyle}
-              tabIndex={-1}
-            >
-              {bio && (
-                <p
-                  id={`speaker-modal-bio-${id}`}
-                  className="whitespace-pre-line text-left leading-relaxed text-gray-700"
-                >
-                  {bio}
-                </p>
-              )}
-            </section>
+
+            {tags && tags.length > 0 && (
+              <div className="mb-6">
+                <h3 className="mb-3 text-sm font-bold uppercase tracking-wide text-gray-500">
+                  Topics
+                </h3>
+                <div className="flex flex-wrap gap-2">
+                  {tags.map((tag, index) => (
+                    <span
+                      key={`${tag}-${index}`}
+                      className="rounded-full border-2 px-3 py-1.5 text-xs font-semibold shadow-sm"
+                      style={{
+                        backgroundColor: `${trackTheme.focusColor}15`,
+                        borderColor: trackTheme.focusColor,
+                        color: trackTheme.focusColor,
+                      }}
+                    >
+                      {tag}
+                    </span>
+                  ))}
+                </div>
+              </div>
+            )}
           </div>
 
           <div className="lg:col-span-2">
-            <div className="rounded-2xl border border-blue-100 bg-gradient-to-br from-blue-50 to-sky-50 p-6">
-              <h3 className="mb-3 text-lg font-bold text-gray-900">Session</h3>
-              <div className="rounded-xl bg-white p-4 shadow-sm">
-                {sessionTitle && (
-                  <p className="text-sm font-semibold leading-relaxed text-gray-900">
+            <div
+              className="rounded-2xl bg-gradient-to-br from-blue-50 to-sky-50 p-6"
+              style={{ border: `3px solid ${trackTheme.focusColor}` }}
+            >
+              <h2 className="mb-4 text-xl font-bold text-gray-900">Session</h2>
+
+              {sessionTitle && (
+                <div className="mb-4 rounded-xl bg-white p-4 shadow-sm">
+                  <h3 className="text-base font-semibold leading-relaxed text-gray-900">
                     {sessionTitle}
+                  </h3>
+                </div>
+              )}
+
+              {sessionDescription && (
+                <div className="rounded-xl bg-white p-4 shadow-sm">
+                  <h3 className="mb-2 text-sm font-bold uppercase tracking-wide text-gray-500">
+                    Description
+                  </h3>
+                  <p
+                    className="whitespace-pre-wrap text-left text-sm text-gray-700"
+                    style={{ maxWidth: '65ch', lineHeight: '1.6' }}
+                  >
+                    {showFullDescription
+                      ? sessionDescription
+                      : descriptionPreview}
                   </p>
-                )}
-              </div>
+                  {needsTruncation && (
+                    <button
+                      onClick={() =>
+                        setShowFullDescription(!showFullDescription)
+                      }
+                      className="mt-3 text-sm font-medium text-sky-600 transition-colors hover:underline focus:outline-none focus:ring-2 focus:ring-offset-2"
+                      style={{
+                        ...interactiveFocusVars,
+                      }}
+                      aria-expanded={showFullDescription}
+                    >
+                      {showFullDescription
+                        ? 'Show less'
+                        : 'Read full description'}
+                    </button>
+                  )}
+                </div>
+              )}
             </div>
           </div>
         </div>
@@ -428,28 +459,23 @@ function SpeakerDetails({
         </div>
       </div>
 
-      <div className="mb-8">
-        <button
-          onClick={goToPreviousSpeaker}
-          className="absolute left-4 top-1/2 z-20 -translate-y-1/2 rounded-full bg-white p-3 shadow-lg transition-all hover:scale-110 hover:shadow-xl focus:outline-none focus:ring-2 focus:ring-primary-500 focus:ring-offset-2"
-          aria-label="Previous speaker"
-        >
-          <IoChevronBack className="size-6 text-gray-600" aria-hidden="true" />
-        </button>
+      <button
+        onClick={goToPreviousSpeaker}
+        className="absolute left-4 top-1/2 z-20 -translate-y-1/2 rounded-full bg-white p-3 shadow-lg transition-all hover:scale-110 hover:shadow-xl focus:outline-none focus:ring-2 focus:ring-primary-500 focus:ring-offset-2"
+        aria-label="Previous speaker"
+      >
+        <IoChevronBack className="size-6 text-gray-600" aria-hidden="true" />
+      </button>
 
-        <button
-          onClick={goToNextSpeaker}
-          className="absolute right-4 top-1/2 z-20 -translate-y-1/2 rounded-full bg-white p-3 shadow-lg transition-all hover:scale-110 hover:shadow-xl focus:outline-none focus:ring-2 focus:ring-primary-500 focus:ring-offset-2"
-          aria-label="Next speaker"
-        >
-          <IoChevronForward
-            className="size-6 text-gray-600"
-            aria-hidden="true"
-          />
-        </button>
-      </div>
+      <button
+        onClick={goToNextSpeaker}
+        className="absolute right-4 top-1/2 z-20 -translate-y-1/2 rounded-full bg-white p-3 shadow-lg transition-all hover:scale-110 hover:shadow-xl focus:outline-none focus:ring-2 focus:ring-primary-500 focus:ring-offset-2"
+        aria-label="Next speaker"
+      >
+        <IoChevronForward className="size-6 text-gray-600" aria-hidden="true" />
+      </button>
 
-      <div className="absolute bottom-4 left-1/2 -translate-x-1/2 rounded-full bg-gray-900/80 px-4 py-2 text-sm font-medium text-white backdrop-blur-sm">
+      <div className="sticky bottom-4 left-1/2 z-10 mx-auto w-fit -translate-x-1/2 rounded-full bg-gray-900/80 px-4 py-2 text-sm font-medium text-white backdrop-blur-sm">
         {displayPosition} of {numSpeakers}
       </div>
     </div>
@@ -468,7 +494,9 @@ SpeakerDetails.propTypes = {
   organization: PropTypes.string,
   position: PropTypes.string,
   sessionTitle: PropTypes.string.isRequired,
+  sessionDescription: PropTypes.string,
   track: PropTypes.string,
+  tags: PropTypes.arrayOf(PropTypes.string),
   twitter: PropTypes.string,
   url: PropTypes.oneOfType([
     PropTypes.string,
