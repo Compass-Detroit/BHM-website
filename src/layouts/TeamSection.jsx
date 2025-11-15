@@ -106,6 +106,7 @@ const TeamSection = ({ teamData, year }) => {
                     />
                   )}
                   {/* Ribbon Label */}
+                  {/* eslint-disable-next-line tailwindcss/no-custom-classname */}
                   <div
                     className={`ribbon-${
                       dev.devfest
