@@ -1,10 +1,11 @@
 import React, { useState } from 'react'
 import PropTypes from 'prop-types'
 
-import SessionsLogo from '@/assets/images/icn-sessions.png'
+import HackathonInfo from '@/components/sessions/HackathonInfo'
 import NoSessionsAvailable from '@/components/sessions/NoSessionsAvailable'
+import Schedule from '@/components/sessions/Schedule'
 import SessionCard from '@/components/sessions/SessionCard'
-import HackathonSchedule from '@/components/sessions/HackathonSchedule'
+import SessionsLogo from '@/assets/images/icn-sessions.png'
 
 import { DIRECTION } from '@/constants/directions'
 import { IoChevronDown } from 'react-icons/io5'
@@ -251,8 +252,10 @@ const SessionsSection = ({
             currentTrackSessions.length > 0 ? 'justify-start' : 'justify-center'
           }`}
         >
-          {currentSession === 'Hackathon' ? (
-            <HackathonSchedule />
+          {currentSession === 'Schedule' ? (
+            <Schedule />
+          ) : currentSession === 'Hackathon' ? (
+            <HackathonInfo />
           ) : currentTrackSessions.length > 0 ? (
             <ul className="grid w-full grid-cols-1 gap-10 py-7">
               {hasSessionsForTrack ? (

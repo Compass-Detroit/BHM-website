@@ -23,6 +23,7 @@ function Home() {
         year={2025}
         speakersData={Speakers2025}
         tracks={[
+          'Schedule',
           'Hackathon',
           'Build with AI',
           'Tech+Design',
