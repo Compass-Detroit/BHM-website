@@ -87,6 +87,7 @@ const SessionsSection = ({
         track: speaker.session.track,
         sessionTime: speaker.session.time,
         sessionRoom: speaker.session.room,
+        sessionDuration: speaker.session.sessionDuration || 1,
       })
     }
   })
@@ -274,6 +275,7 @@ const SessionsSection = ({
                         sessionDesc={session.sessionDesc}
                         sessionTime={session.sessionTime}
                         sessionRoom={session.sessionRoom}
+                        sessionDuration={session.sessionDuration}
                       />
                     </li>
                   ))
