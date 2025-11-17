@@ -12,6 +12,7 @@ function SessionCard({
   sessionDesc,
   sessionTime,
   sessionRoom,
+  sessionDuration = 1, // Default to 1 hour
 }) {
   const [direction, setDirection] = useState(DIRECTION.BOTTOM)
 
@@ -26,18 +27,20 @@ function SessionCard({
   const getSessionTimes = () => {
     if (!sessionTime) return { startTime: '', endTime: '' }
 
+    // If time range is explicitly provided (e.g., "10:00 - 12:00")
     if (sessionTime.includes('-')) {
       const [startStr, endStr] = sessionTime.split('-').map((str) => str.trim())
       return {
-        startTime: format(parse(startStr, 'h:mm', new Date()), 'h:mm'),
-        endTime: format(parse(endStr, 'h:mm', new Date()), 'h:mm'),
+        startTime: format(parse(startStr, 'h:mm', new Date()), 'h:mm a'),
+        endTime: format(parse(endStr, 'h:mm', new Date()), 'h:mm a'),
       }
     }
 
+    // Otherwise, calculate end time based on duration
     const parsedStartTime = parse(sessionTime, 'h:mm', new Date())
     return {
-      startTime: format(parsedStartTime, 'h:mm'),
-      endTime: format(addHours(parsedStartTime, 1), 'h:mm'),
+      startTime: format(parsedStartTime, 'h:mm a'),
+      endTime: format(addHours(parsedStartTime, sessionDuration), 'h:mm a'),
     }
   }
 
@@ -98,21 +101,21 @@ function SessionCard({
               by {speakers.join(' & ')}
             </p>
             {hasSessionInfo && (
-              <div className="mt-2.5 flex items-center space-x-4 text-sm sm:space-x-2 sm:text-base">
+              <div className="mt-2.5 flex flex-wrap items-center gap-3 text-sm sm:text-base">
                 {hasTimeInfo && (
-                  <div className="flex flex-col items-center justify-center sm:flex-row sm:space-x-2">
-                    <p className="text-gray-900 dark:text-gray-100">at</p>
-                    <p className="whitespace-nowrap font-bold text-slate-500 sm:text-xl md:block lg:text-2xl dark:text-slate-400">
+                  <div className="flex items-center gap-2">
+                    <span className="text-gray-900 dark:text-gray-100">at</span>
+                    <span className="whitespace-nowrap font-bold text-slate-500 sm:text-xl lg:text-2xl dark:text-slate-400">
                       {startTime} - {endTime}
-                    </p>
+                    </span>
                   </div>
                 )}
                 {sessionRoom && (
-                  <div className="flex flex-col items-center justify-center sm:flex-row sm:space-x-2">
-                    <p className="text-gray-900 dark:text-gray-100">in</p>
-                    <p className="whitespace-nowrap text-gray-900 dark:text-gray-100">
+                  <div className="flex items-center gap-2">
+                    <span className="text-gray-900 dark:text-gray-100">in</span>
+                    <span className="whitespace-nowrap text-gray-900 dark:text-gray-100">
                       {sessionRoom}
-                    </p>
+                    </span>
                   </div>
                 )}
               </div>
@@ -148,6 +151,7 @@ SessionCard.propTypes = {
   sessionDesc: PropTypes.string.isRequired,
   sessionTime: PropTypes.string.isRequired,
   sessionRoom: PropTypes.string.isRequired,
+  sessionDuration: PropTypes.number, // Duration in hours
 }
 
 export default SessionCard
