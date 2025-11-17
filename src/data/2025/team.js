@@ -1,20 +1,24 @@
 import AaronAmano from '@/data/2025/assets/images/dev/aaron_amano-x96.webp'
+import AliElSharif from '@/data/2025/assets/images/dev/ali_elsharif.webp'
 import DaveKoziol from '@/data/2025/assets/images/dev/dav_koziol.webp'
 import GregMiller from '@/data/2025/assets/images/dev/greg_miller-x96.webp'
-import JennaRitten from '@/data/2025/assets/images/dev/jenna_ritten.webp'
-import JustinBeaudry from '@/data/2025/assets/images/dev/justin_beaudry-x96.webp'
-import RishirajSarkar from '@/data/2025/assets/images/dev/rishiraj_sarkar.webp'
-import ShugmiShumunov from '@/data/2025/assets/images/dev/shugmi_shumunov-x96.webp'
-import SohamMhatre from '@/data/2025/assets/images/dev/soham_mhatre.webp'
-import SumiaSaleh from '@/assets/images/facilitators/Sumia_Saleh-x96.webp'
-import ShimaSolati from '@/data/2025/assets/images/dev/shima_solati.webp'
-import HodaSolati from '@/data/2025/assets/images/dev/hoda_solati.webp'
 import HernandoMalabet from '@/data/2025/assets/images/dev/hernando_malabet.webp'
+import HodaSolati from '@/data/2025/assets/images/dev/hoda_solati.webp'
+import HudaHussaini from '@/data/2025/assets/images/dev/huda_hussaini.webp'
+import JennaRitten from '@/data/2025/assets/images/dev/jenna_ritten.webp'
+import JingranWang from '@/data/2025/assets/images/dev/Jingran_Wang-x96.webp'
+import JustinBeaudry from '@/data/2025/assets/images/dev/justin_beaudry-x96.webp'
+import KayleeBusenbark from '@/data/2025/assets/images/dev/kaylee_busenbark-x96.webp'
+import MaridyMazaira from '@/data/2025/assets/images/dev/maridy_mazaira.webp'
 import NisaSolano from '@/data/2025/assets/images/dev/nisa_solano.webp'
 import RaquelEstrada from '@/data/2025/assets/images/dev/raquel_estrada.webp'
-import MaridyMazaira from '@/data/2025/assets/images/dev/maridy_mazaira.webp'
-import HudaHussaini from '@/data/2025/assets/images/dev/huda_hussaini.webp'
-import AliElSharif from '@/data/2025/assets/images/dev/ali_elsharif.webp'
+import Rehanashri from '@/data/2025/assets/images/dev/rehanashri-x96.webp'
+import RishirajSarkar from '@/data/2025/assets/images/dev/rishiraj_sarkar.webp'
+import ShimaSolati from '@/data/2025/assets/images/dev/shima_solati.webp'
+import ShugmiShumunov from '@/data/2025/assets/images/dev/shugmi_shumunov-x96.webp'
+import SohamMhatre from '@/data/2025/assets/images/dev/soham_mhatre.webp'
+import SohanKetireddy from '@/data/2025/assets/images/dev/sohan_ketireddy-x96.webp'
+import SumiaSaleh from '@/data/2025/assets/images/dev/Sumia_Saleh-x96.webp'
 
 export const teamData = [
   {
@@ -58,21 +62,21 @@ export const teamData = [
     avatar: HudaHussaini,
   },
   {
-    id: 7,
+    id: 4,
     name: 'Sumia Saleh',
     twitter: '',
-    linkedin: 'https://www.linkedin.com/in/sumia-saleh/',
-    github: '',
+    linkedin: 'https://www.linkedin.com/in/sumia-saleh-163741263/',
+    github: 'https://github.com/Sumias',
     devfest: 'organizer',
     star: '',
     university: 'University Of Michigan Dearborn',
     bio: ``,
     organization: '',
-    role: 'Student + GDSC',
+    role: 'GDSC Lead',
     avatar: SumiaSaleh,
   },
   {
-    id: 9,
+    id: 5,
     name: 'Greg Miller',
     linkedin: 'https://www.linkedin.com/in/gregraymiller/',
     github: 'https://github.com/shrinkray',
@@ -87,7 +91,7 @@ export const teamData = [
     avatar: GregMiller,
   },
   {
-    id: 10,
+    id: 6,
     name: 'Aaron Amano',
     twitter: '',
     linkedin: 'https://www.linkedin.com/in/aaronamano/',
@@ -101,7 +105,7 @@ export const teamData = [
     avatar: AaronAmano,
   },
   {
-    id: 12,
+    id: 7,
     name: 'Shugmi Shumunov',
     twitter: '',
     linkedin: 'https://www.linkedin.com/in/shugmishumunov/',
@@ -119,7 +123,7 @@ export const teamData = [
     avatar: ShugmiShumunov,
   },
   {
-    id: 14,
+    id: 8,
     name: 'Justin Beaudry',
     twitter: '',
     linkedin: 'https://www.linkedin.com/in/justinbeaudry/',
@@ -133,7 +137,7 @@ export const teamData = [
     avatar: JustinBeaudry,
   },
   {
-    id: 15,
+    id: 9,
     name: 'Rishiraj Sarkar',
     twitter: '',
     linkedin: null,
@@ -147,7 +151,7 @@ export const teamData = [
     avatar: RishirajSarkar,
   },
   {
-    id: 16,
+    id: 10,
     name: 'Soham Mhatre',
     twitter: '',
     linkedin: null,
@@ -162,12 +166,12 @@ export const teamData = [
     avatar: SohamMhatre,
   },
   {
-    id: 17,
+    id: 11,
     name: 'Shima Solati',
     twitter: '',
     linkedin: 'https://www.linkedin.com/in/shima-solati/',
     github: '',
-    devfest: 'marketing',
+    devfest: 'organizer',
     star: '',
     university: '',
     bio: `Shima Solati is an award-winning UX/UI designer and researcher at BraunAbility, leading efforts to advance mobility and accessibility through innovative, user-centered design. With a Master’s in User Experience Design from the College for Creative Studies and dual degrees in fashion and textiles, Shima brings a rare multidisciplinary perspective to solving complex challenges. Her expertise spans immersive and assistive technologies, VR, AR, robotics, and her portfolio includes impactful work for KUKA Robotics, the Augmented Reality Center, General Motors, and Ford. Passionate about inclusive design and emerging technologies, Shima is dedicated to creating intuitive, innovative solutions that empower all users.`,
@@ -176,7 +180,7 @@ export const teamData = [
     avatar: ShimaSolati,
   },
   {
-    id: 18,
+    id: 12,
     name: 'Hoda Solati',
     twitter: '',
     linkedin: 'https://www.linkedin.com/in/hoda-solati/',
@@ -190,7 +194,7 @@ export const teamData = [
     avatar: HodaSolati,
   },
   {
-    id: 19,
+    id: 13,
     name: 'Ali El Sharif',
     twitter: '',
     linkedin: 'https://www.linkedin.com/in/ali-el-sharif-76530222b/',
@@ -204,7 +208,7 @@ export const teamData = [
     avatar: AliElSharif,
   },
   {
-    id: 20,
+    id: 14,
     name: 'Hernando Gonzalez Malabet',
     twitter: '',
     linkedin: 'https://www.linkedin.com/in/hernando-gonzalez-malabet-baa03625/',
@@ -219,7 +223,7 @@ export const teamData = [
     avatar: HernandoMalabet,
   },
   {
-    id: 21,
+    id: 15,
     name: 'Nisa Solano',
     twitter: '',
     linkedin: 'https://www.linkedin.com/in/nisa-solano/',
@@ -228,13 +232,12 @@ export const teamData = [
     star: '',
     university: 'Wayne State University',
     bio: ``,
-    organization:
-      'Senior Computer Science Student| GDSC| AWS Cloud Club | SHPE Wayne State',
-    role: 'Student',
+    organization: 'GDSC | AWS Cloud Club | SHPE Wayne State',
+    role: 'Senior Computer Science Student',
     avatar: NisaSolano,
   },
   {
-    id: 22,
+    id: 16,
     name: 'Raquel Estrada',
     twitter: '',
     linkedin: 'https://www.linkedin.com/in/raquel-estrada/',
@@ -249,7 +252,7 @@ export const teamData = [
     avatar: RaquelEstrada,
   },
   {
-    id: 23,
+    id: 17,
     name: 'Maridy Mazaira',
     twitter: '',
     linkedin: 'https://www.linkedin.com/in/maridy-mazaira/',
@@ -262,5 +265,54 @@ export const teamData = [
       'Society of Hispanic Professional Engineers - SHPE Detroit Professional',
     role: 'SHPE Detroit President',
     avatar: MaridyMazaira,
+  },
+  {
+    id: 18,
+    name: 'Jingran Wang',
+    twitter: '',
+    linkedin: 'https://www.linkedin.com/in/jingranwang/',
+    github: '',
+    devfest: 'organizer',
+    university: 'University Of Michigan Dearborn',
+    bio: `Experienced community organizer, including co-organizing GDG Ann Arbor. Android/Flutter Developer passionate about UX, readable, shippable code, accessibility, and teamwork.`,
+    organization: 'Hikari Software',
+    role: 'President',
+    avatar: JingranWang,
+  },
+  {
+    id: 19,
+    name: 'Sohan Ketireddy',
+    twitter: '',
+    linkedin: 'https://www.linkedin.com/in/sohan-k',
+    github: 'https://github.com/sohank1',
+    devfest: 'devteam',
+    university: 'University Of Michigan Dearborn',
+    bio: ``,
+    organization: '',
+    role: 'Student',
+    avatar: SohanKetireddy,
+  },
+  {
+    id: 20,
+    name: 'Kaylee Busenbark',
+    twitter: '',
+    linkedin: 'https://www.linkedin.com/in/kaylee-busenbark',
+    github: 'https://github.com/kaybusenbark',
+    devfest: 'devteam',
+    university: 'University Of Michigan Dearborn',
+    bio: ``,
+    organization: '',
+    role: 'Student',
+    avatar: KayleeBusenbark,
+  },
+  {
+    id: 21,
+    name: 'Rehanashri',
+    github: 'https://github.com/rehanashri',
+    devfest: 'devteam',
+    university: 'University Of Michigan Dearborn',
+    organization: '',
+    role: 'Student',
+    avatar: Rehanashri,
   },
 ]

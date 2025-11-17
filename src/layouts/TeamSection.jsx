@@ -77,7 +77,7 @@ const TeamSection = ({ teamData, year }) => {
       </div>
 
       <div className="mx-auto flex max-w-full justify-center lg:mx-0">
-        <p className="prose mt-6 max-w-2xl text-start text-lg/8 text-gray-600">
+        <p className="prose mt-6 max-w-2xl text-left text-lg/8 text-gray-600 [text-wrap:pretty]">
           Our team of {teamCount} includes GDG organizers, session facilitators,
           and web developers — a mix of university students and industry
           professionals from companies like IBM, Little Caesars, and tech
@@ -151,15 +151,15 @@ const TeamSection = ({ teamData, year }) => {
                         <h3 className="mt-6 text-base/7 font-semibold tracking-tight text-gray-900">
                           {dev.name}
                         </h3>
-                        <p className="text-left text-sm/6 text-gray-600">
+                        <p className="prose text-left text-sm/6 text-gray-600 [text-wrap:pretty]">
                           {dev.organization}
                         </p>
                         {dev.university && (
-                          <p className="text-left text-sm/6 text-gray-600">
+                          <p className="prose text-left text-sm/6 text-gray-600 [text-wrap:pretty]">
                             {dev.university}
                           </p>
                         )}
-                        <p className="text-left text-sm/6 text-gray-600">
+                        <p className="prose text-left text-sm/6 font-semibold text-gray-600 [text-wrap:pretty]">
                           {dev.role}
                         </p>
                       </div>
@@ -230,7 +230,9 @@ const TeamSection = ({ teamData, year }) => {
             >
               {selectedBio.name}
             </h3>
-            <p className="text-gray-700">{selectedBio.bio}</p>
+            <p className="prose text-left text-gray-700 [text-wrap:pretty]">
+              {selectedBio.bio}
+            </p>
           </div>
         </div>
       )}
