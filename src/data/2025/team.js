@@ -228,7 +228,7 @@ export const teamData = [
     twitter: '',
     linkedin: 'https://www.linkedin.com/in/nisa-solano/',
     github: '',
-    devfest: 'marketing',
+    devfest: 'organizer',
     star: '',
     university: 'Wayne State University',
     bio: ``,

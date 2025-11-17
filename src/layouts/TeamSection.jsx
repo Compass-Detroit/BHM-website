@@ -118,8 +118,8 @@ const TeamSection = ({ teamData, year }) => {
                     >
                       {dev.devfest}
                     </div>
-                    <div className="flex">
-                      <div className="flex w-24 shrink-0 flex-col items-center">
+                    <div className="flex flex-col items-center xs:flex-row xs:items-start">
+                      <div className="flex shrink-0 flex-col items-center xs:w-24">
                         <img
                           alt={`${dev.name} avatar`}
                           src={dev.avatar}
@@ -147,19 +147,19 @@ const TeamSection = ({ teamData, year }) => {
                           )}
                         </div>
                       </div>
-                      <div className="ml-4 flex flex-col items-start justify-center gap-2">
-                        <h3 className="mt-6 text-base/7 font-semibold tracking-tight text-gray-900">
+                      <div className="mt-4 flex flex-col items-center gap-2 xs:ml-4 xs:mt-0 xs:items-start xs:justify-center">
+                        <h3 className="text-base/7 font-semibold tracking-tight text-gray-900 xs:mt-6">
                           {dev.name}
                         </h3>
-                        <p className="prose text-left text-sm/6 text-gray-600 [text-wrap:pretty]">
+                        <p className="prose text-center text-sm/6 text-gray-600 [text-wrap:pretty] xs:text-left">
                           {dev.organization}
                         </p>
                         {dev.university && (
-                          <p className="prose text-left text-sm/6 text-gray-600 [text-wrap:pretty]">
+                          <p className="prose text-center text-sm/6 text-gray-600 [text-wrap:pretty] xs:text-left">
                             {dev.university}
                           </p>
                         )}
-                        <p className="prose text-left text-sm/6 font-semibold text-gray-600 [text-wrap:pretty]">
+                        <p className="prose text-center text-sm/6 font-semibold text-gray-600 [text-wrap:pretty] xs:text-left">
                           {dev.role}
                         </p>
                       </div>
