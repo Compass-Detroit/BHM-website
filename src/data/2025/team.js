@@ -72,7 +72,7 @@ export const teamData = [
     university: 'University Of Michigan Dearborn',
     bio: ``,
     organization: '',
-    role: 'GDSC Lead',
+    role: 'GDGC Lead',
     avatar: SumiaSaleh,
   },
   {
@@ -232,7 +232,7 @@ export const teamData = [
     star: false,
     university: 'Wayne State University',
     bio: ``,
-    organization: 'GDSC | AWS Cloud Club | SHPE Wayne State',
+    organization: 'GDGC | AWS Cloud Club | SHPE Wayne State',
     role: 'Senior Computer Science Student',
     avatar: NisaSolano,
   },
