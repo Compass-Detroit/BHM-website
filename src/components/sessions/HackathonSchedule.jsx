@@ -1,10 +1,15 @@
-import HackathonEventCard from './HackathonEventCard'
+import PropTypes from 'prop-types'
+import Timeline from './Timeline'
 
-// 2025 schedule - grouped by time
 const hackathonSchedule = [
   {
     time: '8:00 AM',
     events: [
+      {
+        title: 'Check-In & Breakfast',
+        description:
+          'Fuel up for the exciting day! Grab your badge, enjoy a delicious and nutritious breakfast, and mingle with fellow hackers.',
+      },
       {
         title: 'Morning Meditation & Yoga',
         description:
@@ -15,11 +20,6 @@ const hackathonSchedule = [
   {
     time: '9:00 AM',
     events: [
-      {
-        title: 'Check-In & Breakfast',
-        description:
-          'Fuel up for the exciting day! Grab your badge, enjoy a delicious and nutritious breakfast, and mingle with fellow hackers.',
-      },
       {
         title: 'AI Hackathon Keynote',
         description:
@@ -79,60 +79,12 @@ const hackathonSchedule = [
   },
 ]
 
-export const HackathonSchedule = () => {
-  return (
-    <div className="w-full py-8">
-      <div className="mx-auto max-w-4xl">
-        <h3 className="mb-8 text-center text-2xl font-bold text-gray-900 md:text-3xl">
-          Hackathon Schedule
-        </h3>
-        <div className="relative">
-          {/* Vertical line */}
-          <div className="absolute left-8 top-0 h-full w-0.5 bg-gradient-to-b from-primary-400 via-sky-500 to-primary-400 md:left-1/2" />
+const HackathonSchedule = ({ compact = false }) => {
+  return <Timeline schedule={hackathonSchedule} compact={compact} />
+}
 
-          {/* Schedule items */}
-          <div className="space-y-12">
-            {hackathonSchedule.map((timeSlot, timeIndex) => (
-              <div key={timeSlot.time} className="relative">
-                {/* Time badge */}
-                <div className="absolute left-0 flex size-16 items-center justify-center rounded-full bg-primary-400 text-sm font-bold text-gray-900 shadow-lg md:left-1/2 md:-translate-x-1/2">
-                  <span className="text-center text-xs leading-tight md:text-sm">
-                    {timeSlot.time}
-                  </span>
-                </div>
-
-                {/* Events for this time */}
-                <div className="ml-24 space-y-4 md:ml-0">
-                  {timeSlot?.events.length === 1 ? (
-                    // Single event - alternate sides
-                    <HackathonEventCard
-                      title={timeSlot?.events[0]?.title}
-                      description={timeSlot?.events[0]?.description}
-                      alignRight={timeIndex % 2 !== 0}
-                    />
-                  ) : (
-                    // Multiple events for a single time slot - show on both sides
-                    <div className="flex flex-col gap-4 md:flex-row md:justify-between md:gap-8">
-                      <HackathonEventCard
-                        title={timeSlot?.events[0]?.title}
-                        description={timeSlot?.events[0]?.description}
-                        alignRight={false}
-                      />
-                      <HackathonEventCard
-                        title={timeSlot?.events[1]?.title}
-                        description={timeSlot?.events[1]?.description}
-                        alignRight={true}
-                      />
-                    </div>
-                  )}
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </div>
-    </div>
-  )
+HackathonSchedule.propTypes = {
+  compact: PropTypes.bool,
 }
 
 export default HackathonSchedule
