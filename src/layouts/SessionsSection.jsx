@@ -217,7 +217,7 @@ const SessionsSection = ({
           role="tablist"
           aria-label="Session track navigation"
           aria-orientation="horizontal"
-          className={`scrollbar-visible mt-4 flex w-full flex-nowrap items-center justify-center gap-1 overflow-x-auto overflow-y-visible rounded-md bg-black px-4 py-3 md:justify-start md:px-6 ${
+          className={`scrollbar-visible mt-4 flex w-full flex-nowrap items-center justify-center gap-1 overflow-x-auto overflow-y-visible rounded-md bg-black py-3 pe-4 md:justify-start md:px-6 ${
             isExpanded ? 'max-h-none opacity-100' : 'max-h-0 opacity-0'
           }`}
         >
@@ -237,9 +237,11 @@ const SessionsSection = ({
                 aria-controls={`session-panel-${index}`}
                 id={`session-tab-${index}`}
                 tabIndex={activeTab === index ? 0 : -1}
-                className={`relative shrink-0 whitespace-nowrap rounded-md px-0.5 py-2 text-sm font-black uppercase !leading-5 transition-colors duration-300 focus:outline-none focus:ring-2 focus:ring-primary-400 focus:ring-offset-2 focus:ring-offset-black md:min-w-20 lg:min-w-36 lg:text-lg  ${
+                className={`relative shrink-0 whitespace-nowrap rounded-md p-2 text-sm font-black uppercase !leading-5 transition-colors duration-300 focus:outline-none focus:ring-2 focus:ring-primary-400 focus:ring-offset-2 focus:ring-offset-black md:min-w-20 md:px-3 md:py-2 lg:min-w-36 lg:px-4 lg:text-lg ${
+                  index === 0 ? 'ml-14' : ''
+                } ${
                   activeTab === index
-                    ? 'bg-primary-400 text-black after:absolute after:-bottom-3 after:left-1/2 after:hidden after:size-0 after:-translate-x-1/2 after:border-x-[12px] after:border-t-[12px] after:border-primary-400 after:border-x-transparent md:after:block'
+                    ? 'bg-primary-400 text-black after:absolute after:-bottom-3 after:left-1/2 after:block after:size-0 after:-translate-x-1/2 after:border-x-[12px] after:border-t-[12px] after:border-primary-400 after:border-x-transparent'
                     : 'bg-gray-900 text-white hover:bg-gray-800'
                 }`}
                 onClick={() => setActiveTab(index)}
