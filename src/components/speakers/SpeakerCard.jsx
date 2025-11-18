@@ -10,6 +10,7 @@ const SpeakerCard = ({
   bio,
   github,
   id,
+  instagram,
   isGDE,
   isWTM,
   linkedin,
@@ -92,6 +93,7 @@ const SpeakerCard = ({
       <ProfileCard
         avatar={avatar}
         github={github}
+        instagram={instagram}
         isGDE={isGDE}
         isWTM={isWTM}
         linkedin={linkedin}
@@ -128,6 +130,7 @@ const SpeakerCard = ({
                 avatar={avatar}
                 bio={bio}
                 id={id}
+                instagram={instagram}
                 isGDE={isGDE}
                 isWTM={isWTM}
                 mastodon={mastodon}
@@ -155,6 +158,7 @@ SpeakerCard.propTypes = {
   bio: PropTypes.string,
   github: PropTypes.string,
   id: PropTypes.number.isRequired,
+  instagram: PropTypes.string,
   isGDE: PropTypes.bool,
   isWTM: PropTypes.bool,
   linkedin: PropTypes.string,
