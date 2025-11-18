@@ -1419,7 +1419,7 @@ export const SpeakersData = [
     avatar: JennaRitten,
     bio: null,
     twitter: 'jritten',
-    linkedin: 'https://www.linkedin.com/in/jritten/',
+    linkedIn: 'https://www.linkedin.com/in/jritten/',
     github: 'https://github.com/jritten',
     url: null,
     organization: 'IBM',
