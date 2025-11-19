@@ -96,7 +96,7 @@ function Footer() {
               </div>
               <div className="my-8 grid grid-cols-2 gap-4 text-white">
                 <div className="flex gap-4">
-                  <div className="col-1 mt-1">
+                  <div className="mt-1">
                     <img
                       src={ShumunovLogo}
                       alt="Shumunov Solutions logo"
@@ -105,7 +105,7 @@ function Footer() {
                       height={40}
                     />{' '}
                   </div>
-                  <div className="col-1 mt-1">
+                  <div className="mt-1">
                     <p className="text-sm font-medium text-white">
                       <a
                         href="http://shumunovsolutions.com/"
@@ -126,7 +126,7 @@ function Footer() {
                   </div>
                 </div>
                 <div className="flex gap-4">
-                  <div className="col-1">
+                  <div>
                     <img
                       src={ShrinkrayLogo}
                       alt="Shrinkray Interactive, LLC logo"
@@ -135,7 +135,7 @@ function Footer() {
                       height={40}
                     />{' '}
                   </div>
-                  <div className="col-1 mt-4">
+                  <div className="mt-4">
                     <p className="text-sm font-medium text-white">
                       <a
                         href="https://shrinkraylabs.com"
@@ -156,7 +156,7 @@ function Footer() {
                   </div>
                 </div>
               </div>
-              <div className="text-lf w-full text-left italic text-gray-400">
+              <div className="w-full text-left italic text-gray-400">
                 ... just one damn project after another
               </div>
             </div>
