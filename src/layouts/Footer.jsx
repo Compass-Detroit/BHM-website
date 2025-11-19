@@ -95,7 +95,7 @@ function Footer() {
                 </h3>
               </div>
               <div className="my-8 grid grid-cols-2 gap-4 text-white">
-                <div className="flex gap-4">
+                <div className="flex items-center gap-4">
                   <div className="mt-1">
                     <img
                       src={ShumunovLogo}
