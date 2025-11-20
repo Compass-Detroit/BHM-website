@@ -112,7 +112,7 @@ function Footer() {
                         href="http://shumunovsolutions.com/"
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="text-md font-bold text-yellow-500 hover:text-gray-300"
+                        className="text-base font-bold text-yellow-500 hover:text-gray-300"
                       >
                         Shumunov Solutions
                       </a>
@@ -142,7 +142,7 @@ function Footer() {
                         href="https://shrinkraylabs.com"
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="text-md font-bold text-yellow-500 hover:text-gray-300"
+                        className="text-base font-bold text-yellow-500 hover:text-gray-300"
                       >
                         Shrinkray Interactive, LLC
                       </a>

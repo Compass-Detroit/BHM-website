@@ -20,7 +20,7 @@ import JC_Escalante from '@/assets/images/speakers/JC_Escalante.jpeg'
 import JasonFleming from '@/assets/images/speakers/Jason_Fleming.jpg'
 import JayWhitsitt from '@/assets/images/speakers/Jay_Whitsitt.jpeg'
 import JennaRitten from '@/data/2025/assets/images/team/jenna_ritten.webp'
-import JeseekiaVaughn from '@/assets/images/speakers/Jeseekia_Vaughn.jpeg'
+import JeseekiaVaughn from '@/assets/images/speakers/Jeseekia_Vaughn.jpg'
 import JoelVasallo from '@/assets/images/speakers/Joel_Vasallo.jpg'
 import KamilleTynes from '@/assets/images/speakers/Kamille_Tynes.webp'
 import KavithaBangalore from '@/assets/images/speakers/Kavitha_Bangalore.webp'
@@ -1497,7 +1497,7 @@ export const SpeakersData = [
     name: 'Tim Bates',
     email: 'Tim@sovereignailabs.com',
     avatar: TimBates,
-    bio: null,
+    bio: 'As a Professor of Practice at the University of Michigan’s College of Innovation and Technology, he continues to mentor the next generation of technologists, emphasizing ethics, equity, and human-centered design as the foundation for all innovation.',
     twitter: null,
     linkedIn: 'https://www.linkedin.com/in/thegodfatheroftech/',
     github: null,
