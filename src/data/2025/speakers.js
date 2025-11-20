@@ -1497,7 +1497,7 @@ export const SpeakersData = [
     name: 'Tim Bates',
     email: 'Tim@sovereignailabs.com',
     avatar: TimBates,
-    bio: null,
+    bio: 'As a Professor of Practice at the University of Michigan’s College of Innovation and Technology, he continues to mentor the next generation of technologists, emphasizing ethics, equity, and human-centered design as the foundation for all innovation.',
     twitter: null,
     linkedIn: 'https://www.linkedin.com/in/thegodfatheroftech/',
     github: null,
