@@ -62,7 +62,7 @@ export const SpeakersData = [
       title: 'The Wise One',
       abstract: null,
       description:
-        'The Wise One is a AI chatbot designed with blender to help guide new visitors to the land of Diatopia',
+        'The Wise One is an AI chatbot designed with blender to help guide new visitors to the land of Diatopia',
       tags: ['AI', 'voice', '3D Modeling', 'storytelling', 'communication'],
       track: 'Leadership',
       time: '15:00',
@@ -1534,5 +1534,8 @@ export const SpeakersData = [
       time: '08:00',
       room: 'STEM Innovation Learning Center (SILC) - 7th Floor',
     },
+    isWTM: false,
+    isGDE: false,
+    mastodon: null,
   },
 ]
