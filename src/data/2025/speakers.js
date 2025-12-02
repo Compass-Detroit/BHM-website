@@ -60,9 +60,10 @@ export const SpeakersData = [
     position: 'Graduate Adjunct Professor',
     session: {
       title: 'The Wise One',
-      abstract: null,
+      abstract:
+        'The Wise One is an AI chatbot designed with Blender to help guide new visitors to the land of Diatopia',
       description:
-        'The Wise One is an AI chatbot designed with blender to help guide new visitors to the land of Diatopia',
+        'The Wise One is an AI chatbot designed with Blender to help guide new visitors to the land of Diatopia',
       tags: ['AI', 'voice', '3D Modeling', 'storytelling', 'communication'],
       track: 'Leadership',
       time: '15:00',
