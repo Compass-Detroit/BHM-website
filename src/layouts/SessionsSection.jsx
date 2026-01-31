@@ -51,7 +51,7 @@ const SessionsSection = ({
   speakersData,
   year = new Date().getFullYear(),
   tracks = [],
-  defaultExpanded = true,
+  defaultExpanded = false,
 }) => {
   const [activeTab, setActiveTab] = useState(0)
   const [isExpanded, setIsExpanded] = useState(defaultExpanded)
@@ -167,7 +167,7 @@ const SessionsSection = ({
 
   return (
     <section
-      id="sessions"
+      id="schedule"
       className="flex flex-col items-center justify-start bg-primary-100 p-4 sm:px-10 md:px-14 lg:px-16"
     >
       <div className="flex w-full justify-between pt-0">
@@ -185,7 +185,7 @@ const SessionsSection = ({
           />
         </button>
         <h2 className="text-center font-biorhyme text-4xl text-black md:text-5xl lg:text-6xl">
-          {year} Sessions
+          {year} Schedule
         </h2>
         <img
           src={SessionsLogo}
