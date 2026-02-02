@@ -58,7 +58,7 @@ const SpeakersContent = ({ year, defaultExpanded }) => {
         isExpanded ? 'max-h-none opacity-100' : 'max-h-0 opacity-0'
       }`}
     >
-      <div className="mx-auto max-w-4xl mt-6 text-left">
+      <div className="mx-auto mt-6 max-w-4xl text-left">
         <p className="text-base text-gray-700 md:text-lg">
           Join us for engaging and inspiring talks from industry leaders,
           innovators, and experts who are shaping the future of technology. Our
