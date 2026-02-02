@@ -10,7 +10,8 @@ function Navbar() {
   const [activeLink, setActiveLink] = useState('landing')
   const [isNavVisible, setIsNavVisible] = useState(false)
   const [isPathwaysOpen, setIsPathwaysOpen] = useState(false)
-  const [isPathwaysExpandedMobile, setIsPathwaysExpandedMobile] = useState(false)
+  const [isPathwaysExpandedMobile, setIsPathwaysExpandedMobile] =
+    useState(false)
   const [isManualNavigation, setIsManualNavigation] = useState(false)
 
   // Auto-expand Pathways on mobile when we're on a pathway page
@@ -37,9 +38,8 @@ function Navbar() {
   const openPathwaysAndFocusFirst = () => {
     setIsPathwaysOpen(true)
     requestAnimationFrame(() => {
-      const firstItem = pathwaysMenuRef.current?.querySelector(
-        'a[role="menuitem"]'
-      )
+      const firstItem =
+        pathwaysMenuRef.current?.querySelector('a[role="menuitem"]')
       firstItem?.focus()
     })
   }
@@ -48,9 +48,8 @@ function Navbar() {
   const openPathwaysAndFocusLast = () => {
     setIsPathwaysOpen(true)
     requestAnimationFrame(() => {
-      const items = pathwaysMenuRef.current?.querySelectorAll(
-        'a[role="menuitem"]'
-      )
+      const items =
+        pathwaysMenuRef.current?.querySelectorAll('a[role="menuitem"]')
       items?.[items.length - 1]?.focus()
     })
   }
@@ -86,13 +85,10 @@ function Navbar() {
     if (e.key === 'ArrowDown' || e.key === 'ArrowUp') {
       e.preventDefault()
       if (isPathwaysOpen) {
-        const items = pathwaysMenuRef.current?.querySelectorAll(
-          'a[role="menuitem"]'
-        )
+        const items =
+          pathwaysMenuRef.current?.querySelectorAll('a[role="menuitem"]')
         if (items?.length) {
-          const currentIndex = Array.from(items).indexOf(
-            document.activeElement
-          )
+          const currentIndex = Array.from(items).indexOf(document.activeElement)
           if (currentIndex === -1) {
             // Focus on button; move to first or last item
             if (e.key === 'ArrowDown') {
@@ -127,9 +123,8 @@ function Navbar() {
     }
     if (e.key === 'ArrowDown' || e.key === 'ArrowUp') {
       e.preventDefault()
-      const items = pathwaysMenuRef.current?.querySelectorAll(
-        'a[role="menuitem"]'
-      )
+      const items =
+        pathwaysMenuRef.current?.querySelectorAll('a[role="menuitem"]')
       if (!items?.length) return
       const nextIndex =
         e.key === 'ArrowDown'
@@ -369,7 +364,7 @@ function Navbar() {
   const desktopNavList = (
     <ul
       role="menubar"
-      className="flex flex-row flex-nowrap z-50 items-baseline justify-end gap-x-6 px-4 py-2"
+      className="z-50 flex flex-row flex-nowrap items-baseline justify-end gap-x-6 px-4 py-2"
     >
       {sections.map((section) => (
         <li key={section.id} role="none" className="text-center">
@@ -488,9 +483,7 @@ function Navbar() {
           aria-expanded={isPathwaysExpandedMobile}
           aria-controls="pathways-mobile-menu"
           className="flex w-full items-center justify-center gap-2 rounded-lg px-4 py-3 text-center text-gray-700 transition-colors hover:bg-gray-100 dark:text-white dark:hover:bg-primary-400 dark:hover:text-gray-900"
-          onClick={() =>
-            setIsPathwaysExpandedMobile((prev) => !prev)
-          }
+          onClick={() => setIsPathwaysExpandedMobile((prev) => !prev)}
         >
           {pathways.text}
           <FaChevronDown

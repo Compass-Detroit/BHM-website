@@ -211,7 +211,7 @@ const SessionsSection = ({
           isExpanded ? 'opacity-100' : 'max-h-0 opacity-0'
         }`}
       >
-        <nav
+        <div
           ref={navRef}
           role="tablist"
           id="sessions-nav"
@@ -269,7 +269,7 @@ const SessionsSection = ({
               </button>
             </React.Fragment>
           ))}
-        </nav>
+        </div>
 
         <div
           id={`session-panel-${activeTab}`}
