@@ -1,9 +1,9 @@
 import { Route, BrowserRouter as Router, Routes } from 'react-router-dom'
 
 import Home from '@/pages/Home'
-import CareersHub from '@/pages/careers-hub'
-import ConnectionsPage from '@/pages/connections'
-import MediaPage from '@/pages/media'
+import CareersHub from '@/pages/CareersHub'
+import ConnectionsPage from '@/pages/Connections'
+import MediaPage from '@/pages/Media'
 import PreviousEvents from '@/pages/PreviousEvents'
 import PreviousEvent from '@/pages/PreviousEvent'
 import NotFound from '@/pages/NotFound'
