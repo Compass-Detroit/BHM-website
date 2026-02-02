@@ -1,4 +1,4 @@
-import { useEffect, useRef, useState } from 'react'
+import { useCallback, useEffect, useRef, useState } from 'react'
 import { FaBars, FaChevronDown, FaXmark } from 'react-icons/fa6'
 import { Link, useLocation } from 'react-router-dom'
 import CompassDetroitLogo from './ui/CompassDetroitLogo'
@@ -135,32 +135,38 @@ function Navbar() {
   }
 
   // Helper function to get accurate navbar height
-  const getNavbarHeight = () => {
+  const getNavbarHeight = useCallback(() => {
     const navbar = document.querySelector('nav')
     return navbar ? navbar.offsetHeight : 96
-  }
+  }, [])
 
   // Helper function to calculate scroll position
-  const calculateScrollPosition = (target) => {
-    const navbarHeight = getNavbarHeight()
-    const targetRect = target.getBoundingClientRect()
-    return targetRect.top + window.pageYOffset - navbarHeight
-  }
+  const calculateScrollPosition = useCallback(
+    (target) => {
+      const navbarHeight = getNavbarHeight()
+      const targetRect = target.getBoundingClientRect()
+      return targetRect.top + window.pageYOffset - navbarHeight
+    },
+    [getNavbarHeight]
+  )
 
   // Helper function to reset navigation state after delay
-  const resetNavigationState = (delay) => {
+  const resetNavigationState = useCallback((delay) => {
     setTimeout(() => {
       setIsManualNavigation(false)
       setIsNavigating(false)
     }, delay)
-  }
+  }, [])
 
   // Helper function to perform scroll and reset state
-  const performScroll = (target, resetDelay) => {
-    const scrollPosition = calculateScrollPosition(target)
-    window.scrollTo({ top: scrollPosition, behavior: 'smooth' })
-    resetNavigationState(resetDelay)
-  }
+  const performScroll = useCallback(
+    (target, resetDelay) => {
+      const scrollPosition = calculateScrollPosition(target)
+      window.scrollTo({ top: scrollPosition, behavior: 'smooth' })
+      resetNavigationState(resetDelay)
+    },
+    [calculateScrollPosition, resetNavigationState]
+  )
 
   // Helper function to close mobile nav
   const closeMobileNav = () => {
@@ -215,9 +221,7 @@ function Navbar() {
       tryScroll()
     })
     return () => cancelAnimationFrame(id)
-    // Only run when route/hash changes; performScroll is stable for this use case
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [location.pathname, location.hash])
+  }, [location.pathname, location.hash, performScroll])
 
   useEffect(() => {
     // Function to set the active link based on scroll position
@@ -285,7 +289,7 @@ function Navbar() {
     return () => {
       window.removeEventListener('scroll', handleScroll)
     }
-  }, [isManualNavigation, activeLink])
+  }, [isManualNavigation, activeLink, getNavbarHeight])
 
   const handleNavigation = (event, sectionId) => {
     event.preventDefault()
