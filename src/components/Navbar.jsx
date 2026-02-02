@@ -189,6 +189,41 @@ function Navbar() {
     window.scrollTo({ top: 0, behavior: 'smooth' })
   }
 
+  // Smooth scroll to section when navigating to /#section-id from another page
+  useEffect(() => {
+    if (location.pathname !== '/' || !location.hash) return
+
+    const sectionId = location.hash.slice(1).toLowerCase()
+    const validSectionIds = sections.map((s) => s.id)
+    if (!sectionId || !validSectionIds.includes(sectionId)) return
+
+    const scrollToSection = (target) => {
+      if (!target) return
+      setActiveLink(sectionId)
+      setIsManualNavigation(true)
+      performScroll(target, 500)
+    }
+
+    const tryScroll = (retriesLeft = 20) => {
+      const target = document.querySelector(`#${sectionId}`)
+      if (target) {
+        scrollToSection(target)
+        return
+      }
+      if (retriesLeft > 0) {
+        requestAnimationFrame(() => tryScroll(retriesLeft - 1))
+      }
+    }
+
+    // Wait for home page to mount and render the section
+    const id = requestAnimationFrame(() => {
+      tryScroll()
+    })
+    return () => cancelAnimationFrame(id)
+    // Only run when route/hash changes; performScroll is stable for this use case
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [location.pathname, location.hash])
+
   useEffect(() => {
     // Function to set the active link based on scroll position
     // Algorithm Explanation:
