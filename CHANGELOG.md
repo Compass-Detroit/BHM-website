@@ -7,23 +7,42 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [0.1.2] - 2026-02-01
+
 ### Added
 
-- Initial changelog
+- Hash-based smooth scroll: Navbar `useEffect` scrolls to section when navigating to `/#section-id` from any page (Navbar or Footer), with retry until the home section is in the DOM
+- Add new tab in navigation, "Pathways"
+- Careers Hub, Connections, and Media grouped under a single “Pathways” item with caret
+- Golden (primary) underline on hover for Pathways subnav items (desktop)
+- Mobile: active pathway page highlighted with yellow (primary) background; Pathways section auto-expands when on a pathway page
 
 ### Changed
 
-- Refactored README for Compass Detroit branding
-- Updated package name from `michigan-devfest-2023` to `compass-website`
-- Replaced Russell font with BioRhyme for headings
-- Updated Montserrat to use variable font (weight 500 for body text)
-- Added full color ranges for charcoal, pumpkin, burnt, lime, and indigo in Tailwind config
-- Converted GDGDetroitLogo component from TSX to JSX with proper PropTypes
+- **Pathways dropdown accessibility**: Focus-based open/close (`onBlur` on container); keyboard support (Enter/Space toggle, Arrow Down/Up open and focus first/last item, Escape close and return focus to trigger, Arrow keys move between items); `aria-haspopup="menu"`; removed `preventDefault` from button click; mouse leave only closes when focus is outside the dropdown
+- **Footer**: Section links always use `/#section-id`; removed Footer’s own scroll logic so smooth scrolling is handled by the Navbar’s hash-based effect for both Navbar and Footer links
+- Navbar z-index raised (z-30) so it stays in front of LandingSection and other content
+- Removed overflow-hidden from nav and inner grid so Pathways dropdown is no longer clipped
+- Pathways trigger aligned with other nav items (items-baseline, inline-flex) so “Pathways” sits on the same line
+- Pathways dropdown panel nudged up slightly (-mt-0.5) for cleaner alignment
 
-### Fixed
+## [0.1.1] - 2026-01-30
 
-- Fixed git remote configuration (origin now points to Compass-Detroit/compass-website)
-- Fixed Montserrat font weight to use Medium (500) instead of Thin (100)
+### Added
+
+- New pages: Connections, Media, Careers Hub
+- Media section and Connections page
+- Community and membership content on home
+
+### Changed
+
+- Navigation and copyright updates; navbar items reorganized
+- Home section and sub-sections restructured
+- Broader description area on home
+- Team section migrated to leadership with new tabs
+- Partners section refactored
+- Speakers section refactored
+- Remove Past Events page and redirect to Previous Events page
 
 ## [0.1.0] - 2026-01-28
 
@@ -38,5 +57,13 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - ESLint and Prettier configuration
 - VS Code extension recommendations
 
-[Unreleased]: https://github.com/Compass-Detroit/compass-website/compare/v0.1.0...HEAD
+### Fixed
+
+- Fixed git remote configuration (origin now points to Compass-Detroit/compass-website)
+- Fixed Montserrat font weight to use Medium (500) instead of Thin (100)
+- Fixed incorrect variable name usage
+
+[Unreleased]: https://github.com/Compass-Detroit/compass-website/compare/v0.1.2...HEAD
+[0.1.2]: https://github.com/Compass-Detroit/compass-website/releases/tag/v0.1.2
+[0.1.1]: https://github.com/Compass-Detroit/compass-website/compare/v0.1.0...v0.1.1
 [0.1.0]: https://github.com/Compass-Detroit/compass-website/releases/tag/v0.1.0

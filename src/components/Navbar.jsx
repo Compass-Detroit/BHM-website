@@ -1,13 +1,28 @@
-import { useEffect, useRef, useState } from 'react'
-import { FaBars, FaXmark } from 'react-icons/fa6'
-import { Link } from 'react-router-dom'
+import { useCallback, useEffect, useRef, useState } from 'react'
+import { FaBars, FaChevronDown, FaXmark } from 'react-icons/fa6'
+import { Link, useLocation } from 'react-router-dom'
 import CompassDetroitLogo from './ui/CompassDetroitLogo'
-import { sections, externalLinks } from '@/data/2025/navigation'
+import { sections, pathways } from '@/data/2026/navigation'
 
 function Navbar() {
+  const location = useLocation()
+  const isHomePage = location.pathname === '/'
   const [activeLink, setActiveLink] = useState('landing')
   const [isNavVisible, setIsNavVisible] = useState(false)
+  const [isPathwaysOpen, setIsPathwaysOpen] = useState(false)
+  const [isPathwaysExpandedMobile, setIsPathwaysExpandedMobile] =
+    useState(false)
   const [isManualNavigation, setIsManualNavigation] = useState(false)
+
+  // Auto-expand Pathways on mobile when we're on a pathway page
+  const isPathwayPage = pathways.children.some(
+    (link) => link.to === location.pathname
+  )
+  useEffect(() => {
+    if (isPathwayPage) {
+      setIsPathwaysExpandedMobile(true)
+    }
+  }, [isPathwayPage])
   const [isNavigating, setIsNavigating] = useState(false)
   const [isDarkMode, setIsDarkMode] = useState(
     window.matchMedia('(prefers-color-scheme: dark)').matches
@@ -15,39 +30,149 @@ function Navbar() {
 
   const navRef = useRef(null)
   const mobileButtonRef = useRef(null)
+  const pathwaysContainerRef = useRef(null)
+  const pathwaysTriggerRef = useRef(null)
+  const pathwaysMenuRef = useRef(null)
+
+  // Open Pathways menu and focus first item (for keyboard)
+  const openPathwaysAndFocusFirst = () => {
+    setIsPathwaysOpen(true)
+    requestAnimationFrame(() => {
+      const firstItem =
+        pathwaysMenuRef.current?.querySelector('a[role="menuitem"]')
+      firstItem?.focus()
+    })
+  }
+
+  // Open Pathways menu and focus last item (for keyboard Arrow Up)
+  const openPathwaysAndFocusLast = () => {
+    setIsPathwaysOpen(true)
+    requestAnimationFrame(() => {
+      const items =
+        pathwaysMenuRef.current?.querySelectorAll('a[role="menuitem"]')
+      items?.[items.length - 1]?.focus()
+    })
+  }
+
+  // Close Pathways and return focus to trigger
+  const closePathwaysAndFocusTrigger = () => {
+    setIsPathwaysOpen(false)
+    pathwaysTriggerRef.current?.focus()
+  }
+
+  // Close Pathways when focus leaves the dropdown container (keyboard tabbing out)
+  const handlePathwaysBlur = () => {
+    // Use requestAnimationFrame so we check activeElement after focus has moved
+    requestAnimationFrame(() => {
+      if (
+        pathwaysContainerRef.current &&
+        !pathwaysContainerRef.current.contains(document.activeElement)
+      ) {
+        setIsPathwaysOpen(false)
+      }
+    })
+  }
+
+  // Keyboard: Pathways button keydown (Enter, Space, ArrowDown, ArrowUp, Escape)
+  const handlePathwaysTriggerKeyDown = (e) => {
+    if (e.key === 'Escape') {
+      if (isPathwaysOpen) {
+        e.preventDefault()
+        closePathwaysAndFocusTrigger()
+      }
+      return
+    }
+    if (e.key === 'ArrowDown' || e.key === 'ArrowUp') {
+      e.preventDefault()
+      if (isPathwaysOpen) {
+        const items =
+          pathwaysMenuRef.current?.querySelectorAll('a[role="menuitem"]')
+        if (items?.length) {
+          const currentIndex = Array.from(items).indexOf(document.activeElement)
+          if (currentIndex === -1) {
+            // Focus on button; move to first or last item
+            if (e.key === 'ArrowDown') {
+              items[0]?.focus()
+            } else {
+              items[items.length - 1]?.focus()
+            }
+          } else if (e.key === 'ArrowDown') {
+            items[Math.min(currentIndex + 1, items.length - 1)]?.focus()
+          } else {
+            items[Math.max(currentIndex - 1, 0)]?.focus()
+          }
+        }
+      } else {
+        if (e.key === 'ArrowDown') {
+          openPathwaysAndFocusFirst()
+        } else {
+          openPathwaysAndFocusLast()
+        }
+      }
+      return
+    }
+    // Enter and Space trigger click (toggle) - no preventDefault so button works normally
+  }
+
+  // Keyboard: Pathways menu item keydown (ArrowDown, ArrowUp, Escape)
+  const handlePathwaysMenuItemKeyDown = (e, index) => {
+    if (e.key === 'Escape') {
+      e.preventDefault()
+      closePathwaysAndFocusTrigger()
+      return
+    }
+    if (e.key === 'ArrowDown' || e.key === 'ArrowUp') {
+      e.preventDefault()
+      const items =
+        pathwaysMenuRef.current?.querySelectorAll('a[role="menuitem"]')
+      if (!items?.length) return
+      const nextIndex =
+        e.key === 'ArrowDown'
+          ? Math.min(index + 1, items.length - 1)
+          : Math.max(index - 1, 0)
+      items[nextIndex]?.focus()
+    }
+  }
 
   // Helper function to get accurate navbar height
-  const getNavbarHeight = () => {
+  const getNavbarHeight = useCallback(() => {
     const navbar = document.querySelector('nav')
     return navbar ? navbar.offsetHeight : 96
-  }
+  }, [])
 
   // Helper function to calculate scroll position
-  const calculateScrollPosition = (target) => {
-    const navbarHeight = getNavbarHeight()
-    const targetRect = target.getBoundingClientRect()
-    return targetRect.top + window.pageYOffset - navbarHeight
-  }
+  const calculateScrollPosition = useCallback(
+    (target) => {
+      const navbarHeight = getNavbarHeight()
+      const targetRect = target.getBoundingClientRect()
+      return targetRect.top + window.pageYOffset - navbarHeight
+    },
+    [getNavbarHeight]
+  )
 
   // Helper function to reset navigation state after delay
-  const resetNavigationState = (delay) => {
+  const resetNavigationState = useCallback((delay) => {
     setTimeout(() => {
       setIsManualNavigation(false)
       setIsNavigating(false)
     }, delay)
-  }
+  }, [])
 
   // Helper function to perform scroll and reset state
-  const performScroll = (target, resetDelay) => {
-    const scrollPosition = calculateScrollPosition(target)
-    window.scrollTo({ top: scrollPosition, behavior: 'smooth' })
-    resetNavigationState(resetDelay)
-  }
+  const performScroll = useCallback(
+    (target, resetDelay) => {
+      const scrollPosition = calculateScrollPosition(target)
+      window.scrollTo({ top: scrollPosition, behavior: 'smooth' })
+      resetNavigationState(resetDelay)
+    },
+    [calculateScrollPosition, resetNavigationState]
+  )
 
   // Helper function to close mobile nav
   const closeMobileNav = () => {
     if (isNavVisible) {
       setIsNavVisible(false)
+      setIsPathwaysExpandedMobile(false)
     }
   }
 
@@ -64,6 +189,39 @@ function Navbar() {
     // Scroll to top of page
     window.scrollTo({ top: 0, behavior: 'smooth' })
   }
+
+  // Smooth scroll to section when navigating to /#section-id from another page
+  useEffect(() => {
+    if (location.pathname !== '/' || !location.hash) return
+
+    const sectionId = location.hash.slice(1).toLowerCase()
+    const validSectionIds = sections.map((s) => s.id)
+    if (!sectionId || !validSectionIds.includes(sectionId)) return
+
+    const scrollToSection = (target) => {
+      if (!target) return
+      setActiveLink(sectionId)
+      setIsManualNavigation(true)
+      performScroll(target, 500)
+    }
+
+    const tryScroll = (retriesLeft = 10) => {
+      const target = document.querySelector(`#${sectionId}`)
+      if (target) {
+        scrollToSection(target)
+        return
+      }
+      if (retriesLeft > 0) {
+        requestAnimationFrame(() => tryScroll(retriesLeft - 1))
+      }
+    }
+
+    // Wait for home page to mount and render the section
+    const id = requestAnimationFrame(() => {
+      tryScroll()
+    })
+    return () => cancelAnimationFrame(id)
+  }, [location.pathname, location.hash, performScroll])
 
   useEffect(() => {
     // Function to set the active link based on scroll position
@@ -131,7 +289,7 @@ function Navbar() {
     return () => {
       window.removeEventListener('scroll', handleScroll)
     }
-  }, [isManualNavigation, activeLink])
+  }, [isManualNavigation, activeLink, getNavbarHeight])
 
   const handleNavigation = (event, sectionId) => {
     event.preventDefault()
@@ -183,6 +341,7 @@ function Navbar() {
     const handleClickOutside = (event) => {
       if (navRef.current && !navRef.current.contains(event.target)) {
         setIsNavVisible(false)
+        setIsPathwaysOpen(false)
       }
     }
 
@@ -209,18 +368,22 @@ function Navbar() {
   const desktopNavList = (
     <ul
       role="menubar"
-      className="flex flex-row justify-end space-x-6 px-4 py-2"
+      className="z-50 flex flex-row flex-nowrap items-baseline justify-end gap-x-6 px-4 py-2"
     >
       {sections.map((section) => (
         <li key={section.id} role="none" className="text-center">
           <Link
-            to={`#${section.id}`}
-            onClick={(event) => handleNavigation(event, section.id)}
+            to={isHomePage ? `#${section.id}` : `/#${section.id}`}
+            onClick={
+              isHomePage
+                ? (event) => handleNavigation(event, section.id)
+                : undefined
+            }
             role="menuitem"
             aria-current={activeLink === section.id ? 'page' : undefined}
             className={`${
               section.id === 'landing' ? 'hidden' : ''
-            } relative px-2 py-6 pb-2 ${
+            } relative px-2 py-4 pb-2 ${
               activeLink === section.id
                 ? 'after:w-full after:opacity-100'
                 : 'after:w-0 after:opacity-0'
@@ -230,17 +393,65 @@ function Navbar() {
           </Link>
         </li>
       ))}
-      {externalLinks.map((link) => (
-        <li key={link.to} role="none" className="text-center">
-          <Link
-            to={link.to}
+      <li role="none" className="relative text-center">
+        <div
+          ref={pathwaysContainerRef}
+          className="relative"
+          onBlur={handlePathwaysBlur}
+          onMouseEnter={() => setIsPathwaysOpen(true)}
+          onMouseLeave={() => {
+            if (
+              !pathwaysContainerRef.current?.contains(document.activeElement)
+            ) {
+              setIsPathwaysOpen(false)
+            }
+          }}
+        >
+          <button
+            ref={pathwaysTriggerRef}
+            type="button"
             role="menuitem"
-            className="relative px-2 py-6 pb-2 after:absolute after:bottom-0 after:left-0 after:h-1 after:w-0 after:bg-primary-400 after:opacity-0 after:transition-all after:duration-300 after:ease-in-out hover:after:w-full hover:after:opacity-100"
+            aria-expanded={isPathwaysOpen}
+            aria-haspopup="menu"
+            aria-controls="pathways-menu"
+            id="pathways-trigger"
+            className="relative inline-flex items-baseline gap-1 px-2 py-4 pb-2 after:absolute after:bottom-0 after:left-0 after:h-1 after:w-0 after:bg-primary-400 after:opacity-0 after:transition-all after:duration-300 after:ease-in-out hover:after:w-full hover:after:opacity-100"
+            onClick={() => setIsPathwaysOpen((prev) => !prev)}
+            onKeyDown={handlePathwaysTriggerKeyDown}
           >
-            {link.text}
-          </Link>
-        </li>
-      ))}
+            {pathways.text}
+            <FaChevronDown
+              className={`size-3.5 shrink-0 transition-transform duration-200 ${
+                isPathwaysOpen ? 'rotate-180' : ''
+              }`}
+              aria-hidden
+            />
+          </button>
+          <ul
+            ref={pathwaysMenuRef}
+            id="pathways-menu"
+            role="menu"
+            aria-labelledby="pathways-trigger"
+            className={`absolute right-0 top-full z-40 -mt-0.5 min-w-40 rounded-md border border-gray-200 bg-white py-1 shadow-lg dark:border-gray-600 dark:bg-gray-700 ${
+              isPathwaysOpen ? 'block' : 'hidden'
+            }`}
+          >
+            {pathways.children.map((link, index) => (
+              <li key={link.to} role="none">
+                <Link
+                  to={link.to}
+                  role="menuitem"
+                  className="relative block px-4 py-2 text-left text-gray-700 after:absolute after:bottom-0 after:left-0 after:h-0.5 after:w-0 after:bg-primary-400 after:opacity-0 after:transition-all after:duration-300 after:ease-in-out hover:bg-gray-100 hover:after:w-full hover:after:opacity-100 dark:text-gray-100 dark:hover:bg-gray-600"
+                  onClick={() => setIsPathwaysOpen(false)}
+                  onKeyDown={(e) => handlePathwaysMenuItemKeyDown(e, index)}
+                >
+                  {link.text}
+                </Link>
+              </li>
+            ))}
+          </ul>
+        </div>
+      </li>
     </ul>
   )
 
@@ -253,8 +464,12 @@ function Navbar() {
           className={`${section.id === 'landing' ? 'hidden' : ''}`}
         >
           <Link
-            to={`#${section.id}`}
-            onClick={(event) => handleNavigation(event, section.id)}
+            to={isHomePage ? `#${section.id}` : `/#${section.id}`}
+            onClick={
+              isHomePage
+                ? (event) => handleNavigation(event, section.id)
+                : undefined
+            }
             aria-current={activeLink === section.id ? 'page' : undefined}
             className={`block rounded-lg px-4 py-3 text-center transition-colors hover:bg-gray-100 dark:hover:bg-primary-400 ${
               activeLink === section.id
@@ -266,16 +481,49 @@ function Navbar() {
           </Link>
         </li>
       ))}
-      {externalLinks.map((link) => (
-        <li key={link.to}>
-          <Link
-            to={link.to}
-            className="block rounded-lg px-4 py-3 text-center text-gray-700 transition-colors hover:bg-gray-100 dark:text-white dark:hover:bg-primary-400 dark:hover:text-gray-900"
-          >
-            {link.text}
-          </Link>
-        </li>
-      ))}
+      <li>
+        <button
+          type="button"
+          aria-expanded={isPathwaysExpandedMobile}
+          aria-controls="pathways-mobile-menu"
+          className="flex w-full items-center justify-center gap-2 rounded-lg px-4 py-3 text-center text-gray-700 transition-colors hover:bg-gray-100 dark:text-white dark:hover:bg-primary-400 dark:hover:text-gray-900"
+          onClick={() => setIsPathwaysExpandedMobile((prev) => !prev)}
+        >
+          {pathways.text}
+          <FaChevronDown
+            className={`size-3.5 shrink-0 transition-transform duration-200 ${
+              isPathwaysExpandedMobile ? 'rotate-180' : ''
+            }`}
+            aria-hidden
+          />
+        </button>
+        <ul
+          id="pathways-mobile-menu"
+          className={`space-y-1 overflow-hidden pl-4 ${
+            isPathwaysExpandedMobile ? 'mt-2' : 'hidden'
+          }`}
+        >
+          {pathways.children.map((link) => {
+            const isActivePathway = location.pathname === link.to
+            return (
+              <li key={link.to}>
+                <Link
+                  to={link.to}
+                  aria-current={isActivePathway ? 'page' : undefined}
+                  className={`block rounded-lg px-4 py-3 text-center transition-colors hover:bg-gray-100 dark:text-white dark:hover:bg-primary-400 dark:hover:text-gray-900 ${
+                    isActivePathway
+                      ? 'bg-primary-100 font-semibold text-primary-700'
+                      : 'text-gray-700'
+                  }`}
+                  onClick={closeMobileNav}
+                >
+                  {link.text}
+                </Link>
+              </li>
+            )
+          })}
+        </ul>
+      </li>
     </ul>
   )
 
@@ -283,7 +531,7 @@ function Navbar() {
     <nav
       ref={navRef}
       aria-label="Main navigation"
-      className={`fixed left-0 top-0 z-10 w-screen overflow-hidden ${
+      className={`fixed left-0 top-0 z-30 w-screen ${
         activeLink === 'landing'
           ? 'bg-white text-sky-900'
           : 'bg-white text-gray-700 shadow-lg dark:bg-gray-700 dark:text-gray-100'
@@ -297,7 +545,7 @@ function Navbar() {
           } section`}
       </div>
       <div
-        className="grid w-full min-w-0 max-w-full grid-cols-[1fr_auto] items-center gap-2 overflow-hidden p-2 sm:p-4"
+        className="grid w-full min-w-0 max-w-full grid-cols-[1fr_auto] items-center gap-2 p-2 sm:p-4"
         style={{ width: '100%', maxWidth: '100%' }}
       >
         <Link

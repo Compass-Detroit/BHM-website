@@ -1,56 +1,11 @@
 import { Link } from 'react-router-dom'
-import { sections, externalLinks } from '../data/2025/navigation'
+import { sections, externalLinks } from '@/data/2026/navigation'
 import GdgDetroitLogo from '@/assets/images/gdg-detroit-logo-footer.svg'
 import CompassDetroit from '@/assets/images/sponsors/Compass_Detroit_logo.webp'
 
 function Footer() {
-  // Helper function to get navbar height for scroll offset
-  const getNavbarHeight = () => {
-    const navbar = document.querySelector('nav')
-    return navbar ? navbar.offsetHeight : 96
-  }
-
-  // Easing function for smooth scrolling (ease-in-out)
-  const easeInOutCubic = (t) => {
-    return t < 0.5 ? 4 * t * t * t : 1 - Math.pow(-2 * t + 2, 3) / 2
-  }
-
-  // Smooth scroll with easing
-  const smoothScrollTo = (targetPosition, duration = 800) => {
-    const startPosition = window.pageYOffset
-    const distance = targetPosition - startPosition
-    let startTime = null
-
-    const animation = (currentTime) => {
-      if (startTime === null) startTime = currentTime
-      const timeElapsed = currentTime - startTime
-      const progress = Math.min(timeElapsed / duration, 1)
-      const ease = easeInOutCubic(progress)
-
-      window.scrollTo(0, startPosition + distance * ease)
-
-      if (timeElapsed < duration) {
-        requestAnimationFrame(animation)
-      }
-    }
-
-    requestAnimationFrame(animation)
-  }
-
-  // Handle navigation to section anchors
-  const handleNavigation = (event, sectionId) => {
-    event.preventDefault()
-    const target = document.querySelector(`#${sectionId}`)
-
-    if (target) {
-      const navbarHeight = getNavbarHeight()
-      const targetRect = target.getBoundingClientRect()
-      const scrollPosition = targetRect.top + window.pageYOffset - navbarHeight
-
-      smoothScrollTo(scrollPosition)
-    }
-  }
-
+  // Section links always use /#section-id so that smooth scrolling is handled
+  // consistently by the Navbar's hash-based useEffect (from any page, including home).
   return (
     <footer
       role="contentinfo"
@@ -63,8 +18,7 @@ function Footer() {
             .map((section) => (
               <Link
                 key={section.id}
-                to={`#${section.id}`}
-                onClick={(event) => handleNavigation(event, section.id)}
+                to={`/#${section.id}`}
                 className="text-sm text-gray-600 hover:text-gray-800 dark:text-gray-400 dark:hover:text-gray-200"
               >
                 {section.text}
@@ -81,7 +35,7 @@ function Footer() {
           ))}
         </div>
         <p className="mt-8 text-center text-sm text-gray-600 md:order-1 md:mt-0 dark:text-gray-400">
-          © {new Date().getFullYear()} GDG Detroit. All rights reserved.
+          © {new Date().getFullYear()} Compass Detroit. All rights reserved.
         </p>
       </div>
       <div className="mx-auto w-full max-w-full border-t border-gray-300 bg-indigo-950 px-6 pb-24 pt-8 lg:px-8 dark:border-gray-700">

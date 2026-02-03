@@ -26,7 +26,7 @@ const SpeakersContent = ({ year, defaultExpanded }) => {
     <div className="flex w-full justify-between pt-0">
       <button
         aria-label={
-          isExpanded ? `Collapse ${year} Speakers` : `Expand ${year} Speakers`
+          isExpanded ? `Collapse ${year} Compass Detroit Speakers` : `Expand ${year} Compass Detroit Speakers`
         }
         onClick={toggleExpanded}
         className="flex cursor-pointer items-center text-black transition-colors hover:text-gray-600"
@@ -58,7 +58,7 @@ const SpeakersContent = ({ year, defaultExpanded }) => {
         isExpanded ? 'max-h-none opacity-100' : 'max-h-0 opacity-0'
       }`}
     >
-      <div className="mx-auto mt-6 max-w-3xl text-left">
+      <div className="mx-auto mt-6 max-w-4xl text-left">
         <p className="text-base text-gray-700 md:text-lg">
           Join us for engaging and inspiring talks from industry leaders,
           innovators, and experts who are shaping the future of technology. Our

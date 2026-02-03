@@ -3,10 +3,7 @@ import PropTypes from 'prop-types'
 import Kite from '@/assets/images/icn-kite.png'
 import CTAButton from '@/components/ui/CTAButton'
 
-const PartnersSection = ({
-  partnersData = {},
-  year = new Date().getFullYear(),
-}) => {
+const PartnersSection = ({ partnersData = {}, year }) => {
   const isCurrentYear = year === new Date().getFullYear()
 
   // Check if there's any partner data
@@ -83,7 +80,7 @@ const PartnersSection = ({
     >
       <div className="relative w-full pt-0">
         <h2 className="w-full text-center font-biorhyme text-4xl text-black md:text-5xl lg:text-6xl">
-          {year && !isCurrentYear ? `${year} ` : ''}Partners
+          {year ? `${year} ` : ''}Partners
         </h2>
         <img
           src={Kite}
@@ -93,11 +90,11 @@ const PartnersSection = ({
         />
       </div>
 
-      <div className="mx-auto mt-6 max-w-3xl text-left">
+      <div className="mx-auto mt-6 max-w-4xl text-left">
         <p className="text-base text-gray-700 md:text-lg">
-          DevFest wouldn&apos;t be possible without the support of our amazing
-          partners. Thank you for helping us create an unforgettable experience
-          for the tech community.
+          Compass Detroit wouldn&apos;t be possible without the support of our
+          amazing partners. Thank you for helping us create an unforgettable
+          experience for the tech community.
         </p>
       </div>
 
@@ -113,6 +110,7 @@ const PartnersSection = ({
             )}
 
             {/* Diamond and Gold sponsors side by side */}
+
             <div className="mb-12 grid grid-cols-1 gap-8 lg:grid-cols-2">
               <div className="flex flex-col items-center">
                 {renderPartnerTier(
@@ -210,7 +208,7 @@ PartnersSection.propTypes = {
       })
     ),
   }),
-  year: PropTypes.number,
+  year: PropTypes.number.isRequired,
 }
 
 export default PartnersSection
