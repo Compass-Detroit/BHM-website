@@ -1,6 +1,6 @@
-# Contributing to Compass Detroit Website
+# Contributing to Black History Month Innovation Summit Website
 
-Thank you for your interest in contributing to the Compass Detroit website! This document provides guidelines and information for contributors.
+Thank you for your interest in contributing to the Black History Month Innovation Summit (BHM-website)! This document provides guidelines and information for contributors.
 
 ## Getting Started
 
@@ -16,8 +16,8 @@ Thank you for your interest in contributing to the Compass Detroit website! This
 2. **Clone your fork** locally:
 
    ```bash
-   git clone https://github.com/YOUR_USERNAME/compass-website.git
-   cd compass-website
+   git clone https://github.com/YOUR_USERNAME/BHM-website.git
+   cd BHM-website
    ```
 
 3. **Install dependencies**:
@@ -36,21 +36,21 @@ Thank you for your interest in contributing to the Compass Detroit website! This
 
 ### GitHub Desktop: Push/PR goes to wrong org or repo
 
-If **Push** or **Create Pull Request** in GitHub Desktop opens or targets a different organization or repository (e.g. GDG Detroit or devfest-website):
+If **Push** or **Create Pull Request** in GitHub Desktop opens or targets a different organization or repository:
 
 1. **Re-add the repo** so GitHub Desktop picks up the correct remote:
 
    - In GitHub Desktop: **File → Remove repository** (removes it from the list only; files stay on disk).
-   - **File → Add Local Repository** and choose this project folder (`compass-website`).
-   - GitHub Desktop will use the existing Git remotes; pushes and "Create Pull Request" should now target **Compass-Detroit/compass-website**.
+   - **File → Add Local Repository** and choose this project folder (`BHM-website`).
+   - GitHub Desktop will use the existing Git remotes; pushes and "Create Pull Request" should now target **Compass-Detroit/BHM-website**.
 
 2. **Confirm remotes in Terminal** (optional):
    ```bash
    git remote -v
    ```
-   You should see `origin` (and optionally `upstream`) pointing to `https://github.com/Compass-Detroit/compass-website.git`. If not:
+   You should see `origin` (and optionally `upstream`) pointing to `https://github.com/Compass-Detroit/BHM-website.git`. If not:
    ```bash
-   git remote set-url origin https://github.com/Compass-Detroit/compass-website.git
+   git remote set-url origin https://github.com/Compass-Detroit/BHM-website.git
    ```
    Then remove and re-add the repo in GitHub Desktop as in step 1.
 
@@ -151,7 +151,7 @@ Then create a pull request on GitHub using our PR template.
 
 ## Accessibility Guidelines
 
-We are committed to making the DevFest Detroit website accessible to everyone. Please ensure:
+We are committed to making the Black History Month Innovation Summit website accessible to everyone. Please ensure:
 
 ### Keyboard Navigation
 
@@ -232,7 +232,6 @@ When reporting issues, please use our issue templates:
 ## Getting Help
 
 - **GitHub Discussions**: For general questions and discussions
-- **GDG Detroit Community**: Join our [GDG Detroit community](https://gdg.community.dev/gdg-detroit/)
 - **Issues**: For bug reports and feature requests
 
 ## Release Process
@@ -245,8 +244,8 @@ Releases are managed by the maintainers. When your PR is merged:
 
 ## Thank You
 
-Thank you for contributing to the DevFest Detroit website! Your contributions help make our event more accessible and engaging for the developer community in Detroit.
+Thank you for contributing to the Black History Month Innovation Summit website! Your contributions help make our event more accessible and engaging for the community.
 
 ---
 
-**Note**: This project is maintained by the GDG Detroit team. For questions about the project or this contributing guide, please open an issue or start a discussion.
+**Note**: This project is maintained by the Compass Detroit team. For questions about the project or this contributing guide, please open an issue or start a discussion.

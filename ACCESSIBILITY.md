@@ -1,6 +1,6 @@
 # Accessibility Guidelines
 
-This document outlines the accessibility standards and practices for the DevFest Detroit website. Our goal is to ensure the website is accessible to all users, including those using assistive technologies.
+This document outlines the accessibility standards and practices for the Black History Month Innovation Summit website. Our goal is to ensure the website is accessible to all users, including those using assistive technologies.
 
 ## Overview
 
