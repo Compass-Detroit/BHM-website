@@ -10,13 +10,8 @@ const blackHistorySummitSchedule = [
         description:
           'In-person session. Grab your badge, enjoy a delicious breakfast, and get ready for an amazing day of learning and networking.',
       },
-    ],
-  },
-  {
-    time: '8:15 AM',
-    events: [
       {
-        title: 'Morning Mindfulness & Meditative Yoga',
+        title: 'Mindfulness & Meditative Yoga',
         description:
           'In-person session. Start your day mindfully with a relaxing meditation and yoga session to energize your body and clear your mind.',
       },
@@ -26,10 +21,20 @@ const blackHistorySummitSchedule = [
     time: '9:00 AM',
     events: [
       {
+        title: 'Welcome & Opening Remarks',
+        description:
+          'In-person session. Join us for the official welcome and opening remarks to kick off the Black History Month Tech Summit.',
+      },
+    ],
+  },
+  {
+    time: '9:15 AM',
+    events: [
+      {
         title:
           "Powering Detroit's Future: AI-Driven Energy Innovation Fireside Chat with DTE x IBM",
         description:
-          "Innovation Summit Keynote (Virtual & In-person, Leadership Track) - Join us for an inspiring keynote conversation between two visionary Black leaders transforming how Michigan powers its future. Steven Benyard, Vice President of Electric Capital Delivery at DTE Energy, and Jason Kelley, Global Head and Managing Partner of Core Business Applications at IBM, will explore how artificial intelligence is revolutionizing the energy sector while creating unprecedented opportunities for Michigan's communities. Topics include: The AI Revolution in Energy, Equity Through Innovation, Climate Action Meets Community Impact, Building Tomorrow's Workforce, and real-world examples of AI applications improving energy reliability across Southeast Michigan. Speakers: Steven Benyard (VP - Electric Capital Delivery, DTE Energy), Jason Kelley (Global Head, Managing Partner - Core Business Applications, IBM), Tabice Ward (CIO, Walker-Miller).",
+          "Innovation Summit Keynote (Virtual & In-person) at Town Square. A fireside chat with leaders from DTE and IBM on how AI is transforming Michigan's energy future, advancing equity, supporting climate goals, and creating new workforce opportunities.",
       },
     ],
   },
@@ -37,32 +42,9 @@ const blackHistorySummitSchedule = [
     time: '10:00 AM',
     events: [
       {
-        title: 'AI Foundations Sessions',
-        description: 'In-person AI Foundations track sessions.',
-      },
-      {
-        title: 'Build with AI Workshops',
-        description: 'In-person Build with AI track workshops.',
-      },
-      {
-        title: 'Career Mentorship',
-        description: 'Virtual & In-person career mentorship sessions.',
-      },
-      {
-        title: 'Innovation Workshops',
-        description: 'In-person Innovation track workshops.',
-      },
-      {
-        title: 'Leadership Sessions',
-        description: 'Virtual & In-person Leadership track sessions.',
-      },
-      {
-        title: 'Level Up Sessions',
-        description: 'In-person Level Up track sessions.',
-      },
-      {
-        title: 'Resume Review',
-        description: 'Virtual & In-person resume review sessions.',
+        title: 'Sessions',
+        description:
+          'Multiple tracks running simultaneously: Level Up (Town Square), Build with AI (SB 120), Leadership (275 & 278), Innovation (WCB 103), AI Foundations (WCB 105), and Breakout Sessions (255).',
       },
     ],
   },
@@ -80,10 +62,9 @@ const blackHistorySummitSchedule = [
     time: '1:00 PM',
     events: [
       {
-        title:
-          'Catalysts and Change Agents: Extending the Impact of Your Tech Leadership',
+        title: 'Innovation Summit Panel Discussion',
         description:
-          'Innovation Summit Panel Discussion (Virtual & In-person, Leadership Track) - Join Sylvester Hester, Justin Turk, and W. Scott Richardson for a panel on bridging the gap between technical excellence and social responsibility. This session offers a "system architecture" for repeatable community impact, teaching early- and mid-career professionals and tech leaders across industries how to draw on executive and managerial frameworks to strengthen the communities they serve. Learn to maximize your influence while eliminating the "scope creep" of burnout and overcommitment. Speakers: Sylvester Hester (President & CEO, LM Manufacturing), Justin Turk (2X Tech Founder, ConStrat AI + Livegistics), W. Scott Richardson (Senior Specialist - Training Development, Altair Engineering).',
+          'Virtual & In-person panel discussion featuring industry leaders sharing insights on tech leadership, innovation, and community impact.',
       },
     ],
   },
@@ -91,32 +72,9 @@ const blackHistorySummitSchedule = [
     time: '2:00 PM',
     events: [
       {
-        title: 'AI Foundations Sessions',
-        description: 'In-person AI Foundations track sessions.',
-      },
-      {
-        title: 'Build with AI Workshops',
-        description: 'In-person Build with AI track workshops.',
-      },
-      {
-        title: 'Career Mentorship',
-        description: 'Virtual & In-person career mentorship sessions.',
-      },
-      {
-        title: 'Innovation Workshops',
-        description: 'In-person Innovation track workshops.',
-      },
-      {
-        title: 'Leadership Sessions',
-        description: 'Virtual & In-person Leadership track sessions.',
-      },
-      {
-        title: 'Level Up Sessions',
-        description: 'In-person Level Up track sessions.',
-      },
-      {
-        title: 'Mock Interviews',
-        description: 'Virtual & In-person mock interview sessions.',
+        title: 'Sessions',
+        description:
+          'Multiple tracks running simultaneously: Level Up (Town Square), Build with AI (SB 120), Leadership (275 & 278), Innovation (WCB 103), AI Foundations (WCB 105), and Breakout Sessions (255).',
       },
     ],
   },
