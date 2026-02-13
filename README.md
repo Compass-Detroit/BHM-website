@@ -111,7 +111,7 @@ Currently, no environment variables are required to run the application. The app
 | `npm run dev`          | Start the development server via Vite                         |
 | `npm run build`        | Build the project for production                              |
 | `npm run preview`      | Create a preview of the production build locally              |
-| `npm run lint`         | Check code for linting errors (includes Tailwind class order)  |
+| `npm run lint`         | Check code for linting errors (includes Tailwind class order) |
 | `npm run lint:fix`     | Automatically fix linting errors                              |
 | `npm run format`       | Format code with Prettier                                     |
 | `npm run format:check` | Check code formatting with Prettier                           |
