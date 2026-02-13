@@ -99,6 +99,27 @@ export default {
           900: '#312e81',
           950: '#1e1b4b',
         },
+        
+            bhm: {
+      black: {
+        950: "#0B0B0B",
+        900: "#111111",
+      },
+      red: {
+        500: "#C1121F",
+        700: "#8E0C15",
+      },
+      green: {
+        500: "#1B7F3B",
+        700: "#125B2A",
+      },
+      gold: {
+        500: "#CFAE70",
+      },
+      neutral: {
+        50: "#F8F9FA",
+        200: "#E9ECEF",
+        700: "#343A40",},}
       },
       fontFamily: {
         russell: ['Russell', 'cursive'],
