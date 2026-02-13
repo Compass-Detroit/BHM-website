@@ -1,6 +1,6 @@
 # Black History Month Innovation Summit Website
 
-The repository for the [Black History Month Innovation Summit](https://bhminnovationsummit.com/) website. Built with Vite, React, and Tailwind CSS. Internally referred to as **BHM-website**.
+The repository for the [Black History Month Innovation Summit](https://compass-detroit.com/) website. Built with Vite, React, and Tailwind CSS. Internally referred to as **BHM-website**.
 
 This project was forked from the Compass Detroit and Michigan DevFest websites.
 
@@ -83,15 +83,15 @@ docker run -p 3000:3000 bhm-website
 
 ### Docker Commands
 
-| Command                                                                 | Description                                     |
-| ----------------------------------------------------------------------- | ----------------------------------------------- |
-| `docker build -t bhm-website .`                                         | Build the Docker image                          |
-| `docker run -p 3000:3000 bhm-website`                                   | Run the container on port 3000                  |
-| `docker run -d -p 3000:3000 --name bhm-app bhm-website`                 | Run container in detached mode with custom name |
-| `docker stop bhm-app`                                                   | Stop the running container                      |
-| `docker rm bhm-app`                                                     | Remove the container                            |
-| `docker images`                                                         | List all Docker images                          |
-| `docker rmi bhm-website`                                                | Remove the Docker image                         |
+| Command                                                 | Description                                     |
+| ------------------------------------------------------- | ----------------------------------------------- |
+| `docker build -t bhm-website .`                         | Build the Docker image                          |
+| `docker run -p 3000:3000 bhm-website`                   | Run the container on port 3000                  |
+| `docker run -d -p 3000:3000 --name bhm-app bhm-website` | Run container in detached mode with custom name |
+| `docker stop bhm-app`                                   | Stop the running container                      |
+| `docker rm bhm-app`                                     | Remove the container                            |
+| `docker images`                                         | List all Docker images                          |
+| `docker rmi bhm-website`                                | Remove the Docker image                         |
 
 ### Environment Variables
 
