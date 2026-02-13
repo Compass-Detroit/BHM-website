@@ -34,7 +34,7 @@ const blackHistorySummitSchedule = [
         title:
           "Powering Detroit's Future: AI-Driven Energy Innovation Fireside Chat with DTE x IBM",
         description:
-          "Innovation Summit Keynote (Virtual & In-person) at Town Square - Join us for an inspiring keynote conversation between two visionary Black leaders transforming how Michigan powers its future. Steven Benyard, Vice President of Electric Capital Delivery at DTE Energy, and Jason Kelley, Global Head and Managing Partner of Core Business Applications at IBM, will explore how artificial intelligence is revolutionizing the energy sector while creating unprecedented opportunities for Michigan's communities. Topics include: The AI Revolution in Energy (how machine learning and predictive analytics are creating smarter, more resilient power grids), Equity Through Innovation (ensuring AI-powered solutions address historical disparities), Climate Action Meets Community Impact (leveraging AI to accelerate clean energy transition), Building Tomorrow's Workforce (creating pathways for Michigan's talent in the AI-energy economy), and real-world examples of AI applications improving energy reliability across Southeast Michigan. Speakers: Steven Benyard (VP - Electric Capital Delivery, DTE Energy), Jason Kelley (Global Head, Managing Partner - Core Business Applications, IBM), Tabice Ward (CIO, Walker-Miller).",
+          "Innovation Summit Keynote (Virtual & In-person) at Town Square. A fireside chat with leaders from DTE and IBM on how AI is transforming Michigan's energy future, advancing equity, supporting climate goals, and creating new workforce opportunities.",
       },
     ],
   },

@@ -1,7 +1,34 @@
 import HodaSolati from '@/assets/images/speakers/Hoda_Solati.jpg'
-import JennaRitten from '@/data/2025/assets/images/team/jenna_ritten.webp'
+import JennaRitten from '@/data/2026/assets/images/team/jenna_ritten.webp'
 import ShimaSolati from '@/assets/images/speakers/Shima_Solati.jpg'
 import WScottRichardson from '@/assets/images/speakers/W_Scott_Richardson.jpeg'
+
+const keynoteSession = {
+  title:
+    "Powering Detroit's Future: AI-Driven Energy Innovation Fireside Chat with DTE x IBM",
+  abstract:
+    'Innovation Summit Keynote exploring how artificial intelligence is revolutionizing the energy sector while creating unprecedented opportunities for Michigan communities.',
+  description: `
+    Innovation Summit Keynote - Powering Detroit's Future: AI-Driven Energy Innovation
+    Fireside Chat with DTE x IBM.
+
+    Join us for an inspiring keynote conversation between two visionary Black leaders
+    transforming how Michigan powers its future. Steven Benyard (DTE Energy) and
+    Jason Kelley (IBM) will explore how AI is revolutionizing the energy sector while
+    creating unprecedented opportunities for Michigan's communities.
+
+    Topics include:
+      - The AI Revolution in Energy
+      - Equity Through Innovation
+      - Climate Action Meets Community Impact
+      - Building Tomorrow's Workforce
+      - Real-world examples of AI applications improving energy reliability across Southeast Michigan
+    `,
+  tags: ['AI', 'Energy', 'Innovation', 'Leadership', 'Virtual', 'In-person'],
+  track: 'Level Up',
+  time: '09:15',
+  room: 'Town Square',
+}
 
 export const SpeakersData = [
   {
@@ -120,25 +147,7 @@ export const SpeakersData = [
     url: null,
     organization: 'DTE Energy',
     position: 'Vice President - Electric Capital Delivery',
-    session: {
-      title:
-        "Powering Detroit's Future: AI-Driven Energy Innovation Fireside Chat with DTE x IBM",
-      abstract:
-        'Innovation Summit Keynote exploring how artificial intelligence is revolutionizing the energy sector while creating unprecedented opportunities for Michigan communities.',
-      description:
-        "Innovation Summit Keynote - Powering Detroit's Future: AI-Driven Energy Innovation Fireside Chat with DTE x IBM. Join us for an inspiring keynote conversation between two visionary Black leaders transforming how Michigan powers its future. Steven Benyard, Vice President of Electric Capital Delivery at DTE Energy, and Jason Kelley, Global Head and Managing Partner of Core Business Applications at IBM, will explore how artificial intelligence is revolutionizing the energy sector while creating unprecedented opportunities for Michigan's communities. In this dynamic fireside chat, these executives will share insights on: The AI Revolution in Energy (how machine learning and predictive analytics are creating smarter, more resilient power grids that better serve Detroit's diverse neighborhoods), Equity Through Innovation (ensuring AI-powered energy solutions address historical disparities and create economic opportunities in underserved communities), Climate Action Meets Community Impact (leveraging AI to accelerate Michigan's clean energy transition while keeping energy affordable and accessible), Building Tomorrow's Workforce (how DTE and IBM are creating pathways for Michigan's talent to lead in the AI-energy economy), and From Vision to Reality (real-world examples of AI applications already improving energy reliability, reducing outages, and empowering customers across Southeast Michigan). Drawing from their extensive experience leading transformational initiatives at two of the industry's most influential companies, Benyard and Kelley will offer a rare glimpse into the future of energy infrastructure, the role of Black leadership in driving innovation, and why Michigan is uniquely positioned to become a global model for equitable, AI-powered energy systems. This conversation is essential for technology professionals, energy sector leaders, students, and anyone passionate about how emerging technologies can create a more sustainable and equitable future for our communities.",
-      tags: [
-        'AI',
-        'Energy',
-        'Innovation',
-        'Leadership',
-        'Virtual',
-        'In-person',
-      ],
-      track: 'Level Up',
-      time: '09:15',
-      room: 'Town Square',
-    },
+    session: keynoteSession,
     isWTM: false,
     isGDE: false,
     mastodon: null,
@@ -154,25 +163,7 @@ export const SpeakersData = [
     url: null,
     organization: 'IBM',
     position: 'Global Head, Managing Partner - Core Business Applications',
-    session: {
-      title:
-        "Powering Detroit's Future: AI-Driven Energy Innovation Fireside Chat with DTE x IBM",
-      abstract:
-        'Innovation Summit Keynote exploring how artificial intelligence is revolutionizing the energy sector while creating unprecedented opportunities for Michigan communities.',
-      description:
-        "Innovation Summit Keynote - Powering Detroit's Future: AI-Driven Energy Innovation Fireside Chat with DTE x IBM. Join us for an inspiring keynote conversation between two visionary Black leaders transforming how Michigan powers its future. Steven Benyard, Vice President of Electric Capital Delivery at DTE Energy, and Jason Kelley, Global Head and Managing Partner of Core Business Applications at IBM, will explore how artificial intelligence is revolutionizing the energy sector while creating unprecedented opportunities for Michigan's communities. In this dynamic fireside chat, these executives will share insights on: The AI Revolution in Energy (how machine learning and predictive analytics are creating smarter, more resilient power grids that better serve Detroit's diverse neighborhoods), Equity Through Innovation (ensuring AI-powered energy solutions address historical disparities and create economic opportunities in underserved communities), Climate Action Meets Community Impact (leveraging AI to accelerate Michigan's clean energy transition while keeping energy affordable and accessible), Building Tomorrow's Workforce (how DTE and IBM are creating pathways for Michigan's talent to lead in the AI-energy economy), and From Vision to Reality (real-world examples of AI applications already improving energy reliability, reducing outages, and empowering customers across Southeast Michigan). Drawing from their extensive experience leading transformational initiatives at two of the industry's most influential companies, Benyard and Kelley will offer a rare glimpse into the future of energy infrastructure, the role of Black leadership in driving innovation, and why Michigan is uniquely positioned to become a global model for equitable, AI-powered energy systems. This conversation is essential for technology professionals, energy sector leaders, students, and anyone passionate about how emerging technologies can create a more sustainable and equitable future for our communities.",
-      tags: [
-        'AI',
-        'Energy',
-        'Innovation',
-        'Leadership',
-        'Virtual',
-        'In-person',
-      ],
-      track: 'Level Up',
-      time: '09:15',
-      room: 'Town Square',
-    },
+    session: keynoteSession,
     isWTM: false,
     isGDE: false,
     mastodon: null,
@@ -188,25 +179,7 @@ export const SpeakersData = [
     url: null,
     organization: 'Walker-Miller Energy Services',
     position: 'Chief Information Officer',
-    session: {
-      title:
-        "Powering Detroit's Future: AI-Driven Energy Innovation Fireside Chat with DTE x IBM",
-      abstract:
-        'Innovation Summit Keynote exploring how artificial intelligence is revolutionizing the energy sector while creating unprecedented opportunities for Michigan communities.',
-      description:
-        'Tabice Ward joins the keynote conversation as a moderator, bringing her expertise in technology leadership and energy equity to this inspiring discussion about AI-driven energy innovation.',
-      tags: [
-        'AI',
-        'Energy',
-        'Innovation',
-        'Leadership',
-        'Virtual',
-        'In-person',
-      ],
-      track: 'Level Up',
-      time: '09:15',
-      room: 'Town Square',
-    },
+    session: keynoteSession,
     isWTM: false,
     isGDE: false,
     mastodon: null,
