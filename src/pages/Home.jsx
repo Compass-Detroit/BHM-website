@@ -37,11 +37,11 @@ function Home() {
         ]}
       />
 
-      <MembersSection year={currentYear} />
+      <MembersSection />
 
       <SpeakersSection year={currentYear} speakersData={Speakers2026} />
 
-      <AttendeeSection year={currentYear} />
+      <AttendeeSection />
 
       <JobBoardSection year={currentYear} />
 
