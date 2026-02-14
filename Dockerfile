@@ -1,3 +1,6 @@
+# Black History Month Innovation Summit Website (BHM-website)
+# Build: docker build -t bhm-website .
+# Run:   docker run -p 3000:3000 bhm-website
 FROM node:alpine
 
 WORKDIR /app

@@ -1,7 +1,34 @@
 import HodaSolati from '@/assets/images/speakers/Hoda_Solati.jpg'
-import JennaRitten from '@/data/2025/assets/images/team/jenna_ritten.webp'
+import JennaRitten from '@/data/2026/assets/images/team/jenna_ritten.webp'
 import ShimaSolati from '@/assets/images/speakers/Shima_Solati.jpg'
 import WScottRichardson from '@/assets/images/speakers/W_Scott_Richardson.jpeg'
+
+const keynoteSession = {
+  title:
+    "Powering Detroit's Future: AI-Driven Energy Innovation Fireside Chat with DTE x IBM",
+  abstract:
+    'Innovation Summit Keynote exploring how artificial intelligence is revolutionizing the energy sector while creating unprecedented opportunities for Michigan communities.',
+  description: `
+    Innovation Summit Keynote - Powering Detroit's Future: AI-Driven Energy Innovation
+    Fireside Chat with DTE x IBM.
+
+    Join us for an inspiring keynote conversation between two visionary Black leaders
+    transforming how Michigan powers its future. Steven Benyard (DTE Energy) and
+    Jason Kelley (IBM) will explore how AI is revolutionizing the energy sector while
+    creating unprecedented opportunities for Michigan's communities.
+
+    Topics include:
+      - The AI Revolution in Energy
+      - Equity Through Innovation
+      - Climate Action Meets Community Impact
+      - Building Tomorrow's Workforce
+      - Real-world examples of AI applications improving energy reliability across Southeast Michigan
+    `,
+  tags: ['AI', 'Energy', 'Innovation', 'Leadership', 'Virtual', 'In-person'],
+  track: 'Level Up',
+  time: '09:15',
+  room: 'Town Square',
+}
 
 export const SpeakersData = [
   {
@@ -120,18 +147,7 @@ export const SpeakersData = [
     url: null,
     organization: 'DTE Energy',
     position: 'Vice President - Electric Capital Delivery',
-    session: {
-      title:
-        "Powering Detroit's Future: AI-Driven Energy Innovation Fireside Chat with DTE x IBM",
-      abstract:
-        'Innovation Summit Keynote exploring how artificial intelligence is revolutionizing the energy sector while creating unprecedented opportunities for Michigan communities.',
-      description:
-        "Join us for an inspiring keynote conversation between two visionary Black leaders transforming how Michigan powers its future. Steven Benyard and Jason Kelley will explore how AI is revolutionizing the energy sector, addressing equity through innovation, climate action, and building tomorrow's workforce.",
-      tags: ['AI', 'Energy', 'Innovation', 'Leadership'],
-      track: 'Leadership',
-      time: '09:00',
-      room: 'Main Stage',
-    },
+    session: keynoteSession,
     isWTM: false,
     isGDE: false,
     mastodon: null,
@@ -147,18 +163,7 @@ export const SpeakersData = [
     url: null,
     organization: 'IBM',
     position: 'Global Head, Managing Partner - Core Business Applications',
-    session: {
-      title:
-        "Powering Detroit's Future: AI-Driven Energy Innovation Fireside Chat with DTE x IBM",
-      abstract:
-        'Innovation Summit Keynote exploring how artificial intelligence is revolutionizing the energy sector while creating unprecedented opportunities for Michigan communities.',
-      description:
-        "Join us for an inspiring keynote conversation between two visionary Black leaders transforming how Michigan powers its future. Steven Benyard and Jason Kelley will explore how AI is revolutionizing the energy sector, addressing equity through innovation, climate action, and building tomorrow's workforce.",
-      tags: ['AI', 'Energy', 'Innovation', 'Leadership'],
-      track: 'Leadership',
-      time: '09:00',
-      room: 'Main Stage',
-    },
+    session: keynoteSession,
     isWTM: false,
     isGDE: false,
     mastodon: null,
@@ -174,18 +179,7 @@ export const SpeakersData = [
     url: null,
     organization: 'Walker-Miller Energy Services',
     position: 'Chief Information Officer',
-    session: {
-      title:
-        "Powering Detroit's Future: AI-Driven Energy Innovation Fireside Chat with DTE x IBM",
-      abstract:
-        'Innovation Summit Keynote exploring how artificial intelligence is revolutionizing the energy sector while creating unprecedented opportunities for Michigan communities.',
-      description:
-        'Tabice Ward joins the keynote conversation as a moderator, bringing her expertise in technology leadership and energy equity to this inspiring discussion.',
-      tags: ['AI', 'Energy', 'Innovation', 'Leadership'],
-      track: 'Leadership',
-      time: '09:00',
-      room: 'Main Stage',
-    },
+    session: keynoteSession,
     isWTM: false,
     isGDE: false,
     mastodon: null,

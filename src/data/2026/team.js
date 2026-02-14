@@ -1,24 +1,25 @@
-import AaronAmano from '@/data/2025/assets/images/team/aaron_amano-x96.webp'
-import AliElSharif from '@/data/2025/assets/images/team/ali_elsharif.webp'
-import DaveKoziol from '@/data/2025/assets/images/team/dav_koziol.webp'
-import GregMiller from '@/data/2025/assets/images/team/greg_miller-x96.webp'
-import HernandoMalabet from '@/data/2025/assets/images/team/hernando_malabet.webp'
-import HodaSolati from '@/data/2025/assets/images/team/hoda_solati.webp'
-import HudaHussaini from '@/data/2025/assets/images/team/huda_hussaini.webp'
-import JennaRitten from '@/data/2025/assets/images/team/jenna_ritten.webp'
-import JingranWang from '@/data/2025/assets/images/team/Jingran_Wang-x96.webp'
-import JustinBeaudry from '@/data/2025/assets/images/team/justin_beaudry-x96.webp'
-import KayleeBusenbark from '@/data/2025/assets/images/team/kaylee_busenbark-x96.webp'
-import MaridyMazaira from '@/data/2025/assets/images/team/maridy_mazaira.webp'
-import NisaSolano from '@/data/2025/assets/images/team/nisa_solano.webp'
-import RaquelEstrada from '@/data/2025/assets/images/team/raquel_estrada.webp'
-import Rehanashri from '@/data/2025/assets/images/team/rehanashri-x96.webp'
-import RishirajSarkar from '@/data/2025/assets/images/team/rishiraj_sarkar.webp'
-import ShimaSolati from '@/data/2025/assets/images/team/shima_solati.webp'
-import ShugmiShumunov from '@/data/2025/assets/images/team/shugmi_shumunov-x96.webp'
-import SohamMhatre from '@/data/2025/assets/images/team/soham_mhatre.webp'
-import SohanKetireddy from '@/data/2025/assets/images/team/sohan_ketireddy-x96.webp'
-import SumiaSaleh from '@/data/2025/assets/images/team/Sumia_Saleh-x96.webp'
+import AaronAmano from '@/data/2026/assets/images/team/aaron_amano-x96.webp'
+import AliElSharif from '@/data/2026/assets/images/team/ali_elsharif.webp'
+import DaveKoziol from '@/data/2026/assets/images/team/dav_koziol.webp'
+import GregMiller from '@/data/2026/assets/images/team/greg_miller-x96.webp'
+import HernandoMalabet from '@/data/2026/assets/images/team/hernando_malabet.webp'
+import HodaSolati from '@/data/2026/assets/images/team/hoda_solati.webp'
+import HudaHussaini from '@/data/2026/assets/images/team/huda_hussaini.webp'
+import JennaRitten from '@/data/2026/assets/images/team/jenna_ritten.webp'
+import JingranWang from '@/data/2026/assets/images/team/Jingran_Wang-x96.webp'
+import JustinBeaudry from '@/data/2026/assets/images/team/justin_beaudry-x96.webp'
+import KayleeBusenbark from '@/data/2026/assets/images/team/kaylee_busenbark-x96.webp'
+import MaridyMazaira from '@/data/2026/assets/images/team/maridy_mazaira.webp'
+import NisaSolano from '@/data/2026/assets/images/team/nisa_solano.webp'
+import RaquelEstrada from '@/data/2026/assets/images/team/raquel_estrada.webp'
+import Rehanashri from '@/data/2026/assets/images/team/rehanashri-x96.webp'
+import RishirajSarkar from '@/data/2026/assets/images/team/rishiraj_sarkar.webp'
+import ShimaSolati from '@/data/2026/assets/images/team/shima_solati.webp'
+import ShugmiShumunov from '@/data/2026/assets/images/team/shugmi_shumunov-x96.webp'
+import SohamMhatre from '@/data/2026/assets/images/team/soham_mhatre.webp'
+import SohanKetireddy from '@/data/2026/assets/images/team/sohan_ketireddy-x96.webp'
+import SumiaSaleh from '@/data/2026/assets/images/team/Sumia_Saleh-x96.webp'
+import TerrellMcKinney from '@/data/2026/assets/images/team/Terrell_McKinney.webp'
 
 export const teamData = [
   {
@@ -319,5 +320,19 @@ Today, Maridy serves as President of the Society of Hispanic Professional Engine
     organization: '',
     role: 'Student',
     avatar: Rehanashri,
+  },
+  {
+    id: 22,
+    name: 'Terrell McKinney',
+    twitter: '',
+    linkedin: 'https://www.linkedin.com/in/terrellmckinney/',
+    github: 'https://github.com/Terlam',
+    devfest: 'devteam',
+    star: false,
+    university: '',
+    bio: `Terrell McKinney is a software engineer and educator at Aaron Douglas LLC, and a community builder who helps make complex topics like AI, technical interviews, and modern careers more human and accessible. He contributes to the Compass Detroit dev team and to initiatives like the Black CS Success Summit. His approach centers care, practical skill-building, and the belief that technology should serve people—not the other way around.`,
+    organization: 'Aaron Douglas LLC',
+    role: 'Software Engineer',
+    avatar: TerrellMcKinney,
   },
 ]

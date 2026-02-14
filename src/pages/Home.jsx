@@ -27,13 +27,12 @@ function Home() {
         tracks={[
           'Schedule',
           'Map',
-          'Hackathon',
-          'Build with AI',
-          'Tech+Design',
           'Level Up',
+          'Build with AI',
           'Leadership',
           'Innovation',
-          'Workshops',
+          'AI Foundations',
+          'Breakout Sessions',
         ]}
       />
       <CommunitySection year={currentYear} />
