@@ -95,7 +95,7 @@ const SessionsSection = ({
 
   // Get sessions for current track
   const currentTrackSessions = combinedSpeakerData.filter((session) => {
-    // Handle the Misc/Miscellaneous mapping in eventData.js
+    // Handle the Misc/Miscellaneous track name mapping
     const normalizeSessionTrack =
       session.track === 'Miscellaneous' ? 'Misc' : session.track
     const normalizeCurrentSession =

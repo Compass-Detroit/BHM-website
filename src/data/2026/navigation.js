@@ -1,23 +1,16 @@
 // Navigation sections used in Navbar and Footer
+// Items with id = homepage anchor links (#id)
+// Items with to = route links (full page)
 export const sections = [
-  { id: 'location', text: 'About' },
-  { id: 'schedule', text: 'Schedule' },
-  { id: 'community', text: 'Community' },
-  { id: 'members', text: 'Members' },
+  { id: 'location', text: 'Location' },
+  { id: 'schedule', text: 'Sessions' },
   { id: 'speakers', text: 'Speakers' },
+  { id: 'attendees', text: 'Attendees' },
+  { id: 'jobboard', text: 'Job Board' },
   { id: 'partners', text: 'Partners' },
-  { id: 'leadership', text: 'Leadership' },
+  { id: 'leadership', text: 'BHM Team' },
+  { to: '/previous-events', text: 'Previous Events' },
 ]
 
-// Pathways dropdown: careers-hub, connections, media (used in Navbar)
-export const pathways = {
-  text: 'Pathways',
-  children: [
-    { to: '/careers-hub', text: 'Careers Hub' },
-    { to: '/connections', text: 'Connections' },
-    { to: '/media', text: 'Media' },
-  ],
-}
-
-// Flat list of pathway links (used in Footer)
-export const externalLinks = pathways.children
+// Flat list of route-based links (used in Footer)
+export const pageLinks = sections.filter((item) => item.to)

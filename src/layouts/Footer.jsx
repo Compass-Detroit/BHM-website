@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom'
-import { sections, externalLinks } from '@/data/2026/navigation'
+import { sections, pageLinks } from '@/data/2026/navigation'
 import GdgDetroitLogo from '@/assets/images/gdg-detroit-logo-footer.svg'
 import CompassDetroit from '@/assets/images/sponsors/Compass_Detroit_logo.webp'
 
@@ -14,7 +14,7 @@ function Footer() {
       <div className="mx-auto w-full max-w-7xl px-6 py-8 md:flex md:items-center md:justify-between lg:px-8">
         <div className="flex flex-wrap justify-center gap-x-6 gap-y-2 md:order-2">
           {sections
-            .filter((section) => section.id !== 'landing')
+            .filter((section) => section.id)
             .map((section) => (
               <Link
                 key={section.id}
@@ -24,7 +24,7 @@ function Footer() {
                 {section.text}
               </Link>
             ))}
-          {externalLinks.map((link) => (
+          {pageLinks.map((link) => (
             <Link
               key={link.to}
               to={link.to}
