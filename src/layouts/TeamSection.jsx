@@ -64,7 +64,7 @@ const TeamSection = ({ teamData, year }) => {
       id="leadership"
       className="relative bg-primary-50 p-8 sm:px-10 md:px-14 lg:px-16"
     >
-      <SectionSkipLink href="#page-footer">Skip BHM team</SectionSkipLink>
+      <SectionSkipLink href="#page-footer">Skip to footer</SectionSkipLink>
       <div className="flex w-full justify-center pt-0">
         <h2 className="mb-4 w-full text-center font-biorhyme text-4xl text-black md:mb-6 md:text-5xl lg:text-6xl">
           {year ? `${year} ` : ''}Leadership Team
