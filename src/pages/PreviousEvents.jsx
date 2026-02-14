@@ -11,7 +11,6 @@ const PreviousEvents = () => {
   return (
     <PageLayout>
       <section
-        role="banner"
         aria-labelledby="main-heading"
         className={`mt-16 bg-primary-100 transition-opacity duration-500 ease-out ${
           isVisible ? 'opacity-100' : 'opacity-0'
