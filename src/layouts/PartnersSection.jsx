@@ -1,11 +1,12 @@
-import PropTypes from 'prop-types'
-
 import Kite from '@/assets/images/icn-kite.png'
+import LogoLoop from '@/components/LogoLoop'
 import CTAButton from '@/components/ui/CTAButton'
-
+import PropTypes from 'prop-types'
+import { useState } from 'react'
 const PartnersSection = ({ partnersData = {}, year }) => {
   const isCurrentYear = year === new Date().getFullYear()
-
+  const [tooltip, setTooltip] = useState(null)
+  // Check if there's any partner data
   // Check if there's any partner data
   const hasPartners =
     (partnersData.platinum && partnersData.platinum.length > 0) ||
@@ -13,70 +14,50 @@ const PartnersSection = ({ partnersData = {}, year }) => {
     (partnersData.gold && partnersData.gold.length > 0) ||
     (partnersData.organizations && partnersData.organizations.length > 0)
 
-  const renderPartnerTier = (
-    tierName,
-    partners,
-    isSideBySide = false,
-    useFourColumns = false,
-    useSingleColumn = false
-  ) => {
-    if (!partners || partners.length === 0) return null
-
-    return (
-      <div className="mb-12">
-        <h3 className="mb-6 py-4 text-center font-biorhyme text-5xl text-black">
-          {tierName}
-        </h3>
-        <div
-          className={`grid gap-8 ${
-            useSingleColumn
-              ? 'grid-cols-1 justify-items-center'
-              : useFourColumns
-                ? 'grid-cols-1 justify-items-stretch sm:grid-cols-2 md:grid-cols-2'
-                : isSideBySide
-                  ? 'grid-cols-1 justify-items-center sm:grid-cols-2'
-                  : 'grid-cols-1 justify-items-center sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3'
-          }`}
-        >
-          {partners.map((partner) => (
-            <button
-              key={partner.id}
-              className="group relative flex justify-center p-4 transition-transform duration-200 hover:scale-105"
-              onClick={() => partner.url && window.open(partner.url, '_blank')}
-            >
-              {partner.logo ? (
-                <img
-                  src={partner.logo}
-                  alt={partner.name}
-                  className="size-full object-contain transition-opacity duration-200 group-hover:opacity-90"
-                  loading="lazy"
-                />
-              ) : (
-                <div className="flex h-24 items-center justify-center rounded-lg border-2 border-gray-300 bg-gray-50 px-6">
-                  <p className="text-center text-lg font-semibold text-gray-700">
-                    {partner.name}
-                  </p>
-                </div>
-              )}
-              <div className="invisible absolute left-0 top-0 flex size-full flex-col items-center justify-center overflow-y-hidden rounded bg-sky-900/80 p-8 text-center text-white backdrop-blur-lg transition-all duration-200 group-hover:visible">
-                <h4 className="mb-2 text-xl font-bold md:text-2xl">
-                  {partner.name}
-                </h4>
-                <p className="overflow-y-auto text-left text-lg font-bold md:text-xl">
-                  {partner.desc}
-                </p>
-              </div>
-            </button>
-          ))}
-        </div>
-      </div>
-    )
+  const handleMouseEnter = (e, partner) => {
+    const rect = e.currentTarget.getBoundingClientRect()
+    setTooltip({
+      x: rect.right + 10,
+      y: rect.top + rect.height / 2,
+      partner,
+    })
   }
+
+  const handleMouseLeave = () => {
+    setTooltip(null)
+  }
+
+  const renderPartnerItem = (partner) => (
+    <div
+      className="group relative flex w-full items-center justify-center p-4"
+      onMouseEnter={(e) => handleMouseEnter(e, partner)}
+      onMouseLeave={handleMouseLeave}
+    >
+      <button
+        className="block w-full transition-transform duration-200 hover:scale-105 focus:outline-none"
+        onClick={() => partner.url && window.open(partner.url, '_blank')}
+        aria-label={`Visit ${partner.name}`}
+      >
+        {partner.logo ? (
+          <img
+            src={partner.logo}
+            alt={partner.name}
+            className="mx-auto h-24 w-auto object-contain transition-all duration-300"
+            loading="lazy"
+          />
+        ) : (
+          <div className="mx-auto flex h-24 w-40 items-center justify-center rounded-lg border-2 border-gray-300 bg-gray-50 px-4 text-center font-semibold text-gray-700">
+            {partner.name}
+          </div>
+        )}
+      </button>
+    </div>
+  )
 
   return (
     <section
       id="partners"
-      className="flex flex-col justify-center bg-white p-8 sm:px-10 md:px-14 lg:px-16"
+      className="relative flex flex-col justify-center bg-white p-8 sm:px-10 md:px-14 lg:px-16"
     >
       <div className="relative w-full pt-0">
         <h2 className="w-full text-center font-biorhyme text-4xl text-black md:text-5xl lg:text-6xl">
@@ -89,7 +70,6 @@ const PartnersSection = ({ partnersData = {}, year }) => {
           loading="lazy"
         />
       </div>
-
       <div className="mx-auto mt-6 max-w-4xl text-left">
         <p className="text-base text-gray-700 md:text-lg">
           Compass Detroit wouldn&apos;t be possible without the support of our
@@ -98,38 +78,72 @@ const PartnersSection = ({ partnersData = {}, year }) => {
         </p>
       </div>
 
-      <div className="mt-8 overflow-hidden transition-all duration-500 ease-in-out sm:mt-10 md:mt-14 lg:mt-16">
+      <div className="mt-8  overflow-hidden transition-all duration-500 ease-in-out sm:mt-10 md:mt-14 lg:mt-16">
         {hasPartners ? (
           <>
-            {renderPartnerTier(
-              'Platinum Sponsor',
-              partnersData.platinum,
-              false,
-              false,
-              true
+            {/* Platinum Sponsors - Horizontal Loop */}
+            {partnersData.platinum && partnersData.platinum.length > 0 && (
+              <div className="mb-12 w-full">
+                <h3 className="mb-6 py-4 text-center font-biorhyme text-5xl text-black">
+                  Platinum Sponsor
+                </h3>
+                <div className="flex w-full justify-center">
+                  {partnersData.platinum.map((partner) => (
+                    <div key={partner.id} className="w-80">
+                      {renderPartnerItem(partner)}
+                    </div>
+                  ))}
+                </div>
+              </div>
             )}
 
-            {/* Diamond and Gold sponsors side by side */}
-
-            <div className="mb-12 grid grid-cols-1 gap-8 lg:grid-cols-2">
-              <div className="flex flex-col items-center">
-                {renderPartnerTier(
-                  'Diamond Sponsors',
-                  partnersData.diamond,
-                  true
-                )}
+            {/* Diamond, Gold, Organizations - 3 Column Grid */}
+            <div className="grid w-full gap-16 md:grid-rows-3">
+              <div className="flex flex-col overflow-hidden rounded-xl bg-gray-50/50 px-6 py-8">
+                <h3 className="mb-6 text-center font-biorhyme text-2xl text-black">
+                  Diamond
+                </h3>
+                <div className="w-full overflow-hidden">
+                  <LogoLoop
+                    logos={partnersData.diamond}
+                    renderItem={renderPartnerItem}
+                    direction="right"
+                    speed={30}
+                    pauseOnHover
+                  />
+                </div>
               </div>
-              <div className="flex flex-col items-center">
-                {renderPartnerTier(
-                  'Gold Sponsors',
-                  partnersData.gold,
-                  false,
-                  true
-                )}
+
+              <div className="flex flex-col overflow-hidden rounded-xl bg-gray-50/50 px-6 py-8">
+                <h3 className="mb-6 text-center font-biorhyme text-2xl text-black">
+                  Gold
+                </h3>
+                <div className="w-full overflow-hidden">
+                  <LogoLoop
+                    logos={partnersData.gold}
+                    renderItem={renderPartnerItem}
+                    direction="right"
+                    speed={35}
+                    pauseOnHover
+                  />
+                </div>
+              </div>
+
+              <div className="flex flex-col overflow-hidden rounded-xl bg-gray-50/50 px-6 py-8">
+                <h3 className="mb-6 text-center font-biorhyme text-2xl text-black">
+                  Organizations
+                </h3>
+                <div className="w-full overflow-hidden">
+                  <LogoLoop
+                    logos={partnersData.organizations}
+                    renderItem={renderPartnerItem}
+                    direction="right"
+                    speed={25}
+                    pauseOnHover
+                  />
+                </div>
               </div>
             </div>
-
-            {renderPartnerTier('Organizations', partnersData.organizations)}
 
             <div className="col-span-1 my-8 flex flex-col items-center justify-center space-y-6 text-center text-lg leading-relaxed">
               <p className="text-gray-600">
@@ -161,6 +175,23 @@ const PartnersSection = ({ partnersData = {}, year }) => {
           </div>
         )}
       </div>
+
+      {/* Fixed Tooltip Portal */}
+      {tooltip && (
+        <div
+          className="fixed z-[100] w-64 rounded-lg bg-gray-900 p-4 text-left text-white shadow-xl"
+          style={{
+            left: tooltip.x,
+            top: tooltip.y,
+            transform: 'translateY(-50%)',
+          }}
+        >
+          {/* Tooltip arrow */}
+          <div className="absolute -left-2 top-1/2 -mt-2 size-4 -rotate-45 bg-gray-900"></div>
+          <h4 className="mb-1 text-lg font-bold">{tooltip.partner.name}</h4>
+          <p className="text-sm text-gray-300">{tooltip.partner.desc}</p>
+        </div>
+      )}
     </section>
   )
 }
@@ -210,5 +241,4 @@ PartnersSection.propTypes = {
   }),
   year: PropTypes.number.isRequired,
 }
-
 export default PartnersSection
