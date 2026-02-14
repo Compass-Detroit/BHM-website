@@ -134,12 +134,13 @@ const SessionsSection = ({
     }
   }, [activeTab])
 
-  const activateTab = (index) => {
+  const activateTab = (index, moveFocusToPanel = false) => {
     setActiveTab(index)
-    // Move focus to tabpanel so next Tab goes into content (ARIA tabs pattern)
-    requestAnimationFrame(() => {
-      tabpanelRef.current?.focus()
-    })
+    if (moveFocusToPanel) {
+      requestAnimationFrame(() => {
+        tabpanelRef.current?.focus()
+      })
+    }
   }
 
   // Handle keyboard navigation
@@ -154,7 +155,7 @@ const SessionsSection = ({
       buttonRefs.current[nextIndex]?.focus()
     } else if (event.key === 'Enter' || event.key === ' ') {
       event.preventDefault()
-      activateTab(index)
+      activateTab(index, true)
     }
   }
 
@@ -226,7 +227,7 @@ const SessionsSection = ({
           isExpanded ? 'opacity-100' : 'max-h-0 opacity-0'
         }`}
       >
-        <nav aria-label="Session track navigation">
+        <nav aria-label="Session track navigation" aria-hidden={!isExpanded}>
           <div
             ref={navRef}
             role="tablist"
@@ -248,9 +249,9 @@ const SessionsSection = ({
                   }}
                   role="tab"
                   aria-selected={activeTab === index}
-                  aria-controls={`session-panel-${index}`}
+                  aria-controls="sessions-tabpanel"
                   id={`session-tab-${index}`}
-                  tabIndex={0}
+                  tabIndex={isExpanded ? 0 : -1}
                   className={`relative shrink-0 whitespace-nowrap rounded-md p-2 text-sm font-black uppercase !leading-5 transition-colors duration-300 focus:outline-none focus:ring-2 focus:ring-primary-400 focus:ring-offset-2 focus:ring-offset-black md:min-w-20 md:px-3 md:py-2 lg:min-w-36 lg:px-4 lg:text-lg ${
                     index === 0 ? 'md:ml-14' : ''
                   } ${
@@ -258,7 +259,7 @@ const SessionsSection = ({
                       ? 'bg-primary-400 text-black after:absolute after:-bottom-3 after:left-1/2 after:block after:size-0 after:-translate-x-1/2 after:border-x-[12px] after:border-t-[12px] after:border-primary-400 after:border-x-transparent'
                       : 'bg-gray-900 text-white hover:bg-gray-800'
                   }`}
-                  onClick={() => activateTab(index)}
+                  onClick={() => activateTab(index, false)}
                   onFocus={(e) => scrollTabIntoView(e.currentTarget)}
                   onKeyDown={(e) => handleKeyDown(e, index)}
                 >
@@ -301,10 +302,11 @@ const SessionsSection = ({
 
         <div
           ref={tabpanelRef}
-          id={`session-panel-${activeTab}`}
+          id="sessions-tabpanel"
           role="tabpanel"
           aria-labelledby={`session-tab-${activeTab}`}
-          tabIndex={0}
+          aria-hidden={!isExpanded}
+          tabIndex={isExpanded ? 0 : -1}
           className={`flex w-full items-start px-[2.5%] md:px-[5%] ${
             isExpanded ? 'max-h-none opacity-100' : 'max-h-0 opacity-0'
           } ${
