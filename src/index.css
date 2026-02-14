@@ -39,6 +39,26 @@
   /* Example: .custom-button { ... } */
 }
 
+/* Navbar: mobile menu container when expanded */
+.nav-menu-expanded {
+  max-height: calc(100vh - 80px);
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+/* WCAG 1.4.10 Reflow: un-stick the header at high zoom/small height */
+@media (max-width: 480px), (max-height: 400px) {
+  nav.site-header {
+    position: absolute;
+    width: 100%;
+  }
+
+  .site-header {
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+  }
+}
+
 /* Yoda 404 Animations */
 @keyframes float {
   0%,

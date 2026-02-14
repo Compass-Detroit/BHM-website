@@ -365,7 +365,7 @@ function Navbar() {
     <nav
       ref={navRef}
       aria-label="Main navigation"
-      className={`fixed left-0 top-0 z-30 w-screen ${
+      className={`site-header fixed left-0 top-0 z-30 w-screen ${
         activeLink === 'landing' && isHomePage
           ? 'bg-white text-sky-900'
           : 'bg-white text-gray-700 shadow-lg dark:bg-gray-700 dark:text-gray-100'
@@ -451,7 +451,7 @@ function Navbar() {
           <div
             id="mobile-navigation"
             aria-labelledby="mobile-menu-button"
-            className={`block w-full overflow-hidden bg-white shadow-lg ${
+            className={`nav-menu-expanded block w-full overflow-hidden bg-white shadow-lg ${
               activeLink === 'landing' && isHomePage
                 ? 'bg-primary-400'
                 : 'bg-white dark:bg-gray-900 dark:text-white'
