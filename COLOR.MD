@@ -8,11 +8,11 @@ The palette is inspired by Pan-African symbolism and implemented as semantic Tai
 
 ## ✊🏾 Symbolism
 
-| Color | Meaning |
-|------|--------|
-| Red | sacrifice & struggle |
-| Black | identity & strength |
-| Green | growth & future |
+| Color           | Meaning                  |
+| --------------- | ------------------------ |
+| Red             | sacrifice & struggle     |
+| Black           | identity & strength      |
+| Green           | growth & future          |
 | Gold (optional) | excellence & celebration |
 
 These colors are used intentionally — not decoratively.
@@ -33,21 +33,21 @@ These colors are used intentionally — not decoratively.
 
 ### Core Colors
 
-| Token | Hex |
-|------|-----|
+| Token         | Hex     |
+| ------------- | ------- |
 | bhm-black-950 | #0B0B0B |
 | bhm-black-900 | #111111 |
-| bhm-red-500 | #C1121F |
-| bhm-red-700 | #8E0C15 |
+| bhm-red-500   | #C1121F |
+| bhm-red-700   | #8E0C15 |
 | bhm-green-500 | #1B7F3B |
 | bhm-green-700 | #125B2A |
-| bhm-gold-500 | #CFAE70 |
+| bhm-gold-500  | #CFAE70 |
 
 ### Neutrals
 
-| Token | Hex |
-|------|-----|
-| bhm-neutral-50 | #F8F9FA |
+| Token           | Hex     |
+| --------------- | ------- |
+| bhm-neutral-50  | #F8F9FA |
 | bhm-neutral-200 | #E9ECEF |
 | bhm-neutral-700 | #343A40 |
 | bhm-neutral-900 | #212529 |
@@ -111,25 +111,19 @@ This snippet is documentation only. The source of truth is the actual Tailwind c
 Primary button:
 
 ```html
-<button class="bg-bhm-red-500 hover:bg-bhm-red-700 text-white">
-  Explore
-</button>
+<button class="bg-bhm-red-500 hover:bg-bhm-red-700 text-white">Explore</button>
 ```
 
 Dark hero section:
 
 ```html
-<section class="bg-bhm-black-950 text-bhm-neutral-50">
-  ...
-</section>
+<section class="bg-bhm-black-950 text-bhm-neutral-50">...</section>
 ```
 
 Badge highlight:
 
 ```html
-<span class="bg-bhm-green-500 text-white">
-  Spotlight
-</span>
+<span class="bg-bhm-green-500 text-white"> Spotlight </span>
 ```
 
 ---
