@@ -4,6 +4,9 @@ import { Link, useLocation } from 'react-router-dom'
 import CompassDetroitLogo from './ui/CompassDetroitLogo'
 import { sections } from '@/data/2026/navigation'
 
+// Navbar only shows section (anchor) links; route links like Previous Events are in Footer
+const navSections = sections.filter((s) => s.id)
+
 function Navbar() {
   const location = useLocation()
   const isHomePage = location.pathname === '/'
@@ -251,40 +254,16 @@ function Navbar() {
     return () => colorSchemePref.removeEventListener('change', handleChange)
   }, [])
 
-  // Desktop Navigation List
+  // Desktop Navigation List (section links only)
   const desktopNavList = (
     <ul
       role="menubar"
       className="z-50 flex flex-row flex-nowrap items-baseline justify-end gap-x-6 px-4 py-2"
     >
-      {sections.map((section) => {
-        const isRouteLink = !!section.to
-        const linkKey = section.id || section.to
-        const isActive = isRouteLink
-          ? location.pathname === section.to
-          : activeLink === section.id
-
-        if (isRouteLink) {
-          return (
-            <li key={linkKey} role="none" className="text-center">
-              <Link
-                to={section.to}
-                role="menuitem"
-                aria-current={isActive ? 'page' : undefined}
-                className={`relative px-2 py-4 pb-2 ${
-                  isActive
-                    ? 'after:w-full after:opacity-100'
-                    : 'after:w-0 after:opacity-0'
-                } after:absolute after:bottom-0 after:left-0 after:h-1 after:bg-primary-400 after:transition-all after:duration-300 after:ease-in-out`}
-              >
-                {section.text}
-              </Link>
-            </li>
-          )
-        }
-
+      {navSections.map((section) => {
+        const isActive = activeLink === section.id
         return (
-          <li key={linkKey} role="none" className="text-center">
+          <li key={section.id} role="none" className="text-center">
             <Link
               to={isHomePage ? `#${section.id}` : `/#${section.id}`}
               onClick={
@@ -308,37 +287,13 @@ function Navbar() {
     </ul>
   )
 
-  // Mobile Navigation List
+  // Mobile Navigation List (section links only)
   const mobileNavList = (
     <ul className="flex flex-col space-y-2 p-4 dark:bg-gray-700 dark:text-white">
-      {sections.map((section) => {
-        const isRouteLink = !!section.to
-        const linkKey = section.id || section.to
-        const isActive = isRouteLink
-          ? location.pathname === section.to
-          : activeLink === section.id
-
-        if (isRouteLink) {
-          return (
-            <li key={linkKey}>
-              <Link
-                to={section.to}
-                aria-current={isActive ? 'page' : undefined}
-                className={`block rounded-lg px-4 py-3 text-center transition-colors hover:bg-gray-100 dark:hover:bg-primary-400 dark:hover:text-gray-900 ${
-                  isActive
-                    ? 'bg-primary-100 font-semibold text-primary-700'
-                    : 'text-gray-700 dark:text-white dark:hover:text-gray-900'
-                }`}
-                onClick={closeMobileNav}
-              >
-                {section.text}
-              </Link>
-            </li>
-          )
-        }
-
+      {navSections.map((section) => {
+        const isActive = activeLink === section.id
         return (
-          <li key={linkKey}>
+          <li key={section.id}>
             <Link
               to={isHomePage ? `#${section.id}` : `/#${section.id}`}
               onClick={
@@ -377,7 +332,7 @@ function Navbar() {
           `Currently viewing ${
             activeLink === 'landing'
               ? 'hero'
-              : sections.find((s) => s.id === activeLink)?.text
+              : navSections.find((s) => s.id === activeLink)?.text
           } section`}
       </div>
       <div
