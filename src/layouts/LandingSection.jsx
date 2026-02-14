@@ -1,3 +1,4 @@
+import BgImage from '@/assets/images/bgimg.jpg'
 import { ReactComponent as EventLogoSvg } from '@/assets/images/compass-logo.svg'
 import CTAButton from '@/components/ui/CTAButton'
 import { FaTicket } from 'react-icons/fa6'
@@ -12,19 +13,25 @@ function LandingSection() {
             aria-label="Compass Detroit 2026 logo"
           />
         </div>
-
-        <div className="flex w-full flex-col justify-between bg-pumpkin-200 text-black lg:w-1/2">
+        <div
+          className="flex w-full flex-col justify-between text-white lg:w-1/2"
+          style={{
+            backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(${BgImage})`,
+            backgroundSize: 'cover',
+            backgroundPosition: 'center',
+          }}
+        >
           <div className="flex grow flex-col items-center justify-center space-y-8 p-10">
-            <h2 className="text-4xl font-bold font-biorhyme text-indigo-900">
+            <h2 className="font-biorhyme text-4xl font-bold text-white">
               February 28, 2026
             </h2>
 
-            <p className="prose text-justify text-sm font-normal lg:text-base xl:text-lg">
+            <p className="prose text-justify text-sm font-normal text-white lg:text-base xl:text-lg">
               The Detroit, Ann Arbor, Toledo, UofM Dearborn and Windsor GDGs are
               teaming up with Compass Detroit to bring you the Compass Detroit
               conference on February 28, 2026.
             </p>
-            <p className="prose text-justify text-sm font-normal lg:text-base xl:text-lg">
+            <p className="prose text-justify text-sm font-normal text-white lg:text-base xl:text-lg">
               Join us Saturday, February 28th for the Compass Detroit
               conference. With this year&apos;s event, we aim to put together a
               great weekend of networking, innovation, and knowledge sharing for
