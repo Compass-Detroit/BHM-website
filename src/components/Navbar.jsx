@@ -20,6 +20,28 @@ function Navbar() {
 
   const navRef = useRef(null)
   const mobileButtonRef = useRef(null)
+  const headerBarRef = useRef(null)
+
+  // Sync header height to CSS custom property for .nav-menu-expanded max-height
+  useEffect(() => {
+    const el = headerBarRef.current
+    if (!el) return
+
+    const setHeaderHeight = () => {
+      document.documentElement.style.setProperty(
+        '--header-height',
+        `${el.offsetHeight}px`
+      )
+    }
+
+    setHeaderHeight()
+    const observer = new ResizeObserver(setHeaderHeight)
+    observer.observe(el)
+    return () => {
+      observer.disconnect()
+      document.documentElement.style.removeProperty('--header-height')
+    }
+  }, [])
 
   // Helper function to get accurate navbar height
   const getNavbarHeight = useCallback(() => {
@@ -336,6 +358,7 @@ function Navbar() {
           } section`}
       </div>
       <div
+        ref={headerBarRef}
         className="grid w-full min-w-0 max-w-full grid-cols-[1fr_auto] items-center gap-2 p-2 sm:p-4"
         style={{ width: '100%', maxWidth: '100%' }}
       >
