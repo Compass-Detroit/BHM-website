@@ -3,6 +3,7 @@ import PropTypes from 'prop-types'
 
 import SpeakersLogo from '@/assets/images/icn-speakers.png'
 import SpeakerCard from '@/components/speakers/SpeakerCard'
+import SectionSkipLink from '@/components/ui/SectionSkipLink'
 
 import { SpeakerContext } from '@/components/speakers/SpeakerContext'
 
@@ -24,9 +25,12 @@ const SpeakersContent = ({ year, defaultExpanded }) => {
 
   const renderSpeakerHeader = (
     <div className="flex w-full justify-between pt-0">
+      <SectionSkipLink href="#attendees">Skip speakers section</SectionSkipLink>
       <button
         aria-label={
-          isExpanded ? `Collapse ${year} Compass Detroit Speakers` : `Expand ${year} Compass Detroit Speakers`
+          isExpanded
+            ? `Collapse ${year} Compass Detroit Speakers`
+            : `Expand ${year} Compass Detroit Speakers`
         }
         onClick={toggleExpanded}
         className="flex cursor-pointer items-center text-black transition-colors hover:text-gray-600"
@@ -117,7 +121,7 @@ const SpeakersContent = ({ year, defaultExpanded }) => {
   return (
     <section
       id="speakers"
-      className="flex flex-col justify-center border-b border-primary bg-sky-50 p-8 sm:px-10 md:px-14 lg:px-16"
+      className="relative flex flex-col justify-center border-b border-primary bg-sky-50 p-8 sm:px-10 md:px-14 lg:px-16"
     >
       {renderSpeakerHeader}
       {renderSpeakerDescription}
