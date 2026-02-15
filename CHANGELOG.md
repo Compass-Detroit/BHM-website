@@ -7,6 +7,26 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+### Added
+
+- Navbar mobile menu: `.nav-menu-expanded` with `max-height: calc(100vh - 80px)`, `overflow-y: auto`, and `-webkit-overflow-scrolling: touch` so the menu never exceeds viewport height
+- WCAG 1.4.10 Reflow: media query at `max-width: 480px` and `max-height: 400px` to un-stick the header (`position: absolute`) and reduce padding so content is not blocked at high zoom or small viewports
+
+### Changed
+
+- **Navbar**: Removed pathway/route-link logic; Navbar now only shows section (anchor) links; route links like Previous Events remain in Footer only
+
+## [0.2.0] - 2026-02-13
+
+### Changed
+
+- **Fork & rebrand**: Repurposed from Compass Detroit / Michigan DevFest for the Black History Month Innovation Summit (BHM-website)
+- Updated package.json: name to `bhm-website`, repository to `Compass-Detroit/BHM-website`, added description
+- Updated README, CONTRIBUTING, ACCESSIBILITY docs for Black History Month Innovation Summit
+- Updated Docker documentation and image naming to `bhm-website`
+- Updated index.html metadata, site.webmanifest, and GitHub issue templates
+- Updated CHANGELOG links to point to BHM-website repository
+
 ## [0.1.2] - 2026-02-01
 
 ### Added
@@ -63,7 +83,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Fixed Montserrat font weight to use Medium (500) instead of Thin (100)
 - Fixed incorrect variable name usage
 
-[Unreleased]: https://github.com/Compass-Detroit/compass-website/compare/v0.1.2...HEAD
-[0.1.2]: https://github.com/Compass-Detroit/compass-website/releases/tag/v0.1.2
-[0.1.1]: https://github.com/Compass-Detroit/compass-website/compare/v0.1.0...v0.1.1
-[0.1.0]: https://github.com/Compass-Detroit/compass-website/releases/tag/v0.1.0
+[Unreleased]: https://github.com/Compass-Detroit/BHM-website/compare/v0.2.0...HEAD
+[0.2.0]: https://github.com/Compass-Detroit/BHM-website/compare/v0.1.2...v0.2.0
+[0.1.2]: https://github.com/Compass-Detroit/BHM-website/compare/v0.1.1...v0.1.2
+[0.1.1]: https://github.com/Compass-Detroit/BHM-website/compare/v0.1.0...v0.1.1
+[0.1.0]: https://github.com/Compass-Detroit/BHM-website/releases/tag/v0.1.0

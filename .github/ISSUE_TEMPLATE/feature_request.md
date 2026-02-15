@@ -1,6 +1,6 @@
 ---
 name: Feature Request
-about: Suggest an idea for the DevFest Detroit website
+about: Suggest an idea for the Black History Month Innovation Summit website
 title: '[FEATURE] '
 labels: enhancement
 assignees: ''

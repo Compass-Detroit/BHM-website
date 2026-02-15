@@ -1,9 +1,7 @@
-import PropTypes from 'prop-types'
-
 import DevLogo from '@/assets/images/icn-dev.png'
 import CTAButton from '@/components/ui/CTAButton'
 
-const MembersSection = ({ year }) => {
+const MembersSection = () => {
   return (
     <section
       id="members"
@@ -11,7 +9,7 @@ const MembersSection = ({ year }) => {
     >
       <div className="flex w-full justify-center pt-0">
         <h2 className="mb-4 w-full text-center font-biorhyme text-4xl text-black md:mb-6 md:text-5xl lg:text-6xl">
-          {year ? `${year} ` : ''}Membership
+          Membership
         </h2>
         <img
           src={DevLogo}
@@ -63,10 +61,6 @@ const MembersSection = ({ year }) => {
       </div>
     </section>
   )
-}
-
-MembersSection.propTypes = {
-  year: PropTypes.number.isRequired,
 }
 
 export default MembersSection

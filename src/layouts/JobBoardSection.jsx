@@ -1,7 +1,8 @@
 import PropTypes from 'prop-types'
 
 import Kite from '@/assets/images/icn-kite.png'
-import { jobBoardData } from '@/data/2025/jobboard'
+import { jobBoardData } from '@/data/2026/jobboard'
+import SectionSkipLink from '@/components/ui/SectionSkipLink'
 
 const JobBoardSection = ({ year = new Date().getFullYear() }) => {
   const isCurrentYear = year === new Date().getFullYear()
@@ -9,8 +10,9 @@ const JobBoardSection = ({ year = new Date().getFullYear() }) => {
   return (
     <section
       id="jobboard"
-      className="flex flex-col justify-center bg-yellow-50 p-8 py-24 sm:px-10 md:px-14 lg:px-16"
+      className="relative flex flex-col justify-center bg-yellow-50 p-8 py-24 sm:px-10 md:px-14 lg:px-16"
     >
+      <SectionSkipLink href="#partners">Skip job board</SectionSkipLink>
       <div className="relative w-full pt-0">
         <h2 className="w-full text-center font-biorhyme text-4xl text-black md:text-5xl lg:text-6xl">
           {year && !isCurrentYear ? `${year} ` : ''}Job Board

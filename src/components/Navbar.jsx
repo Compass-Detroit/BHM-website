@@ -1,6 +1,6 @@
 import { pathways, sections } from '@/data/2026/navigation'
 import { useCallback, useEffect, useRef, useState } from 'react'
-import { FaBars, FaChevronDown, FaXmark } from 'react-icons/fa6'
+import { FaBars, FaXmark } from 'react-icons/fa6'
 import { Link, useLocation } from 'react-router-dom'
 import BhmLogo from './ui/BhmLogo'
 
@@ -9,127 +9,33 @@ function Navbar() {
   const isHomePage = location.pathname === '/'
   const [activeLink, setActiveLink] = useState('landing')
   const [isNavVisible, setIsNavVisible] = useState(false)
-  const [isPathwaysOpen, setIsPathwaysOpen] = useState(false)
-  const [isPathwaysExpandedMobile, setIsPathwaysExpandedMobile] =
-    useState(false)
   const [isManualNavigation, setIsManualNavigation] = useState(false)
-
-  // Auto-expand Pathways on mobile when we're on a pathway page
-  const isPathwayPage = pathways.children.some(
-    (link) => link.to === location.pathname
-  )
-  useEffect(() => {
-    if (isPathwayPage) {
-      setIsPathwaysExpandedMobile(true)
-    }
-  }, [isPathwayPage])
   const [isNavigating, setIsNavigating] = useState(false)
 
   const navRef = useRef(null)
   const mobileButtonRef = useRef(null)
-  const pathwaysContainerRef = useRef(null)
-  const pathwaysTriggerRef = useRef(null)
-  const pathwaysMenuRef = useRef(null)
+  const headerBarRef = useRef(null)
 
-  // Open Pathways menu and focus first item (for keyboard)
-  const openPathwaysAndFocusFirst = () => {
-    setIsPathwaysOpen(true)
-    requestAnimationFrame(() => {
-      const firstItem =
-        pathwaysMenuRef.current?.querySelector('a[role="menuitem"]')
-      firstItem?.focus()
-    })
-  }
+  // Sync header height to CSS custom property for .nav-menu-expanded max-height
+  useEffect(() => {
+    const el = headerBarRef.current
+    if (!el) return
 
-  // Open Pathways menu and focus last item (for keyboard Arrow Up)
-  const openPathwaysAndFocusLast = () => {
-    setIsPathwaysOpen(true)
-    requestAnimationFrame(() => {
-      const items =
-        pathwaysMenuRef.current?.querySelectorAll('a[role="menuitem"]')
-      items?.[items.length - 1]?.focus()
-    })
-  }
-
-  // Close Pathways and return focus to trigger
-  const closePathwaysAndFocusTrigger = () => {
-    setIsPathwaysOpen(false)
-    pathwaysTriggerRef.current?.focus()
-  }
-
-  // Close Pathways when focus leaves the dropdown container (keyboard tabbing out)
-  const handlePathwaysBlur = () => {
-    // Use requestAnimationFrame so we check activeElement after focus has moved
-    requestAnimationFrame(() => {
-      if (
-        pathwaysContainerRef.current &&
-        !pathwaysContainerRef.current.contains(document.activeElement)
-      ) {
-        setIsPathwaysOpen(false)
-      }
-    })
-  }
-
-  // Keyboard: Pathways button keydown (Enter, Space, ArrowDown, ArrowUp, Escape)
-  const handlePathwaysTriggerKeyDown = (e) => {
-    if (e.key === 'Escape') {
-      if (isPathwaysOpen) {
-        e.preventDefault()
-        closePathwaysAndFocusTrigger()
-      }
-      return
+    const setHeaderHeight = () => {
+      document.documentElement.style.setProperty(
+        '--header-height',
+        `${el.offsetHeight}px`
+      )
     }
-    if (e.key === 'ArrowDown' || e.key === 'ArrowUp') {
-      e.preventDefault()
-      if (isPathwaysOpen) {
-        const items =
-          pathwaysMenuRef.current?.querySelectorAll('a[role="menuitem"]')
-        if (items?.length) {
-          const currentIndex = Array.from(items).indexOf(document.activeElement)
-          if (currentIndex === -1) {
-            // Focus on button; move to first or last item
-            if (e.key === 'ArrowDown') {
-              items[0]?.focus()
-            } else {
-              items[items.length - 1]?.focus()
-            }
-          } else if (e.key === 'ArrowDown') {
-            items[Math.min(currentIndex + 1, items.length - 1)]?.focus()
-          } else {
-            items[Math.max(currentIndex - 1, 0)]?.focus()
-          }
-        }
-      } else {
-        if (e.key === 'ArrowDown') {
-          openPathwaysAndFocusFirst()
-        } else {
-          openPathwaysAndFocusLast()
-        }
-      }
-      return
-    }
-    // Enter and Space trigger click (toggle) - no preventDefault so button works normally
-  }
 
-  // Keyboard: Pathways menu item keydown (ArrowDown, ArrowUp, Escape)
-  const handlePathwaysMenuItemKeyDown = (e, index) => {
-    if (e.key === 'Escape') {
-      e.preventDefault()
-      closePathwaysAndFocusTrigger()
-      return
+    setHeaderHeight()
+    const observer = new ResizeObserver(setHeaderHeight)
+    observer.observe(el)
+    return () => {
+      observer.disconnect()
+      document.documentElement.style.removeProperty('--header-height')
     }
-    if (e.key === 'ArrowDown' || e.key === 'ArrowUp') {
-      e.preventDefault()
-      const items =
-        pathwaysMenuRef.current?.querySelectorAll('a[role="menuitem"]')
-      if (!items?.length) return
-      const nextIndex =
-        e.key === 'ArrowDown'
-          ? Math.min(index + 1, items.length - 1)
-          : Math.max(index - 1, 0)
-      items[nextIndex]?.focus()
-    }
-  }
+  }, [])
 
   // Helper function to get accurate navbar height
   const getNavbarHeight = useCallback(() => {
@@ -169,7 +75,6 @@ function Navbar() {
   const closeMobileNav = () => {
     if (isNavVisible) {
       setIsNavVisible(false)
-      setIsPathwaysExpandedMobile(false)
     }
   }
 
@@ -192,7 +97,7 @@ function Navbar() {
     if (location.pathname !== '/' || !location.hash) return
 
     const sectionId = location.hash.slice(1).toLowerCase()
-    const validSectionIds = sections.map((s) => s.id)
+    const validSectionIds = sections.map((s) => s.id).filter(Boolean)
     if (!sectionId || !validSectionIds.includes(sectionId)) return
 
     const scrollToSection = (target) => {
@@ -231,13 +136,18 @@ function Navbar() {
       // Use dynamic navbar height for accurate scroll detection
       const navbarHeight = getNavbarHeight()
 
-      // Set Default section to landing (first element in sections)
-      let currentSection = sections[0].id
+      // Sections used for scroll detection (homepage anchors only)
+      const scrollSections = [
+        { id: 'landing' },
+        ...sections.filter((s) => s.id),
+      ]
+      // Set Default section to landing (hero at top)
+      let currentSection = 'landing'
 
       // This will track the closest distance to navbar
       let minDistance = Infinity
 
-      sections.forEach((section, index) => {
+      scrollSections.forEach((section, index) => {
         const target = document.querySelector(`#${section.id}`)
         if (!target) return
 
@@ -265,7 +175,7 @@ function Navbar() {
         }
 
         // Special case: last section when scrolled to bottom
-        if (index === sections.length - 1) {
+        if (index === scrollSections.length - 1) {
           const scrolledToBottom =
             window.innerHeight + window.scrollY >=
             document.body.offsetHeight - 10 // near bottom
@@ -338,7 +248,6 @@ function Navbar() {
     const handleClickOutside = (event) => {
       if (navRef.current && !navRef.current.contains(event.target)) {
         setIsNavVisible(false)
-        setIsPathwaysOpen(false)
       }
     }
 
@@ -351,166 +260,75 @@ function Navbar() {
     }
   }, [])
 
-  // Desktop Navigation List
+  // Check if color scheme preference was updated
+  useEffect(() => {
+    const colorSchemePref = window.matchMedia('(prefers-color-scheme: dark)')
+    const handleChange = (event) => setIsDarkMode(event.matches)
+
+    colorSchemePref.addEventListener('change', handleChange)
+
+    return () => colorSchemePref.removeEventListener('change', handleChange)
+  }, [])
+
+  // Desktop Navigation List (section links only)
   const desktopNavList = (
     <ul
       role="menubar"
       className="z-50 flex flex-row flex-nowrap items-baseline justify-end gap-x-6 px-4 py-2"
     >
-      {sections.map((section) => (
-        <li key={section.id} role="none" className="text-center">
-          <Link
-            to={isHomePage ? `#${section.id}` : `/#${section.id}`}
-            onClick={
-              isHomePage
-                ? (event) => handleNavigation(event, section.id)
-                : undefined
-            }
-            role="menuitem"
-            aria-current={activeLink === section.id ? 'page' : undefined}
-            className={`${
-              section.id === 'landing' ? 'hidden' : ''
-            } relative px-2 py-4 pb-2 ${
-              activeLink === section.id
-                ? 'after:w-full after:opacity-100'
-                : 'after:w-0 after:opacity-0'
-            } after:absolute after:bottom-0 after:left-0 after:h-1 after:bg-primary-400 after:transition-all after:duration-300 after:ease-in-out`}
-          >
-            {section.text}
-          </Link>
-        </li>
-      ))}
-      <li role="none" className="relative text-center">
-        <div
-          ref={pathwaysContainerRef}
-          className="relative"
-          onBlur={handlePathwaysBlur}
-          onMouseEnter={() => setIsPathwaysOpen(true)}
-          onMouseLeave={() => {
-            if (
-              !pathwaysContainerRef.current?.contains(document.activeElement)
-            ) {
-              setIsPathwaysOpen(false)
-            }
-          }}
-        >
-          <button
-            ref={pathwaysTriggerRef}
-            type="button"
-            role="menuitem"
-            aria-expanded={isPathwaysOpen}
-            aria-haspopup="menu"
-            aria-controls="pathways-menu"
-            id="pathways-trigger"
-            className="relative inline-flex items-baseline gap-1 px-2 py-4 pb-2 after:absolute after:bottom-0 after:left-0 after:h-1 after:w-0 after:bg-primary-400 after:opacity-0 after:transition-all after:duration-300 after:ease-in-out hover:after:w-full hover:after:opacity-100"
-            onClick={() => setIsPathwaysOpen((prev) => !prev)}
-            onKeyDown={handlePathwaysTriggerKeyDown}
-          >
-            {pathways.text}
-            <FaChevronDown
-              className={`size-3.5 shrink-0 transition-transform duration-200 ${
-                isPathwaysOpen ? 'rotate-180' : ''
-              }`}
-              aria-hidden
-            />
-          </button>
-          <ul
-            ref={pathwaysMenuRef}
-            id="pathways-menu"
-            role="menu"
-            aria-labelledby="pathways-trigger"
-            className={`absolute right-0 top-full z-40 -mt-0.5 min-w-40 rounded-md border border-gray-200 bg-white py-1 shadow-lg dark:border-gray-600 dark:bg-gray-700 ${
-              isPathwaysOpen ? 'block' : 'hidden'
-            }`}
-          >
-            {pathways.children.map((link, index) => (
-              <li key={link.to} role="none">
-                <Link
-                  to={link.to}
-                  role="menuitem"
-                  className="relative block px-4 py-2 text-left text-gray-700 after:absolute after:bottom-0 after:left-0 after:h-0.5 after:w-0 after:bg-primary-400 after:opacity-0 after:transition-all after:duration-300 after:ease-in-out hover:bg-gray-100 hover:after:w-full hover:after:opacity-100 dark:text-gray-100 dark:hover:bg-gray-600"
-                  onClick={() => setIsPathwaysOpen(false)}
-                  onKeyDown={(e) => handlePathwaysMenuItemKeyDown(e, index)}
-                >
-                  {link.text}
-                </Link>
-              </li>
-            ))}
-          </ul>
-        </div>
-      </li>
+      {navSections.map((section) => {
+        const isActive = activeLink === section.id
+        return (
+          <li key={section.id} role="none" className="text-center">
+            <Link
+              to={isHomePage ? `#${section.id}` : `/#${section.id}`}
+              onClick={
+                isHomePage
+                  ? (event) => handleNavigation(event, section.id)
+                  : undefined
+              }
+              role="menuitem"
+              aria-current={isActive ? 'page' : undefined}
+              className={`relative px-2 py-4 pb-2 ${
+                isActive
+                  ? 'after:w-full after:opacity-100'
+                  : 'after:w-0 after:opacity-0'
+              } after:absolute after:bottom-0 after:left-0 after:h-1 after:bg-primary-400 after:transition-all after:duration-300 after:ease-in-out`}
+            >
+              {section.text}
+            </Link>
+          </li>
+        )
+      })}
     </ul>
   )
 
-  // Mobile Navigation List
+  // Mobile Navigation List (section links only)
   const mobileNavList = (
     <ul className="flex flex-col space-y-2 p-4 dark:bg-gray-700 dark:text-white">
-      {sections.map((section) => (
-        <li
-          key={section.id}
-          className={`${section.id === 'landing' ? 'hidden' : ''}`}
-        >
-          <Link
-            to={isHomePage ? `#${section.id}` : `/#${section.id}`}
-            onClick={
-              isHomePage
-                ? (event) => handleNavigation(event, section.id)
-                : undefined
-            }
-            aria-current={activeLink === section.id ? 'page' : undefined}
-            className={`block rounded-lg px-4 py-3 text-center transition-colors hover:bg-gray-100 dark:hover:bg-primary-400 ${
-              activeLink === section.id
-                ? 'bg-primary-100 font-semibold text-primary-700'
-                : 'text-gray-700 dark:text-white dark:hover:text-gray-900'
-            }`}
-          >
-            {section.text}
-          </Link>
-        </li>
-      ))}
-      <li>
-        <button
-          type="button"
-          aria-expanded={isPathwaysExpandedMobile}
-          aria-controls="pathways-mobile-menu"
-          className="flex w-full items-center justify-center gap-2 rounded-lg px-4 py-3 text-center text-gray-700 transition-colors hover:bg-gray-100 dark:text-white dark:hover:bg-primary-400 dark:hover:text-gray-900"
-          onClick={() => setIsPathwaysExpandedMobile((prev) => !prev)}
-        >
-          {pathways.text}
-          <FaChevronDown
-            className={`size-3.5 shrink-0 transition-transform duration-200 ${
-              isPathwaysExpandedMobile ? 'rotate-180' : ''
-            }`}
-            aria-hidden
-          />
-        </button>
-        <ul
-          id="pathways-mobile-menu"
-          className={`space-y-1 overflow-hidden pl-4 ${
-            isPathwaysExpandedMobile ? 'mt-2' : 'hidden'
-          }`}
-        >
-          {pathways.children.map((link) => {
-            const isActivePathway = location.pathname === link.to
-            return (
-              <li key={link.to}>
-                <Link
-                  to={link.to}
-                  aria-current={isActivePathway ? 'page' : undefined}
-                  className={`block rounded-lg px-4 py-3 text-center transition-colors hover:bg-gray-100 dark:text-white dark:hover:bg-primary-400 dark:hover:text-gray-900 ${
-                    isActivePathway
-                      ? 'bg-primary-100 font-semibold text-primary-700'
-                      : 'text-gray-700'
-                  }`}
-                  onClick={closeMobileNav}
-                >
-                  {link.text}
-                </Link>
-              </li>
-            )
-          })}
-        </ul>
-      </li>
+      {navSections.map((section) => {
+        const isActive = activeLink === section.id
+        return (
+          <li key={section.id}>
+            <Link
+              to={isHomePage ? `#${section.id}` : `/#${section.id}`}
+              onClick={
+                isHomePage
+                  ? (event) => handleNavigation(event, section.id)
+                  : undefined
+              }
+              aria-current={isActive ? 'page' : undefined}
+              className={`block rounded-lg px-4 py-3 text-center transition-colors hover:bg-gray-100 dark:hover:bg-primary-400 dark:hover:text-gray-900 ${
+                isActive
+                  ? 'bg-primary-100 font-semibold text-primary-700'
+                  : 'text-gray-700 dark:text-white dark:hover:text-gray-900'
+              }`}
+            >
+              {section.text}
+            </Link>
+          </li>
+        )
+      })}
     </ul>
   )
 
@@ -524,10 +342,13 @@ function Navbar() {
       <div aria-live="polite" aria-atomic="true" className="sr-only">
         {activeLink &&
           `Currently viewing ${
-            sections.find((s) => s.id === activeLink)?.text
+            activeLink === 'landing'
+              ? 'hero'
+              : navSections.find((s) => s.id === activeLink)?.text
           } section`}
       </div>
       <div
+        ref={headerBarRef}
         className="grid w-full min-w-0 max-w-full grid-cols-[1fr_auto] items-center gap-2 p-2 sm:p-4"
         style={{ width: '100%', maxWidth: '100%' }}
       >
@@ -547,7 +368,11 @@ function Navbar() {
           aria-label={isNavVisible ? 'Close Main Menu' : 'Open Main Menu'}
           aria-expanded={isNavVisible}
           aria-controls="mobile-navigation"
-          className="touch-manipulation rounded border-2 border-gray-300 p-2 transition-colors hover:bg-gray-100 active:bg-gray-200 sm:px-4 xl:hidden dark:text-gray-100 dark:hover:bg-primary-400"
+          className={`touch-manipulation rounded border-2 p-2 transition-colors sm:px-4 xl:hidden ${
+            activeLink === 'landing' && isHomePage
+              ? 'border-sky-900 hover:bg-primary-300 active:bg-primary-200'
+              : 'border-gray-300 hover:bg-gray-100 active:bg-gray-200 dark:text-gray-100 dark:hover:bg-primary-400'
+          }`}
           onClick={(e) => {
             e.preventDefault()
             e.stopPropagation()

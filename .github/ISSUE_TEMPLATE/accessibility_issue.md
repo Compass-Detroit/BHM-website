@@ -1,6 +1,6 @@
 ---
 name: Accessibility Issue
-about: Report an accessibility issue with the DevFest Detroit website
+about: Report an accessibility issue with the Black History Month Innovation Summit website
 title: '[A11Y] '
 labels: accessibility, bug
 assignees: ''
