@@ -24,9 +24,6 @@ function Navbar() {
     }
   }, [isPathwayPage])
   const [isNavigating, setIsNavigating] = useState(false)
-  const [isDarkMode, setIsDarkMode] = useState(
-    window.matchMedia('(prefers-color-scheme: dark)').matches
-  )
 
   const navRef = useRef(null)
   const mobileButtonRef = useRef(null)
@@ -354,16 +351,6 @@ function Navbar() {
     }
   }, [])
 
-  // Check if color scheme preference was updated
-  useEffect(() => {
-    const colorSchemePref = window.matchMedia('(prefers-color-scheme: dark)')
-    const handleChange = (event) => setIsDarkMode(event.matches)
-
-    colorSchemePref.addEventListener('change', handleChange)
-
-    return () => colorSchemePref.removeEventListener('change', handleChange)
-  }, [])
-
   // Desktop Navigation List
   const desktopNavList = (
     <ul
@@ -554,12 +541,7 @@ function Navbar() {
           onClick={handleHomeNavigation}
           aria-label="Go to home page"
         >
-          <CompassDetroitLogo
-            textColor={
-              isDarkMode && activeLink !== 'landing' ? '#FFFFFF' : '#0c4a6e'
-            }
-            className="h-12 sm:h-16"
-          />
+          <CompassDetroitLogo textColor="#0c4a6e" className="h-12 sm:h-16" />
         </Link>
 
         {/* Mobile NavBar Hamburger Button */}
