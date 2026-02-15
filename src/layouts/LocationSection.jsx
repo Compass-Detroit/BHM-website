@@ -48,12 +48,11 @@ function LocationSection() {
               Saturday, February 28th <br />
               8:00 AM – 5:00 PM
             </time>
-
             <a
               href="https://www.google.com/maps/dir//DTE+Energy+Headquarters+1+Energy+Plaza+Detroit,+48226"
               target="_blank"
               rel="noreferrer"
-              className="inline-flex w-fit items-center justify-center rounded border-2 border-black bg-white px-6 py-3 font-semibold transition hover:bg-black hover:text-white dark:border-white dark:bg-transparent dark:hover:bg-white dark:hover:text-black"
+              className="inline-flex w-fit items-center justify-center rounded bg-sky-900 px-6 py-3 font-semibold text-white transition hover:bg-sky-300 hover:text-white dark:border-white dark:bg-transparent dark:hover:bg-white dark:hover:text-black"
               aria-label="Get directions to DTE Energy Headquarters (opens in new tab)"
             >
               Get Directions
