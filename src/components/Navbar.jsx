@@ -1,8 +1,8 @@
+import { pathways, sections } from '@/data/2026/navigation'
 import { useCallback, useEffect, useRef, useState } from 'react'
 import { FaBars, FaChevronDown, FaXmark } from 'react-icons/fa6'
 import { Link, useLocation } from 'react-router-dom'
-import CompassDetroitLogo from './ui/CompassDetroitLogo'
-import { sections, pathways } from '@/data/2026/navigation'
+import BhmLogo from './ui/BhmLogo'
 
 function Navbar() {
   const location = useLocation()
@@ -518,11 +518,7 @@ function Navbar() {
     <nav
       ref={navRef}
       aria-label="Main navigation"
-      className={`fixed left-0 top-0 z-30 w-screen ${
-        activeLink === 'landing'
-          ? 'bg-white text-sky-900'
-          : 'bg-white text-gray-700 shadow-lg dark:bg-gray-700 dark:text-gray-100'
-      }`}
+      className="fixed left-0 top-0 z-30 w-screen bg-white text-[#0c4a6e] shadow-lg dark:text-[#0c4a6e]"
     >
       {/* Screen Reader Announcements */}
       <div aria-live="polite" aria-atomic="true" className="sr-only">
@@ -541,7 +537,7 @@ function Navbar() {
           onClick={handleHomeNavigation}
           aria-label="Go to home page"
         >
-          <CompassDetroitLogo textColor="#0c4a6e" className="h-12 sm:h-16" />
+          <BhmLogo textColor="#0c4a6e" className="h-12 sm:h-16" />
         </Link>
 
         {/* Mobile NavBar Hamburger Button */}
@@ -551,11 +547,7 @@ function Navbar() {
           aria-label={isNavVisible ? 'Close Main Menu' : 'Open Main Menu'}
           aria-expanded={isNavVisible}
           aria-controls="mobile-navigation"
-          className={`touch-manipulation rounded border-2 p-2 transition-colors sm:px-4 xl:hidden ${
-            activeLink === 'landing'
-              ? 'border-sky-900 hover:bg-primary-300 active:bg-primary-200'
-              : 'border-gray-300 hover:bg-gray-100 active:bg-gray-200 dark:text-gray-100 dark:hover:bg-primary-400'
-          }`}
+          className="touch-manipulation rounded border-2 border-gray-300 p-2 transition-colors hover:bg-gray-100 active:bg-gray-200 sm:px-4 xl:hidden dark:text-gray-100 dark:hover:bg-primary-400"
           onClick={(e) => {
             e.preventDefault()
             e.stopPropagation()
@@ -595,11 +587,7 @@ function Navbar() {
           <div
             id="mobile-navigation"
             aria-labelledby="mobile-menu-button"
-            className={`block w-full overflow-hidden bg-white shadow-lg ${
-              activeLink === 'landing'
-                ? 'bg-primary-400'
-                : 'bg-white dark:bg-gray-900 dark:text-white'
-            }`}
+            className="block w-full overflow-hidden bg-white shadow-lg"
             style={{
               transform: 'translateZ(0)',
               backfaceVisibility: 'hidden',
