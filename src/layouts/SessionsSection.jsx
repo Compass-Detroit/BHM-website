@@ -32,19 +32,17 @@ const convertTo24Hour = (time) => {
 // Track descriptions
 const trackDescriptions = {
   'Build with AI':
-    'Explore cutting-edge AI development, from machine learning to generative models. Learn how to build intelligent applications that push the boundaries of innovation.',
-  Hackathon:
-    'Put your skills to the test in our collaborative hackathon. Build innovative solutions, network with fellow developers, and compete for amazing prizes.',
+    'Explore cutting-edge AI development, from machine learning to generative models. Hands-on workshops at Service Bldg (SB) 120.',
   Innovation:
-    'Discover groundbreaking ideas and emerging technologies that are shaping the future. Join us for sessions that challenge conventional thinking and inspire creativity.',
+    'Discover groundbreaking ideas and emerging technologies shaping the future. Sessions at Walker Crisler Bldg (WCB) 103.',
   'Level Up':
-    'Advance your career and personal growth. From mentorship to leadership, explore sessions that help you level up professionally and personally in tech.',
+    'Advance your career and personal growth. From mentorship to leadership, explore sessions that help you level up professionally and personally in tech. Located at Town Square.',
   Leadership:
-    'Discover insights from founders and entrepreneurs building the next generation of tech companies. Learn about startup strategies, funding, product-market fit, and scaling from idea to execution.',
-  'Tech+Design':
-    'Where technology meets user experience. Dive into sessions covering frontend development, design systems, accessibility, and creating delightful user interfaces.',
-  Workshops:
-    'Get hands-on with interactive workshops. Build, code, and create alongside experts in intimate learning sessions designed for practical skill development.',
+    'Discover insights from founders and entrepreneurs building the next generation of tech companies. Learn about startup strategies, funding, and scaling. Sessions at rooms 275 and 278.',
+  'AI Foundations':
+    'Build your foundational knowledge of artificial intelligence. Perfect for beginners and those looking to strengthen their AI fundamentals. Located at Walker Crisler Bldg (WCB) 105.',
+  'Breakout Sessions':
+    'Focused discussions and interactive sessions on specialized topics. Join intimate conversations with experts and peers at room 255.',
 }
 
 const SessionsSection = ({
@@ -265,6 +263,15 @@ const SessionsSection = ({
                     <>Build with AI</>
                   ) : tab === 'Workshops' ? (
                     <>Workshops</>
+                  ) : tab === 'AI Foundations' ? (
+                    <>AI Foundations</>
+                  ) : tab === 'Breakout Sessions' ? (
+                    <>
+                      <span className="inline max-xs:hidden">
+                        Breakout Sessions
+                      </span>
+                      <span className="hidden max-xs:inline">Breakout</span>
+                    </>
                   ) : (
                     tab
                   )}
