@@ -2,6 +2,7 @@ import { useState, useEffect, useRef } from 'react'
 import PropTypes from 'prop-types'
 import DevLogo from '@/assets/images/icn-dev.png'
 import LinkedInHandle from '@/components/ui/LinkedInHandle'
+import SectionSkipLink from '@/components/ui/SectionSkipLink'
 import GithubHandle from '@/components/ui/GithubHandle'
 import Star from '@/assets/images/icons/star.svg'
 import TwitterHandle from '@/components/ui/TwitterHandle'
@@ -61,8 +62,9 @@ const TeamSection = ({ teamData, year }) => {
   return (
     <section
       id="leadership"
-      className=" bg-primary-50 p-8 sm:px-10 md:px-14 lg:px-16"
+      className="relative bg-primary-50 p-8 sm:px-10 md:px-14 lg:px-16"
     >
+      <SectionSkipLink href="#page-footer">Skip to footer</SectionSkipLink>
       <div className="flex w-full justify-center pt-0">
         <h2 className="mb-4 w-full text-center font-biorhyme text-4xl text-black md:mb-6 md:text-5xl lg:text-6xl">
           {year ? `${year} ` : ''}Leadership Team
