@@ -36,56 +36,118 @@ These colors are used intentionally — not decoratively.
 | Token         | Hex     |
 | ------------- | ------- |
 | bhm-black-950 | #0B0B0B |
-| bhm-black-900 | #111111 |
-| bhm-red-500   | #C1121F |
 | bhm-red-700   | #8E0C15 |
-| bhm-green-500 | #1B7F3B |
-| bhm-green-700 | #125B2A |
-| bhm-gold-500  | #CFAE70 |
+| bhm-green-700 | #1B7F3B |
+| bhm-gold-400  | #CFAE70 |
 
 ### Neutrals
 
 | Token           | Hex     |
 | --------------- | ------- |
 | bhm-neutral-50  | #F8F9FA |
-| bhm-neutral-200 | #E9ECEF |
-| bhm-neutral-700 | #343A40 |
-| bhm-neutral-900 | #212529 |
+| bhm-neutral-100 | #eceff2 |
+| bhm-neutral-200 | #d6dce1 |
+| bhm-neutral-300 | #b2bec7 |
 
 ---
 
 ## ⚙ Tailwind Implementation
 
-The palette is defined in `tailwind.config.js`:
+The palette is defined in `tailwind.config.js` along with additional color ranges:
 
 ```js
-extend: {
-  colors: {
-    bhm: {
-      black: {
-        950: "#0B0B0B",
-        900: "#111111",
+ extend: {
+      screens: {
+        xs: '400px',
       },
-      red: {
-        500: "#C1121F",
-        700: "#8E0C15",
-      },
-      green: {
-        500: "#1B7F3B",
-        700: "#125B2A",
-      },
-      gold: {
-        500: "#CFAE70",
-      },
-      neutral: {
-        50: "#F8F9FA",
-        200: "#E9ECEF",
-        700: "#343A40",
-        900: "#212529",
-      },
-    },
-  },
-}
+      colors: {
+        primary: {
+          50: '#fbf9f1',
+          100: '#f5f0df',
+          200: '#eadfbe',
+          300: '#dcc795',
+          400: '#cfae70',
+          500: '#c2954d',
+          600: '#b58041',
+          700: '#966638',
+          800: '#795233',
+          900: '#62452c',
+          950: '#352215',
+          DEFAULT: '#cfae70',
+        },
+        bhm: {
+          black: {
+            50: '#fafafa',
+            100: '#f5f5f5',
+            200: '#e6e6e6',
+            300: '#d3d3d3',
+            400: '#a3a3a3',
+            500: '#727272',
+            600: '#535353',
+            700: '#404040',
+            800: '#272727',
+            900: '#1a1a1a',
+            950: '#0b0b0b',
+            DEFAULT: '#0b0b0b',
+          },
+          red: {
+            50: '#fff1f2',
+            100: '#ffe0e2',
+            200: '#ffc7cb',
+            300: '#ffa0a7',
+            400: '#ff6974',
+            500: '#fa3947',
+            600: '#e71b2a',
+            700: '#c1121f',
+            800: '#a1131e',
+            900: '#85171f',
+            950: '#49060b',
+            DEFAULT: '#c1121f',
+          },
+          green: {
+            50: '#f1fcf3',
+            100: '#defae5',
+            200: '#bef4ce',
+            300: '#8beaa8',
+            400: '#51d77b',
+            500: '#2abd58',
+            600: '#1d9c45',
+            700: '#1b7f3b',
+            800: '#1a6131',
+            900: '#17502b',
+            950: '#072c14',
+            DEFAULT: '#1b7f3b',
+          },
+          gold: {
+            50: '#fbf9f1',
+            100: '#f5f0df',
+            200: '#eadfbe',
+            300: '#dcc795',
+            400: '#cfae70',
+            500: '#c2954d',
+            600: '#b58041',
+            700: '#966638',
+            800: '#795233',
+            900: '#62452c',
+            950: '#352215',
+            DEFAULT: '#cfae70',
+          },
+          neutral: {
+            50: '#f8f9fa',
+            100: '#eceff2',
+            200: '#d6dce1',
+            300: '#b2bec7',
+            400: '#889ba8',
+            500: '#697e8e',
+            600: '#546775',
+            700: '#45535f',
+            800: '#3c4750',
+            900: '#353d45',
+            950: '#23292e',
+            DEFAULT: '#f8f9fa',
+          },
+        },
+      }
 ```
 
 This snippet is documentation only. The source of truth is the actual Tailwind config file.
