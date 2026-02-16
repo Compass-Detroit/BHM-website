@@ -4,15 +4,15 @@ function LandingSection() {
   return (
     <section id="landing" className="mt-16 bg-indigo-950">
       <div className="mx-auto flex max-w-[1554px] flex-wrap">
-        <div className="mx-auto mt-4 flex w-full items-center justify-center rounded-lg bg-white p-12 shadow-lg lg:mt-0 lg:w-1/2">
+        <div className="mx-auto mt-4 flex w-full items-center justify-center  bg-white p-6 shadow-lg md:p-12 lg:mt-0 lg:w-1/2">
           {/* The logo is a PNG, so textColor is not used, but we maintain the prop for compatibility with Footer usage */}
-          <h1 className="text-asimovian text-7xl font-bold text-black">
+          <h1 className="text-asimovian text-center text-4xl font-bold text-black md:text-5xl lg:text-7xl">
             A Black History Month Innovation Summit
           </h1>
         </div>
         <div className="flex w-full flex-col justify-between bg-pumpkin text-black lg:w-1/2">
-          <div className="flex grow flex-col items-center justify-center space-y-8 p-10">
-            <h2 className="font-biorhyme text-4xl font-bold">
+          <div className="flex grow flex-col items-center justify-center space-y-8 p-6 md:p-10">
+            <h2 className="text-center font-biorhyme text-2xl font-bold md:text-4xl">
               February 28, 2026
             </h2>
 

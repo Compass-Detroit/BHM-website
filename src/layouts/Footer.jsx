@@ -1,9 +1,8 @@
 import { Link } from 'react-router-dom'
 import { sections, pageLinks } from '@/data/2026/navigation'
 import GdgDetroitLogo from '@/assets/images/gdg-detroit-logo-footer.svg'
-import CompassDetroit from '@/assets/images/sponsors/Compass_Detroit_logo.webp'
 import SectionSkipLink from '@/components/ui/SectionSkipLink'
-
+import BhmLogo from '@/assets/images/icons/blackhistorylogo.png'
 function Footer() {
   // Section links always use /#section-id so that smooth scrolling is handled
   // consistently by the Navbar's hash-based useEffect (from any page, including home).
@@ -68,8 +67,8 @@ function Footer() {
             <div className="flex items-center justify-center">
               {/* Middle column - 1/3 width */}
               <img
-                src={CompassDetroit}
-                alt="Compass Detroit Logo"
+                src={BhmLogo}
+                alt="Black History Month Logo"
                 className="h-auto w-64 object-contain object-center"
               />
             </div>
