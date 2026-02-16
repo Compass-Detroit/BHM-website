@@ -1,9 +1,8 @@
 import { useCallback, useEffect, useRef, useState } from 'react'
 import { FaBars, FaXmark } from 'react-icons/fa6'
 import { Link, useLocation } from 'react-router-dom'
-import CompassDetroitLogo from './ui/CompassDetroitLogo'
 import { sections } from '@/data/2026/navigation'
-
+import logo from '@/assets/images/icons/blackhistorylogo.png'
 // Navbar only shows section (anchor) links; route links like Previous Events are in Footer
 const navSections = sections.filter((s) => s.id)
 
@@ -14,7 +13,7 @@ function Navbar() {
   const [isNavVisible, setIsNavVisible] = useState(false)
   const [isManualNavigation, setIsManualNavigation] = useState(false)
   const [isNavigating, setIsNavigating] = useState(false)
-  const [isDarkMode, setIsDarkMode] = useState(
+  const [setIsDarkMode] = useState(
     window.matchMedia('(prefers-color-scheme: dark)').matches
   )
 
@@ -368,12 +367,17 @@ function Navbar() {
           onClick={handleHomeNavigation}
           aria-label="Go to home page"
         >
-          <CompassDetroitLogo
+          {/* <CompassDetroitLogo
             textColor={
               isDarkMode && !(activeLink === 'landing' && isHomePage)
                 ? '#FFFFFF'
                 : '#0c4a6e'
             }
+            className="h-12 sm:h-16"
+          /> */}
+          <img
+            src={logo}
+            alt="Black History Month 2026 logo"
             className="h-12 sm:h-16"
           />
         </Link>
