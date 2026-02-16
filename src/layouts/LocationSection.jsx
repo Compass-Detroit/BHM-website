@@ -35,9 +35,9 @@ function LocationSection() {
 
           {/* Details */}
           <div className="flex flex-col justify-center">
-            <h1 className="mb-2 text-2xl font-bold md:text-3xl">
+            <h3 className="mb-2 text-2xl font-bold md:text-3xl">
               Compass Detroit 2026
-            </h1>
+            </h3>
 
             <p className="mb-1 font-semibold">
               1 Energy Plaza, Detroit, MI 48226
