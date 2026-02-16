@@ -1,17 +1,14 @@
 import CTAButton from '@/components/ui/CTAButton'
 import { FaTicket } from 'react-icons/fa6'
-import logo from '@/assets/images/icons/blackhistorylogo.png'
 function LandingSection() {
   return (
     <section id="landing" className="mt-16 bg-indigo-950">
       <div className="mx-auto flex max-w-[1554px] flex-wrap">
         <div className="mx-auto mt-4 flex w-full items-center justify-center rounded-lg bg-white p-12 shadow-lg lg:mt-0 lg:w-1/2">
           {/* The logo is a PNG, so textColor is not used, but we maintain the prop for compatibility with Footer usage */}
-          <img
-            src={logo}
-            alt="Compass Detroit 2026 logo"
-            className="mx-auto h-auto w-full max-w-screen-xs"
-          />
+          <h1 className="text-asimovian text-7xl font-bold text-black">
+            A Black History Month Innovation Summit
+          </h1>
         </div>
         <div className="flex w-full flex-col justify-between bg-pumpkin text-black lg:w-1/2">
           <div className="flex grow flex-col items-center justify-center space-y-8 p-10">
