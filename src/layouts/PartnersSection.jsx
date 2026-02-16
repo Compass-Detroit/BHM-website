@@ -2,6 +2,7 @@ import PropTypes from 'prop-types'
 
 import Kite from '@/assets/images/icn-kite.png'
 import CTAButton from '@/components/ui/CTAButton'
+import SectionSkipLink from '@/components/ui/SectionSkipLink'
 
 const PartnersSection = ({ partnersData = {}, year }) => {
   const isCurrentYear = year === new Date().getFullYear()
@@ -76,8 +77,11 @@ const PartnersSection = ({ partnersData = {}, year }) => {
   return (
     <section
       id="partners"
-      className="flex flex-col justify-center bg-white p-8 sm:px-10 md:px-14 lg:px-16"
+      className="relative flex flex-col justify-center bg-white p-8 sm:px-10 md:px-14 lg:px-16"
     >
+      <SectionSkipLink href="#leadership">
+        Skip partners section
+      </SectionSkipLink>
       <div className="relative w-full pt-0">
         <h2 className="w-full text-center font-biorhyme text-4xl text-black md:text-5xl lg:text-6xl">
           {year ? `${year} ` : ''}Partners

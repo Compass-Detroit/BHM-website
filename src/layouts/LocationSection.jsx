@@ -1,10 +1,11 @@
 import { FaMapPin, FaClock } from 'react-icons/fa6'
+import SectionSkipLink from '@/components/ui/SectionSkipLink'
 
 function LocationSection() {
   return (
     <section
       id="location"
-      className="flex h-auto items-center justify-center bg-slate-100 py-16 text-black md:py-28 dark:bg-gray-900 dark:text-white"
+      className="relative flex h-auto items-center justify-center bg-slate-100 py-16 text-black md:py-28 dark:bg-gray-900 dark:text-white"
       aria-labelledby="location-heading"
     >
       <div className="mx-4 flex flex-col space-y-8 sm:mx-6 lg:mx-8">
@@ -75,6 +76,11 @@ function LocationSection() {
               >
                 GET DTE DIRECTIONS
               </a>
+              <div className="relative">
+                <SectionSkipLink href="#schedule">
+                  Skip location section
+                </SectionSkipLink>
+              </div>
             </div>
           </div>
 

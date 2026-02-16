@@ -1,10 +1,11 @@
 import { PageLayout } from '@/layouts/PageLayout'
 import TeamSection from '@/layouts/TeamSection'
-import CommunitySection from '@/layouts/CommunitySection'
 import LandingSection from '@/layouts/LandingSection'
 import LocationSection from '@/layouts/LocationSection'
 import MembersSection from '@/layouts/MembersSection'
 import PartnersSection from '@/layouts/PartnersSection'
+import AttendeeSection from '@/layouts/AttendeeSection'
+import JobBoardSection from '@/layouts/JobBoardSection'
 import SessionsSection from '@/layouts/SessionsSection'
 import SpeakersSection from '@/layouts/SpeakersSection'
 
@@ -35,10 +36,14 @@ function Home() {
           'Breakout Sessions',
         ]}
       />
-      <CommunitySection year={currentYear} />
-      <MembersSection year={currentYear} />
+
+      <MembersSection />
 
       <SpeakersSection year={currentYear} speakersData={Speakers2026} />
+
+      <AttendeeSection />
+
+      <JobBoardSection year={currentYear} />
 
       <PartnersSection year={currentYear} partnersData={partnersData} />
       <TeamSection year={currentYear} teamData={teamData} />

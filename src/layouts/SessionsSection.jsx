@@ -5,6 +5,7 @@ import HackathonSessionHeader from '@/components/sessions/HackathonSessionHeader
 import NoSessionsAvailable from '@/components/sessions/NoSessionsAvailable'
 import Schedule from '@/components/sessions/Schedule'
 import SessionCard from '@/components/sessions/SessionCard'
+import SectionSkipLink from '@/components/ui/SectionSkipLink'
 import SessionsLogo from '@/assets/images/icn-sessions.png'
 import VenueMaps from '@/components/sessions/VenueMaps'
 
@@ -58,6 +59,7 @@ const SessionsSection = ({
   )
   const navRef = useRef(null)
   const buttonRefs = useRef([])
+  const tabpanelRef = useRef(null)
 
   const tabs = [...tracks]
   const currentSession = tabs[activeTab]
@@ -95,7 +97,7 @@ const SessionsSection = ({
 
   // Get sessions for current track
   const currentTrackSessions = combinedSpeakerData.filter((session) => {
-    // Handle the Misc/Miscellaneous mapping in eventData.js
+    // Handle the Misc/Miscellaneous track name mapping
     const normalizeSessionTrack =
       session.track === 'Miscellaneous' ? 'Misc' : session.track
     const normalizeCurrentSession =
@@ -106,32 +108,42 @@ const SessionsSection = ({
 
   const hasSessionsForTrack = currentTrackSessions.length > 0
 
-  // Scroll focused button into view for keyboard navigation
-  useEffect(() => {
-    if (buttonRefs.current[activeTab] && navRef.current) {
-      const button = buttonRefs.current[activeTab]
-      const nav = navRef.current
-      const buttonRect = button.getBoundingClientRect()
-      const navRect = nav.getBoundingClientRect()
+  const scrollTabIntoView = (button) => {
+    if (!button || !navRef.current) return
+    const nav = navRef.current
+    const buttonRect = button.getBoundingClientRect()
+    const navRect = nav.getBoundingClientRect()
 
-      // Check if button is outside visible area
-      if (buttonRect.left < navRect.left) {
-        // Scroll left to show button
-        nav.scrollTo({
-          left: nav.scrollLeft + (buttonRect.left - navRect.left) - 16,
-          behavior: 'smooth',
-        })
-      } else if (buttonRect.right > navRect.right) {
-        // Scroll right to show button
-        nav.scrollTo({
-          left: nav.scrollLeft + (buttonRect.right - navRect.right) + 16,
-          behavior: 'smooth',
-        })
-      }
+    if (buttonRect.left < navRect.left) {
+      nav.scrollTo({
+        left: nav.scrollLeft + (buttonRect.left - navRect.left) - 16,
+        behavior: 'smooth',
+      })
+    } else if (buttonRect.right > navRect.right) {
+      nav.scrollTo({
+        left: nav.scrollLeft + (buttonRect.right - navRect.right) + 16,
+        behavior: 'smooth',
+      })
+    }
+  }
+
+  // Scroll focused tab into view when activeTab changes (click/Enter/Arrow)
+  useEffect(() => {
+    if (buttonRefs.current[activeTab]) {
+      scrollTabIntoView(buttonRefs.current[activeTab])
     }
   }, [activeTab])
 
-  // Handle keyboard navigation for horizontal scrolling
+  const activateTab = (index, moveFocusToPanel = false) => {
+    setActiveTab(index)
+    if (moveFocusToPanel) {
+      requestAnimationFrame(() => {
+        tabpanelRef.current?.focus()
+      })
+    }
+  }
+
+  // Handle keyboard navigation
   const handleKeyDown = (event, index) => {
     if (event.key === 'ArrowLeft' || event.key === 'ArrowRight') {
       event.preventDefault()
@@ -141,6 +153,9 @@ const SessionsSection = ({
           : Math.min(tabs.length - 1, index + 1)
       setActiveTab(nextIndex)
       buttonRefs.current[nextIndex]?.focus()
+    } else if (event.key === 'Enter' || event.key === ' ') {
+      event.preventDefault()
+      activateTab(index, true)
     }
   }
 
@@ -166,8 +181,11 @@ const SessionsSection = ({
   return (
     <section
       id="schedule"
-      className="flex flex-col items-center justify-start bg-primary-100 p-4 sm:px-10 md:px-14 lg:px-16"
+      className="relative flex flex-col items-center justify-start bg-primary-100 p-4 sm:px-10 md:px-14 lg:px-16"
     >
+      <SectionSkipLink href="#members">
+        Skip sessions navigation
+      </SectionSkipLink>
       <div className="flex w-full justify-between pt-0">
         <button
           aria-label={
@@ -209,7 +227,7 @@ const SessionsSection = ({
           isExpanded ? 'opacity-100' : 'max-h-0 opacity-0'
         }`}
       >
-        <nav aria-label="Session track navigation">
+        <nav aria-label="Session track navigation" aria-hidden={!isExpanded}>
           <div
             ref={navRef}
             role="tablist"
@@ -231,9 +249,9 @@ const SessionsSection = ({
                   }}
                   role="tab"
                   aria-selected={activeTab === index}
-                  aria-controls={`session-panel-${index}`}
+                  aria-controls="sessions-tabpanel"
                   id={`session-tab-${index}`}
-                  tabIndex={activeTab === index ? 0 : -1}
+                  tabIndex={isExpanded ? 0 : -1}
                   className={`relative shrink-0 whitespace-nowrap rounded-md p-2 text-sm font-black uppercase !leading-5 transition-colors duration-300 focus:outline-none focus:ring-2 focus:ring-primary-400 focus:ring-offset-2 focus:ring-offset-black md:min-w-20 md:px-3 md:py-2 lg:min-w-36 lg:px-4 lg:text-lg ${
                     index === 0 ? 'md:ml-14' : ''
                   } ${
@@ -241,7 +259,8 @@ const SessionsSection = ({
                       ? 'bg-primary-400 text-black after:absolute after:-bottom-3 after:left-1/2 after:block after:size-0 after:-translate-x-1/2 after:border-x-[12px] after:border-t-[12px] after:border-primary-400 after:border-x-transparent'
                       : 'bg-gray-900 text-white hover:bg-gray-800'
                   }`}
-                  onClick={() => setActiveTab(index)}
+                  onClick={() => activateTab(index, false)}
+                  onFocus={(e) => scrollTabIntoView(e.currentTarget)}
                   onKeyDown={(e) => handleKeyDown(e, index)}
                 >
                   {tab === 'Miscellaneous' ? (
@@ -282,9 +301,12 @@ const SessionsSection = ({
         </nav>
 
         <div
-          id={`session-panel-${activeTab}`}
+          ref={tabpanelRef}
+          id="sessions-tabpanel"
           role="tabpanel"
           aria-labelledby={`session-tab-${activeTab}`}
+          aria-hidden={!isExpanded}
+          tabIndex={isExpanded ? 0 : -1}
           className={`flex w-full items-start px-[2.5%] md:px-[5%] ${
             isExpanded ? 'max-h-none opacity-100' : 'max-h-0 opacity-0'
           } ${

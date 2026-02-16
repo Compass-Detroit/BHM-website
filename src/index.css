@@ -4,6 +4,24 @@
 
 /* Custom CSS using Tailwind's @layer directive */
 @layer utilities {
+  /* Navbar: mobile menu container when expanded */
+  /* --header-height is set by Navbar via ResizeObserver; fallback for initial paint */
+  .nav-menu-expanded {
+    max-height: calc(100vh - var(--header-height, 80px));
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  /* WCAG 1.4.10 Reflow: un-stick the header at high zoom/small height */
+  @media (max-width: 480px), (max-height: 400px) {
+    .site-header {
+      position: absolute;
+      width: 100%;
+      padding-top: 0.5rem;
+      padding-bottom: 0.5rem;
+    }
+  }
+
   /* Hide scrollbar but allow scrolling */
   .scrollbar-hide {
     -ms-overflow-style: none; /* IE and Edge */
@@ -34,12 +52,7 @@
   }
 }
 
-@layer components {
-  /* Add your custom component classes here */
-  /* Example: .custom-button { ... } */
-}
-
-/* Yoda 404 Animations */
+/* Yoda 404 keyframes (@keyframes are not layer-aware) */
 @keyframes float {
   0%,
   100% {
@@ -88,49 +101,50 @@
   }
 }
 
-.yoda-float {
-  animation: float 4s ease-in-out infinite;
+@layer components {
+  /* Yoda 404 animation classes */
+  .yoda-float {
+    animation: float 4s ease-in-out infinite;
+  }
+
+  .yoda-float-variation {
+    animation: floatVariation 5s ease-in-out infinite;
+  }
+
+  .yoda-float-variation2 {
+    animation: floatVariation2 6s ease-in-out infinite;
+  }
 }
 
-.yoda-float-variation {
-  animation: floatVariation 5s ease-in-out infinite;
-}
+@layer base {
+  /* Reset and base styles */
+  * {
+    box-sizing: border-box;
+  }
 
-.yoda-float-variation2 {
-  animation: floatVariation2 6s ease-in-out infinite;
-}
+  html,
+  body {
+    width: 100%;
+    max-width: 100%;
+    overflow-x: hidden;
+  }
 
-/* Reset any potential conflicting styles */
-* {
-  box-sizing: border-box;
-}
+  :root {
+    font-family: Montserrat, 'Open Sans', Helvetica, Arial, sans-serif;
+    line-height: 1.5;
+    font-weight: 500;
+    font-synthesis: none;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-text-size-adjust: 100%;
+  }
 
-html,
-body {
-  width: 100%;
-  max-width: 100%;
-  overflow-x: hidden;
-}
-
-:root {
-  font-family: Montserrat, 'Open Sans', Helvetica, Arial, sans-serif;
-  line-height: 1.5;
-  font-weight: 500;
-
-  /* color: rgba(255, 255, 255, 0.87); */
-  /* background-color: #242424; */
-
-  font-synthesis: none;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  -webkit-text-size-adjust: 100%;
-}
-
-body {
-  margin: 0;
-  min-width: 320px;
-  min-height: 100vh;
+  body {
+    margin: 0;
+    min-width: 320px;
+    min-height: 100vh;
+  }
 }
 
 /* Orbitron Variable Font */

@@ -189,6 +189,19 @@ const Modal = ({ isOpen, onClose }) => {
 - Test with screen readers and keyboard navigation
 - Use responsive images with appropriate alt text
 
+### 9. Reflow (WCAG 1.4.10)
+
+[WCAG 1.4.10 Reflow](https://www.w3.org/WAI/WCAG21/Understanding/reflow.html) (Level AA) requires that content reflows without loss of information or functionality at 320px width and without requiring horizontal scrolling. At high zoom or very small viewport heights, sticky/fixed headers can block content.
+
+**Our implementation**:
+
+- **Header un-sticking**: At `max-width: 480px` or `max-height: 400px`, the site header switches from `position: fixed` to `position: absolute` so it scrolls away with the page instead of blocking content.
+- **Reduced header padding**: In the same viewport range, header padding is reduced to minimize vertical footprint.
+- **Mobile menu height**: The expanded mobile menu uses `max-height: calc(100vh - 80px)` and `overflow-y: auto` so long link lists remain accessible; bottom items are never cut off.
+- **Touch scrolling**: `-webkit-overflow-scrolling: touch` improves scroll behavior when the mobile menu overflows.
+
+These styles live in `src/index.css` (`.nav-menu-expanded` and the reflow media query).
+
 ## Testing Strategy
 
 ### 1. Static Analysis

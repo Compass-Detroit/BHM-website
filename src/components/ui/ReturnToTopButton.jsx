@@ -1,8 +1,15 @@
 import { useState, useEffect } from 'react'
+import { useLocation } from 'react-router-dom'
 import { FaArrowUp } from 'react-icons/fa6'
 
 const ReturnToTopButton = () => {
+  const { pathname } = useLocation()
   const [isVisible, setIsVisible] = useState(false)
+
+  // Scroll to top when route changes
+  useEffect(() => {
+    window.scrollTo(0, 0)
+  }, [pathname])
 
   useEffect(() => {
     const toggleVisibility = () => {

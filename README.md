@@ -1,6 +1,6 @@
 # Black History Month Innovation Summit Website
 
-The repository for the [Black History Month Innovation Summit](https://bhminnovationsummit.com/) website. Built with Vite, React, and Tailwind CSS. Internally referred to as **BHM-website**.
+The repository for the [Black History Month Innovation Summit](https://bhmsummit.com/) website. Built with Vite, React, and Tailwind CSS. Internally referred to as **BHM-website**.
 
 This project was forked from the Compass Detroit and Michigan DevFest websites.
 
@@ -83,15 +83,15 @@ docker run -p 3000:3000 bhm-website
 
 ### Docker Commands
 
-| Command                                                                 | Description                                     |
-| ----------------------------------------------------------------------- | ----------------------------------------------- |
-| `docker build -t bhm-website .`                                         | Build the Docker image                          |
-| `docker run -p 3000:3000 bhm-website`                                   | Run the container on port 3000                  |
-| `docker run -d -p 3000:3000 --name bhm-app bhm-website`                 | Run container in detached mode with custom name |
-| `docker stop bhm-app`                                                   | Stop the running container                      |
-| `docker rm bhm-app`                                                     | Remove the container                            |
-| `docker images`                                                         | List all Docker images                          |
-| `docker rmi bhm-website`                                                | Remove the Docker image                         |
+| Command                                                 | Description                                     |
+| ------------------------------------------------------- | ----------------------------------------------- |
+| `docker build -t bhm-website .`                         | Build the Docker image                          |
+| `docker run -p 3000:3000 bhm-website`                   | Run the container on port 3000                  |
+| `docker run -d -p 3000:3000 --name bhm-app bhm-website` | Run container in detached mode with custom name |
+| `docker stop bhm-app`                                   | Stop the running container                      |
+| `docker rm bhm-app`                                     | Remove the container                            |
+| `docker images`                                         | List all Docker images                          |
+| `docker rmi bhm-website`                                | Remove the Docker image                         |
 
 ### Environment Variables
 
@@ -260,16 +260,27 @@ The built files will be in the `dist/` directory, ready for deployment.
 
 ### Deployment
 
-<!-- TODO: Connect this repo to Vercel w/ CI/CD -->
+The site is deployed on [Vercel](https://vercel.com) and uses Vercel Analytics and Speed Insights. Deployment is triggered automatically when changes are merged to `main` via the GitHub integration.
+
+**Vercel configuration**:
+
+- `vercel.json` – SPA rewrites so client-side routes (e.g. `/previous-events`) resolve correctly
+- `base: './'` in Vite config – Output works with Vercel’s static hosting
+
+**To deploy manually** (e.g. from a fork):
+
+1. Connect the repository to Vercel
+2. Use the default Vite preset (build command: `npm run build`, output directory: `dist/`)
+3. Deploy
+
+**Alternative**: Use [Docker](#docker) for self-hosted deployments.
 
 ### Issues
 
 This project uses GitHub Issues & GitHub Projects in the [Compass-Detroit/BHM-website](https://github.com/Compass-Detroit/BHM-website) repository for tracking development. Please create an issue if you encounter any problems or have suggestions for improvements.
 
-<!-- TODO: Create an issue template -->
 
 ### Pull Requests
 
 Please submit a pull request for any changes you'd like to make.
 
-<!-- TODO: Add a PR template -->
