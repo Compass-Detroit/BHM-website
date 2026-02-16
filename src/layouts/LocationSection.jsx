@@ -1,127 +1,62 @@
-import { FaMapPin, FaClock } from 'react-icons/fa6'
-import SectionSkipLink from '@/components/ui/SectionSkipLink'
+import CTAButton from '@/components/ui/CTAButton'
 
 function LocationSection() {
   return (
     <section
       id="location"
-      className="relative flex h-auto items-center justify-center bg-slate-100 py-16 text-black md:py-28 dark:bg-gray-900 dark:text-white"
+      className=" bg-gray-50 py-16 text-black md:py-28 dark:bg-gray-100 dark:text-gray-900"
       aria-labelledby="location-heading"
     >
-      <div className="mx-4 flex flex-col space-y-8 sm:mx-6 lg:mx-8">
-        {/* When Section */}
-        <div className="flex justify-center">
-          <div className="flex items-center">
-            <div className="mx-2 flex size-11 items-center justify-center rounded-full bg-yellow-500">
-              <FaClock className="size-6 text-white" aria-hidden="true" />
-            </div>
-            <h2
-              id="location-heading"
-              className="font-biorhyme text-lg font-semibold md:text-xl lg:text-2xl"
-            >
-              When & Where
-            </h2>
-          </div>
-        </div>
-        <div className="flex justify-center pb-16">
-          <div className="text-center">
-            <div className="mt-2 space-y-1">
-              <time
-                dateTime="2026-02-28T08:00:00-05:00/2026-02-28T17:00:00-05:00"
-                className="block text-xl font-semibold"
-              >
-                Saturday: 8:00 AM - 5:00 PM
-              </time>
-            </div>
-          </div>
-        </div>
+      <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
+        {/* Header */}
+        <h2
+          id="location-heading"
+          className="mb-12 text-center font-biorhyme text-2xl font-semibold md:text-3xl"
+        >
+          When &amp; Where
+        </h2>
 
-        {/* Saturday Location Row */}
-        <div className="flex w-full max-w-full flex-col lg:flex-row lg:space-x-6">
-          {/* Saturday Location Info */}
-          <div className="mb-4 flex flex-col lg:mb-0 lg:w-1/2">
-            <div className="mb-4 flex items-center">
-              <div className="mx-2 flex size-11 items-center justify-center rounded-full bg-yellow-500">
-                <FaMapPin className="size-6 text-white" aria-hidden="true" />
-              </div>
-              <h3 className="text-lg font-semibold md:text-xl lg:text-2xl">
-                Compass Detroit 2026
-              </h3>
-            </div>
-            <div className="ml-16">
-              <time dateTime="2026-02-28T08:00:00-05:00/2026-02-28T17:00:00-05:00">
-                <p>Saturday, February 28th - 8:00 AM - 5:00 PM</p>
-              </time>
-              <dl>
-                <dt className="sr-only">Venue</dt>
-                <dd className="font-medium xl:whitespace-nowrap">
-                  <strong>DTE</strong>
-                </dd>
-                <dt className="sr-only">Address</dt>
-                <dd>
-                  <address
-                    className="not-italic xl:whitespace-nowrap"
-                    aria-label="Main event venue address"
-                  >
-                    1 Energy Plaza, Detroit, MI 48226
-                  </address>
-                </dd>
-              </dl>
-              <a
-                href="https://www.google.com/maps/dir//DTE+Energy+Headquarters+1+Energy+Plaza+Detroit,+48226"
-                target="_blank"
-                className="mb-4 mt-3 inline-flex items-center whitespace-nowrap rounded bg-sky-900 px-8 py-5 text-primary-50 shadow-xl transition delay-75 duration-100 ease-in-out hover:-translate-y-1 hover:scale-110 hover:cursor-pointer focus:outline-none focus:ring-2 focus:ring-primary-400 focus:ring-offset-2"
-                rel="noreferrer"
-                aria-label="Get directions to DTE Energy Headquarters (opens in new tab)"
-              >
-                GET DTE DIRECTIONS
-              </a>
-              <div className="relative">
-                <SectionSkipLink href="#schedule">
-                  Skip location section
-                </SectionSkipLink>
-              </div>
-            </div>
+        {/* Content Grid */}
+        <div className="grid gap-10 md:grid-cols-2">
+          {/* Map */}
+          <div
+            className="flex aspect-[4/3] items-center justify-center rounded-xl border-2 border-black bg-white dark:border-white"
+            role="region"
+            aria-label="Event location map"
+          >
+            <iframe
+              title="DTE Energy Headquarters"
+              className="size-full rounded-lg"
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1610!2d-83.0603389!3d42.3337713!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x883b2d363de9d8eb%3A0xb42701b85d37b41d!2sDTE%20Energy%20Headquarters!5e1!3m2!1sen!2sus!4v1706832000000!5m2!1sen!2sus"
+              loading="lazy"
+              allowFullScreen
+            />
           </div>
 
-          {/* Saturday Map */}
-          <div className="mx-2 w-full max-w-full overflow-hidden lg:w-1/2">
-            <h4 className="mb-2 text-sm font-semibold text-gray-700 dark:text-white">
-              Saturday - DTE Location
-            </h4>
-            <p className="mb-2 text-lg font-semibold">
-              DTE Energy Headquarters
+          {/* Details */}
+          <div className="flex flex-col justify-center">
+            <h1 className="mb-2 text-2xl font-bold md:text-3xl">
+              Compass Detroit 2026
+            </h1>
+
+            <p className="mb-1 font-semibold">
+              1 Energy Plaza, Detroit, MI 48226
             </p>
-            <div
-              className="rounded-2xl border-4 border-blue-500 bg-white p-1"
-              role="region"
-              aria-label="Saturday location map"
+
+            <time
+              dateTime="2026-02-28T08:00:00-05:00/2026-02-28T17:00:00-05:00"
+              className="mb-6 text-gray-700 dark:text-gray-300"
             >
-              <iframe
-                title="DTE Energy Headquarters"
-                aria-label="Map showing DTE Energy Headquarters location"
-                className="aspect-[4/3] rounded-xl border-4 border-white"
-                style={{
-                  maxWidth: '100%',
-                  width: '100%',
-                  boxSizing: 'border-box',
-                }}
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1610!2d-83.0603389!3d42.3337713!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x883b2d363de9d8eb%3A0xb42701b85d37b41d!2sDTE%20Energy%20Headquarters!5e1!3m2!1sen!2sus!4v1706832000000!5m2!1sen!2sus"
-                allowFullScreen
-                loading="lazy"
-                sandbox="allow-scripts allow-same-origin allow-popups allow-popups-to-escape-sandbox"
-              >
-                <p>
-                  Interactive map showing DTE Energy Headquarters location.
-                  <a
-                    href="https://www.google.com/maps/dir//DTE+Energy+Headquarters+1+Energy+Plaza+Detroit,+48226"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    Open in Google Maps
-                  </a>
-                </p>
-              </iframe>
+              Saturday, February 28th <br />
+              8:00 AM – 5:00 PM
+            </time>
+            <div>
+              <div className="flex flex-row gap-8"></div>
+              <CTAButton
+                href="https://www.google.com/maps/dir//DTE+Energy+Headquarters+1+Energy+Plaza+Detroit,+48226"
+                label="GET DIRECTIONS"
+                ariaLabel="Get directions to DTE Energy Headquarters"
+              />
             </div>
           </div>
         </div>
@@ -129,5 +64,4 @@ function LocationSection() {
     </section>
   )
 }
-
 export default LocationSection
