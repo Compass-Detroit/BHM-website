@@ -1,34 +1,7 @@
-import HodaSolati from '@/assets/images/speakers/Hoda_Solati.jpg'
-import JennaRitten from '@/data/2026/assets/images/team/jenna_ritten.webp'
-import ShimaSolati from '@/assets/images/speakers/Shima_Solati.jpg'
 import WScottRichardson from '@/assets/images/speakers/W_Scott_Richardson.jpeg'
-
-const keynoteSession = {
-  title:
-    "Powering Detroit's Future: AI-Driven Energy Innovation Fireside Chat with DTE x IBM",
-  abstract:
-    'Innovation Summit Keynote exploring how artificial intelligence is revolutionizing the energy sector while creating unprecedented opportunities for Michigan communities.',
-  description: `
-    Innovation Summit Keynote - Powering Detroit's Future: AI-Driven Energy Innovation
-    Fireside Chat with DTE x IBM.
-
-    Join us for an inspiring keynote conversation between two visionary Black leaders
-    transforming how Michigan powers its future. Steven Benyard (DTE Energy) and
-    Jason Kelley (IBM) will explore how AI is revolutionizing the energy sector while
-    creating unprecedented opportunities for Michigan's communities.
-
-    Topics include:
-      - The AI Revolution in Energy
-      - Equity Through Innovation
-      - Climate Action Meets Community Impact
-      - Building Tomorrow's Workforce
-      - Real-world examples of AI applications improving energy reliability across Southeast Michigan
-    `,
-  tags: ['AI', 'Energy', 'Innovation', 'Leadership', 'Virtual', 'In-person'],
-  track: 'Level Up',
-  time: '09:15',
-  room: 'Town Square',
-}
+import UdayBhowal from '@/data/2026/assets/images/speakers/Uday_Shankar_Bhowal.webp'
+import JennaRitten from '@/data/2026/assets/images/team/jenna_ritten.webp'
+import BreonaClawson from '@/data/2026/assets/images/speakers/Breona_Clawson.webp'
 
 export const SpeakersData = [
   {
@@ -36,27 +9,20 @@ export const SpeakersData = [
     name: 'W. Scott Richardson',
     email: 'zurielseven@gmail.com',
     avatar: WScottRichardson,
-    bio: `W. Scott Richardson is an award-winning Aerospace Engineer, working for Altair Engineering as an Architect of Learning Experience Design for Computer Aided Engineering. Scott has been an active volunteer both as the Global Community Outreach chair for Altair's ABERN ERG community development as well as with the National Society of Black Engineers Metro Detroit chapter over the past half decade.\n\nWherever Scott goes, you'll find him teaching or learning, from core professional competencies to historical minutae, from Star Trek trivia to his latest hobbies. In this way, he hopes to give to the communities around him and better them.`,
-    twitter: 'zurielseven',
+    bio: `W. Scott Richardson is a Senior Specialist in Training Development for Altair Engineering with a focus on digital simulation solvers for structural analysis and optimization. Scott also has professional experience with Altair in application engineer and product design roles for aerospace and defense, automotive, and general consumer products. Scott is a co-founder of ABERN, Altair's Black Employee Resource Network and currently serves as the ERG's Community Outreach chair and a member of ABERN's global steering committee. He has a passion for developing STEM courses and experiences for students that strengthen and support them in their STEM-related career goals..`,
+    twitter: null,
     linkedIn: 'https://www.linkedin.com/in/zurielseven',
     organization: 'Altair Engineering',
-    position: '',
+    position: 'Senior Specialist - Training Development',
     session: {
-      title: 'Getting started with Microcontrollers and Sensors',
+      title:
+        'Catalysts and Change Agents: Extending the Impact of Your Tech Leadership',
       abstract:
         "Ever thought about expanding on your software skills with hardware? Let's start with a Make-and-Take with lasers and microcontrollers! We'll teach some basics of electronics in a hands-on workshop while building and coding a light detector. Time to find your new maker path! (Laptop required)",
-      description: `This workshop is for beginners to electronics that want to get their hands on something physical. We'll use a handful of simple pieces to assemble a Make-and-Take light detector that we can test with a laser. We'll code the microcontroller to pick up the analog signal from the laser. Why a laser? Well, we could test with a flashlight too, but lasers are just way cooler.\n\nAlong the way, we'll start from practically no electronics knowledge at all and discuss how and why these electronics work together the way that they do, ideate and improve code to make our microcontroller run, and practice good breadboarding skills. Let this be the start of a new maker identity!`,
-      tags: [
-        'Electronics',
-        'Microcontrollers',
-        'Lasers',
-        'Basic Optics',
-        'Getting Started',
-        'Hands-On',
-        'Take-Home',
-      ],
-      track: 'Innovation',
-      time: '16:00',
+      description: `Innovation Summit Panel Discussion - Catalysts and Change Agents: Extending the Impact of Your Tech Leadership Join Sylvester Hester, Justin Turk, W. Scott Richardson, and Will Hill for a panel on bridging the gap between technical excellence and social responsibility moderated by Angela Richardson. This session offers a "system architecture" for repeatable community impact, teaching early- and mid-career professionals and tech leaders across industries how to draw on executive and managerial frameworks to strengthen the communities they serve. Learn to maximize your influence while eliminating the "scope creep" of burnout and overcommitment.`,
+      tags: ['Virtual', 'In-person', 'Level Up'],
+      track: 'Level Up',
+      time: '13:00',
       room: 'MCC4',
     },
     isWTM: false,
@@ -65,174 +31,72 @@ export const SpeakersData = [
   },
   {
     id: 2,
+    name: 'Uday Bhowal',
+    email: 'udayshankar.bhowal@evernorth.com',
+    avatar: UdayBhowal,
+    bio: `I have over 7 years of experience in deploying, managing and automating in various data technology infrastructures involving AWS, Github, Terraform, Python, Visual Basics, Open AI/Azure AI gateways, MCPs, Agentic AI development, Data Visualization, and more. I worked with a multitude of industries naming telecommunication, healthcare tech, education and sustainability.`,
+    twitter: null,
+    linkedIn: 'https://www.linkedin.com/in/uday-shankar-40usb92219',
+    organization: 'Cigna',
+    position: 'Lead Analyst',
+    session: {
+      title:
+        'Open Source & Community Building Using AI and Effective Automation',
+      abstract:
+        "Ever thought about expanding on your software skills with hardware? Let's start with a Make-and-Take with lasers and microcontrollers! We'll teach some basics of electronics in a hands-on workshop while building and coding a light detector. Time to find your new maker path! (Laptop required)",
+      description: `Open-source projects grow when contributions are simple, accessible, and well-supported. In this session, we’ll explore how developers can combine Firebase with REST APIs and OpenAI services to build automation that strengthens community collaboration. Using Firebase Authentication and Firestore, we’ll show how to create secure, real-time contribution pipelines. With RESTful endpoints, we’ll connect OpenAI to generate documentation, assist with onboarding, and even automate repetitive tasks like issue triage or pull request summaries. Aimed at easy-to-implement solutions with minimal infrastructure, it'll be a practical workflow that any developer can adopt. Attendees will see how Firebase handles scalability and data management, while OpenAI provides intelligent automation through simple API calls. By the end, participants will be able to work with starter templates and clear strategies to apply immediately in their own open-source projects — building smarter processes and more welcoming communities with minimal effort.`,
+      tags: ['In-person', 'Innovation'],
+      track: 'Innovation',
+      time: '10:00',
+      room: 'MCC4',
+    },
+    isWTM: false,
+    isGDE: false,
+    mastodon: null,
+  },
+  {
+    id: 3,
     name: 'Jenna Ritten',
-    email: null,
+    email: 'jritten@umich.edu',
     avatar: JennaRitten,
-    bio: null,
+    bio: `Jenna is the visionary behind Detroit's Innovation Summit series and Founding Executive Director of Compass (Collective of Minority Professionals and STEAM Societies), the organization bringing together Michigan's diverse tech talent to combat brain drain and create local opportunities. As Chief Developer Advocate & Architect at IBM Research, she leads IBM's technical community while scaling their global developer ecosystem from 2 million to 9 million members.A cornerstone of Michigan's tech renaissance, Jenna serves as Co-Leader of Google Developer Group Detroit, lead organizer of Michigan DevFest (1,000+ attendees), and board member of Automation Workz. As a local leader in Michigan's tech ecosystem since 2018, she pioneered hackathon culture in the region by introducing the first hackathons to both the AfroTech Conference in 2023 and Michigan DevFest in 2025, creating hands-on opportunities for developers to showcase their skills and solve real-world challenges.Through Compass' partnerships with NSBE Detroit, SHPE Detroit, IBM, Google, DTE Energy, and other leading organizations, Jenna is building bridges between corporate innovation and community empowerment. Her mission: ensuring Michigan's next generation of Black technologists not only have opportunities to excel but can do so without leaving the state they call home.Connect with Jenna to learn how Compass is transforming Michigan's tech ecosystem, one community at a time.`,
     twitter: 'jritten',
     linkedIn: 'https://www.linkedin.com/in/jritten/',
     github: 'https://github.com/jritten',
-    url: null,
     organization: 'IBM',
     position: 'Chief Developer Advocate & Senior Architect',
     session: {
-      title: 'AI Hackathon Winners Presentations, Demos & Awards',
+      title: null,
       abstract: null,
       description: null,
       tags: [],
-      track: 'Level Up',
-      time: '16:00',
-      room: 'MCC2',
+      track: null,
+      time: null,
+      room: null,
     },
     isWTM: true,
     isGDE: true,
     mastodon: null,
   },
   {
-    id: 3,
-    name: 'Hoda Solati',
-    email: null,
-    avatar: HodaSolati,
-    bio: `Hoda Solati is an award-winning UX designer working at BraunAbility blending creativity, technology, and innovation to craft inclusive, user-centered experiences. With advanced degrees in UX Design and Animation, she explores cutting-edge technologies such as VR, AR, and robotics to solve complex design challenges. Recognized at global events including DDX’25 NYC, IEEE Smart Mobility, and Ars Electronica, Hoda is passionate about redefining the future of user experience through innovation and accessibility.`,
-    twitter: null,
-    linkedIn: 'https://www.linkedin.com/in/hoda-solati',
-    url: null,
-    organization: 'BraunAbility',
-    position: 'UX Designer',
-    session: {
-      title: 'Design for AI Workshop',
-      abstract: null,
-      description: null,
-      tags: [],
-      track: 'Hackathon',
-      time: '10:00',
-      room: 'STEM Innovation Learning Center (SILC) - 7th Floor',
-    },
-    isWTM: false,
-    isGDE: false,
-    mastodon: null,
-  },
-  {
     id: 4,
-    name: 'Shima Solati',
-    email: null,
-    avatar: ShimaSolati,
-    bio: `Shima Solati is an award-winning UX/UI designer and researcher at BraunAbility, leading efforts to advance mobility and accessibility through innovative, user-centered design. With a Master’s in User Experience Design from the College for Creative Studies and dual degrees in fashion and textiles, Shima brings a rare multidisciplinary perspective to solving complex challenges. Her expertise spans immersive and assistive technologies, VR, AR, robotics, and her portfolio includes impactful work for KUKA Robotics, the Augmented Reality Center, General Motors, and Ford. Passionate about inclusive design and emerging technologies, Shima is dedicated to creating intuitive solutions that empower all users.`,
+    name: 'Breona Clawson',
+    email: 'breona@eloquentdigitalmarketing.net',
+    avatar: BreonaClawson,
+    bio: `Breona Clawson is the Founder of Eloquent Digital Marketing, a systems-first digital marketing and operations agency based in Metro Detroit. With over six years of experience supporting entrepreneurs, nonprofits, and community-driven organizations, she specializes in helping non-technical professionals simplify digital tools, streamline workflows, and build sustainable systems without burnout. Breona is also a community builder, workshop facilitator, and speaker who regularly leads sessions on digital tools, AI-assisted workflows, personal branding, and operational clarity. Her work sits at the intersection of technology, accessibility, and real-world application — translating complex tools into practical, everyday use.`,
     twitter: null,
-    linkedIn: 'https://www.linkedin.com/in/shima-solati/',
-    url: null,
-    organization: 'BraunAbility',
-    position: 'UX/UI Designer and Researcher',
+    linkedIn: 'https://www.linkedin.com/in/breonaclawson',
+    github: null,
+    organization: 'Eloquent Digital Marketing',
+    position: 'Founder & Digital Operations Strategist',
     session: {
-      title: 'Design for AI Workshop',
+      title: 'AI Without the Overwhelm: Start Using It Today',
       abstract: null,
       description: null,
-      tags: [],
-      track: 'Hackathon',
-      time: '10:00',
-      room: 'STEM Innovation Learning Center (SILC) - 7th Floor',
-    },
-    isWTM: false,
-    isGDE: false,
-    mastodon: null,
-  },
-  {
-    id: 5,
-    name: 'Steven Benyard',
-    email: null,
-    avatar: `https://placehold.co/600x400/0F9D58/FFFFFF?text=Steven+Benyard`,
-    bio: 'Steven Benyard is Vice President of Electric Capital Delivery at DTE Energy, where he leads transformational initiatives in energy infrastructure and AI-driven innovation. A visionary Black leader in the energy sector, Steven is committed to creating equitable, sustainable energy solutions for Michigan communities.',
-    twitter: null,
-    linkedIn: null,
-    url: null,
-    organization: 'DTE Energy',
-    position: 'Vice President - Electric Capital Delivery',
-    session: keynoteSession,
-    isWTM: false,
-    isGDE: false,
-    mastodon: null,
-  },
-  {
-    id: 6,
-    name: 'Jason Kelley',
-    email: null,
-    avatar: `https://placehold.co/600x400/0F9D58/FFFFFF?text=Jason+Kelley`,
-    bio: 'Jason Kelley is the Global Head and Managing Partner of Core Business Applications at IBM. A transformational leader driving AI adoption and digital innovation at scale, Jason brings decades of experience helping enterprises leverage cutting-edge technology for business transformation.',
-    twitter: null,
-    linkedIn: null,
-    url: null,
-    organization: 'IBM',
-    position: 'Global Head, Managing Partner - Core Business Applications',
-    session: keynoteSession,
-    isWTM: false,
-    isGDE: false,
-    mastodon: null,
-  },
-  {
-    id: 7,
-    name: 'Tabice Ward',
-    email: null,
-    avatar: `https://placehold.co/600x400/0F9D58/FFFFFF?text=Tabice+Ward`,
-    bio: 'Tabice Ward serves as Chief Information Officer at Walker-Miller Energy Services, where she leads technology strategy and digital transformation initiatives. A champion for diversity in tech, Tabice brings expertise in leveraging technology to create equitable energy solutions.',
-    twitter: null,
-    linkedIn: null,
-    url: null,
-    organization: 'Walker-Miller Energy Services',
-    position: 'Chief Information Officer',
-    session: keynoteSession,
-    isWTM: false,
-    isGDE: false,
-    mastodon: null,
-  },
-  {
-    id: 8,
-    name: 'Sylvester Hester',
-    email: null,
-    avatar: `https://placehold.co/600x400/0F9D58/FFFFFF?text=Sylvester+Hester`,
-    bio: 'Sylvester Hester is the President and CEO of LM Manufacturing, a leading automotive supplier. A visionary business leader, Sylvester has built a reputation for excellence in manufacturing while championing workforce development and community investment in Detroit.',
-    twitter: null,
-    linkedIn: null,
-    url: null,
-    organization: 'LM Manufacturing',
-    position: 'President & CEO',
-    session: {
-      title:
-        'Catalysts and Change Agents: Extending the Impact of Your Tech Leadership',
-      abstract:
-        'Innovation Summit Panel Discussion on bridging the gap between technical excellence and social responsibility.',
-      description:
-        'This session offers a "system architecture" for repeatable community impact, teaching early- and mid-career professionals and tech leaders across industries how to draw on executive and managerial frameworks to strengthen the communities they serve.',
-      tags: ['Leadership', 'Community', 'Impact'],
-      track: 'Leadership',
-      time: '13:00',
-      room: 'Main Stage',
-    },
-    isWTM: false,
-    isGDE: false,
-    mastodon: null,
-  },
-  {
-    id: 9,
-    name: 'Justin Turk',
-    email: null,
-    avatar: `https://placehold.co/600x400/0F9D58/FFFFFF?text=Justin+Turk`,
-    bio: 'Justin Turk is a 2X Tech Founder, having built ConStrat AI and Livegistics. An innovative entrepreneur at the intersection of AI, logistics, and construction technology, Justin is passionate about using technology to solve real-world problems and create economic opportunity.',
-    twitter: null,
-    linkedIn: null,
-    url: null,
-    organization: 'ConStrat AI + Livegistics',
-    position: '2X Tech Founder',
-    session: {
-      title:
-        'Catalysts and Change Agents: Extending the Impact of Your Tech Leadership',
-      abstract:
-        'Innovation Summit Panel Discussion on bridging the gap between technical excellence and social responsibility.',
-      description:
-        'Join our panel on extending the impact of your tech leadership, discussing how to maximize influence while eliminating the "scope creep" of burnout and overcommitment.',
-      tags: ['Leadership', 'Entrepreneurship', 'Impact'],
-      track: 'Leadership',
-      time: '13:00',
-      room: 'Main Stage',
+      tags: ['In-person', 'AI Foundations'],
+      track: 'AI Foundations',
+      time: null,
+      room: null,
     },
     isWTM: false,
     isGDE: false,

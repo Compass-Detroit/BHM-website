@@ -1,4 +1,3 @@
-import AaronAmano from '@/data/2026/assets/images/team/aaron_amano-x96.webp'
 import AliElSharif from '@/data/2026/assets/images/team/ali_elsharif.webp'
 import DaveKoziol from '@/data/2026/assets/images/team/dav_koziol.webp'
 import GregMiller from '@/data/2026/assets/images/team/greg_miller-x96.webp'
@@ -7,19 +6,16 @@ import HodaSolati from '@/data/2026/assets/images/team/hoda_solati.webp'
 import HudaHussaini from '@/data/2026/assets/images/team/huda_hussaini.webp'
 import JennaRitten from '@/data/2026/assets/images/team/jenna_ritten.webp'
 import JingranWang from '@/data/2026/assets/images/team/Jingran_Wang-x96.webp'
-import JustinBeaudry from '@/data/2026/assets/images/team/justin_beaudry-x96.webp'
-import KayleeBusenbark from '@/data/2026/assets/images/team/kaylee_busenbark-x96.webp'
 import MaridyMazaira from '@/data/2026/assets/images/team/maridy_mazaira.webp'
 import NisaSolano from '@/data/2026/assets/images/team/nisa_solano.webp'
 import RaquelEstrada from '@/data/2026/assets/images/team/raquel_estrada.webp'
-import Rehanashri from '@/data/2026/assets/images/team/rehanashri-x96.webp'
 import RishirajSarkar from '@/data/2026/assets/images/team/rishiraj_sarkar.webp'
 import ShimaSolati from '@/data/2026/assets/images/team/shima_solati.webp'
 import ShugmiShumunov from '@/data/2026/assets/images/team/shugmi_shumunov-x96.webp'
 import SohamMhatre from '@/data/2026/assets/images/team/soham_mhatre.webp'
-import SohanKetireddy from '@/data/2026/assets/images/team/sohan_ketireddy-x96.webp'
 import SumiaSaleh from '@/data/2026/assets/images/team/Sumia_Saleh-x96.webp'
 import TerrellMcKinney from '@/data/2026/assets/images/team/Terrell_McKinney.webp'
+import Rehanashri from '@/data/2026/assets/images/team/rehanashri-x96.webp'
 
 export const teamData = [
   {
@@ -92,20 +88,6 @@ export const teamData = [
     avatar: GregMiller,
   },
   {
-    id: 6,
-    name: 'Aaron Amano',
-    twitter: '',
-    linkedin: 'https://www.linkedin.com/in/aaronamano/',
-    github: 'https://github.com/aaronamano',
-    devfest: 'devteam',
-    star: false,
-    university: 'University Of Michigan Dearborn',
-    bio: ``,
-    organization: '',
-    role: 'CS Student',
-    avatar: AaronAmano,
-  },
-  {
     id: 7,
     name: 'Shugmi Shumunov',
     twitter: '',
@@ -122,20 +104,6 @@ export const teamData = [
     organization: 'Shumunov Solutions',
     role: 'Developer',
     avatar: ShugmiShumunov,
-  },
-  {
-    id: 8,
-    name: 'Justin Beaudry',
-    twitter: '',
-    linkedin: 'https://www.linkedin.com/in/justinbeaudry/',
-    github: 'https://github.com/justinbeaudry',
-    devfest: 'devteam',
-    star: false,
-    university: '',
-    bio: ``,
-    organization: 'Actual Reality Technologies + Toledo Codes + GDG Toledo',
-    role: 'Director of Engineering',
-    avatar: JustinBeaudry,
   },
   {
     id: 9,
@@ -283,45 +251,6 @@ Today, Maridy serves as President of the Society of Hispanic Professional Engine
     avatar: JingranWang,
   },
   {
-    id: 19,
-    name: 'Sohan Ketireddy',
-    twitter: '',
-    linkedin: 'https://www.linkedin.com/in/sohan-k',
-    github: 'https://github.com/sohank1',
-    devfest: 'devteam',
-    star: false,
-    university: 'University Of Michigan Dearborn',
-    bio: ``,
-    organization: '',
-    role: 'Student',
-    avatar: SohanKetireddy,
-  },
-  {
-    id: 20,
-    name: 'Kaylee Busenbark',
-    twitter: '',
-    linkedin: 'https://www.linkedin.com/in/kaylee-busenbark',
-    github: 'https://github.com/kaybusenbark',
-    devfest: 'devteam',
-    star: false,
-    university: 'University Of Michigan Dearborn',
-    bio: ``,
-    organization: '',
-    role: 'Student',
-    avatar: KayleeBusenbark,
-  },
-  {
-    id: 21,
-    name: 'Rehanashri',
-    github: 'https://github.com/rehanashri',
-    devfest: 'devteam',
-    star: false,
-    university: 'University Of Michigan Dearborn',
-    organization: '',
-    role: 'Student',
-    avatar: Rehanashri,
-  },
-  {
     id: 22,
     name: 'Terrell McKinney',
     twitter: '',
@@ -334,5 +263,16 @@ Today, Maridy serves as President of the Society of Hispanic Professional Engine
     organization: 'Aaron Douglas LLC',
     role: 'Software Engineer',
     avatar: TerrellMcKinney,
+  },
+  {
+    id: 21,
+    name: 'Rehanashri',
+    github: 'https://github.com/rehanashri',
+    devfest: 'devteam',
+    star: false,
+    university: 'University Of Michigan Dearborn',
+    organization: '',
+    role: 'Student',
+    avatar: Rehanashri,
   },
 ]
