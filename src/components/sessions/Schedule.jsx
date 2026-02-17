@@ -4,7 +4,7 @@ export const Schedule = () => {
   return (
     <div className="w-full py-8">
       <div className="mx-auto max-w-7xl px-4">
-        <h3 className="mb-8 text-center text-2xl font-bold text-gray-900 md:text-3xl">
+        <h3 className="mb-8 text-center text-4xl font-bold text-gray-900 md:text-3xl">
           Black History Month Tech Summit Schedule
         </h3>
         <BlackHistorySummitSchedule />
