@@ -18,7 +18,6 @@ function LandingSection() {
             alt="Black History Month 2026 logo"
             className="h-auto w-full max-w-full"
             loading="eager"
-            aria-hidden="true"
           />
         </div>
 
@@ -43,7 +42,7 @@ function LandingSection() {
                 href="https://bit.ly/det-bhm-26-rsvp"
                 label="GET TICKETS"
                 icon={<FaTicket />}
-                ariaLabel="Get your tickets today for Michigan DevFest 2025"
+                ariaLabel="Get your tickets today for BHM Innovation Summit 2026"
               />
             </div>
           </div>

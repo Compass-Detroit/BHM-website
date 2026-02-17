@@ -81,7 +81,7 @@ const HackathonInfo = () => {
       </div>
 
       <div className="rounded-2xl bg-gradient-to-br from-blue-50 to-sky-50 p-8">
-        <h3 className="mb-4 text-2xl font-bold text-gray-900">
+        <h3 className="mb-4 text-4xl font-bold text-gray-900">
           What We&apos;re Asking You To Build
         </h3>
         <p className="mb-6 leading-relaxed text-gray-700">
@@ -152,7 +152,7 @@ const HackathonInfo = () => {
       </div>
 
       <div className="rounded-2xl border-4 border-sky-500 bg-sky-50 p-8">
-        <h3 className="mb-4 text-2xl font-bold text-sky-900">What We Expect</h3>
+        <h3 className="mb-4 text-4xl font-bold text-sky-900">What We Expect</h3>
         <p className="mb-4 leading-relaxed text-gray-700">
           Your solution should:
         </p>
@@ -199,7 +199,7 @@ const HackathonInfo = () => {
       </div>
 
       <div className="rounded-2xl bg-gradient-to-br from-purple-50 to-pink-50 p-8">
-        <h3 className="mb-4 text-2xl font-bold text-purple-900">
+        <h3 className="mb-4 text-4xl font-bold text-purple-900">
           Deliverables
         </h3>
         <div className="space-y-6">
