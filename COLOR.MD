@@ -323,7 +323,7 @@ Use layered surfaces instead of pure black:
 <div
   className="
   rounded-xl border p-6
-  bg-bhm-neutral-0 border-bhm-neutral-200
+  border-bhm-neutral-200
   dark:bg-bhm-black-900 dark:border-bhm-black-800
 "
 >
