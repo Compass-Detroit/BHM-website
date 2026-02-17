@@ -17,7 +17,7 @@ function LocationSection() {
             </div>
             <h2
               id="location-heading"
-              className="font-biorhyme text-lg font-semibold md:text-xl lg:text-2xl"
+              className="font-biorhyme text-5xl text-bhm-neutral-900 md:text-5xl lg:text-6xl"
             >
               When & Where
             </h2>

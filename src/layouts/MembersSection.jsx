@@ -1,5 +1,6 @@
 import DevLogo from '@/assets/images/icn-dev.png'
 import CTAButton from '@/components/ui/CTAButton'
+import { FaEnvelope } from 'react-icons/fa6'
 
 const MembersSection = () => {
   return (
@@ -8,7 +9,7 @@ const MembersSection = () => {
       className="bg-primary-50 p-8 sm:px-10 md:px-14 lg:px-16"
     >
       <div className="flex w-full justify-center pt-0">
-        <h2 className="mb-4 w-full text-center font-biorhyme text-4xl text-black md:mb-6 md:text-5xl lg:text-6xl">
+        <h2 className="mb-4 w-full text-center font-biorhyme text-5xl text-bhm-neutral-900 md:text-5xl lg:text-6xl">
           Membership
         </h2>
         <img
@@ -30,7 +31,7 @@ const MembersSection = () => {
         <div className="mt-6 grid w-full grid-cols-1 gap-8 md:grid-cols-3">
           {/* Left column — 2/3 width on desktop: Why Join + bullet points */}
           <div className="min-w-0 md:col-span-2">
-            <h3 className="mb-4 font-biorhyme text-2xl text-gray-900">
+            <h3 className="mb-4 font-biorhyme text-4xl text-gray-900">
               Why join?
             </h3>
             <ul className="list-inside list-disc space-y-2 text-base leading-relaxed text-gray-700">
@@ -55,6 +56,10 @@ const MembersSection = () => {
               label="Become a Member"
               target="_self"
               ariaLabel="Email to become a Compass Detroit member"
+              className="text-xl font-semibold text-bhm-neutral-900"
+              variant="secondary"
+              icon={<FaEnvelope />}
+              iconPosition="right"
             />
           </div>
         </div>

@@ -37,7 +37,7 @@ const PreviousEvents = () => {
             talent and fosters a tradition of collaborative learning.
           </p>
 
-          <h2 className="mt-8 text-center font-biorhyme text-3xl">
+          <h2 className="mt-8 text-center font-biorhyme text-5xl text-bhm-neutral-900 md:text-5xl lg:text-6xl">
             Black History Month Tech Summit
           </h2>
           <p className="mx-auto mt-4 w-5/6 text-lg leading-relaxed text-primary-950 lg:w-2/3">
@@ -51,7 +51,7 @@ const PreviousEvents = () => {
             talent and continues a tradition of collaborative learning.
           </p>
 
-          <h2 className="mt-8 text-center font-biorhyme text-3xl">
+          <h2 className="mt-8 text-center font-biorhyme text-5xl text-bhm-neutral-900 md:text-5xl lg:text-6xl">
             Michigan DevFest
           </h2>
           <p className="mx-auto mt-4 w-5/6 text-lg leading-relaxed text-primary-950 lg:w-2/3">

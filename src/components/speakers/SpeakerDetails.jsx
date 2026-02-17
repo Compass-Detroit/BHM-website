@@ -24,7 +24,16 @@ const hexToRgba = (hex, alpha) => {
 const TRACK_THEMES = {
   default: {
     gradient: `linear-gradient(135deg, ${colors.sky[900]} 0%, ${colors.sky[800]} 48%, ${colors.sky[950]} 100%)`,
-    pattern: `radial-gradient(circle at 22% 18%, ${hexToRgba(colors.sky[400], 0.32)} 0, ${hexToRgba(colors.sky[400], 0.08)} 36%, transparent 62%), radial-gradient(circle at 78% 22%, ${hexToRgba(colors.sky[500], 0.28)} 0, ${hexToRgba(colors.sky[500], 0.08)} 35%, transparent 64%)`,
+    pattern: `radial-gradient(circle at 22% 18%, ${hexToRgba(
+      colors.sky[400],
+      0.32
+    )} 0, ${hexToRgba(
+      colors.sky[400],
+      0.08
+    )} 36%, transparent 62%), radial-gradient(circle at 78% 22%, ${hexToRgba(
+      colors.sky[500],
+      0.28
+    )} 0, ${hexToRgba(colors.sky[500], 0.08)} 35%, transparent 64%)`,
     fallbackColor: colors.sky[950],
     badgeBorder: hexToRgba(colors.sky[300], 0.55),
     badgeText: colors.white,
@@ -33,7 +42,16 @@ const TRACK_THEMES = {
   },
   'Build with AI': {
     gradient: `linear-gradient(135deg, ${colors.violet[600]} 0%, ${colors.violet[800]} 52%, ${colors.violet[950]} 100%)`,
-    pattern: `radial-gradient(circle at 24% 20%, ${hexToRgba(colors.violet[300], 0.38)} 0, ${hexToRgba(colors.violet[300], 0.12)} 35%, transparent 60%), radial-gradient(circle at 78% 18%, ${hexToRgba(colors.pink[400], 0.32)} 0, ${hexToRgba(colors.pink[400], 0.1)} 38%, transparent 65%)`,
+    pattern: `radial-gradient(circle at 24% 20%, ${hexToRgba(
+      colors.violet[300],
+      0.38
+    )} 0, ${hexToRgba(
+      colors.violet[300],
+      0.12
+    )} 35%, transparent 60%), radial-gradient(circle at 78% 18%, ${hexToRgba(
+      colors.pink[400],
+      0.32
+    )} 0, ${hexToRgba(colors.pink[400], 0.1)} 38%, transparent 65%)`,
     fallbackColor: colors.violet[950],
     badgeBorder: hexToRgba(colors.violet[300], 0.6),
     badgeText: colors.white,
@@ -42,7 +60,16 @@ const TRACK_THEMES = {
   },
   Innovation: {
     gradient: `linear-gradient(135deg, ${colors.amber[500]} 0%, ${colors.amber[600]} 40%, ${colors.amber[900]} 70%, ${colors.amber[950]} 100%)`,
-    pattern: `radial-gradient(circle at 26% 22%, ${hexToRgba(colors.amber[200], 0.52)} 0, ${hexToRgba(colors.amber[200], 0.16)} 34%, transparent 58%), radial-gradient(circle at 80% 20%, ${hexToRgba(colors.amber[300], 0.4)} 0, ${hexToRgba(colors.amber[300], 0.12)} 36%, transparent 64%)`,
+    pattern: `radial-gradient(circle at 26% 22%, ${hexToRgba(
+      colors.amber[200],
+      0.52
+    )} 0, ${hexToRgba(
+      colors.amber[200],
+      0.16
+    )} 34%, transparent 58%), radial-gradient(circle at 80% 20%, ${hexToRgba(
+      colors.amber[300],
+      0.4
+    )} 0, ${hexToRgba(colors.amber[300], 0.12)} 36%, transparent 64%)`,
     fallbackColor: colors.amber[950],
     badgeBorder: hexToRgba(colors.amber[200], 0.6),
     badgeText: colors.white,
@@ -51,7 +78,16 @@ const TRACK_THEMES = {
   },
   'Tech+Design': {
     gradient: `linear-gradient(135deg, ${colors.pink[500]} 0%, ${colors.pink[600]} 46%, ${colors.pink[800]} 80%, ${colors.pink[950]} 100%)`,
-    pattern: `radial-gradient(circle at 24% 24%, ${hexToRgba(colors.pink[300], 0.42)} 0, ${hexToRgba(colors.pink[300], 0.14)} 32%, transparent 58%), radial-gradient(circle at 78% 16%, ${hexToRgba(colors.pink[400], 0.38)} 0, ${hexToRgba(colors.pink[400], 0.14)} 36%, transparent 64%)`,
+    pattern: `radial-gradient(circle at 24% 24%, ${hexToRgba(
+      colors.pink[300],
+      0.42
+    )} 0, ${hexToRgba(
+      colors.pink[300],
+      0.14
+    )} 32%, transparent 58%), radial-gradient(circle at 78% 16%, ${hexToRgba(
+      colors.pink[400],
+      0.38
+    )} 0, ${hexToRgba(colors.pink[400], 0.14)} 36%, transparent 64%)`,
     fallbackColor: colors.pink[950],
     badgeBorder: hexToRgba(colors.pink[300], 0.55),
     badgeText: colors.white,
@@ -60,7 +96,16 @@ const TRACK_THEMES = {
   },
   Workshops: {
     gradient: `linear-gradient(135deg, ${colors.orange[500]} 0%, ${colors.orange[600]} 48%, ${colors.orange[700]} 78%, ${colors.orange[950]} 100%)`,
-    pattern: `radial-gradient(circle at 24% 22%, ${hexToRgba(colors.orange[300], 0.48)} 0, ${hexToRgba(colors.orange[300], 0.16)} 30%, transparent 58%), radial-gradient(circle at 78% 20%, ${hexToRgba(colors.orange[400], 0.36)} 0, ${hexToRgba(colors.orange[400], 0.12)} 34%, transparent 62%)`,
+    pattern: `radial-gradient(circle at 24% 22%, ${hexToRgba(
+      colors.orange[300],
+      0.48
+    )} 0, ${hexToRgba(
+      colors.orange[300],
+      0.16
+    )} 30%, transparent 58%), radial-gradient(circle at 78% 20%, ${hexToRgba(
+      colors.orange[400],
+      0.36
+    )} 0, ${hexToRgba(colors.orange[400], 0.12)} 34%, transparent 62%)`,
     fallbackColor: colors.orange[950],
     badgeBorder: hexToRgba(colors.orange[300], 0.58),
     badgeText: colors.white,
@@ -69,7 +114,16 @@ const TRACK_THEMES = {
   },
   'Level Up': {
     gradient: `linear-gradient(135deg, ${colors.green[500]} 0%, ${colors.green[600]} 48%, ${colors.green[700]} 74%, ${colors.green[950]} 100%)`,
-    pattern: `radial-gradient(circle at 18% 20%, ${hexToRgba(colors.green[400], 0.42)} 0, ${hexToRgba(colors.green[400], 0.14)} 33%, transparent 58%), radial-gradient(circle at 80% 24%, ${hexToRgba(colors.green[300], 0.36)} 0, ${hexToRgba(colors.green[300], 0.12)} 35%, transparent 62%)`,
+    pattern: `radial-gradient(circle at 18% 20%, ${hexToRgba(
+      colors.green[400],
+      0.42
+    )} 0, ${hexToRgba(
+      colors.green[400],
+      0.14
+    )} 33%, transparent 58%), radial-gradient(circle at 80% 24%, ${hexToRgba(
+      colors.green[300],
+      0.36
+    )} 0, ${hexToRgba(colors.green[300], 0.12)} 35%, transparent 62%)`,
     fallbackColor: colors.green[950],
     badgeBorder: hexToRgba(colors.green[200], 0.5),
     badgeText: colors.white,
@@ -78,7 +132,16 @@ const TRACK_THEMES = {
   },
   Leadership: {
     gradient: `linear-gradient(135deg, ${colors.sky[400]} 0%, ${colors.sky[500]} 45%, ${colors.sky[700]} 78%, ${colors.sky[950]} 100%)`,
-    pattern: `radial-gradient(circle at 22% 20%, ${hexToRgba(colors.sky[300], 0.46)} 0, ${hexToRgba(colors.sky[300], 0.14)} 32%, transparent 58%), radial-gradient(circle at 80% 22%, ${hexToRgba(colors.sky[400], 0.34)} 0, ${hexToRgba(colors.sky[400], 0.12)} 36%, transparent 64%)`,
+    pattern: `radial-gradient(circle at 22% 20%, ${hexToRgba(
+      colors.sky[300],
+      0.46
+    )} 0, ${hexToRgba(
+      colors.sky[300],
+      0.14
+    )} 32%, transparent 58%), radial-gradient(circle at 80% 22%, ${hexToRgba(
+      colors.sky[400],
+      0.34
+    )} 0, ${hexToRgba(colors.sky[400], 0.12)} 36%, transparent 64%)`,
     fallbackColor: colors.sky[950],
     badgeBorder: hexToRgba(colors.sky[200], 0.55),
     badgeText: colors.white,
@@ -405,7 +468,9 @@ function SpeakerDetails({
               className="rounded-2xl bg-gradient-to-br from-blue-50 to-sky-50 p-6"
               style={{ border: `3px solid ${trackTheme.focusColor}` }}
             >
-              <h2 className="mb-4 text-xl font-bold text-gray-900">Session</h2>
+              <h2 className="mb-4 text-5xl text-bhm-neutral-900 md:text-5xl lg:text-6xl">
+                Session
+              </h2>
 
               {sessionTitle && (
                 <div className="mb-4 rounded-xl bg-white p-4 shadow-sm">

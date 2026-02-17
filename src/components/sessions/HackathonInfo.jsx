@@ -2,7 +2,7 @@ const HackathonInfo = () => {
   return (
     <div className="mx-auto max-w-6xl space-y-12 py-8">
       <div className="text-center">
-        <h2 className="mb-4 text-4xl font-bold text-gray-900 md:text-5xl">
+        <h2 className="mb-4 text-4xl text-bhm-neutral-900 md:text-5xl lg:text-6xl">
           IBM AI Hackathon
         </h2>
         <p className="prose mx-auto max-w-3xl text-pretty text-left text-xl leading-relaxed text-gray-700">
@@ -13,7 +13,7 @@ const HackathonInfo = () => {
       </div>
 
       <div className="rounded-2xl border-4 border-purple-500 bg-purple-50 p-8">
-        <h3 className="mb-4 text-2xl font-bold text-purple-900">
+        <h3 className="mb-4 text-4xl font-bold text-purple-900">
           The Challenge
         </h3>
         <div className="space-y-4 text-gray-700">
