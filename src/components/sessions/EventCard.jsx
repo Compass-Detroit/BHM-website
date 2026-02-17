@@ -3,10 +3,10 @@ import PropTypes from 'prop-types'
 // Track color mapping
 const trackColors = {
   'AI Foundations': {
-    bg: 'bg-purple-100',
-    border: 'border-purple-400',
-    badge: 'bg-purple-700',
-    text: 'text-purple-700',
+    bg: 'bg-red-100',
+    border: 'border-red-400',
+    badge: 'bg-red-700',
+    text: 'text-red-700',
   },
   'Build with AI': {
     bg: 'bg-blue-100',
@@ -15,10 +15,10 @@ const trackColors = {
     text: 'text-blue-700',
   },
   Innovation: {
-    bg: 'bg-emerald-100',
-    border: 'border-emerald-400',
-    badge: 'bg-emerald-700',
-    text: 'text-emerald-700',
+    bg: 'bg-indigo-100',
+    border: 'border-indigo-400',
+    badge: 'bg-indigo-700',
+    text: 'text-indigo-700',
   },
   Leadership: {
     bg: 'bg-amber-100',
