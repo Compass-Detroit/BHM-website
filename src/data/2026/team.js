@@ -16,6 +16,8 @@ import SohamMhatre from '@/data/2026/assets/images/team/soham_mhatre.webp'
 import SumiaSaleh from '@/data/2026/assets/images/team/Sumia_Saleh-x96.webp'
 import TerrellMcKinney from '@/data/2026/assets/images/team/Terrell_McKinney.webp'
 import Rehanashri from '@/data/2026/assets/images/team/rehanashri-x96.webp'
+import Harunah from '@/data/2026/assets/images/team/Kakooza_Harunah.jpg'
+import DeAndre from '@/data/2026/assets/images/team/DeAndre_Boston.jpg'
 
 export const teamData = [
   {
@@ -274,5 +276,29 @@ Today, Maridy serves as President of the Society of Hispanic Professional Engine
     organization: '',
     role: 'Student',
     avatar: Rehanashri,
+  },
+  {
+    id: 22,
+    name: 'Kakooza Harunah',
+    github: 'https://github.com/devharunah',
+    devfest: 'devteam',
+    star: false,
+    university: '',
+    bio: 'Kakooza Harunah is a Software Developer from Uganda, passionate about startups. He’s building Kawa, a coffee marketplace inspired by Uganda’s biggest export, focused on creating simple, impactful digital products.',
+    organization: 'Arron Dogulas ',
+    role: 'Developer',
+    avatar: Harunah,
+  },
+  {
+    id: 23,
+    name: 'DeAndre Boston',
+    github: 'https://github.com/dboston528',
+    devfest: 'devteam',
+    star: false,
+    university: 'Southern Illinois University at Carbondale',
+    bio: 'DeAndre Boston is a Full-stack Software Engineer for Aaron Douglas, LLC. He also has a background in cloud based support engineering. He’s  passionate about using his technical skills to support community-driven organizations and create tools that make a meaningful impact.',
+    organization: 'Aaron Douglas, LLC ',
+    role: 'Developer',
+    avatar: DeAndre,
   },
 ]
