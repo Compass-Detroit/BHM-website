@@ -87,9 +87,9 @@ function CTAButton({
   // Define variant styles
   const variantStyles = {
     primary:
-      'bg-sky-900 text-primary-50 px-20 shadow-xl font-semibold hover:bg-sky-800 hover:shadow-2xl',
+      'bg-bhm-gold-300 text-bhm-neutral-950 px-20 shadow-xl font-semibold hover:bg-sky-800 hover:shadow-2xl',
     secondary:
-      'bg-primary-100 text-sky-900 border-[4px] border-sky-900 shadow-lg hover:bg-primary-50 hover:border-primary-900 hover:text-sky-900',
+      'bg-bhm-gold-50 text-bhm-neutral-950 border-[4px] border-bhm-neutral-950 shadow-lg hover:bg-bhm-gold-50 hover:border-bhm-neutral-950 hover:text-bhm-neutral-950',
   }
 
   const baseStyles =
