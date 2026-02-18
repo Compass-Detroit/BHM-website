@@ -26,28 +26,30 @@ const ProfileCard = ({
   const getBadgeColor = () => {
     const trackColors = {
       'Build with AI': 'bg-purple-800',
-      Innovation: 'bg-primary-900',
+      Innovation: 'bg-indigo-800',
       'Level Up': 'bg-emerald-800',
       Leadership: 'bg-sky-800',
       'Tech+Design': 'bg-red-800',
-      Workshops: 'bg-orange-900',
+      Workshops: 'bg-orange-800',
+      'AI Foundations': 'bg-red-800',
     }
 
-    if (track) return trackColors[track] || 'bg-sky-400'
-    return 'bg-gray-600'
+    if (track) return trackColors[track] || 'bg-red-700'
+    return 'bg-red-700'
   }
 
   const badgeColor = getBadgeColor(track)
 
   const speakerDetailColors = `bg-white text-sky-800 border-[1px] border-sky-900 shadow-xl hover:bg-primary-400 hover:border-primary-900 hover:text-sky-900`
 
+  // change these for the speaker wrapper gradients
   const getGradientColors = (bgColor) => {
     const colorMap = {
       // Speaker track colors - lighter gradients for subtle image overlays
       'bg-purple-800': 'from-purple-400/60 via-purple-400/5',
       'bg-primary-900': 'from-primary-400/60 via-primary-400/5',
-      'bg-emerald-800': 'from-emerald-400/60 via-emerald-400/5',
-      'bg-sky-800': 'from-sky-400/60 via-sky-400/5',
+      'bg-emerald-800': 'from-emerald-200/60 via-emerald-50/5',
+      'bg-indigo-800': 'from-indigo-400/60 via-indigo-400/5',
       'bg-red-800': 'from-red-400/60 via-red-400/5',
       'bg-orange-900': 'from-orange-400/60 via-orange-400/5',
 
@@ -56,10 +58,10 @@ const ProfileCard = ({
       'bg-primary-500': 'from-primary-300/60 via-primary-300/5',
       'bg-blue-500': 'from-blue-400/60 via-blue-400/5',
       'bg-green-500': 'from-green-400/60 via-green-400/5',
-      'bg-amber-500': 'from-amber-400/60 via-amber-400/5',
+      'bg-indigo-500': 'from-indigo-400/60 via-indigo-400/5',
       'bg-gray-500': 'from-gray-400/60 via-gray-400/5',
       'bg-gray-600': 'from-gray-400/60 via-gray-400/5',
-      'bg-gray-700': 'from-gray-400/60 via-gray-400/5',
+      'bg-gray-700': 'from-gray-900/60 via-gray-900/5',
     }
 
     return colorMap[bgColor] || 'from-gray-400/60 via-gray-400/5'

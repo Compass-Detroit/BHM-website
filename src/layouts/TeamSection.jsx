@@ -6,15 +6,26 @@ import SectionSkipLink from '@/components/ui/SectionSkipLink'
 import GithubHandle from '@/components/ui/GithubHandle'
 import Star from '@/assets/images/icons/star.svg'
 import TwitterHandle from '@/components/ui/TwitterHandle'
+import { FaCodeCommit } from 'react-icons/fa6'
 
 const TeamSection = ({ teamData, year }) => {
   const [selectedBio, setSelectedBio] = useState(null)
   const modalRef = useRef(null)
   const closeButtonRef = useRef(null)
 
-  const sortedTeamData = [...teamData].sort((a, b) =>
-    a.name.localeCompare(b.name)
-  )
+  // Sort: event runners (starred) first, then top website contributors, then everyone else
+  // Within each group, sort alphabetically by name
+  const getSortTier = (dev) => {
+    if (dev.star) return 0 // Event runners
+    if (dev.topContributor) return 1 // Top website contributors
+    return 2
+  }
+  const sortedTeamData = [...teamData].sort((a, b) => {
+    const tierA = getSortTier(a)
+    const tierB = getSortTier(b)
+    if (tierA !== tierB) return tierA - tierB
+    return a.name.localeCompare(b.name)
+  })
 
   // Get ribbon color based on role
   const getRibbonColor = (role) => {
@@ -120,14 +131,14 @@ const TeamSection = ({ teamData, year }) => {
                     >
                       {dev.devfest}
                     </div>
-                    <div className="flex flex-col items-center xs:flex-row xs:items-start">
-                      <div className="flex shrink-0 flex-col items-center xs:w-24">
+                    <div className="flex flex-col items-center min-[401px]:flex-row min-[401px]:items-start">
+                      <div className="flex shrink-0 flex-col items-center min-[401px]:w-24">
                         <img
                           alt={`${dev.name} avatar`}
                           src={dev.avatar}
                           className="size-24 rounded-full outline outline-1 -outline-offset-1 outline-black/5"
                         />
-                        <div className="mt-2 flex gap-1">
+                        <div className="mt-2 flex w-24 shrink-0 flex-wrap items-center justify-center gap-1">
                           {dev.linkedin && (
                             <LinkedInHandle
                               handle={dev.linkedin}
@@ -147,21 +158,37 @@ const TeamSection = ({ teamData, year }) => {
                               absolute={false}
                             />
                           )}
+                          {dev.commits != null && dev.commits > 0 && (
+                            <span
+                              className="flex w-24 shrink-0 items-center justify-center gap-1 rounded-full bg-white px-2 py-1 text-xs text-gray-600"
+                              title="Commits to this site"
+                            >
+                              <span
+                                aria-label={`${dev.commits.toLocaleString()} commits to this site`}
+                              >
+                                &gt;&nbsp;{dev.commits.toLocaleString()}
+                              </span>
+                              <FaCodeCommit
+                                className="size-4 text-black"
+                                aria-hidden="true"
+                              />
+                            </span>
+                          )}
                         </div>
                       </div>
-                      <div className="mt-4 flex flex-col items-center gap-2 xs:ml-4 xs:mt-0 xs:items-start xs:justify-center">
-                        <h3 className="text-base/7 font-semibold tracking-tight text-gray-900 xs:mt-6">
+                      <div className="mt-4 flex flex-col items-center gap-2 min-[401px]:ml-4 min-[401px]:mt-0 min-[401px]:items-start min-[401px]:justify-center">
+                        <h3 className="text-base/7 font-semibold tracking-tight text-gray-900 min-[401px]:mt-6">
                           {dev.name}
                         </h3>
-                        <p className="prose text-center text-sm/6 text-gray-600 [text-wrap:pretty] xs:text-left">
+                        <p className="prose text-center text-sm/6 text-gray-600 [text-wrap:pretty] min-[401px]:text-left">
                           {dev.organization}
                         </p>
                         {dev.university && (
-                          <p className="prose text-center text-sm/6 text-gray-600 [text-wrap:pretty] xs:text-left">
+                          <p className="prose text-center text-sm/6 text-gray-600 [text-wrap:pretty] min-[401px]:text-left">
                             {dev.university}
                           </p>
                         )}
-                        <p className="prose text-center text-sm/6 font-semibold text-gray-600 [text-wrap:pretty] xs:text-left">
+                        <p className="prose text-center text-sm/6 font-semibold text-gray-600 [text-wrap:pretty] min-[401px]:text-left">
                           {dev.role}
                         </p>
                       </div>
