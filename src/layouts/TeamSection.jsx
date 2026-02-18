@@ -160,24 +160,25 @@ const TeamSection = ({ teamData, year }) => {
                           )}
                           {dev.commits != null && dev.commits > 0 && (
                             <span
-                              className="flex w-24 shrink-0 items-center justify-center gap-1 rounded-full bg-white px-2 py-1 text-xs text-gray-600"
+                              className="flex w-24 shrink-0 items-center justify-center rounded-full py-0.5 text-primary-900"
                               title="Commits to this site"
                             >
-                              <span
-                                aria-label={`${dev.commits.toLocaleString()} commits to this site`}
-                              >
-                                &gt;&nbsp;{dev.commits.toLocaleString()}
-                              </span>
                               <FaCodeCommit
-                                className="size-4 text-black"
+                                className="size-4"
                                 aria-hidden="true"
                               />
+                              <span
+                                className="text-xs"
+                                aria-label={`This developer has made ${dev.commits.toLocaleString()} commits to this site`}
+                              >
+                                &nbsp;Dev
+                              </span>
                             </span>
                           )}
                         </div>
                       </div>
                       <div className="mt-4 flex flex-col items-center gap-2 min-[401px]:ml-4 min-[401px]:mt-0 min-[401px]:items-start min-[401px]:justify-center">
-                        <h3 className="text-base/7 font-semibold tracking-tight text-gray-900 min-[401px]:mt-6">
+                        <h3 className="text-xl font-semibold tracking-tight text-gray-900 min-[401px]:mt-6">
                           {dev.name}
                         </h3>
                         <p className="prose text-center text-sm/6 text-gray-600 [text-wrap:pretty] min-[401px]:text-left">

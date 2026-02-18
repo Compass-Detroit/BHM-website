@@ -8,7 +8,7 @@ function LocationSection() {
       className="relative flex h-auto items-center justify-center bg-slate-100 py-16 text-black md:py-28 dark:bg-gray-900 dark:text-white"
       aria-labelledby="location-heading"
     >
-      <div className="mx-4 flex flex-col space-y-8 sm:mx-6 lg:mx-8">
+      <div className="mx-auto flex w-full max-w-[1100px] flex-col space-y-8 px-4 sm:px-6 lg:px-8">
         {/* When Section */}
         <div className="flex justify-center">
           <div className="flex items-center">
@@ -44,9 +44,7 @@ function LocationSection() {
               <div className="mx-2 flex size-11 items-center justify-center rounded-full bg-yellow-500">
                 <FaMapPin className="size-6 text-white" aria-hidden="true" />
               </div>
-              <h3 className="text-lg font-semibold md:text-xl lg:text-2xl">
-                Compass Detroit 2026
-              </h3>
+              <h3 className="text-3xl font-semibold">Compass Detroit 2026</h3>
             </div>
             <div className="ml-16">
               <time dateTime="2026-02-28T08:00:00-05:00/2026-02-28T17:00:00-05:00">

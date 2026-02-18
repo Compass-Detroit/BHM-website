@@ -40,7 +40,7 @@ function VenueMaps() {
     <section className="w-full py-8" aria-labelledby="venue-maps-heading">
       <h3
         id="venue-maps-heading"
-        className="mb-4 text-base font-semibold text-gray-800 md:text-lg dark:text-gray-900"
+        className="mb-4 text-3xl font-semibold text-gray-800 dark:text-gray-900"
       >
         Black History Month Tech Summit Venue Guide
       </h3>

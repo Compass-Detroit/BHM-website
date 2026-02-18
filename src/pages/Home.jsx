@@ -4,7 +4,6 @@ import LandingSection from '@/layouts/LandingSection'
 import LocationSection from '@/layouts/LocationSection'
 import MembersSection from '@/layouts/MembersSection'
 import PartnersSection from '@/layouts/PartnersSection'
-import AttendeeSection from '@/layouts/AttendeeSection'
 import JobBoardSection from '@/layouts/JobBoardSection'
 import SessionsSection from '@/layouts/SessionsSection'
 import SpeakersSection from '@/layouts/SpeakersSection'
@@ -40,8 +39,7 @@ function Home() {
       <MembersSection />
 
       <SpeakersSection year={currentYear} speakersData={Speakers2026} />
-
-      <AttendeeSection />
+      {/* Add attendee section */}
 
       <JobBoardSection year={currentYear} />
 

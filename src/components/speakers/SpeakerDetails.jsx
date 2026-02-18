@@ -422,13 +422,15 @@ function SpeakerDetails({
 
       <div className="p-8">
         <div className="grid gap-8 lg:grid-cols-5">
-          <div className="lg:col-span-3">
-            <h2
-              id={`speaker-modal-about-${id}`}
-              className="mb-4 text-2xl font-bold text-gray-900"
-            >
-              About {name.split(' ')[0]}
-            </h2>
+          <div className={sessionTitle ? 'lg:col-span-3' : 'lg:col-span-5'}>
+            {bio && (
+              <h3
+                id={`speaker-modal-about-${id}`}
+                className="mb-4 text-2xl font-bold text-gray-900"
+              >
+                About {name.split(' ')[0]}
+              </h3>
+            )}
 
             {bio && (
               <p
@@ -441,9 +443,9 @@ function SpeakerDetails({
 
             {tags && tags.length > 0 && (
               <div className="mb-6">
-                <h3 className="mb-3 text-sm font-bold uppercase tracking-wide text-gray-500">
+                <h4 className="mb-3 text-sm font-bold uppercase tracking-wide text-gray-500">
                   Topics
-                </h3>
+                </h4>
                 <div className="flex flex-wrap gap-2">
                   {tags.map((tag, index) => (
                     <span
@@ -463,56 +465,56 @@ function SpeakerDetails({
             )}
           </div>
 
-          <div className="lg:col-span-2">
-            <div
-              className="rounded-2xl bg-gradient-to-br from-blue-50 to-sky-50 p-6"
-              style={{ border: `3px solid ${trackTheme.focusColor}` }}
-            >
-              <h2 className="mb-4 text-4xl text-bhm-neutral-900 lg:text-5xl">
-                Session
-              </h2>
+          {sessionTitle && (
+            <div className="lg:col-span-2">
+              <div
+                className="rounded-2xl bg-gradient-to-br from-blue-50 to-sky-50 p-6"
+                style={{ border: `3px solid ${trackTheme.focusColor}` }}
+              >
+                <h4 className="mb-4 text-xl font-semibold uppercase text-bhm-neutral-900">
+                  Session
+                </h4>
 
-              {sessionTitle && (
                 <div className="mb-4 rounded-xl bg-white p-4 shadow-sm">
                   <h3 className="text-base font-semibold leading-relaxed text-gray-900">
                     {sessionTitle}
                   </h3>
                 </div>
-              )}
 
-              {sessionDescription && (
-                <div className="rounded-xl bg-white p-4 shadow-sm">
-                  <h3 className="mb-2 text-sm font-bold uppercase tracking-wide text-gray-500">
-                    Description
-                  </h3>
-                  <p
-                    className="whitespace-pre-wrap text-left text-sm text-gray-700"
-                    style={{ maxWidth: '65ch', lineHeight: '1.6' }}
-                  >
-                    {showFullDescription
-                      ? sessionDescription
-                      : descriptionPreview}
-                  </p>
-                  {needsTruncation && (
-                    <button
-                      onClick={() =>
-                        setShowFullDescription(!showFullDescription)
-                      }
-                      className="mt-3 text-sm font-bold text-sky-700 transition-colors hover:underline focus:outline-none focus:ring-2 focus:ring-offset-2"
-                      style={{
-                        ...interactiveFocusVars,
-                      }}
-                      aria-expanded={showFullDescription}
+                {sessionDescription && (
+                  <div className="rounded-xl bg-white p-4 shadow-sm">
+                    <h5 className="mb-2 text-sm font-bold uppercase tracking-wide text-gray-500">
+                      Description
+                    </h5>
+                    <p
+                      className="whitespace-pre-wrap text-left text-sm text-gray-700"
+                      style={{ maxWidth: '65ch', lineHeight: '1.6' }}
                     >
                       {showFullDescription
-                        ? 'Show less'
-                        : 'Read full description'}
-                    </button>
-                  )}
-                </div>
-              )}
+                        ? sessionDescription
+                        : descriptionPreview}
+                    </p>
+                    {needsTruncation && (
+                      <button
+                        onClick={() =>
+                          setShowFullDescription(!showFullDescription)
+                        }
+                        className="mt-3 text-sm font-bold text-sky-700 transition-colors hover:underline focus:outline-none focus:ring-2 focus:ring-offset-2"
+                        style={{
+                          ...interactiveFocusVars,
+                        }}
+                        aria-expanded={showFullDescription}
+                      >
+                        {showFullDescription
+                          ? 'Show less'
+                          : 'Read full description'}
+                      </button>
+                    )}
+                  </div>
+                )}
+              </div>
             </div>
-          </div>
+          )}
         </div>
 
         <div className="mt-8 flex items-center justify-center space-x-6 text-sm text-gray-500">
@@ -572,7 +574,7 @@ SpeakerDetails.propTypes = {
   onClose: PropTypes.func.isRequired,
   organization: PropTypes.string,
   position: PropTypes.string,
-  sessionTitle: PropTypes.string.isRequired,
+  sessionTitle: PropTypes.string,
   sessionDescription: PropTypes.string,
   track: PropTypes.string,
   tags: PropTypes.arrayOf(PropTypes.string),
