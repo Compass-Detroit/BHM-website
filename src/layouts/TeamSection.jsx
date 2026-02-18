@@ -168,10 +168,10 @@ const TeamSection = ({ teamData, year }) => {
                                 aria-hidden="true"
                               />
                               <span
-                                className="text-xs "
-                                aria-label={`${dev.commits.toLocaleString()} commits to this site`}
+                                className="text-xs"
+                                aria-label={`This developer has made ${dev.commits.toLocaleString()} commits to this site`}
                               >
-                                &nbsp;LEAD
+                                &nbsp;Dev
                               </span>
                             </span>
                           )}

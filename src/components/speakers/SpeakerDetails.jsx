@@ -424,12 +424,12 @@ function SpeakerDetails({
         <div className="grid gap-8 lg:grid-cols-5">
           <div className={sessionTitle ? 'lg:col-span-3' : 'lg:col-span-5'}>
             {bio && (
-              <h2
+              <h3
                 id={`speaker-modal-about-${id}`}
                 className="mb-4 text-2xl font-bold text-gray-900"
               >
                 About {name.split(' ')[0]}
-              </h2>
+              </h3>
             )}
 
             {bio && (
@@ -471,9 +471,9 @@ function SpeakerDetails({
                 className="rounded-2xl bg-gradient-to-br from-blue-50 to-sky-50 p-6"
                 style={{ border: `3px solid ${trackTheme.focusColor}` }}
               >
-                <h3 className="mb-4 text-xl font-semibold uppercase text-bhm-neutral-900">
+                <h4 className="mb-4 text-xl font-semibold uppercase text-bhm-neutral-900">
                   Session
-                </h3>
+                </h4>
 
                 <div className="mb-4 rounded-xl bg-white p-4 shadow-sm">
                   <h3 className="text-base font-semibold leading-relaxed text-gray-900">
@@ -483,9 +483,9 @@ function SpeakerDetails({
 
                 {sessionDescription && (
                   <div className="rounded-xl bg-white p-4 shadow-sm">
-                    <h4 className="mb-2 text-sm font-bold uppercase tracking-wide text-gray-500">
+                    <h5 className="mb-2 text-sm font-bold uppercase tracking-wide text-gray-500">
                       Description
-                    </h4>
+                    </h5>
                     <p
                       className="whitespace-pre-wrap text-left text-sm text-gray-700"
                       style={{ maxWidth: '65ch', lineHeight: '1.6' }}

@@ -24,23 +24,20 @@ const PreviousEvents = () => {
             Compass Detroit Past Events
           </h1>
 
-          <p className="prose mx-auto w-2/3 max-w-none text-2xl leading-relaxed text-primary-950">
+          <p className="prose mx-auto max-w-prose  text-2xl leading-relaxed text-primary-950">
             Compass Detroit is a community-driven event connecting tech
             enthusiasts, professionals, and students to network and explore
             industry trends. Our organization, Compass, stands for the
             collective of minority professionals and STEAM societies in
-            Michigan.
-          </p>
-
-          <p className="mx-auto mt-4 w-2/3 max-w-none text-lg leading-relaxed text-primary-950">
-            Through various speakers and workshops, the event highlights local
-            talent and fosters a tradition of collaborative learning.
+            Michigan. Through various speakers and workshops, the event
+            highlights local talent and fosters a tradition of collaborative
+            learning.
           </p>
 
           <h2 className="mt-8 text-center font-biorhyme text-4xl font-bold text-bhm-neutral-700">
             Black History Month: Innovation Summit
           </h2>
-          <p className="prose mx-auto mt-4 w-2/3 max-w-none text-lg leading-relaxed text-bhm-neutral-700">
+          <p className="prose mx-auto mt-4 max-w-prose  text-lg leading-relaxed text-bhm-neutral-700">
             The{' '}
             <a
               href="https://bhmtechsummit.com"
@@ -50,48 +47,48 @@ const PreviousEvents = () => {
             >
               Black History Month Innovation Summit
             </a>{' '}
-            connects tech enthusiasts, professionals, and students to network
-            and explore industry trends. This event celebrates Black
-            contributions to technology and reinforces the importance of
-            diversity in the field.
+            launches our programming year each February. This event centers the
+            contributions of Black technologists, founders, and leaders while
+            examining innovation through the lens of equity and access.
           </p>
-          <p className="mx-auto mt-4 w-2/3 max-w-none text-lg leading-relaxed text-bhm-neutral-700">
-            Through expert speakers and workshops, the summit highlights local
-            talent and continues a tradition of collaborative learning. Each
-            year, this event kicks off the year, running in the month of
-            February.
+          <p className="mx-auto mt-4 max-w-prose  text-lg leading-relaxed text-bhm-neutral-700">
+            The summit blends keynote talks, career-focused panels, and
+            workforce-oriented workshops, with a strong emphasis on mentorship
+            and industry readiness. It serves as both a celebration and a call
+            to action, strengthening pathways for emerging talent entering the
+            tech ecosystem.
           </p>
 
           <h2 className="mt-8 text-center font-biorhyme text-4xl font-bold text-bhm-neutral-700">
-            Women Techmakers&apos;: International Women&apos;s Day
+            Women Techmakers: International Women&apos;s Day
           </h2>
-          <p className="prose mx-auto mt-4 w-2/3 max-w-none text-lg leading-relaxed text-bhm-neutral-700">
-            The{' '}
+          <p className="prose mx-auto mt-4 max-w-prose text-lg leading-relaxed text-bhm-neutral-700">
+            Held in the spring, our{' '}
             <a
               href="https://gdg.community.dev/iwd/"
               target="_blank"
               rel="noopener noreferrer"
               className="font-bold text-primary-800 underline hover:text-primary-600"
             >
-              Women Techmakers&apos; International Women&apos;s Day
+              Women Techmakers International Women&apos;s Day
             </a>{' '}
-            connects tech enthusiasts, professionals, and students to network
-            and explore industry trends. This event celebrates International
-            Women&apos;s Day and reinforces the importance of diversity in the
-            field.
+            event focuses on advancing women in technology across disciplines.
+            This gathering creates space for dialogue around leadership,
+            visibility, and sustainable career growth in technical and executive
+            roles.
           </p>
-          <p className="mx-auto mt-4 w-2/3 max-w-none text-lg leading-relaxed text-bhm-neutral-700">
-            Through expert speakers and workshops, the summit highlights local
-            talent and continues a tradition of collaborative learning. Through
-            expert speakers and workshops, the summit highlights local talent
-            and continues a tradition of collaborative learning. This is our
-            second event in the year, running in the spring.
+          <p className="mx-auto mt-4 max-w-prose  text-lg leading-relaxed text-bhm-neutral-700">
+            The program features practitioner-led talks, community spotlights,
+            and interactive sessions designed to foster peer support and
+            long-term professional connection. The emphasis is on
+            representation, advancement, and strengthening the pipeline of women
+            shaping Michigan&apos;s tech landscape.
           </p>
 
           <h2 className="mt-8 text-center font-biorhyme text-4xl font-bold text-bhm-neutral-700">
             Michigan DevFest
           </h2>
-          <p className="prose mx-auto mt-4 w-2/3 max-w-none text-lg leading-relaxed text-bhm-neutral-700">
+          <p className="prose mx-auto mt-4 max-w-prose  text-lg leading-relaxed text-bhm-neutral-700">
             Hosted by GDG-Detroit for over a decade,{' '}
             <a
               href="https://midevfest.com"
@@ -101,17 +98,17 @@ const PreviousEvents = () => {
             >
               Michigan DevFest
             </a>{' '}
-            brings together regional developers, professionals, and students to
-            explore modern technology. This community-driven event has grown
-            into a statewide draw, offering diverse workshops and expert-led
-            sessions. This is our capstone event running in the fall. In 2025 it
-            was our 11th and largest event, with over 600 attendees, held at the
-            MotorCity Casino.
+            is our capstone event in the fall. It convenes developers, technical
+            leaders, students, and industry partners from across the state to
+            explore modern platforms, applied AI, and emerging technologies.
           </p>
-          <p className="prose mx-auto mt-4 w-2/3 max-w-none text-lg leading-relaxed text-bhm-neutral-700">
-            As a long-standing member of the Compass network, The Michigan
-            DevFest highlights and showcases the immense talent within our local
-            tech ecosystem and continues a tradition of collaborative learning.
+          <p className="prose mx-auto mt-4 max-w-prose  text-lg leading-relaxed text-bhm-neutral-700">
+            In 2025, DevFest marked its 11th year and largest gathering to date,
+            welcoming over 600 attendees at MotorCity Casino. With multiple
+            tracks, deep technical workshops, and nationally recognized
+            speakers, DevFest showcases the strength of Michigan&apos;s
+            technology ecosystem and reinforces Compass&apos; commitment to
+            inclusive, high-quality technical programming.
           </p>
         </div>
       </section>

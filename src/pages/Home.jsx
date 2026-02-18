@@ -39,8 +39,7 @@ function Home() {
       <MembersSection />
 
       <SpeakersSection year={currentYear} speakersData={Speakers2026} />
-      {/* TODO: Add attendee section */}
-      {/* <AttendeeSection /> */}
+      {/* Add attendee section */}
 
       <JobBoardSection year={currentYear} />
 
