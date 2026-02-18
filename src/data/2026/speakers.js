@@ -295,7 +295,7 @@ export const SpeakersData = [
       title:
         'Understanding AI Terminology and Concepts for Non-Technical Audiences',
       abstract: null,
-      description: `mia`,
+      description: `AI is everywhere, but the language around it can be confusing or intimidating—especially if you don’t work in technology. This session breaks down the most common AI terms and concepts in clear, accessible language for students, business professionals, and community members without a technical background. Attendees will learn what AI, machine learning, and large language models actually are, how they work at a high level, and what key terms like training data, bias, and automation really mean in practice. The talk will also provide practical examples of how these technologies show up in everyday tools and careers, helping participants build confidence to join AI-related conversations and make informed decisions about using AI in their own work or studies.`,
       tags: ['In-person', 'AI Foundations'],
       track: 'AI Foundations',
       time: '10:30',
@@ -421,8 +421,7 @@ export const SpeakersData = [
     organization: 'DTE Energy',
     position: 'Vice President - Electric Capital Delivery',
     session: {
-      title:
-        'Powering Detroits Future: AI-Driven Energy Innovation Fireside Chat with DTE x IBM',
+      title: `Powering Detroit's Future: AI-Driven Energy Innovation Fireside Chat with DTE x IBM`,
       abstract: null,
       description: `Innovation Summit Keynote - Powering Detroit's Future: AI-Driven Energy Innovation Fireside Chat with DTE x IBM Join us for an inspiring keynote conversation between two visionary Black leaders transforming how Michigan powers its future. Steven Benyard, Vice President of Electric Capital Delivery at DTE Energy, and Jason Kelley, Global Head and Managing Partner of Core Business Applications at IBM, will explore how artificial intelligence is revolutionizing the energy sector while creating unprecedented opportunities for Michigan's communities. In this dynamic fireside chat, these executives will share insights on: - The AI Revolution in Energy: How machine learning and predictive analytics are creating smarter, more resilient power grids that better serve Detroit's diverse neighborhoods - Equity Through Innovation: Ensuring AI-powered energy solutions address historical disparities and create economic opportunities in underserved communities - Climate Action Meets Community Impact: Leveraging AI to accelerate Michigan's clean energy transition while keeping energy affordable and accessible - Building Tomorrow's Workforce: How the DTE and IBM are creating pathways for Michigan's talent to lead in the AI-energy economy - From Vision to Reality: Real-world examples of AI applications already improving energy reliability, reducing outages, and empowering customers across Southeast Michigan Drawing from their extensive experience leading transformational initiatives at two of the industry's most influential companies, Benyard and Kelley will offer a rare glimpse into the future of energy infrastructure, the role of Black leadership in driving innovation, and why Michigan is uniquely positioned to become a global model for equitable, AI-powered energy systems. This conversation is essential for technology professionals, energy sector leaders, students, and anyone passionate about how emerging technologies can create a more sustainable and equitable future for our communities.`,
       tags: ['In-person', 'Level Up', 'Virtual'],
@@ -543,9 +542,9 @@ export const SpeakersData = [
     email: 'wbowen05@gmail.com',
     avatar:
       'https://res.cloudinary.com/startup-grind/image/upload/c_fill,dpr_2,f_auto,g_face,h_200,q_auto:good,w_200/v1/gcs/platform-data-goog/events/WilliamBowen_7oqh2cM.jpeg',
-    bio: `To teach is to live and to live is learn. This is the motto that Dean Hendricks adopted since childhood. He grew up helping his mother feed the homeless and has pivoted that passion into dedicating his life to philanthropy. He’s a member of the Detroit Rotary Club, and a proud Phi Theta Kappa member. At the beginning of 2022 He founded the Hendricks Foundation – helping students cross the digital divide worldwide. Today the Hendricks Foundation is now teaching students how to build leverage locally hosted AI’s to help them learn how to be ready for the new workforce so that no one gets left behind.`,
+    bio: `William Bowen is an IT Specialist with the US Army, where he focuses on supporting secure, reliable desktop environments and helping teams adapt to evolving technologies. Drawing on years of hands-on experience with operating systems, end-user support, and infrastructure modernization, William is passionate about making technical change approachable for everyone. Outside of his military role, he mentors colleagues and community members on practical ways to transition to Linux and other alternative operating systems, emphasizing clear communication, step-by-step guidance, and long-term sustainability. He brings that same mindset to personal wellness, advocating for small, consistent habits that lead to meaningful change over time.`,
     twitter: null,
-    linkedIn: 'https://www.linkedin.com/in/dean-hendricks-b64b52241',
+    linkedIn: 'https://www.linkedin.com/in/william-bowen-a7216610/',
     github: null,
     organization: 'US Army',
     position: 'IT Specialist',
@@ -858,7 +857,7 @@ export const SpeakersData = [
     organization: 'EmpowerID',
     position: 'Senior Software Developer',
     session: {
-      title: 'Dont Ship Insecure Agents: MCP Security Best Practices',
+      title: `Don't Ship Insecure Agents: MCP Security Best Practices`,
       abstract: null,
       description: `The Model Context Protocol (MCP) has evolved from Anthropic's internal experiment to the industry standard for AI agent connectivity—now under the Linux Foundation with 97 million monthly SDK downloads. But as adoption accelerates, security gaps are emerging: 43% of tested implementations contain command injection flaws, and real-world incidents have already caused serious damage—from exfiltrating private GitHub repos to the Replit agent that deleted a production database, fabricated thousands of fake records to cover it up, and lied about rollback options. This session explores production-tested patterns for building secure MCP implementations, drawing from experience building MCP Gateway infrastructure. We'll start with an overview of the MCP specification—what it is, how it works, and the core primitives (Tools, Resources, Prompts). We'll then cover the November 2025 spec updates (async Tasks, Resource Indicators, enhanced OAuth) before diving into three critical security pillars: least privilege access through scoped tokens and token exchange, token isolation ensuring agents never touch user credentials, and comprehensive audit logging for tracking agent actions across trust boundaries. We'll also tackle the anti-patterns that doom MCP deployments: ""god mode"" service accounts, token passthrough (explicitly warned against in the spec), and tool overload that degrades agent performance. With 53% of MCP servers still relying on long-lived static secrets and only 8.5% adopting OAuth, there's urgent work to be done. Whether you're connecting AI to enterprise APIs or building developer tools, you'll leave with actionable architecture patterns and the security mindset needed to ship MCP integrations you can trust.`,
       tags: ['In-person', 'Innovation'],
@@ -1112,8 +1111,7 @@ export const SpeakersData = [
     organization: 'BeAware ConferenceCaptioning',
     position: 'Founder & Chief Enablement Officer',
     session: {
-      title:
-        'Lets Build & Deploy a Social Media Web App in 15 Minutes Using Google AI Studio & No Code',
+      title: `Let's Build & Deploy a Social Media Web App in 15 Minutes Using Google AI Studio & No Code`,
       abstract: null,
       description: `In this amazingly resourceful & hands-on session, attendees will learn how to build a functional mini social platform in just 15 minutes using Google Firebase, and Google AI Studio, all with free tools and no credit card required. The session will walk through creating a simple community social web app that includes secure email/password authentication, real-time data updates, user posts, and basic social interactions using Firebase Authentication, Realtime Database, and Hosting. Google AI Studio will be used to accelerate development and reduce boilerplate generating a React app that is ready to go, showing how AI can assist (not replace) developers. This talk is designed to simplify the understanding of (or demystify) modern app development and empower attendees to see how quickly some ideas can become working products. Whether you’re a student, founder, creative, or technologist, you’ll leave with a clearer understanding, and live code, showing how insanely accessible building has become. No gatekeeping, credit cards, trial periods needed as is the case with tools like unLovable, Base44x0, RepealIt. You can tell I was so frustrated by them that I figured this solution and I'm sharing it with the world today!`,
       tags: ['In-person', 'Innovation'],
