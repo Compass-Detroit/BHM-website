@@ -7,21 +7,32 @@ import PropTypes from 'prop-types'
  * Focuses the target element on activation so keyboard users land in the right place.
  */
 function SectionSkipLink({ href, children }) {
-  const handleClick = (e) => {
+  const activate = (e) => {
     const id = href.replace(/^#/, '')
     const target = id ? document.getElementById(id) : null
     if (target) {
       e.preventDefault()
       target.setAttribute('tabindex', '-1')
-      target.scrollIntoView({ behavior: 'smooth', block: 'start' })
+      const navbarHeight = document.querySelector('nav')?.offsetHeight ?? 96
+      const targetTop = target.getBoundingClientRect().top + window.scrollY
+      const scrollPosition = targetTop - navbarHeight
+      window.scrollTo({ top: scrollPosition, behavior: 'smooth' })
       target.focus({ preventScroll: true })
+    }
+  }
+
+  const handleKeyDown = (e) => {
+    if (e.key === 'Enter' || e.key === ' ') {
+      e.preventDefault()
+      e.currentTarget.click()
     }
   }
 
   return (
     <a
       href={href}
-      onClick={handleClick}
+      onClick={activate}
+      onKeyDown={handleKeyDown}
       // eslint-disable-next-line tailwindcss/enforces-negative-arbitrary-values -- Negative top positions link off-screen for WCAG bypass; visible on focus
       className={
         'absolute -top-[9999px] left-[6px] z-[100] rounded bg-white px-2 py-1 text-black shadow ' +
