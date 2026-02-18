@@ -131,8 +131,8 @@ const TeamSection = ({ teamData, year }) => {
                     >
                       {dev.devfest}
                     </div>
-                    <div className="flex flex-col items-center xs:flex-row xs:items-start">
-                      <div className="flex shrink-0 flex-col items-center xs:w-24">
+                    <div className="flex flex-col items-center min-[401px]:flex-row min-[401px]:items-start">
+                      <div className="flex shrink-0 flex-col items-center min-[401px]:w-24">
                         <img
                           alt={`${dev.name} avatar`}
                           src={dev.avatar}
@@ -176,19 +176,19 @@ const TeamSection = ({ teamData, year }) => {
                           )}
                         </div>
                       </div>
-                      <div className="mt-4 flex flex-col items-center gap-2 xs:ml-4 xs:mt-0 xs:items-start xs:justify-center">
-                        <h3 className="text-base/7 font-semibold tracking-tight text-gray-900 xs:mt-6">
+                      <div className="mt-4 flex flex-col items-center gap-2 min-[401px]:ml-4 min-[401px]:mt-0 min-[401px]:items-start min-[401px]:justify-center">
+                        <h3 className="text-base/7 font-semibold tracking-tight text-gray-900 min-[401px]:mt-6">
                           {dev.name}
                         </h3>
-                        <p className="prose text-center text-sm/6 text-gray-600 [text-wrap:pretty] xs:text-left">
+                        <p className="prose text-center text-sm/6 text-gray-600 [text-wrap:pretty] min-[401px]:text-left">
                           {dev.organization}
                         </p>
                         {dev.university && (
-                          <p className="prose text-center text-sm/6 text-gray-600 [text-wrap:pretty] xs:text-left">
+                          <p className="prose text-center text-sm/6 text-gray-600 [text-wrap:pretty] min-[401px]:text-left">
                             {dev.university}
                           </p>
                         )}
-                        <p className="prose text-center text-sm/6 font-semibold text-gray-600 [text-wrap:pretty] xs:text-left">
+                        <p className="prose text-center text-sm/6 font-semibold text-gray-600 [text-wrap:pretty] min-[401px]:text-left">
                           {dev.role}
                         </p>
                       </div>
