@@ -332,7 +332,7 @@ export const SpeakersData = [
     mastodon: null,
   },
   {
-    id: 15,
+    id: 14,
     name: 'Gina Grant',
     email: 'gina@corekind.com',
     avatar:
@@ -358,7 +358,7 @@ export const SpeakersData = [
     mastodon: null,
   },
   {
-    id: 16,
+    id: 15,
     name: 'Hafeez Jimoh',
     email: 'jimohafeezco@gmail.com',
     avatar:
@@ -383,7 +383,7 @@ export const SpeakersData = [
     mastodon: null,
   },
   {
-    id: 17,
+    id: 16,
     name: 'Winston Roberts',
     email: 'winstonroberts@teacherinasuit.com',
     avatar:
@@ -408,7 +408,7 @@ export const SpeakersData = [
     mastodon: null,
   },
   {
-    id: 18,
+    id: 17,
     name: 'Steven Benyard',
     email: null,
     avatar:
@@ -435,7 +435,7 @@ export const SpeakersData = [
     mastodon: null,
   },
   {
-    id: 19,
+    id: 18,
     name: 'Jason Kelley',
     email: null,
     avatar:
@@ -461,7 +461,7 @@ export const SpeakersData = [
     mastodon: null,
   },
   {
-    id: 20,
+    id: 19,
     name: 'Tabice Ward',
     email: null,
     avatar:
@@ -487,7 +487,7 @@ export const SpeakersData = [
     mastodon: null,
   },
   {
-    id: 22,
+    id: 20,
     name: 'Terrell McKinney',
     email: 'terrell@aarondouglas.us',
     avatar:
@@ -513,7 +513,7 @@ export const SpeakersData = [
     mastodon: null,
   },
   {
-    id: 23,
+    id: 21,
     name: 'Dean Hendricks',
     email: 'Dean@hendricks-foundation.org',
     avatar:
@@ -538,7 +538,7 @@ export const SpeakersData = [
     mastodon: null,
   },
   {
-    id: 24,
+    id: 22,
     name: 'William Bowen',
     email: 'wbowen05@gmail.com',
     avatar:
@@ -563,7 +563,7 @@ export const SpeakersData = [
     mastodon: null,
   },
   {
-    id: 25,
+    id: 23,
     name: 'Tatiana Jackson',
     email: 'tatiana@therealculture.com',
     avatar:
@@ -589,7 +589,7 @@ export const SpeakersData = [
     mastodon: null,
   },
   {
-    id: 26,
+    id: 24,
     name: 'Desmond Baker Jr',
     email: 'desibaker54@gmail.com',
     avatar:
@@ -615,7 +615,7 @@ export const SpeakersData = [
     mastodon: null,
   },
   {
-    id: 27,
+    id: 25,
     name: 'Angela Richardson',
     email: 'angela.rene.richardson@gmail.com',
     avatar:
@@ -641,7 +641,7 @@ export const SpeakersData = [
     mastodon: null,
   },
   {
-    id: 28,
+    id: 26,
     name: 'Sylvester Hester',
     email: null,
     avatar:
@@ -667,7 +667,7 @@ export const SpeakersData = [
     mastodon: null,
   },
   {
-    id: 29,
+    id: 27,
     name: 'Justin Turk',
     email: null,
     avatar:
@@ -693,7 +693,7 @@ export const SpeakersData = [
     mastodon: null,
   },
   {
-    id: 30,
+    id: 28,
     name: 'Will Hill',
     email: null,
     avatar:
@@ -719,7 +719,7 @@ export const SpeakersData = [
     mastodon: null,
   },
   {
-    id: 31,
+    id: 29,
     name: 'Tracie Hightower',
     email: 'tracie@coflowlearning.com',
     avatar:
@@ -744,7 +744,7 @@ export const SpeakersData = [
     mastodon: null,
   },
   {
-    id: 32,
+    id: 30,
     name: 'Tinetta Wilson',
     email: 'Nettashibachi@gmail.com',
     avatar:
@@ -770,7 +770,7 @@ export const SpeakersData = [
     mastodon: null,
   },
   {
-    id: 33,
+    id: 31,
     name: 'Lawrielle West',
     email: 'info@lwestandco.com',
     avatar:
@@ -795,7 +795,7 @@ export const SpeakersData = [
     mastodon: null,
   },
   {
-    id: 34,
+    id: 32,
     name: 'Mattalynn Darden',
     email: 'christie.sullivan018@gmail.com',
     avatar:
@@ -820,7 +820,7 @@ export const SpeakersData = [
     mastodon: null,
   },
   {
-    id: 35,
+    id: 33,
     name: 'Lorrena Black',
     email: 'lorrena@sheserved.co',
     avatar:
@@ -846,7 +846,7 @@ export const SpeakersData = [
     mastodon: null,
   },
   {
-    id: 36,
+    id: 34,
     name: 'Anishma Mavuram',
     email: 'anishmareddy11@gmail.com',
     avatar:
@@ -871,7 +871,7 @@ export const SpeakersData = [
     mastodon: null,
   },
   {
-    id: 37,
+    id: 35,
     name: 'Dr. Zipporah Abla',
     email: 'zippy@zippyconsultinggroup.com',
     avatar:
@@ -897,7 +897,7 @@ export const SpeakersData = [
     mastodon: null,
   },
   {
-    id: 39,
+    id: 36,
     name: 'Pedro Garcia',
     email: '64pgarciav@gmai.com',
     avatar:
@@ -922,7 +922,7 @@ export const SpeakersData = [
     mastodon: null,
   },
   {
-    id: 40,
+    id: 37,
     name: 'Tim Bates',
     email: 'Tim@sovereignailabs.com',
     avatar:
@@ -947,7 +947,7 @@ export const SpeakersData = [
     mastodon: null,
   },
   {
-    id: 41,
+    id: 38,
     name: 'Cheryl Thompson',
     email: 'cheryl@cadia.org',
     avatar:
@@ -973,7 +973,7 @@ export const SpeakersData = [
     mastodon: null,
   },
   {
-    id: 42,
+    id: 39,
     name: 'Dr. Bernadette Atanga',
     email: 'atangabmd@gmail.com',
     avatar:
@@ -998,7 +998,7 @@ export const SpeakersData = [
     mastodon: null,
   },
   {
-    id: 44,
+    id: 40,
     name: 'Terrell McKinney',
     email: 'terrell@aarondouglas.us',
     avatar:
@@ -1023,7 +1023,7 @@ export const SpeakersData = [
     mastodon: null,
   },
   {
-    id: 45,
+    id: 41,
     name: 'Yana Grant',
     email: 'iamyanagrant@gmail.com',
     avatar:
@@ -1038,7 +1038,7 @@ export const SpeakersData = [
       title:
         'The Human Side of AI: How Data Annotation Powers Machine Learning',
       abstract: null,
-      description: `Artificial intelligence is transforming the way we connect, create, and solve problems—but behind every smart algorithm is a team of people ensuring the data is accurate, diverse, and high-quality. In this session, Bryanna Grant from Meta’s Product Data Operations team will take you behind the scenes of AI and machine learning, sharing how her work in data labeling, annotation, and quality assurance helps fuel the next generation of technology. You’ll learn: • Why high-quality, well-annotated data is the foundation of effective AI/ML systems • How teams use advanced tools and workflows to collect, label, and audit data at scale • The real-world impact of data operations on products you use every day • Career pathways and skills for breaking into the world of AI/ML data operations • This talk will introduce you to the the human side of AI and inspire you to see how Detroit’s tech talent can help shape the future of innovation.`,
+      description: `Artificial intelligence is transforming the way we connect, create, and solve problems—but behind every smart algorithm is a team of people ensuring the data is accurate, diverse, and high-quality. In this session, Yana Grant from Meta’s Product Data Operations team will take you behind the scenes of AI and machine learning, sharing how her work in data labeling, annotation, and quality assurance helps fuel the next generation of technology. You’ll learn: • Why high-quality, well-annotated data is the foundation of effective AI/ML systems • How teams use advanced tools and workflows to collect, label, and audit data at scale • The real-world impact of data operations on products you use every day • Career pathways and skills for breaking into the world of AI/ML data operations • This talk will introduce you to the the human side of AI and inspire you to see how Detroit’s tech talent can help shape the future of innovation.`,
       tags: ['In-person', 'AI Foundations'],
       track: 'AI Foundations',
       time: '15:00',
@@ -1049,7 +1049,7 @@ export const SpeakersData = [
     mastodon: null,
   },
   {
-    id: 46,
+    id: 42,
     name: 'Umelo Onyejiaka',
     email: 'umelo.onyejiaka@gmail.com',
     avatar:
@@ -1075,7 +1075,7 @@ export const SpeakersData = [
     mastodon: null,
   },
   {
-    id: 47,
+    id: 43,
     name: 'Ronald Grover',
     email: 'ronald.grover@gm.com',
     avatar:
@@ -1100,7 +1100,7 @@ export const SpeakersData = [
     mastodon: null,
   },
   {
-    id: 48,
+    id: 44,
     name: 'Saamer Mansoor',
     email: 'hello@conferencecaptioning.com',
     avatar:
@@ -1126,7 +1126,7 @@ export const SpeakersData = [
     mastodon: null,
   },
   {
-    id: 49,
+    id: 45,
     name: 'Ashley Burton-Mims',
     email: 'ashley@emeraldandrose.com',
     avatar:
