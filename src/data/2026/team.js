@@ -112,7 +112,7 @@ export const teamData = [
     `,
     organization: 'Shumunov Solutions',
     role: 'Developer',
-    commits: 100,
+    commits: 50,
     avatar: ShugmiShumunov,
   },
   {
@@ -144,7 +144,7 @@ export const teamData = [
 `,
     organization: 'Mhatre Solutions',
     role: 'Developer',
-    commits: 100,
+    commits: 90,
     avatar: SohamMhatre,
   },
   {
