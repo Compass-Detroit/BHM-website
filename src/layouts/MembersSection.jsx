@@ -28,7 +28,7 @@ const MembersSection = () => {
           who wants to learn, share, and grow with the community.
         </p>
 
-        <div className="mt-6 grid w-full grid-cols-1 gap-8 lg:grid-cols-3">
+        <div className="mt-6 grid w-full grid-cols-1 gap-8 md:grid-cols-3">
           {/* Left column — 2/3 width on desktop: Why Join + bullet points */}
           <div className="min-w-0 md:col-span-2">
             <h3 className="mb-4 font-biorhyme text-4xl text-gray-900">
