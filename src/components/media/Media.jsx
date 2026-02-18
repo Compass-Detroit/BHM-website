@@ -4,7 +4,7 @@ function Media() {
       id="media"
       className="flex flex-col justify-center bg-yellow-50 p-8 py-24 sm:px-10 md:px-14 lg:px-16"
     >
-      <h2 className="w-full text-center font-biorhyme text-4xl text-black md:text-5xl lg:text-6xl">
+      <h2 className="w-full text-center font-biorhyme text-4xl text-bhm-neutral-900 md:text-4xl lg:text-5xl">
         Media
       </h2>
 

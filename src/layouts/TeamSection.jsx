@@ -77,7 +77,7 @@ const TeamSection = ({ teamData, year }) => {
     >
       <SectionSkipLink href="#page-footer">Skip to footer</SectionSkipLink>
       <div className="flex w-full justify-center pt-0">
-        <h2 className="mb-4 w-full text-center font-biorhyme text-4xl text-black md:mb-6 md:text-5xl lg:text-6xl">
+        <h2 className="mb-4 w-full text-center font-biorhyme text-5xl text-bhm-neutral-900 md:mb-6 md:text-5xl lg:text-6xl">
           {year ? `${year} ` : ''}Leadership Team
         </h2>
         <img
@@ -100,7 +100,7 @@ const TeamSection = ({ teamData, year }) => {
       </div>
 
       <div className="">
-        <div className="mx-auto max-w-7xl px-6 lg:px-8">
+        <div className="mx-auto max-w-7xl lg:px-8">
           <ul className="mx-auto mt-20 grid max-w-2xl grid-cols-1 gap-x-8 gap-y-16 text-center  lg:mx-0 lg:max-w-none lg:grid-cols-2 xl:grid-cols-3">
             {sortedTeamData.map((dev) => {
               // Build ribbon class name - eslint-disable needed for dynamic class

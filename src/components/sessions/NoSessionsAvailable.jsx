@@ -10,7 +10,7 @@ const NoSessionsAvailable = ({ currentSession }) => {
             <FaClock className="size-12 text-white" aria-hidden="true" />
           </div>
         </div>
-        <h3 className="mb-2 text-2xl font-bold text-gray-900 dark:text-white">
+        <h3 className="mb-2 text-4xl font-bold text-gray-900 dark:text-white">
           Coming Soon!
         </h3>
         <p className="mb-4 text-lg text-gray-600 dark:text-gray-200">

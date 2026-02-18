@@ -468,7 +468,9 @@ function SpeakerDetails({
               className="rounded-2xl bg-gradient-to-br from-blue-50 to-sky-50 p-6"
               style={{ border: `3px solid ${trackTheme.focusColor}` }}
             >
-              <h2 className="mb-4 text-xl font-bold text-gray-900">Session</h2>
+              <h2 className="mb-4 text-4xl text-bhm-neutral-900 lg:text-5xl">
+                Session
+              </h2>
 
               {sessionTitle && (
                 <div className="mb-4 rounded-xl bg-white p-4 shadow-sm">

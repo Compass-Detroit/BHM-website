@@ -83,7 +83,7 @@ const PartnersSection = ({ partnersData = {}, year }) => {
         Skip partners section
       </SectionSkipLink>
       <div className="relative w-full pt-0">
-        <h2 className="w-full text-center font-biorhyme text-4xl text-black md:text-5xl lg:text-6xl">
+        <h2 className="w-full text-center font-biorhyme text-5xl text-bhm-neutral-900 md:text-5xl lg:text-6xl">
           {year ? `${year} ` : ''}Partners
         </h2>
         <img

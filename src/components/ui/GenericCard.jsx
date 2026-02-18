@@ -52,7 +52,7 @@ const GenericCard = ({
 
         <div className="px-6 pb-6 pt-4 text-center">
           {name && (
-            <h3 className="mb-1 line-clamp-2 text-lg font-semibold text-gray-900 dark:text-white">
+            <h3 className="mb-1 line-clamp-2 text-lg font-semibold text-bhm-neutral-900 dark:text-white">
               {name}
             </h3>
           )}

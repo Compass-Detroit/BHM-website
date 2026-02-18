@@ -30,7 +30,9 @@ const Yoda404 = () => {
         <h1 className="font-biorhyme text-8xl font-bold text-emerald-800">
           404
         </h1>
-        <h2 className="mt-2 text-2xl text-gray-800">Page Not Found</h2>
+        <h2 className="mt-2 text-5xl text-bhm-neutral-900 md:text-5xl lg:text-6xl">
+          Page Not Found
+        </h2>
       </div>
 
       {/* Yoda Character Container */}

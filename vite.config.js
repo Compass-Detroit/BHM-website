@@ -28,8 +28,17 @@ export default defineConfig({
     }),
     react(),
   ],
+  // route based code splitting
   build: {
     sourcemap: true,
+    rollupOptions: {
+      output: {
+        manualChunks: {
+          'react-vendor': ['react', 'react-dom', 'react-router-dom'],
+        },
+      },
+    },
+    chunkSizeWarningLimit: 600,
   },
   base: './',
 })
