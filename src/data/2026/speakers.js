@@ -1,10 +1,53 @@
+import WScottRichardson from './assets/images/speakers/W.ScottRichardson.webp'
+import JennaRitten from './assets/images/speakers/JennaRitten.webp'
+import BreonaClawson from './assets/images/speakers/BreonaClawson.webp'
+import JCEscalante from './assets/images/speakers/JCEscalante.webp'
+import IdaByrdHill from './assets/images/speakers/IdaByrd-Hill.webp'
+import AnthonyJohnson from './assets/images/speakers/AnthonyJohnson.webp'
+import LanasiaAngelina from './assets/images/speakers/LanasiaAngelina.webp'
+import PriyalSheth from './assets/images/speakers/PriyalSheth.webp'
+import NathanielCook from './assets/images/speakers/NathanielCook.webp'
+import DanielEasterly from './assets/images/speakers/DanielEasterly.webp'
+import LynnHakim from './assets/images/speakers/LynnHakim.webp'
+import MerlindaLorianeSewavi from './assets/images/speakers/Merlinda-LorianeSewavi.webp'
+import GinaGrant from './assets/images/speakers/GinaGrant.webp'
+import HafeezJimoh from './assets/images/speakers/HafeezJimoh.webp'
+import WinstonRoberts from './assets/images/speakers/WinstonRoberts.webp'
+import TabiceWard from './assets/images/speakers/TabiceWard.webp'
+import TerrellMcKinney from './assets/images/speakers/TerrellMcKinney.webp'
+import DeanHendricks from './assets/images/speakers/DeanHendricks.webp'
+import WilliamBowen from './assets/images/speakers/WilliamBowen.webp'
+import TatianaJackson from './assets/images/speakers/TatianaJackson.webp'
+import DesmondBakerJr from './assets/images/speakers/DesmondBakerJr.webp'
+import AngelaRichardson from './assets/images/speakers/AngelaRichardson.webp'
+import SylvesterHester from './assets/images/speakers/SylvesterHester.webp'
+import JustinTurk from './assets/images/speakers/JustinTurk.webp'
+import WillHill from './assets/images/speakers/WillHill.webp'
+import TracieHightower from './assets/images/speakers/TracieHightower.webp'
+import TinettaWilson from './assets/images/speakers/TinettaWilson.webp'
+import LawrielleWest from './assets/images/speakers/LawrielleWest.webp'
+import MattalynnDarden from './assets/images/speakers/MattalynnDarden.webp'
+import LorrenaBlack from './assets/images/speakers/LorrenaBlack.webp'
+import AnishmaMavuram from './assets/images/speakers/AnishmaMavuram.webp'
+import PedroGarcia from './assets/images/speakers/PedroGarcia.webp'
+import TimBates from './assets/images/speakers/TimBates.webp'
+import CherylThompson from './assets/images/speakers/CherylThompson.webp'
+import YanaGrant from './assets/images/speakers/YanaGrant.webp'
+import UmeloOnyejiaka from './assets/images/speakers/UmeloOnyejiaka.webp'
+import RonaldGrover from './assets/images/speakers/RonaldGrover.webp'
+import SaamerMansoor from './assets/images/speakers/SaamerMansoor.webp'
+import UdayBhowal from './assets/images/speakers/UdayBhowal.webp'
+import AshleyBurton from './assets/images/speakers/AshleyBurton.webp'
+import BernadetteAtanga from './assets/images/speakers/BernadetteAtanga.webp'
+import ZipporahAbla from './assets/images/speakers/ZipporahAbla.webp'
+import StevenBenyard from './assets/images/speakers/StevenBenyard.webp'
+
 export const SpeakersData = [
   {
     id: 1,
     name: 'W. Scott Richardson',
     email: 'zurielseven@gmail.com',
-    avatar:
-      'https://res.cloudinary.com/startup-grind/image/upload/c_fill,dpr_2,f_auto,g_face,h_200,q_auto:good,w_200/v1/gcs/platform-data-goog/events/W.ScottRichardson.jpg',
+    avatar: WScottRichardson,
     bio: `W. Scott Richardson is a Senior Specialist in Training Development for Altair Engineering with a focus on digital simulation solvers for structural analysis and optimization. Scott also has professional experience with Altair in application engineer and product design roles for aerospace and defense, automotive, and general consumer products. Scott is a co-founder of ABERN, Altair's Black Employee Resource Network and currently serves as the ERG's Community Outreach chair and a member of ABERN's global steering committee. He has a passion for developing STEM courses and experiences for students that strengthen and support them in their STEM-related career goals..`,
     twitter: null,
     linkedIn: 'https://www.linkedin.com/in/zurielseven',
@@ -29,8 +72,7 @@ export const SpeakersData = [
     id: 2,
     name: 'Uday Bhowal',
     email: 'udayshankar.bhowal@evernorth.com',
-    avatar:
-      'https://res.cloudinary.com/startup-grind/image/upload/c_fill,dpr_2,f_auto,g_face,h_200,q_auto:good,w_200/v1/gcs/platform-data-goog/events/UdayShankarBhowal_64QWlut.png',
+    avatar: UdayBhowal,
     bio: `I have over 7 years of experience in deploying, managing and automating in various data technology infrastructures involving AWS, Github, Terraform, Python, Visual Basics, Open AI/Azure AI gateways, MCPs, Agentic AI development, Data Visualization, and more. I worked with a multitude of industries naming telecommunication, healthcare tech, education and sustainability.`,
     twitter: null,
     linkedIn: 'https://www.linkedin.com/in/uday-shankar-40usb92219',
@@ -54,8 +96,7 @@ export const SpeakersData = [
     id: 3,
     name: 'Jenna Ritten',
     email: 'jritten@umich.edu',
-    avatar:
-      'https://res.cloudinary.com/startup-grind/image/upload/c_fill,dpr_2,f_auto,g_face,h_200,q_auto:good,w_200/v1/gcs/platform-data-goog/events/WTM-IWD25-ProfileAvatar-jritten_JCZNXPi.png',
+    avatar: JennaRitten,
     bio: `Jenna is the visionary behind Detroit's Innovation Summit series and Founding Executive Director of Compass (Collective of Minority Professionals and STEAM Societies), the organization bringing together Michigan's diverse tech talent to combat brain drain and create local opportunities. As Chief Developer Advocate & Architect at IBM Research, she leads IBM's technical community while scaling their global developer ecosystem from 2 million to 9 million members.A cornerstone of Michigan's tech renaissance, Jenna serves as Co-Leader of Google Developer Group Detroit, lead organizer of Michigan DevFest (1,000+ attendees), and board member of Automation Workz. As a local leader in Michigan's tech ecosystem since 2018, she pioneered hackathon culture in the region by introducing the first hackathons to both the AfroTech Conference in 2023 and Michigan DevFest in 2025, creating hands-on opportunities for developers to showcase their skills and solve real-world challenges.Through Compass' partnerships with NSBE Detroit, SHPE Detroit, IBM, Google, DTE Energy, and other leading organizations, Jenna is building bridges between corporate innovation and community empowerment. Her mission: ensuring Michigan's next generation of Black technologists not only have opportunities to excel but can do so without leaving the state they call home.Connect with Jenna to learn how Compass is transforming Michigan's tech ecosystem, one community at a time.`,
     twitter: 'jritten',
     linkedIn: 'https://www.linkedin.com/in/jritten/',
@@ -79,8 +120,7 @@ export const SpeakersData = [
     id: 4,
     name: 'Breona Clawson',
     email: 'breona@eloquentdigitalmarketing.net',
-    avatar:
-      'https://res.cloudinary.com/startup-grind/image/upload/c_fill,dpr_2,f_auto,g_face,h_200,q_auto:good,w_200/v1/gcs/platform-data-goog/events/BreonaClawson_qkiVlqC.jpg',
+    avatar: BreonaClawson,
     bio: `Breona Clawson is the Founder of Eloquent Digital Marketing, a systems-first digital marketing and operations agency based in Metro Detroit. With over six years of experience supporting entrepreneurs, nonprofits, and community-driven organizations, she specializes in helping non-technical professionals simplify digital tools, streamline workflows, and build sustainable systems without burnout. Breona is also a community builder, workshop facilitator, and speaker who regularly leads sessions on digital tools, AI-assisted workflows, personal branding, and operational clarity. Her work sits at the intersection of technology, accessibility, and real-world application — translating complex tools into practical, everyday use.`,
     twitter: null,
     linkedIn: 'https://www.linkedin.com/in/breonaclawson',
@@ -104,8 +144,7 @@ export const SpeakersData = [
     id: 5,
     name: 'JC Escalante',
     email: 'jcskalant@gmail.com',
-    avatar:
-      'https://res.cloudinary.com/startup-grind/image/upload/c_fill,dpr_2,f_auto,g_face,h_200,q_auto:good,w_200/v1/gcs/platform-data-goog/events/JCEscalante_yRkoyPp.png',
+    avatar: JCEscalante,
     bio: `C Escalante is a Technology Product Manager based in Chicago, specializing in building AI-enabled products for the Insights & Analytics industry. His focus is on the practical application of AI—helping organizations accelerate their path towards actionable insights. With a background in deploying AI-enabled solutions globally and sharing his insights at industry events like Google Cloud Next, Michigan DevFest, and Google Cloud Next extended he is passionate about demystifying "frontier models" and Generative AI for non-technical users and empowering professionals to adopt AI tools with safety and confidence.`,
     twitter: null,
     linkedIn: 'https://www.linkedin.com/in/jcskalant',
@@ -129,8 +168,7 @@ export const SpeakersData = [
     id: 6,
     name: 'Ida Byrd-Hill',
     email: 'ida@autoworkz.org',
-    avatar:
-      'https://res.cloudinary.com/startup-grind/image/upload/c_fill,dpr_2,f_auto,g_face,h_200,q_auto:good,w_200/v1/gcs/platform-data-goog/events/IdaByrd-Hill_bAb9x65.png',
+    avatar: IdaByrdHill,
     bio: `Ida Byrd-Hill, MBA, catapulted from a roach-infested Flint housing project to CEO of Automation Workz, a behavior insights firm that engineers corporate revenue and profits increases through culture audits, executive coaching and training of 17,000+ front-liners in AI/ Machine learning, cybersecurity, Data Analytics, IoT and Network engineering. Ida is best known for increasing Dr. Bronner’s revenue 45% over 3 years, catapulting HR Manager to VP, HR and corporate board member. Prior to her death, Ida's daughter, Karen Hill requested her MOM to share her gift - ability explain any complicated subject to a 5th grade, with the world.Ida Byrd-Hill is a graduate of the University of Michigan - Ann Arbor with a BA, Economics and Jack Welch Management Institute with an MBA Strategy/ People Management. Ida has 30 years business experience in strategy, business development/sales, wealth management, people management/HR, executive search, government relations, diversity, inclusion, and equity, data analysis, and programmer.Ida Byrd-Hill is a member of Detroit Regional Chamber of Commerce CEO Talent Council, SHRM, Society of Automotive Analysts and Holon IQ/ BCG AI & Digital Skills Leadership Council.Ida is the author of 9 books, including Invisible Talent Market: Solving the Talent Shortage Without Outsourcing and Visas and newly released, Culture Re-Wired: Unleash Your Inner AI CEO. In her spare time, Ida lost 58 lbs, nurturing her addiction to pilates, video games and philosophical debates with her son and CTO, Kevin Hill.`,
     twitter: null,
     linkedIn: 'https://www.linkedin.com/in/idabyrdhill',
@@ -155,8 +193,7 @@ export const SpeakersData = [
     id: 7,
     name: 'Anthony Johnson',
     email: 'awljohnson2@gmail.com',
-    avatar:
-      'https://res.cloudinary.com/startup-grind/image/upload/c_fill,dpr_2,f_auto,g_face,h_200,q_auto:good,w_200/v1/gcs/platform-data-goog/events/AnthonyJohnson_quBiAOM.jpeg',
+    avatar: AnthonyJohnson,
     bio: `Coach Ant (Anthony Johnson) is a youth development leader, professional speaker, and the Founder and President of the Empower Youth Development League (EYDL), a Detroit-based organization dedicated to expanding access, opportunity, and pathways for middle and high school students across Metro Detroit.With a background in leadership development, workforce readiness, and community-centered innovation, Coach Ant designs programs that bridge education, technology, and real-world application.Through EYDL’s flagship Tech Tuesday initiative, the program equips youth with digital literacy, emerging technology skills, and innovation mindsets aligned with Detroit’s evolving economy.In recognition of Black History Month, Coach Ant’s leadership advances Detroit’s legacy of Black innovation by ensuring the next generation is not only prepared to participate in the innovation ecosystem, but positioned to lead, build, and sustain it through scalable, community-driven public-private collaboration.Known for his engaging, purpose-driven approach, Coach Ant challenges communities to move from intention to action; investing early in youth as the next generation of innovators, leaders, and creators shaping Detroit’s future.`,
     twitter: null,
     linkedIn: ' https://www.linkedin.com/in/anthony-w-johnson-012668348',
@@ -181,8 +218,7 @@ export const SpeakersData = [
     id: 8,
     name: 'Lanasia Angelina',
     email: 'riseandbegreat@gmail.com',
-    avatar:
-      'https://res.cloudinary.com/startup-grind/image/upload/c_fill,dpr_2,f_auto,g_face,h_200,q_auto:good,w_200/v1/gcs/platform-data-goog/events/LanasiaAngelina_wEiJmXo.png',
+    avatar: LanasiaAngelina,
     bio: `Lanasia Angelina is a best-selling author, dynamic speaker, certified Life & Business Coach, and trusted brand consultant known for helping powerhouse leaders step into their next level of authority with clarity, confidence, and impact. With a deep specialization in mindset transformation, she equips visionary women, entrepreneurs, and emerging thought leaders to align with purpose, break through internal barriers, and lead boldly from within.Through her signature coaching frameworks and purpose-driven methodology, Lanasia empowers clients to unlock their authentic voice, build mission-aligned brands, and design lives and businesses that are rooted in legacy, leadership, and lasting impact. Her bold yet soulful approach has helped thousands evolve spiritually, professionally, and personally—redefining what success looks like from the inside out.`,
     twitter: null,
     linkedIn: 'https://www.linkedin.com/in/lanasia-angelina-664a45b1',
@@ -206,8 +242,7 @@ export const SpeakersData = [
     id: 9,
     name: 'Priyal Sheth',
     email: 'pnsheth@umich.edu',
-    avatar:
-      'https://res.cloudinary.com/startup-grind/image/upload/c_fill,dpr_2,f_auto,g_face,h_200,q_auto:good,w_200/v1/gcs/platform-data-goog/events/PriyalSheth_XgiZj9r.png',
+    avatar: PriyalSheth,
     bio: `Priyal Sheth is a robotics software engineer specializing in autonomous systems for both ground vehicles and drones. He currently works at Torc Robotics and has built perception, planning, and control systems for production autonomous vehicles as well as high-speed, fully autonomous race cars competing in the Abu Dhabi Autonomous Racing League. With a background in Computer Science and Robotics from the University of Michigan and a certificate from MIT’s Innovation & Entrepreneurship Bootcamp, Priyal combines hands-on engineering expertise with a passion for sharing practical lessons from building autonomy in the real world. His work emphasizes system-level thinking, real-world challenges, and translating complex technology into actionable insights for engineers, innovators, and entrepreneurs.`,
     twitter: null,
     linkedIn: 'https://www.linkedin.com/in/priyalsheth/',
@@ -231,8 +266,7 @@ export const SpeakersData = [
     id: 10,
     name: 'Nathaniel Cook',
     email: 'greaterlakehousellc.beta@gmail.com',
-    avatar:
-      'https://res.cloudinary.com/startup-grind/image/upload/c_fill,dpr_2,f_auto,g_face,h_200,q_auto:good,w_200/v1/gcs/platform-data-goog/events/NathanielCook_Iab1qJt.jpg',
+    avatar: NathanielCook,
     bio: `Nathaniel Cook is a self-taught Software Engineer previously Finys and the founder of Greater Lakehouse LLC. With a focus on building scalable software solutions, Nathaniel is equally passionate about the human infrastructure of technology. He believes that the strongest code is written by developers who feel supported by their community. Based in the Detroit area, he advocates for early-career developers and works to bridge the gap between technical learning and professional networking.`,
     twitter: null,
     linkedIn: 'https://www.linkedin.com/in/nathanielcook3',
@@ -257,8 +291,7 @@ export const SpeakersData = [
     id: 11,
     name: 'Daniel Easterly',
     email: 'info@40AcresApp.com',
-    avatar:
-      'https://res.cloudinary.com/startup-grind/image/upload/c_fill,dpr_2,f_auto,g_face,h_200,q_auto:good,w_200/v1/gcs/platform-data-goog/events/DanielEasterly%2520_IIRyCZ4.png',
+    avatar: DanielEasterly,
     bio: `Daniel Easterly is a Detroit-based technologist, urban development strategist, and founder of 40 Acres App®, a platform building the infrastructure for community-owned real estate and incentivized urban development. His work sits at the intersection of blockchain, AI, education, and land use—focusing on turning vacant lots into income-producing assets owned by residents, churches, nonprofits, and small businesses. Daniel has led pilots, workshops, and public sessions across Detroit centered on digital ownership, workforce pathways, and equitable development.`,
     twitter: null,
     linkedIn: 'https://www.linkedin.com/in/danielqeasterly',
@@ -283,8 +316,7 @@ export const SpeakersData = [
     id: 12,
     name: 'Lynn Hakim',
     email: 'hk9794@wayne.edu',
-    avatar:
-      'https://res.cloudinary.com/startup-grind/image/upload/c_fill,dpr_2,f_auto,g_face,h_200,q_auto:good,w_200/v1/gcs/platform-data-goog/events/LynnHakim_dNvCrjd.jpg',
+    avatar: LynnHakim,
     bio: `I am a senior at Wayne State University majoring in Computer Science and Mathematics. I currently work as a Software Developer Intern at General Dynamics Information Technology (GDIT), where I contribute to software development projects in a professional, team-based environment. On campus, I serve on the board of the Society of Computer Developers at WSU, helping organize technical workshops and social events for students. I am also a member of a mathematics research group focused on group theory and homological algebra. Outside of the university, I am involved with LebNet Michigan, a nonprofit organization that connects Lebanese tech professionals, students, and entrepreneurs across the state.`,
     twitter: null,
     linkedIn: 'https://www.linkedin.com/in/lynn-hakim-3b30ba25a/',
@@ -309,8 +341,7 @@ export const SpeakersData = [
     id: 13,
     name: 'Merlinda-Loriane Sewavi',
     email: 'merlinda@syntheiacollective.com',
-    avatar:
-      'https://res.cloudinary.com/startup-grind/image/upload/c_fill,dpr_2,f_auto,g_face,h_200,q_auto:good,w_200/v1/gcs/platform-data-goog/events/Merlinda-LorianeSewavi_Nqgy90p.jpg',
+    avatar: MerlindaLorianeSewavi,
     bio: `Merlinda-Loriane Sewavi is a translational systems engineer with a cross-disciplinary foundation spanning human biology, microbiology, and chemical biology. A graduate of Michigan State University’s Honors College with dual B.S. degrees and minors in Health Promotion and Bioethics, she later earned her M.S. in Chemical Biology of Cancer from the University of Michigan–Ann Arbor, where she was both a Rackham Merit Fellow and a National GEM Consortium Fellow.Her research career includes appointments at the Institute for Quantitative Health Science & Engineering (MSU IQ), Lawrence Livermore National Laboratory, and Stanford University, where she served as a founding engineer on a federally funded ARPA-H cardiac moonshot. Merlinda’s work integrates iPSC engineering, multi-omic assay development, and high-fidelity cardiac modeling to build next-generation infrastructure for clinically aligned drug safety and disease insight.Alongside her technical work, Merlinda is a committed public servant dedicated to expanding access for Black students in engineering, science, and innovation. She is a member of Alpha Kappa Alpha Sorority, Inc, sits on the national alumni board of the National GEM Consortium, serves as Technical Excellence Chair for the Detroit Professionals chapter of the National Society of Black Engineers, and is a Michigan Founder Forward Fellow. Her current translational work is supported by Henry Ford Health’s Innovation Institute as she builds systems that connect community brilliance with cutting-edge biotechnological impact.`,
     twitter: null,
     linkedIn: 'http://linkedin.com/in/merlindasewavi',
@@ -335,8 +366,7 @@ export const SpeakersData = [
     id: 14,
     name: 'Gina Grant',
     email: 'gina@corekind.com',
-    avatar:
-      'https://res.cloudinary.com/startup-grind/image/upload/c_fill,dpr_2,f_auto,g_face,h_200,q_auto:good,w_200/v1/gcs/platform-data-goog/events/GinaGrant_r0IR5RS.png',
+    avatar: GinaGrant,
     bio: `Gina Grant is a distinguished educator, innovation strategist, artist, and global speaker committed to helping people navigate learning, creativity, and technological change with confidence and humanity. As the founder of CoreKind, she leads human-centered initiatives that blend ethical AI, participatory design, and strengths-based practice to make conversations about digital futures, identity, and belonging more accessible and grounded. CoreKind develops learning experiences, tools, and partnerships that help people recognize their strengths, build authentic connections, and move through uncertainty with purpose. Guided by Gina’s vision, the organization works alongside communities and institutions to ensure technology amplifies human potential and supports inclusive, meaningful change.`,
     twitter: null,
     linkedIn: 'https://www.linkedin.com/in/gina-grant-8b417b12',
@@ -361,8 +391,7 @@ export const SpeakersData = [
     id: 15,
     name: 'Hafeez Jimoh',
     email: 'jimohafeezco@gmail.com',
-    avatar:
-      'https://res.cloudinary.com/startup-grind/image/upload/c_fill,dpr_2,f_auto,g_face,h_200,q_auto:good,w_200/v1/gcs/platform-data-goog/events/HafeezJimoh_lj0FRaF.jpg',
+    avatar: HafeezJimoh,
     bio: `Hafeez is a Robotics Engineer with active research in teaching robots how to see and move. More importantly, I love to teach and break down seemingly hard concepts into simple bits for people to understand. He has led robotics labs, taught engineering students, built automation systems, and worked across robotics, analytics, and product-focused roles in industry and academia. Alongside hands-on technical work, Hafeez actively shares insights on LinkedIn and online platforms. His perspective blends real-world engineering experience with practical career strategy, focusing on how documentation, writing, and public thinking can unlock opportunities, accelerate growth, and compound professional impact over time.`,
     twitter: null,
     linkedIn: 'https://www.linkedin.com/in/jimohafeezco',
@@ -386,8 +415,7 @@ export const SpeakersData = [
     id: 16,
     name: 'Winston Roberts',
     email: 'winstonroberts@teacherinasuit.com',
-    avatar:
-      'https://res.cloudinary.com/startup-grind/image/upload/c_fill,dpr_2,f_auto,g_face,h_200,q_auto:good,w_200/v1/gcs/platform-data-goog/events/WinstonRoberts_I7fCNlZ.jpg',
+    avatar: WinstonRoberts,
     bio: `Winston Roberts is the AI Innovation Lead at Foundation Academies and founder of Teacher in a Suit, a firm delivering AI training tailored for educators.He has trained over 1,000 educators nationwide and delivered keynotes and workshops at conferences including SXSW EDU, ASU+GSV, and ISTE. His work has been featured in The Economist, Psychology Today, EdTech Magazine, and TEACH Magazine.Now in his 10th year in the classroom, Winston teaches high school financial literacy, holds a master’s in Education Entrepreneurship from the University of Pennsylvania, and is a proud graduate of Morehouse College.A devoted husband and father of two young daughters, Winston’s vision for the future of education is shaped by watching them grow up alongside the rise of AI. He is committed to ensuring no student is locked out of the future by outdated systems—and that schools reclaim their role as engines of relevance, empowerment, and innovation in an AI-driven world.`,
     twitter: null,
     linkedIn: 'https://www.linkedin.com/in/winston-roberts-74232552',
@@ -411,8 +439,7 @@ export const SpeakersData = [
     id: 17,
     name: 'Steven Benyard',
     email: null,
-    avatar:
-      'https://res.cloudinary.com/startup-grind/image/upload/c_fill,dpr_2,f_auto,g_face,h_400,q_auto:good,w_400/v1/gcs/platform-data-goog/events/1636330278309_XnRNDym.jpeg',
+    avatar: StevenBenyard,
     bio: `Steven Benyard leads DTE Energy's Electric Capital Delivery organization, overseeing critical infrastructure investments that power Southeast Michigan. With his unique blend of engineering expertise and business acumen, he champions innovative approaches to modernizing the electric grid while ensuring reliable service for 2.3 million customers.`,
     twitter: null,
     linkedIn:
@@ -434,37 +461,10 @@ export const SpeakersData = [
     mastodon: null,
   },
   {
-    id: 18,
-    name: 'Jason Kelley',
-    email: null,
-    avatar:
-      'https://res.cloudinary.com/startup-grind/image/upload/c_fill,dpr_2,f_auto,g_face,h_200,q_auto:good,w_200/v1/gcs/platform-data-goog/events/Screenshot%25202026-01-13%2520at%25203.55.27%25E2%2580%25AFPM_391DLAf.png',
-    bio: `Jason Kelley drives IBM's global strategy for core business applications, partnering with enterprises worldwide to harness the power of AI and hybrid cloud technologies. His leadership focuses on helping organizations transform their operations through intelligent automation and data-driven insights.`,
-    twitter: null,
-    linkedIn: 'https://www.linkedin.com/in/jason-kelley-599330/',
-    github: null,
-    organization: 'IBM',
-    position: 'Global Head, Managing Partner - Core Business Applications',
-    session: {
-      title:
-        'Powering Detroits Future: AI-Driven Energy Innovation Fireside Chat with DTE x IBM',
-      abstract: null,
-      description: `Innovation Summit Keynote - Powering Detroit's Future: AI-Driven Energy Innovation Fireside Chat with DTE x IBM Join us for an inspiring keynote conversation between two visionary Black leaders transforming how Michigan powers its future. Steven Benyard, Vice President of Electric Capital Delivery at DTE Energy, and Jason Kelley, Global Head and Managing Partner of Core Business Applications at IBM, will explore how artificial intelligence is revolutionizing the energy sector while creating unprecedented opportunities for Michigan's communities. In this dynamic fireside chat, these executives will share insights on: - The AI Revolution in Energy: How machine learning and predictive analytics are creating smarter, more resilient power grids that better serve Detroit's diverse neighborhoods - Equity Through Innovation: Ensuring AI-powered energy solutions address historical disparities and create economic opportunities in underserved communities - Climate Action Meets Community Impact: Leveraging AI to accelerate Michigan's clean energy transition while keeping energy affordable and accessible - Building Tomorrow's Workforce: How the DTE and IBM are creating pathways for Michigan's talent to lead in the AI-energy economy - From Vision to Reality: Real-world examples of AI applications already improving energy reliability, reducing outages, and empowering customers across Southeast Michigan Drawing from their extensive experience leading transformational initiatives at two of the industry's most influential companies, Benyard and Kelley will offer a rare glimpse into the future of energy infrastructure, the role of Black leadership in driving innovation, and why Michigan is uniquely positioned to become a global model for equitable, AI-powered energy systems. This conversation is essential for technology professionals, energy sector leaders, students, and anyone passionate about how emerging technologies can create a more sustainable and equitable future for our communities.`,
-      tags: ['In-person', 'Level Up', 'Virtual'],
-      track: 'Level Up',
-      time: '09:00',
-      room: null,
-    },
-    isWTM: false,
-    isGDE: false,
-    mastodon: null,
-  },
-  {
     id: 19,
     name: 'Tabice Ward',
     email: null,
-    avatar:
-      'https://res.cloudinary.com/startup-grind/image/upload/c_fill,dpr_2,f_auto,g_face,h_200,q_auto:good,w_200/v1/gcs/platform-data-goog/events/TabiceWard_wcYcB06.jpeg',
+    avatar: TabiceWard,
     bio: `Tabice Ward serves as the Chief Information Officer at Walker-Miller Energy Services where she leads the strategic direction of the IT organization. As a technology executive, she focuses on helping organizations develop innovative and transformative technology strategies that drive business enablement, enhance security, and reduce cyber risk.With 35+ years of experience in the energy sector, she possesses deep expertise in technology management, cybersecurity operations, cyber risk management, physical security, business continuity, regulatory compliance, and security policy. She shares her knowledge as an adjunct lecturer at the University of Detroit Mercy, helping develop the next generation of technology leaders. Additionally, she is an Executive Advisor for Hush, a cyber tech startup.Tabice has held key leadership positions, including Executive Technology Strategist at ChoiceTel, Area Vice President of Enterprise Security at Xcel Energy and IT Director/CISO at DTE Energy, where she led the strategic direction and transformation of cybersecurity programs. In these roles, she partnered with business leaders to develop and execute comprehensive technology and cybersecurity strategies across IT and ICS/OT environments.`,
     twitter: null,
     linkedIn: 'https://www.linkedin.com/in/tabiceward',
@@ -489,8 +489,7 @@ export const SpeakersData = [
     id: 20,
     name: 'Terrell McKinney',
     email: 'terrell@aarondouglas.us',
-    avatar:
-      'https://res.cloudinary.com/startup-grind/image/upload/c_fill,dpr_2,f_auto,g_face,h_200,q_auto:good,w_200/v1/gcs/platform-data-goog/events/TerrellMcKinney_6M3kjvV.png',
+    avatar: TerrellMcKinney,
     bio: `Terrell McKinney is an educator, software engineer, and community builder committed to helping people navigate technology, work, and change with clarity and confidence. With a background spanning youth education, international teaching, curriculum leadership, and software engineering, his work focuses on making complex systems—AI, technical interviews, and modern careers—more human and accessible. Through his practice, Aaron Douglas LLC, and community initiatives like the Black CS Success Summit, Terrell designs learning experiences, workshops, and tools that support real people through growth, transition, and uncertainty. His approach centers care, practical skill-building, and the belief that technology should serve people—not the other way around.`,
     twitter: null,
     linkedIn: 'https://www.linkedin.com/in/terrellmckinney',
@@ -515,8 +514,7 @@ export const SpeakersData = [
     id: 21,
     name: 'Dean Hendricks',
     email: 'Dean@hendricks-foundation.org',
-    avatar:
-      'https://res.cloudinary.com/startup-grind/image/upload/c_fill,dpr_2,f_auto,g_face,h_200,q_auto:good,w_200/v1/gcs/platform-data-goog/events/DeanHendricks_BILNFa4.jpg',
+    avatar: DeanHendricks,
     bio: `To teach is to live and to live is learn. This is the motto that Dean Hendricks adopted since childhood. He grew up helping his mother feed the homeless and has pivoted that passion into dedicating his life to philanthropy. He’s a member of the Detroit Rotary Club, and a proud Phi Theta Kappa member. At the beginning of 2022 He founded the Hendricks Foundation – helping students cross the digital divide worldwide. Today the Hendricks Foundation is now teaching students how to build leverage locally hosted AI’s to help them learn how to be ready for the new workforce so that no one gets left behind.`,
     twitter: null,
     linkedIn: 'https://www.linkedin.com/in/dean-hendricks-b64b52241',
@@ -540,8 +538,7 @@ export const SpeakersData = [
     id: 22,
     name: 'William Bowen',
     email: 'wbowen05@gmail.com',
-    avatar:
-      'https://res.cloudinary.com/startup-grind/image/upload/c_fill,dpr_2,f_auto,g_face,h_200,q_auto:good,w_200/v1/gcs/platform-data-goog/events/WilliamBowen_7oqh2cM.jpeg',
+    avatar: WilliamBowen,
     bio: `William Bowen is an IT Specialist with the US Army, where he focuses on supporting secure, reliable desktop environments and helping teams adapt to evolving technologies. Drawing on years of hands-on experience with operating systems, end-user support, and infrastructure modernization, William is passionate about making technical change approachable for everyone. Outside of his military role, he mentors colleagues and community members on practical ways to transition to Linux and other alternative operating systems, emphasizing clear communication, step-by-step guidance, and long-term sustainability. He brings that same mindset to personal wellness, advocating for small, consistent habits that lead to meaningful change over time.`,
     twitter: null,
     linkedIn: 'https://www.linkedin.com/in/william-bowen-a7216610/',
@@ -565,8 +562,7 @@ export const SpeakersData = [
     id: 23,
     name: 'Tatiana Jackson',
     email: 'tatiana@therealculture.com',
-    avatar:
-      'https://res.cloudinary.com/startup-grind/image/upload/c_fill,dpr_2,f_auto,g_face,h_200,q_auto:good,w_200/v1/gcs/platform-data-goog/events/TatianaJackson_eVSilG5.jpg',
+    avatar: TatianaJackson,
     bio: `Tatiana Simone Jackson is an award-winning multimedia marketing leader with over a decade of experience shaping culturally driven campaigns that convert attention into impact.As the Founder of Real Culture, a Black woman–owned media and strategy company, she specializes in bridging storytelling, digital strategy, and emerging technology to help brands and communities grow with intention.Tatiana’s work spans national and global brands including Stellantis, Disney+, and Blumhouse, with campaigns recognized by MediaPost and the American Advertising Federation, including a Gold ADDY Award. Her strategies have generated more than 10+ million impressions across digital campaigns, syndicated journalism, and social platforms.She is also a published syndicated writer whose work has appeared in the Michigan Chronicle and BlackPressUSA.With a background in Behavioral Sciences from the University of Michigan-Dearborn, Tatiana brings a human-centered lens to marketing, focusing on audience psychology, cultural relevance, and sustainable growth. Through her speaking and workshops, she equips entrepreneurs, creatives, and organizations with practical tools to turn ideas into scalable concepts without losing authenticity.Tatiana is passionate about helping Detroit-based innovators and small businesses build visibility, credibility, and long-term impact in a rapidly evolving digital landscape.`,
     twitter: null,
     linkedIn: 'linkedin.com/in/tatiana-simone-jackson',
@@ -591,8 +587,7 @@ export const SpeakersData = [
     id: 24,
     name: 'Desmond Baker Jr',
     email: 'desibaker54@gmail.com',
-    avatar:
-      'https://res.cloudinary.com/startup-grind/image/upload/c_fill,dpr_2,f_auto,g_face,h_200,q_auto:good,w_200/v1/gcs/platform-data-goog/events/DesmondBakerJr_JVHcdE9.jpg',
+    avatar: DesmondBakerJr,
     bio: `Desi Baker is the founder of Digital Alchemy, a creative technology community teaching everyday people how to build real apps using AI — no CS degree required. A Maywood native with 10 years in creative education, Desi coined "vibe coding" as a framework for creative professionals to go from idea to deployed application using AI-assisted development. He specializes in Google's AI ecosystem and is on a mission to close the digital divide one builder at a time. Build it. Commit it. Deploy it. Repeat.`,
     twitter: null,
     linkedIn: 'https://www.linkedin.com/in/desmond-baker-jr-896892103',
@@ -617,8 +612,7 @@ export const SpeakersData = [
     id: 25,
     name: 'Angela Richardson',
     email: 'angela.rene.richardson@gmail.com',
-    avatar:
-      'https://res.cloudinary.com/startup-grind/image/upload/c_fill,dpr_2,f_auto,g_face,h_200,q_auto:good,w_200/v1/gcs/platform-data-goog/events/AngelaRichardson_ZPsa0YW.jpeg',
+    avatar: AngelaRichardson,
     bio: `Angela Richardson, CAE, is a strategic governance and programs executive with more than 20 years of experience leading national industry councils, executive peer networks, and board-driven organizations. She has facilitated high-trust national conversations for Fortune 1000 ESG, CSR, and social media executives, guiding dialogue on accountability, reputational risk, and long-term institutional impact. She currently directs three national councils within the automotive sector, partnering with volunteer leaders to align strategy, strengthen member engagement, and shape long-range priorities.Angela brings a governance and executive accountability perspective to emerging technology, engaging with AI and cybersecurity through the lens of institutional risk and long-term leadership responsibility. A member of the Michigan Council of Women in Technology and recent graduate of its Reignite! program, she is committed to ensuring mid-career women have a seat at the table shaping the future of tech.`,
     twitter: null,
     linkedIn: 'https://www.linkedin.com/in/angelamrichardson',
@@ -643,8 +637,7 @@ export const SpeakersData = [
     id: 26,
     name: 'Sylvester Hester',
     email: null,
-    avatar:
-      'https://res.cloudinary.com/startup-grind/image/upload/c_fill,dpr_2,f_auto,g_face,h_200,q_auto:good,w_200/v1/gcs/platform-data-goog/events/SylvesterHester.jpg',
+    avatar: SylvesterHester,
     bio: `Mr. Hester is President & CEO of LM Manufacturing, LLC. Established in 2019, LM Manufacturing, LLC is a joint venture between LAN Manufacturing Group (LMG) and Magna Seating North America. LMG is wholly owned by Sylvester Hester, a 30-year veteran automotive, aerospace supply chain executive with substantial experience in manufacturing, operations, logistics, and business development.Hester holds a Master of Science in Administration degree, with concentration in leadership, from Central Michigan University, and a Bachelor of Science in Plastics Engineering with emphasis in polymer chemistry from Ferris State University. `,
     twitter: null,
     linkedIn: 'https://www.linkedin.com/in/sylvesterhester',
@@ -669,8 +662,7 @@ export const SpeakersData = [
     id: 27,
     name: 'Justin Turk',
     email: null,
-    avatar:
-      'https://res.cloudinary.com/startup-grind/image/upload/c_fill,dpr_2,f_auto,g_face,h_200,q_auto:good,w_200/v1/gcs/platform-data-goog/events/1751053281996_sWP1m9C.jpeg',
+    avatar: JustinTurk,
     bio: null,
     twitter: null,
     linkedIn: 'https://www.linkedin.com/in/justin-turk-28384a5',
@@ -695,8 +687,7 @@ export const SpeakersData = [
     id: 28,
     name: 'Will Hill',
     email: null,
-    avatar:
-      'https://res.cloudinary.com/startup-grind/image/upload/c_fill,dpr_2,f_auto,g_face,h_200,q_auto:good,w_200/v1/gcs/platform-data-goog/events/WillHill_eCWq1jm.jpg',
+    avatar: WillHill,
     bio: 'Mr. Hill has been a Youth Robotics Competition Team Coach since 2014. He started coaching in the F.I.R.S.T. LEGO League Jr league, then moved to the VEX IQ league for his 5th season… where his rookie team earned a trophy at a tournament out of 40+ teams and won 4th place at a separate tournament out of 30+ teams. Mr. Hill earned a B.S. in Computer Engineering from University of Illinois at Urbana-Champaign. He has over 19 years of sales & product management experience for small and large multinational electronics and software technology companies. He shares wisdom from 42 jobs since 14 years old, 24 addresses in & outside the USA, and over 100 cities visited globally.Mr. Hill created the ckingknowledge brand around the year 2000 as a personal email address. It was invented to express a deep-rooted passion for lifelong learning. Carrying this fire into becoming a parent while living as a proud nerd, he knew he needed to "show his children engineering" if he was serious about influencing them to choose engineering as a career. So, he created ckingknowledge Robotics Club in 2016; then, created ckingknowledge Institute on 2020 June 25.',
     twitter: null,
     linkedIn: 'https://www.linkedin.com/in/will-hill-a19a253',
@@ -721,8 +712,7 @@ export const SpeakersData = [
     id: 29,
     name: 'Tracie Hightower',
     email: 'tracie@coflowlearning.com',
-    avatar:
-      'https://res.cloudinary.com/startup-grind/image/upload/c_fill,dpr_2,f_auto,g_face,h_200,q_auto:good,w_200/v1/gcs/platform-data-goog/events/TracieHightower_ZReQZra.jpg',
+    avatar: TracieHightower,
     bio: 'Tracie Hightower is a strategic innovation consultant and facilitator focused on helping community-facing organizations build stamina for problem-solving, adaptive strategy, and future-ready decision-making. Her work blends innovation methods with practical tools, dashboards, and workshops which support leaders navigating complexity and rapid technological change. She is especially committed to strengthening Detroit’s social-impact ecosystem through learning experiences that convert ideas into measurable action.',
     twitter: null,
     linkedIn: 'https://www.linkedin.com/in/traciehightower',
@@ -746,8 +736,7 @@ export const SpeakersData = [
     id: 30,
     name: 'Tinetta Wilson',
     email: 'Nettashibachi@gmail.com',
-    avatar:
-      'https://res.cloudinary.com/startup-grind/image/upload/c_fill,dpr_2,f_auto,g_face,h_200,q_auto:good,w_200/v1/gcs/platform-data-goog/events/TinettaWilson_Gblg4rK.jpeg',
+    avatar: TinettaWilson,
     bio: 'Tinetta K. Wilson is a Detroit based entrepreneur, community advocate, and the owner of Netta’s Hibachi LLC, a mobile culinary business built on innovation, culture, and community empowerment. Her journey reflects what’s possible when access to the right tools meets determination and vision.Through the use of AI tools like ChatGPT, Netta has expanded her economic knowledge, strengthened her business strategy, and accelerated her growth as a founder. From understanding financial language and grant funding, to refining operations, marketing, and long term planning, AI has served as an accessible learning partner helping her make informed decisions, increase efficiency, and confidently navigate spaces traditionally out of reach for small and minority owned businesses.Today, Netta speaks about the power of technology as an equalizer, showing how beginner-friendly AI tools can support entrepreneurship, workforce development, and economic mobility. Her work centers on ensuring that everyday people, creatives, and small business owners are not left behind in the digital economy but equipped to thrive within it.',
     twitter: null,
     linkedIn: 'https://www.linkedin.com/in/tinetta-wilson-3613a8332',
@@ -772,8 +761,7 @@ export const SpeakersData = [
     id: 31,
     name: 'Lawrielle West',
     email: 'info@lwestandco.com',
-    avatar:
-      'https://res.cloudinary.com/startup-grind/image/upload/c_fill,dpr_2,f_auto,g_face,h_200,q_auto:good,w_200/v1/gcs/platform-data-goog/events/LawrielleWest_6PSUX6d.png',
+    avatar: LawrielleWest,
     bio: 'Lawrielle West is a Distinguished Professional Development Specialist, Executive Leader, and the Principal of LWest & Co., a consulting firm specializing in organizational development for nonprofits and small businesses. As the Founder of KwanzaaMe, West leads a vibrant lifestyle brand committed to celebrating and uplifting Black community, history, and culture year-round. Through creative products and purpose-driven engagement, she helps families, organizations, and communities connect while preserving heritage in meaningful and joyful ways.As the first Executive Director of the African American Cultural & Historical Museum of Washtenaw County, West stewards the strategic vision and organizational health of a vital cultural institution. Through her work at LWest & Co., she facilitates leadership development, project management, and workforce strategy, helping professionals treat their current roles as high-stakes laboratories for executive growth. Lawrielle is a sought-after speaker who empowers multi-passionate leaders to bridge the gap between individual contribution and undeniable executive authority.',
     twitter: null,
     linkedIn: 'https://www.linkedin.com/in/lawriellewest',
@@ -797,8 +785,7 @@ export const SpeakersData = [
     id: 32,
     name: 'Mattalynn Darden',
     email: 'christie.sullivan018@gmail.com',
-    avatar:
-      'https://res.cloudinary.com/startup-grind/image/upload/c_fill,dpr_2,f_auto,g_face,h_200,q_auto:good,w_200/v1/gcs/platform-data-goog/events/MattalynnDarden_hFOiLqC.jpeg',
+    avatar: MattalynnDarden,
     bio: 'Mattalynn Darden is a certified cybersecurity professional, and founder of Mattie D UC LLC, a Detroit-based cybersecurity consulting firm serving small businesses, startups, and nonprofits. She specializes in offensive security, penetration testing, and mentoring the next generation of cybersecurity professionals.An active community leader and mentor with organizations such as Black Girls Hack, Michigan Council of Women in Technology (MCWT) and Women in Cyber Security (WiCyS). Known for translating complex security concepts into clear, actionable guidance for diverse audiences.',
     twitter: null,
     linkedIn: 'https://linkedin.com/in/mattalynn-darden',
@@ -822,8 +809,7 @@ export const SpeakersData = [
     id: 33,
     name: 'Lorrena Black',
     email: 'lorrena@sheserved.co',
-    avatar:
-      'https://res.cloudinary.com/startup-grind/image/upload/c_fill,dpr_2,f_auto,g_face,h_200,q_auto:good,w_200/v1/gcs/platform-data-goog/events/LorrenaBlack_PrqtOGm.jpeg',
+    avatar: LorrenaBlack,
     bio: 'Lorrena Black is a retired U.S. Army Major, Keynote Speaker, and Workshop Presenter who interrupts the idea of Imposter Syndrome so women and veterans have the awareness and audacity to go after the roles, raises, and recognition they’ve been avoiding.As the Founder and CEO of She Served LLC, she transforms self-doubt into confidence, setbacks into resilience, and emotions into leadership power for audiences ready to step into their next level. With 25 years of honorable military service, including early years as a Human Resources Specialist and later as a Signal Officer, Lorrena brings a rare blend of lived experience, emotional intelligence expertise, and relatable storytelling. Her signature frameworks, Mission Resilience™ and the R.A.L.L.Y.™ Method, invite audiences to reframe adversity, recenter in their identity, and lead themselves and others with purpose and power.',
     twitter: null,
     linkedIn: 'https://www.linkedin.com/in/lorrenablack',
@@ -848,8 +834,7 @@ export const SpeakersData = [
     id: 34,
     name: 'Anishma Mavuram',
     email: 'anishmareddy11@gmail.com',
-    avatar:
-      'https://res.cloudinary.com/startup-grind/image/upload/c_fill,dpr_2,f_auto,g_face,h_200,q_auto:good,w_200/v1/gcs/platform-data-goog/events/AnishmaMavuram_mFhqul5.jpeg',
+    avatar: AnishmaMavuram,
     bio: "Im a software engineer with a background in Identity Governance and Administration and policy-based access control. My current work focuses on securing AI agent access—building delegation frameworks, policy engines, and security controls that enable safe human-to-agent-to-tool interactions. I work with Neo4j graphs, AuthZEN policies, MCP protocols, and OAuth2 flows to solve the trust problem in autonomous systems. I'm drawn to questions that dont have answers yet: How do we apply least-privilege to agents executing multi-step operations? How do we ensure agents never have user credentials? I've presented at the European Identity Conference (EIC) and local community events. I'm passionate about authorization, identity standards, and collaborating with the community to build the next generation of identity infrastructure—one that keeps humans safely in control.",
     twitter: null,
     linkedIn: 'https://www.linkedin.com/in/anishmareddy',
@@ -873,8 +858,7 @@ export const SpeakersData = [
     id: 35,
     name: 'Dr. Zipporah Abla',
     email: 'zippy@zippyconsultinggroup.com',
-    avatar:
-      'https://res.cloudinary.com/startup-grind/image/upload/c_fill,dpr_2,f_auto,g_face,h_200,q_auto:good,w_200/v1/gcs/platform-data-goog/events/Dr.ZipporahAbla_U2f2eb5.jpg',
+    avatar: ZipporahAbla,
     bio: "Dr. Zippy is a leadership consultant, organizational behavior professor, and founder of Zippy Consulting Group and The JOY Institute. With a Doctorate in Leadership Studies and an MBA, she specializes in translating cutting-edge happiness science into measurable business outcomes for Fortune 500 companies, government agencies, and technology organizations.As a former Dell Technologies learning leader who managed initiatives impacting thousands of employees, Dr. Zippy brings a unique blend of enterprise-scale expertise and neuroscience-backed innovation to workforce transformation. Her proprietary JOY Framework™ helps organizations leverage positive psychology and behavioral science to drive performance, retention, and innovation in fast-paced tech environments.Dr. Zippy teaches Organizational Behavior and Culture & Communication at Cleary University, and Self Leadership, Women in Leadership, and Women in Business at Baker College. Her teaching philosophy centers on the principle that learning without behavior change is just entertainment, ensuring every intervention creates real impact. She has worked extensively with diverse sectors, including healthcare, public safety, and technology, with a consistent focus on cultural competency and inclusive leadership development.Dr. Zippy's work demonstrates that happiness isn't just a feel-good concept—it's a strategic advantage that drives innovation, collaboration, and sustainable success in Michigan's growing tech ecosystem.",
     twitter: null,
     linkedIn: 'https://www.linkedin.com/in/zippyabla',
@@ -899,8 +883,7 @@ export const SpeakersData = [
     id: 36,
     name: 'Pedro Garcia',
     email: '64pgarciav@gmai.com',
-    avatar:
-      'https://res.cloudinary.com/startup-grind/image/upload/c_fill,dpr_2,f_auto,g_face,h_200,q_auto:good,w_200/v1/gcs/platform-data-goog/events/PedroGarcia_zx4yEzA.JPG',
+    avatar: PedroGarcia,
     bio: 'Product Development Engineer with 5+ years of experience in Automotive Product Development and Manufacturing Engineering. Passionate about turning ideas in to real word products.',
     twitter: null,
     linkedIn: 'www.linkedin.com/in/pedro-garcia-427843146',
@@ -924,8 +907,7 @@ export const SpeakersData = [
     id: 37,
     name: 'Tim Bates',
     email: 'Tim@sovereignailabs.com',
-    avatar:
-      'https://res.cloudinary.com/startup-grind/image/upload/c_fill,dpr_2,f_auto,g_face,h_200,q_auto:good,w_200/v1/gcs/platform-data-goog/events/TimBates_tVRe9uc.jpg',
+    avatar: TimBates,
     bio: 'Professor Bates is a veteran technologist, AI systems architect, and educator with over two decades of experience designing and governing enterprise-scale technology systems. His work focuses on responsible and applied AI, with particular emphasis on small and edge models, AI governance, and secure human-in-the-loop systems. He advises organizations as a strategic technology leader, helping them move beyond hype toward durable, auditable, and community-aligned AI solutions. A recipient of the DTE Real McCoy Award, Professor Bates is recognized for leadership, innovation, and impact at the intersection of technology, equity, and economic access.',
     twitter: null,
     linkedIn: ' https://www.linkedin.com/in/thegodfatheroftech',
@@ -949,8 +931,7 @@ export const SpeakersData = [
     id: 38,
     name: 'Cheryl Thompson',
     email: 'cheryl@cadia.org',
-    avatar:
-      'https://res.cloudinary.com/startup-grind/image/upload/c_fill,dpr_2,f_auto,g_face,h_200,q_auto:good,w_200/v1/gcs/platform-data-goog/events/CherylThompson_eaUvh5D.png',
+    avatar: CherylThompson,
     bio: 'TEDx Speaker — “Competition Breeds Excellence,” TEDx Windsor, 2019. AI Learning Lab Facilitator — 16-session series in 2026, serving hundreds of professionals across industries.Corporate Workshop Leader — AI adoption sessions for OEMs, Tier 1 suppliers, and workforce development organizations Webinar & Panel Speaker — Featured speaker on AI risk, innovation, and the human side of AI adoption with Culture Shift Team and partner organizations  Industry Experience — 40+ years in automotive (Ford Motor Company, American Axle & Manufacturing, cross-industry consulting) Hands-On AI Practitioner — 1,200+ hours learning and building with AI tools including Claude, ChatGPT, Gemini, Perplexity, and Lovable',
     twitter: null,
     linkedIn: 'https://www.linkedin.com/in/cheryl-thompson',
@@ -975,8 +956,7 @@ export const SpeakersData = [
     id: 39,
     name: 'Dr. Bernadette Atanga',
     email: 'atangabmd@gmail.com',
-    avatar:
-      'https://res.cloudinary.com/startup-grind/image/upload/c_fill,dpr_2,f_auto,g_face,h_200,q_auto:good,w_200/v1/gcs/platform-data-goog/events/Dr.BernadetteAtanga_SyR8iFB.jpg',
+    avatar: BernadetteAtanga,
     bio: 'Dr. Bernadette Atanga is a distinguished physician with over thirty years of experience in combined Internal Medicine and Pediatrics in the United States. She has spent nearly two decades serving within the U.S. Department of Veterans Affairs (VA), where she worked closely with veterans and their families and gained deep insight into how unresolved emotional trauma, chronic stress, and emotional suppression contribute to conflict, leadership strain, health breakdown, and family disruption.Dr. Atanga is a sought-after speaker, leadership coach, and the author of Beneath the Armor, a compelling book that examines how societal expectations of emotional suppression—particularly among men—negatively affect families, workplaces, and communities. Her work is especially relevant to male-dominated and high-performance environments such as technology, healthcare, and executive leadership, where pressure to perform often masks emotional strain and fuels conflict.Recognizing emotional health as a critical yet overlooked component of leadership effectiveness, Dr. Atanga empowers leaders through coaching focused on emotional mastery, self-awareness, and empathetic leadership. Drawing from her clinical background and trauma-informed approach, she equips leaders to navigate stress, improve communication, and resolve conflict in fast-paced, high-stakes environments. Through her L.E.A.D. framework, she helps organizations foster healthier cultures, stronger teams, and more sustainable leadership.Dr. Atanga brings a global perspective shaped by years living and working in the United States, Italy, Cameroon, and Britain. Fluent in five languages, she integrates cultural awareness into her leadership development work. She has been featured on television discussing leadership, emotional suppression in men, and its impact on workplace conflict and well-being, and continues to inspire organizations worldwide through her speaking, coaching, and transformative programs.',
     twitter: null,
     linkedIn: 'www.linkedin.com/in/bernadette-atanga-md-083274327',
@@ -1000,8 +980,7 @@ export const SpeakersData = [
     id: 40,
     name: 'Terrell McKinney',
     email: 'terrell@aarondouglas.us',
-    avatar:
-      'https://res.cloudinary.com/startup-grind/image/upload/c_fill,dpr_2,f_auto,g_face,h_200,q_auto:good,w_200/v1/gcs/platform-data-goog/events/TerrellMcKinney_6M3kjvV.png',
+    avatar: TerrellMcKinney,
     bio: `Terrell McKinney is an educator, software engineer, and community builder committed to helping people navigate technology, work, and change with clarity and confidence. With a background spanning youth education, international teaching, curriculum leadership, and software engineering, his work focuses on making complex systems—AI, technical interviews, and modern careers—more human and accessible. Through his practice, Aaron Douglas LLC, and community initiatives like the Black CS Success Summit, Terrell designs learning experiences, workshops, and tools that support real people through growth, transition, and uncertainty. His approach centers care, practical skill-building, and the belief that technology should serve people—not the other way around.`,
     twitter: null,
     linkedIn: 'https://www.linkedin.com/in/terrellmckinney',
@@ -1025,8 +1004,7 @@ export const SpeakersData = [
     id: 41,
     name: 'Yana Grant',
     email: 'iamyanagrant@gmail.com',
-    avatar:
-      'https://res.cloudinary.com/startup-grind/image/upload/c_fill,dpr_2,f_auto,g_face,h_200,q_auto:good,w_200/v1/gcs/platform-data-goog/events/YanaGrant_agziP6o.jpeg',
+    avatar: YanaGrant,
     bio: `Yana Grant is a product data operations analyst at Meta, where she helps power the next generation of artificial intelligence and machine learning through high-quality data annotation, labeling, and quality assurance. A proud Long Beach, California native, Yana brings a unique perspective shaped by her West Coast roots and a passion for community empowerment.Before joining Meta, Yana was a Missile & Fire Control SAP Software DevOps Analyst at Lockheed Martin. She then moved to Detroit to work at LinkedIn in Trust and Safety.Yana credits her abilities and professional growth to her formative IT internships at the Congressional Budget Office and at NBCUniversal, where she supported operations and systems administration.In addition to her work at Meta, Yana is the founder of Hustle and Brand, a coaching platform dedicated to helping high school and college students turn their career dreams into reality. Through Hustle and Brand, she provides early college-to-career coaching, resume and LinkedIn building tips, and access to internships, scholarships, and leadership opportunities. Yana is known for her ability to inspire confidence, deliver actionable advice, and help others build their personal brand and professional hustle.`,
     twitter: null,
     linkedIn: 'https://www.linkedin.com/in/yana-grant',
@@ -1051,8 +1029,7 @@ export const SpeakersData = [
     id: 42,
     name: 'Umelo Onyejiaka',
     email: 'umelo.onyejiaka@gmail.com',
-    avatar:
-      'https://res.cloudinary.com/startup-grind/image/upload/c_fill,dpr_2,f_auto,g_face,h_200,q_auto:good,w_200/v1/gcs/platform-data-goog/events/UmeloOnyejiaka_gNKdgZX.jpeg',
+    avatar: UmeloOnyejiaka,
     bio: `Umelo Onyejiaka is a cloud and DevOps engineer, community builder, and the founder of DevOps Detroit. He holds multiple industry certifications including AWS Certified Solutions Architect – Professional, AWS Certified DevOps Engineer – Professional, Certified Kubernetes Administrator (CKA), and Terraform Associate.Beyond certifications, Umelo’s work focuses on how people actually grow skills in the real world. He believes meaningful skill development happens faster and more sustainably in community through shared learning, mentorship, and exposure rather than in isolation.Through DevOps Detroit, he creates spaces where individuals can build practical technical skills, gain confidence, and see what’s possible by learning alongside others on similar journeys. His approach centers on the idea that when people grow together, the entire ecosystem benefits.At the Detroit Black History Month Innovation Summit, Umelo will speak on how community driven learning accelerates skill development, creates opportunity, and turns individual potential into collective impact.`,
     twitter: null,
     linkedIn: 'https://www.linkedin.com/in/umelo-onyejiaka-84213524b',
@@ -1077,8 +1054,7 @@ export const SpeakersData = [
     id: 43,
     name: 'Ronald Grover',
     email: 'ronald.grover@gm.com',
-    avatar:
-      'https://res.cloudinary.com/startup-grind/image/upload/c_fill,dpr_2,f_auto,g_face,h_200,q_auto:good,w_200/v1/gcs/platform-data-goog/events/RonaldGrover_6hKKNeM.png',
+    avatar: RonaldGrover,
     bio: `Ronald (Ron) Grover Jr., Ph.D., is a Staff Researcher at General Motors Research and Development within the Propulsion Systems Research Lab. Ron earned his doctorate in Mechanical Engineering from the University of Michigan. With over 20 years of expertise in computational fluid dynamics (CFD) modeling, Ron specializes in developing tools and methods to accelerate automotive vehicle efficiency. His technical background spans fuel spray modeling, in-cylinder processes for internal combustion engines, vehicle aerodynamics, and advanced cooling solutions for electrified powertrains. In 2014, Ron received the Black Engineer of the Year Award for Most Promising Scientist in Industry, and in 2023, he earned the American Society of Mechanical Engineers (ASME) Dedicated Service Award. He has served as the industry advisor and secretary on the ASME Internal Combustion Engine Division Executive Committee and is currently the Events Lead for the newly formed ASME Transportation Systems Division. Ron previously co-chaired the USDRIVE Advanced Combustion and Emissions Control (ACEC) Tech Team.`,
     twitter: null,
     linkedIn: ' https://www.linkedin.com/in/ronald-grover-41738311',
@@ -1102,8 +1078,7 @@ export const SpeakersData = [
     id: 44,
     name: 'Saamer Mansoor',
     email: 'hello@conferencecaptioning.com',
-    avatar:
-      'https://res.cloudinary.com/startup-grind/image/upload/c_fill,dpr_2,f_auto,g_face,h_200,q_auto:good,w_200/v1/gcs/platform-data-goog/events/SaamerMansoor_Y9xfyKZ.jpg',
+    avatar: SaamerMansoor,
     bio: `Saamer Mansoor is a Detroit-based founder, tech-enabler, software architect, and accessibility advocate. He is the founder of Conference Captioning, a event-tech platform that provides real-time captions and multilingual translations for live events, helping organizers create inclusive experiences for deaf and non-English-speaking audiences.Saamer builds & designs practical, people-first technology focused on accessibility, community, and real-world impact while also volunteering to support small businesses through TechTown & Velocity. His work sits at the intersection of AI, app development, and social good, with a strong emphasis on lowering barriers to entry for both dreamers/entrepreneurs and builders.`,
     twitter: null,
     linkedIn: 'https://linkedin.com/in/saamer',
@@ -1127,8 +1102,7 @@ export const SpeakersData = [
     id: 45,
     name: 'Ashley Burton-Mims',
     email: 'ashley@emeraldandrose.com',
-    avatar:
-      'https://res.cloudinary.com/startup-grind/image/upload/c_fill,dpr_2,f_auto,g_face,h_200,q_auto:good,w_200/v1/gcs/platform-data-goog/events/AshleyBurton-Mims_KvFjzuI.jpg',
+    avatar: AshleyBurton,
     bio: `Ashley Burton-Mims is the Founder and CEO of Emerald & Rose Consulting, a Detroit-based leadership and workplace wellness firm focused on burnout awareness and sustainable performance. With nearly two decades of corporate experience managing billion-dollar businesses within Fortune 500 environments, Ashley understands firsthand the pressure high-achieving professionals face in demanding industries.After navigating her own experience with burnout, she founded Emerald & Rose to empower professionals and organizations to recognize the early signs of burnout and integrate sustainable strategies for long-term success. Through her signature B.R.I.G.H.T. framework—Boundaries, Rest, Intention, Grace, Honesty, and Tribe—Ashley equips leaders with practical tools to perform at a high level without sacrificing their well-being.Her work has been featured in Forbes as an Editor’s Pick, and she has facilitated workshops for corporate teams, entrepreneurs, and community organizations across Detroit and beyond. Ashley is passionate about redefining what high performance looks like, particularly for Black professionals and women who are often expected to overperform, absorb systemic stress, and succeed without visible support.`,
     twitter: null,
     linkedIn: 'www.linkedin.com/in/emeraldandrose',
