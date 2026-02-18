@@ -52,14 +52,14 @@ const MembersSection = () => {
               Ready to join?
             </p>
             <CTAButton
-              href="mailto:hello@compassdetroit.org"
+              href="mailto:hello@compassdetroit.org?subject=Compass%20Detroit%20Membership%20Inquiry"
               label="Become a Member"
-              target="_self"
+              target="_blank"
               ariaLabel="Email to become a Compass Detroit member"
               className="text-xl font-semibold text-bhm-neutral-900"
               variant="secondary"
               icon={<FaEnvelope />}
-              iconPosition="right"
+              iconPosition="left"
             />
           </div>
         </div>
