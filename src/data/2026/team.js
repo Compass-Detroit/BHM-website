@@ -1,4 +1,3 @@
-import AaronAmano from '@/data/2026/assets/images/team/aaron_amano-x96.webp'
 import AliElSharif from '@/data/2026/assets/images/team/ali_elsharif.webp'
 import DaveKoziol from '@/data/2026/assets/images/team/dav_koziol.webp'
 import GregMiller from '@/data/2026/assets/images/team/greg_miller-x96.webp'
@@ -7,19 +6,18 @@ import HodaSolati from '@/data/2026/assets/images/team/hoda_solati.webp'
 import HudaHussaini from '@/data/2026/assets/images/team/huda_hussaini.webp'
 import JennaRitten from '@/data/2026/assets/images/team/jenna_ritten.webp'
 import JingranWang from '@/data/2026/assets/images/team/Jingran_Wang-x96.webp'
-import JustinBeaudry from '@/data/2026/assets/images/team/justin_beaudry-x96.webp'
-import KayleeBusenbark from '@/data/2026/assets/images/team/kaylee_busenbark-x96.webp'
 import MaridyMazaira from '@/data/2026/assets/images/team/maridy_mazaira.webp'
 import NisaSolano from '@/data/2026/assets/images/team/nisa_solano.webp'
 import RaquelEstrada from '@/data/2026/assets/images/team/raquel_estrada.webp'
-import Rehanashri from '@/data/2026/assets/images/team/rehanashri-x96.webp'
 import RishirajSarkar from '@/data/2026/assets/images/team/rishiraj_sarkar.webp'
 import ShimaSolati from '@/data/2026/assets/images/team/shima_solati.webp'
 import ShugmiShumunov from '@/data/2026/assets/images/team/shugmi_shumunov-x96.webp'
 import SohamMhatre from '@/data/2026/assets/images/team/soham_mhatre.webp'
-import SohanKetireddy from '@/data/2026/assets/images/team/sohan_ketireddy-x96.webp'
 import SumiaSaleh from '@/data/2026/assets/images/team/Sumia_Saleh-x96.webp'
 import TerrellMcKinney from '@/data/2026/assets/images/team/Terrell_McKinney.webp'
+import Rehanashri from '@/data/2026/assets/images/team/rehanashri-x96.webp'
+import Harunah from '@/data/2026/assets/images/team/Kakooza_Harunah.jpg'
+import DeAndre from '@/data/2026/assets/images/team/DeAndre_Boston.jpg'
 
 export const teamData = [
   {
@@ -33,6 +31,7 @@ export const teamData = [
     university: '',
     organization: 'Little Caesars',
     role: 'GDG Organizer',
+    commits: null,
     avatar: DaveKoziol,
   },
   {
@@ -46,6 +45,7 @@ export const teamData = [
     university: '',
     organization: 'IBM',
     role: 'GDG Organizer + Women Techmakers',
+    commits: null,
     avatar: JennaRitten,
   },
   {
@@ -60,6 +60,7 @@ export const teamData = [
     bio: `Have done a few cool AI project like Integrating AI and cybersecurity testing for automotive vehicles, Creating a Gen AI agent for your car and automating contract processing with IDP!`,
     organization: 'Ally Financial + Women Techmakers',
     role: 'GenAI Technical Product Owner',
+    commits: null,
     avatar: HudaHussaini,
   },
   {
@@ -74,6 +75,7 @@ export const teamData = [
     bio: ``,
     organization: '',
     role: 'GDGC Lead',
+    commits: null,
     avatar: SumiaSaleh,
   },
   {
@@ -83,36 +85,25 @@ export const teamData = [
     github: 'https://github.com/shrinkray',
     devfest: 'devteam',
     star: false,
+    topContributor: true,
     university: '',
     bio: `
 	  Hello, I am the founder of Shrinkray Interactive, a web development studio in Toledo, Ohio, leaning-in on accessible, high-performance, and user-friendly web experiences. As a founding member of GDG Toledo, I connect developers and designers through events and hackathons. Collaborating with the devteam, I oversee UX engineering and redesign for the Michigan DevFest website—creating a fast, inclusive experience for speakers, partners, and attendees. If you are seeking a friendly and talented developer for your project, let's connect.
 	`,
     organization: 'Shrinkray Interactive + GDG Toledo + Toledo Codes',
-    role: 'Senior UX Engineer + Frontend',
+    role: 'Senior UX Engineer + Technical Lead + Frontend',
+    commits: '150',
     avatar: GregMiller,
   },
   {
     id: 6,
-    name: 'Aaron Amano',
-    twitter: '',
-    linkedin: 'https://www.linkedin.com/in/aaronamano/',
-    github: 'https://github.com/aaronamano',
-    devfest: 'devteam',
-    star: false,
-    university: 'University Of Michigan Dearborn',
-    bio: ``,
-    organization: '',
-    role: 'CS Student',
-    avatar: AaronAmano,
-  },
-  {
-    id: 7,
     name: 'Shugmi Shumunov',
     twitter: '',
     linkedin: 'https://www.linkedin.com/in/shugmishumunov/',
     github: 'https://github.com/ShugKnight24',
     devfest: 'devteam',
     star: false,
+    topContributor: true,
     university: '',
     bio: `
       Shugmi Shumunov is a software developer who believes code is the ultimate storytelling medium. With a primary focus on the JavaScript ecosystem within e-commerce, working across the stack in various industries. Always seeking beautiful, elegant, and performant solutions while collaborating with talented, curious, and passionate engineers and tech enthusiasts.
@@ -121,24 +112,11 @@ export const teamData = [
     `,
     organization: 'Shumunov Solutions',
     role: 'Developer',
+    commits: 100,
     avatar: ShugmiShumunov,
   },
   {
-    id: 8,
-    name: 'Justin Beaudry',
-    twitter: '',
-    linkedin: 'https://www.linkedin.com/in/justinbeaudry/',
-    github: 'https://github.com/justinbeaudry',
-    devfest: 'devteam',
-    star: false,
-    university: '',
-    bio: ``,
-    organization: 'Actual Reality Technologies + Toledo Codes + GDG Toledo',
-    role: 'Director of Engineering',
-    avatar: JustinBeaudry,
-  },
-  {
-    id: 9,
+    id: 7,
     name: 'Rishiraj Sarkar',
     twitter: '',
     linkedin: null,
@@ -149,25 +127,28 @@ export const teamData = [
     bio: `Cybersecurity graduate student working with AI privacy and network security`,
     organization: '',
     role: 'Student + GDGC Dearborn',
+    commits: null,
     avatar: RishirajSarkar,
   },
   {
-    id: 10,
+    id: 8,
     name: 'Soham Mhatre',
     twitter: '',
     linkedin: null,
     github: 'https://github.com/soham02',
     devfest: 'devteam',
     star: false,
+    topContributor: true,
     university: '',
     bio: `Soham Mhatre is a developer focused on building practical, human-centered software. He works across the MERN stack with a strong focus on cloud and AI workflows. Recent projects include an image labeling system using AWS Recognition and a financial planning/learning platform with real-time persona generation. Soham enjoys translating complex, real-world requirements into simple, shippable features and cares deeply about clean APIs, accessible UIs, and measurable outcomes. Having recently graduated from Harrisburg University with a Master's in Software Engineering, he's now pursuing full-time opportunities where he can contribute end-to-end from backend services and databases to polished frontends that people love to use.  
 `,
     organization: 'Mhatre Solutions',
     role: 'Developer',
+    commits: 100,
     avatar: SohamMhatre,
   },
   {
-    id: 11,
+    id: 9,
     name: 'Shima Solati',
     twitter: '',
     linkedin: 'https://www.linkedin.com/in/shima-solati/',
@@ -178,10 +159,11 @@ export const teamData = [
     bio: `Shima Solati is an award-winning UX/UI designer and researcher at BraunAbility, leading efforts to advance mobility and accessibility through innovative, user-centered design. With a Master’s in User Experience Design from the College for Creative Studies and dual degrees in fashion and textiles, Shima brings a rare multidisciplinary perspective to solving complex challenges. Her expertise spans immersive and assistive technologies, VR, AR, robotics, and her portfolio includes impactful work for KUKA Robotics, the Augmented Reality Center, General Motors, and Ford. Passionate about inclusive design and emerging technologies, Shima is dedicated to creating intuitive, innovative solutions that empower all users.`,
     organization: 'BraunAbility',
     role: 'UX/UI Designer & Researcher',
+    commits: null,
     avatar: ShimaSolati,
   },
   {
-    id: 12,
+    id: 10,
     name: 'Hoda Solati',
     twitter: '',
     linkedin: 'https://www.linkedin.com/in/hoda-solati/',
@@ -192,10 +174,11 @@ export const teamData = [
     bio: `Hoda Solati is an award-winning UX designer working at BraunAbility blending creativity, technology, and innovation to craft inclusive, user-centered experiences. With advanced degrees in UX Design and Animation, she explores cutting-edge technologies such as VR, AR, and robotics to solve complex design challenges. Recognized at global events including DDX’25 NYC and IEEE Smart Mobility, Hoda is passionate about redefining the future of user experience through innovation and accessibility.`,
     organization: 'BraunAbility + GDG + Women Techmakers, I/O 2025',
     role: 'UX/UI Designer & Researcher',
+    commits: null,
     avatar: HodaSolati,
   },
   {
-    id: 13,
+    id: 11,
     name: 'Ali El Sharif',
     twitter: '',
     linkedin: 'https://www.linkedin.com/in/ali-el-sharif-76530222b/',
@@ -206,10 +189,11 @@ export const teamData = [
     bio: `Ali El-Sharif works as a professor at St. Clair College in Windsor, where he teaches Data Analytics, Cybersecurity, and Cloud Computing. He also teaches at the University of Windsor and the University of Niagara Falls Canada.  Ali is a Google Developers Groups Windsor co-organizer and co-author of the upcoming book "Building Responsible AI with Python - Identify, explain, and mitigate bias with hands-on code examples." https://a.co/d/1O3Up6p`,
     organization: 'St. Clair College',
     role: 'Professor',
+    commits: null,
     avatar: AliElSharif,
   },
   {
-    id: 14,
+    id: 12,
     name: 'Hernando Gonzalez Malabet',
     twitter: '',
     linkedin: 'https://www.linkedin.com/in/hernando-gonzalez-malabet-baa03625/',
@@ -221,10 +205,11 @@ export const teamData = [
     organization:
       'Society of Hispanic Professional Engineers - SHPE Detroit Professional',
     role: 'Director of Professional Development',
+    commits: null,
     avatar: HernandoMalabet,
   },
   {
-    id: 15,
+    id: 13,
     name: 'Nisa Solano',
     twitter: '',
     linkedin: 'https://www.linkedin.com/in/nisa-solano/',
@@ -235,10 +220,11 @@ export const teamData = [
     bio: ``,
     organization: 'GDGC | AWS Cloud Club | SHPE Wayne State',
     role: 'Senior Computer Science Student',
+    commits: null,
     avatar: NisaSolano,
   },
   {
-    id: 16,
+    id: 14,
     name: 'Raquel Estrada',
     twitter: '',
     linkedin: 'https://www.linkedin.com/in/raquel-estrada/',
@@ -250,10 +236,11 @@ export const teamData = [
     organization:
       'Society of Hispanic Professional Engineers - SHPE Detroit Professional',
     role: 'SHPE Detroit Vice President',
+    commits: null,
     avatar: RaquelEstrada,
   },
   {
-    id: 17,
+    id: 15,
     name: 'Maridy Mazaira',
     twitter: '',
     linkedin: 'https://www.linkedin.com/in/maridy-mazaira/',
@@ -266,10 +253,11 @@ Today, Maridy serves as President of the Society of Hispanic Professional Engine
     organization:
       'Society of Hispanic Professional Engineers - SHPE Detroit Professional',
     role: 'SHPE Detroit President',
+    commits: null,
     avatar: MaridyMazaira,
   },
   {
-    id: 18,
+    id: 16,
     name: 'Jingran Wang',
     twitter: '',
     linkedin: 'https://www.linkedin.com/in/jingranwang/',
@@ -280,49 +268,11 @@ Today, Maridy serves as President of the Society of Hispanic Professional Engine
     bio: `Experienced community organizer, including co-organizing GDG Ann Arbor. Android/Flutter Developer passionate about UX, readable, shippable code, accessibility, and teamwork.`,
     organization: 'Hikari Software',
     role: 'President',
+    commits: null,
     avatar: JingranWang,
   },
   {
-    id: 19,
-    name: 'Sohan Ketireddy',
-    twitter: '',
-    linkedin: 'https://www.linkedin.com/in/sohan-k',
-    github: 'https://github.com/sohank1',
-    devfest: 'devteam',
-    star: false,
-    university: 'University Of Michigan Dearborn',
-    bio: ``,
-    organization: '',
-    role: 'Student',
-    avatar: SohanKetireddy,
-  },
-  {
-    id: 20,
-    name: 'Kaylee Busenbark',
-    twitter: '',
-    linkedin: 'https://www.linkedin.com/in/kaylee-busenbark',
-    github: 'https://github.com/kaybusenbark',
-    devfest: 'devteam',
-    star: false,
-    university: 'University Of Michigan Dearborn',
-    bio: ``,
-    organization: '',
-    role: 'Student',
-    avatar: KayleeBusenbark,
-  },
-  {
-    id: 21,
-    name: 'Rehanashri',
-    github: 'https://github.com/rehanashri',
-    devfest: 'devteam',
-    star: false,
-    university: 'University Of Michigan Dearborn',
-    organization: '',
-    role: 'Student',
-    avatar: Rehanashri,
-  },
-  {
-    id: 22,
+    id: 17,
     name: 'Terrell McKinney',
     twitter: '',
     linkedin: 'https://www.linkedin.com/in/terrellmckinney/',
@@ -333,6 +283,45 @@ Today, Maridy serves as President of the Society of Hispanic Professional Engine
     bio: `Terrell McKinney is a software engineer and educator at Aaron Douglas LLC, and a community builder who helps make complex topics like AI, technical interviews, and modern careers more human and accessible. He contributes to the Compass Detroit dev team and to initiatives like the Black CS Success Summit. His approach centers care, practical skill-building, and the belief that technology should serve people—not the other way around.`,
     organization: 'Aaron Douglas LLC',
     role: 'Software Engineer',
+    commits: null,
     avatar: TerrellMcKinney,
+  },
+  {
+    id: 18,
+    name: 'Rehanashri',
+    github: 'https://github.com/rehanashri',
+    devfest: 'devteam',
+    star: false,
+    university: 'University Of Michigan Dearborn',
+    organization: '',
+    role: 'Student',
+    commits: null,
+    avatar: Rehanashri,
+  },
+  {
+    id: 19,
+    name: 'Kakooza Harunah',
+    github: 'https://github.com/devharunah',
+    devfest: 'devteam',
+    star: false,
+    university: '',
+    bio: 'Kakooza Harunah is a Software Developer from Uganda, passionate about startups. He’s building Kawa, a coffee marketplace inspired by Uganda’s biggest export, focused on creating simple, impactful digital products.',
+    organization: 'Aaron Douglas, LLC ',
+    role: 'Developer',
+    commits: null,
+    avatar: Harunah,
+  },
+  {
+    id: 20,
+    name: 'DeAndre Boston',
+    github: 'https://github.com/dboston528',
+    devfest: 'devteam',
+    star: false,
+    university: 'Southern Illinois University at Carbondale',
+    bio: 'DeAndre Boston is a Full-stack Software Engineer for Aaron Douglas, LLC. With a background in cloud engineering, he is passionate to support community-driven organizations and create tools that make a meaningful impact.',
+    organization: 'Aaron Douglas, LLC ',
+    role: 'Developer',
+    commits: null,
+    avatar: DeAndre,
   },
 ]

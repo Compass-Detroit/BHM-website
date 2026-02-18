@@ -23,22 +23,22 @@ const hexToRgba = (hex, alpha) => {
 // Track themes: Tailwind CSS 3.4 standard colors via name-shade (e.g. sky-400, violet-950)
 const TRACK_THEMES = {
   default: {
-    gradient: `linear-gradient(135deg, ${colors.sky[900]} 0%, ${colors.sky[800]} 48%, ${colors.sky[950]} 100%)`,
+    gradient: `linear-gradient(135deg, ${colors.red[900]} 0%, ${colors.red[800]} 48%, ${colors.red[950]} 100%)`,
     pattern: `radial-gradient(circle at 22% 18%, ${hexToRgba(
-      colors.sky[400],
+      colors.red[400],
       0.32
     )} 0, ${hexToRgba(
-      colors.sky[400],
+      colors.red[400],
       0.08
     )} 36%, transparent 62%), radial-gradient(circle at 78% 22%, ${hexToRgba(
-      colors.sky[500],
+      colors.red[500],
       0.28
-    )} 0, ${hexToRgba(colors.sky[500], 0.08)} 35%, transparent 64%)`,
-    fallbackColor: colors.sky[950],
-    badgeBorder: hexToRgba(colors.sky[300], 0.55),
+    )} 0, ${hexToRgba(colors.red[500], 0.08)} 35%, transparent 64%)`,
+    fallbackColor: colors.red[950],
+    badgeBorder: hexToRgba(colors.red[300], 0.55),
     badgeText: colors.white,
-    focusColor: colors.sky[700],
-    focusRingOffset: hexToRgba(colors.sky[950], 0.6),
+    focusColor: colors.red[700],
+    focusRingOffset: hexToRgba(colors.red[950], 0.6),
   },
   'Build with AI': {
     gradient: `linear-gradient(135deg, ${colors.violet[600]} 0%, ${colors.violet[800]} 52%, ${colors.violet[950]} 100%)`,
@@ -59,22 +59,22 @@ const TRACK_THEMES = {
     focusRingOffset: hexToRgba(colors.violet[900], 0.65),
   },
   Innovation: {
-    gradient: `linear-gradient(135deg, ${colors.amber[500]} 0%, ${colors.amber[600]} 40%, ${colors.amber[900]} 70%, ${colors.amber[950]} 100%)`,
+    gradient: `linear-gradient(135deg, ${colors.indigo[500]} 0%, ${colors.indigo[600]} 40%, ${colors.indigo[900]} 70%, ${colors.indigo[950]} 100%)`,
     pattern: `radial-gradient(circle at 26% 22%, ${hexToRgba(
-      colors.amber[200],
+      colors.indigo[200],
       0.52
     )} 0, ${hexToRgba(
-      colors.amber[200],
+      colors.indigo[200],
       0.16
     )} 34%, transparent 58%), radial-gradient(circle at 80% 20%, ${hexToRgba(
-      colors.amber[300],
+      colors.indigo[300],
       0.4
-    )} 0, ${hexToRgba(colors.amber[300], 0.12)} 36%, transparent 64%)`,
-    fallbackColor: colors.amber[950],
-    badgeBorder: hexToRgba(colors.amber[200], 0.6),
+    )} 0, ${hexToRgba(colors.indigo[300], 0.12)} 36%, transparent 64%)`,
+    fallbackColor: colors.indigo[950],
+    badgeBorder: hexToRgba(colors.indigo[200], 0.6),
     badgeText: colors.white,
-    focusColor: colors.amber[700],
-    focusRingOffset: hexToRgba(colors.amber[800], 0.55),
+    focusColor: colors.indigo[700],
+    focusRingOffset: hexToRgba(colors.indigo[800], 0.55),
   },
   'Tech+Design': {
     gradient: `linear-gradient(135deg, ${colors.pink[500]} 0%, ${colors.pink[600]} 46%, ${colors.pink[800]} 80%, ${colors.pink[950]} 100%)`,
