@@ -25,8 +25,8 @@ function Home() {
         year={currentYear}
         speakersData={Speakers2026}
         tracks={[
-          'Schedule',
           'Map',
+          'Schedule',
           'Level Up',
           'Build with AI',
           'Leadership',
