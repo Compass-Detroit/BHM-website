@@ -21,18 +21,10 @@ function SectionSkipLink({ href, children }) {
     }
   }
 
-  const handleKeyDown = (e) => {
-    if (e.key === 'Enter' || e.key === ' ') {
-      e.preventDefault()
-      e.currentTarget.click()
-    }
-  }
-
   return (
     <a
       href={href}
       onClick={activate}
-      onKeyDown={handleKeyDown}
       // eslint-disable-next-line tailwindcss/enforces-negative-arbitrary-values -- Negative top positions link off-screen for WCAG bypass; visible on focus
       className={
         'absolute -top-[9999px] left-[6px] z-[100] rounded bg-white px-2 py-1 text-black shadow ' +
