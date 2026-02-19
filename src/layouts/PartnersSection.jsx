@@ -143,7 +143,6 @@ const PartnersSection = ({ partnersData = {}, year }) => {
                 <CTAButton
                   href="mailto:sponsors@midevfest.com?subject=Compass%20Detroit%20Partner%20Inquiry"
                   label="Become a Partner"
-                  target="_self"
                   ariaLabel="Join us as a partner"
                   className="text-xl font-semibold text-bhm-neutral-900"
                   variant="secondary"
