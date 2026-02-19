@@ -198,7 +198,7 @@ const TeamSection = ({ teamData, year }) => {
                   {/* Button positioned relative to card, outside overflow container */}
                   {dev.bio && (
                     <button
-                      className="absolute -bottom-3 left-1/2 -translate-x-1/2 rounded-full bg-primary-700 px-4 py-1.5 text-sm font-bold uppercase tracking-wide text-white shadow-md transition-colors hover:bg-primary-800 focus:outline-none focus:ring-2 focus:ring-primary-500 focus:ring-offset-2"
+                      className="absolute -bottom-3 left-1/2 -translate-x-1/2 rounded-full bg-primary-700 px-4 py-1.5 text-sm font-bold uppercase tracking-wide text-white shadow-md transition-colors hover:bg-primary-800 focus:outline-none focus:ring-2 focus:ring-focus-ring focus:ring-offset-2"
                       onClick={() =>
                         setSelectedBio({ name: dev.name, bio: dev.bio })
                       }
@@ -235,7 +235,7 @@ const TeamSection = ({ teamData, year }) => {
           >
             <button
               ref={closeButtonRef}
-              className="absolute right-4 top-4 text-gray-400 transition-colors hover:text-gray-600 focus:outline-none focus:ring-2 focus:ring-primary-500 focus:ring-offset-2"
+              className="absolute right-4 top-4 text-gray-400 transition-colors hover:text-gray-600 focus:outline-none focus:ring-2 focus:ring-focus-ring focus:ring-offset-2"
               onClick={() => setSelectedBio(null)}
               aria-label="Close dialog"
             >

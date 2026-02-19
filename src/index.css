@@ -134,8 +134,6 @@
   }
 
   :root {
-    /* Dark focus ring for WCAG visibility on light backgrounds */
-    --focus-ring-color: #1a1a1a;
     font-family: Montserrat, 'Open Sans', Helvetica, Arial, sans-serif;
     line-height: 1.5;
     font-weight: 500;
@@ -152,10 +150,6 @@
     min-height: 100vh;
   }
 
-  /* Dark focus ring overrides gold for WCAG contrast (2.4.7 Focus Visible) */
-  *:focus-visible {
-    --tw-ring-color: var(--focus-ring-color) !important;
-  }
 }
 
 /* Orbitron Variable Font */

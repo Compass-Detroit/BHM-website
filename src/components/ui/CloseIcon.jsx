@@ -7,7 +7,7 @@ const CloseIcon = forwardRef(
       <button
         ref={ref}
         onClick={onClick}
-        className={`text-gray-400 transition-colors hover:text-gray-600 focus:outline-none focus:ring-2 focus:ring-primary-500 focus:ring-offset-2 ${className}`}
+        className={`text-gray-400 transition-colors hover:text-gray-600 focus:outline-none focus:ring-2 focus:ring-focus-ring focus:ring-offset-2 ${className}`}
         aria-label={label}
       >
         <svg

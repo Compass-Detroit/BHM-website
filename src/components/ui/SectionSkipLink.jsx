@@ -13,7 +13,7 @@ function SectionSkipLink({ href, children }) {
     if (target) {
       e.preventDefault()
       target.setAttribute('tabindex', '-1')
-      const navbarHeight = document.querySelector('nav')?.offsetHeight ?? 96
+      const navbarHeight = 96
       const targetTop = target.getBoundingClientRect().top + window.scrollY
       const scrollPosition = targetTop - navbarHeight
       window.scrollTo({ top: scrollPosition, behavior: 'smooth' })
@@ -36,7 +36,7 @@ function SectionSkipLink({ href, children }) {
       // eslint-disable-next-line tailwindcss/enforces-negative-arbitrary-values -- Negative top positions link off-screen for WCAG bypass; visible on focus
       className={
         'absolute -top-[9999px] left-[6px] z-[100] rounded bg-white px-2 py-1 text-black shadow ' +
-        'focus:top-[6px] focus:outline-none focus:ring-2 focus:ring-primary-500 focus:ring-offset-2 ' +
+        'focus:top-[6px] focus:outline-none focus:ring-2 focus:ring-focus-ring focus:ring-offset-2 ' +
         'dark:bg-gray-800 dark:text-white'
       }
     >
