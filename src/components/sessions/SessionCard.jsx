@@ -66,11 +66,21 @@ function SessionCard({
         }
         className="flex w-full items-center justify-between p-3 md:px-8 lg:px-14"
       >
-        <div className="flex items-center text-left">
+        <div
+          className={`grid items-center gap-5 text-left ${
+            speakerAvatars?.length > 1
+              ? 'grid-cols-1'
+              : 'grid-cols-1 md:grid-cols-[120px_1fr]'
+          }`}
+        >
           {speakerAvatars?.length && (
             <div
               className={`flex flex-wrap overflow-hidden ${
-                speakerAvatars?.length >= 3 ? 'gap-1' : 'rounded-full'
+                speakerAvatars?.length >= 3 ? 'gap-1' : 'gap-2 rounded-full'
+              } ${
+                speakerAvatars?.length > 1
+                  ? 'justify-center'
+                  : 'justify-center sm:justify-start'
               }`}
             >
               {speakerAvatars.map((avatar, index) => (
@@ -84,16 +94,18 @@ function SessionCard({
                   alt={`Headshot of ${speakers[index]}`}
                   className={`${
                     speakerAvatars?.length >= 3
-                      ? 'mx-auto my-1 size-20 justify-center rounded-full lg:size-32'
-                      : 'size-40'
+                      ? 'mx-auto my-1 size-[90px] justify-center rounded-full'
+                      : 'size-[120px] rounded-full'
                   } object-cover`}
                 />
               ))}
             </div>
           )}
-          <div className="ml-5">
+          <div
+            className={`min-w-0 ${!speakerAvatars?.length ? 'col-span-2' : ''}`}
+          >
             {sessionTitle && (
-              <h3 className="font-bold text-gray-900 md:text-xl lg:text-2xl xl:text-3xl dark:text-white">
+              <h3 className="text-base font-semibold text-gray-900 md:text-xl dark:text-white">
                 {sessionTitle}
               </h3>
             )}

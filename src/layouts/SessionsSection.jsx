@@ -218,8 +218,8 @@ const SessionsSection = ({
 
       {/* Track Description */}
       {isExpanded && currentSession && trackDescriptions[currentSession] && (
-        <div className="mt-6 w-full px-[10%] md:px-[25%]">
-          <p className="text-left text-base leading-relaxed text-gray-700 md:text-lg">
+        <div className="mt-6 max-w-4xl">
+          <p className="text-left text-lg leading-relaxed text-gray-700">
             {trackDescriptions[currentSession]}
           </p>
         </div>
@@ -325,7 +325,7 @@ const SessionsSection = ({
           ) : currentTrackSessions.length > 0 ? (
             <>
               {currentSession === 'Hackathon' && <HackathonSessionHeader />}
-              <ul className="grid w-full grid-cols-1 gap-10 py-7">
+              <ul className="grid w-full grid-cols-1 gap-10 py-7 xl:grid-cols-2">
                 {hasSessionsForTrack ? (
                   currentTrackSessions
                     .sort((a, b) => {
