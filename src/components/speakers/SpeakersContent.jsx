@@ -126,7 +126,7 @@ const SpeakersContent = ({ year, defaultExpanded }) => {
       {renderSpeakerHeader}
       {renderSpeakerDescription}
       <div
-        className={`overflow-hidden transition-all duration-500 ease-in-out ${
+        className={`mx-auto max-w-[2000px] overflow-hidden transition-all duration-500 ease-in-out ${
           isExpanded ? 'max-h-none opacity-100' : 'max-h-0 opacity-0'
         }`}
       >
