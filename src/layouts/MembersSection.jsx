@@ -5,7 +5,7 @@ import { FaEnvelope } from 'react-icons/fa6'
 const MembersSection = () => {
   return (
     <section
-      id="members"
+      id="membership"
       className="bg-primary-50 p-8 sm:px-10 md:px-14 lg:px-16"
     >
       <div className="flex w-full justify-center pt-0">
@@ -54,7 +54,6 @@ const MembersSection = () => {
             <CTAButton
               href="mailto:hello@compassdetroit.org?subject=Compass%20Detroit%20Membership%20Inquiry"
               label="Become a Member"
-              target="_blank"
               ariaLabel="Email to become a Compass Detroit member"
               className="text-xl font-semibold text-bhm-neutral-900"
               variant="secondary"
