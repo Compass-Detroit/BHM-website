@@ -28,11 +28,11 @@ const ProfileCard = ({
       'Build with AI': 'bg-purple-800',
       Innovation: 'bg-indigo-800',
       'Level Up': 'bg-emerald-800',
-      Leadership: 'bg-bhm-gold-500',
+      Leadership: 'bg-bhm-gold-800',
       'Tech+Design': 'bg-red-800',
       Workshops: 'bg-orange-800',
       'AI Foundations': 'bg-red-800',
-      'Breakout Sessions': 'bg-bhm-black-900',
+      'Breakout Sessions': 'bg-bhm-black-800',
     }
 
     if (track) return trackColors[track] || 'bg-red-700'
@@ -53,8 +53,8 @@ const ProfileCard = ({
       'bg-indigo-800': 'from-indigo-400/60 via-indigo-400/5',
       'bg-red-800': 'from-red-400/60 via-red-400/5',
       'bg-orange-900': 'from-orange-400/60 via-orange-400/5',
-      'bg-bhm-gold-500': 'from-bhm-gold-400/60 via-bhm-gold-400/5',
-      'bg-bhm-black-900': 'from-bhm-black-800/60 via-bhm-black-800/5',
+      'bg-bhm-gold-800': 'from-bhm-gold-400/60 via-bhm-gold-400/5',
+      'bg-bhm-black-800': 'from-bhm-black-800/60 via-bhm-black-800/5',
 
       // Legacy/fallback colors
       'bg-primary-300': 'from-primary-300/60 via-primary-300/5',
