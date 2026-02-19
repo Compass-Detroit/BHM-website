@@ -44,6 +44,9 @@ const trackDescriptions = {
     'Build your foundational knowledge of artificial intelligence. Perfect for beginners and those looking to strengthen their AI fundamentals. Located at Walker Crisler Bldg (WCB) 105.',
   'Breakout Sessions':
     'Focused discussions and interactive sessions on specialized topics. Join intimate conversations with experts and peers at room 255.',
+  Map: 'DTE Energy Headquarters is a Class A office complex on the west side of Downtown Detroit at I-75 and Grand River, Michigan, consisting of three interconnected buildings.',
+  Schedule:
+    'Full-day conference featuring keynotes, breakout sessions, workshops, networking lunch, panel discussions, sponsor showcases, and techie networking.',
 }
 
 const SessionsSection = ({
