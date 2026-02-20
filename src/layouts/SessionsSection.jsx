@@ -34,18 +34,19 @@ const convertTo24Hour = (time) => {
 const trackDescriptions = {
   'Build with AI':
     'Explore cutting-edge AI development, from machine learning to generative models. Hands-on workshops at Service Bldg (SB) 120.',
-  Innovation:
+  'Innovation':
     'Discover groundbreaking ideas and emerging technologies shaping the future. Sessions at Walker Crisler Bldg (WCB) 103.',
   'Level Up':
     'Advance your career and personal growth. From mentorship to leadership, explore sessions that help you level up professionally and personally in tech. Located at Town Square.',
-  Leadership:
+  'Leadership':
     'Discover insights from founders and entrepreneurs building the next generation of tech companies. Learn about startup strategies, funding, and scaling. Sessions at rooms 275 and 278.',
   'AI Foundations':
     'Build your foundational knowledge of artificial intelligence. Perfect for beginners and those looking to strengthen their AI fundamentals. Located at Walker Crisler Bldg (WCB) 105.',
   'Breakout Sessions':
     'Focused discussions and interactive sessions on specialized topics. Join intimate conversations with experts and peers at room 255.',
-  Map: 'DTE Energy Headquarters is a Class A office complex on the west side of Downtown Detroit at I-75 and Grand River, Michigan, consisting of three interconnected buildings.',
-  Schedule:
+  'Map':
+    'DTE Energy Headquarters is an office complex on the west side of Downtown Detroit at I-75 and Grand River, Michigan, consisting of three interconnected buildings.',
+  'Schedule':
     'Full-day conference featuring keynotes, breakout sessions, workshops, networking lunch, panel discussions, sponsor showcases, and techie networking.',
 }
 
