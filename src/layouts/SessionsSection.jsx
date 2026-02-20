@@ -173,7 +173,7 @@ const SessionsSection = ({
         href="https://www.papercall.io/midevfest2025"
         target="_blank"
         aria-label="Apply to speak at Michigan DevFest 2025 - opens in new tab"
-        className="flex items-center rounded bg-sky-900 px-8 py-5 text-primary-50 shadow-xl transition delay-75 duration-100 ease-in-out hover:-translate-y-1 hover:scale-110 hover:cursor-pointer focus:outline-none focus:ring-2 focus:ring-primary-500 focus:ring-offset-2"
+        className="flex items-center rounded bg-sky-900 px-8 py-5 text-bhm-gold-50 shadow-xl transition delay-75 duration-100 ease-in-out hover:-translate-y-1 hover:scale-110 hover:cursor-pointer focus:outline-none focus:ring-2 focus:ring-primary-500 focus:ring-offset-2"
         rel="noreferrer"
       >
         APPLY TO SPEAK
@@ -184,7 +184,7 @@ const SessionsSection = ({
   return (
     <section
       id="schedule"
-      className="relative flex flex-col items-center justify-start bg-primary-100 p-4 sm:px-10 md:px-14 lg:px-16"
+      className="relative flex flex-col items-center justify-start bg-bhm-gold-50 p-4 sm:px-10 md:px-14 lg:px-16"
     >
       <SectionSkipLink href="#members">
         Skip sessions navigation
@@ -255,7 +255,7 @@ const SessionsSection = ({
                   aria-controls="sessions-tabpanel"
                   id={`session-tab-${index}`}
                   tabIndex={isExpanded ? 0 : -1}
-                  className={`relative shrink-0 whitespace-nowrap rounded-md p-2 text-sm font-black uppercase !leading-5 transition-colors duration-300 focus:outline-none focus:ring-2 focus:ring-primary-400 focus:ring-offset-2 focus:ring-offset-black md:min-w-20 md:px-3 md:py-2 lg:min-w-36 lg:px-4 lg:text-lg ${
+                  className={`focus:ring-focus-ring relative shrink-0 whitespace-nowrap rounded-md p-2 text-sm font-black uppercase !leading-5 transition-colors duration-300 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-black md:min-w-20 md:px-3 md:py-2 lg:min-w-36 lg:px-4 lg:text-lg ${
                     index === 0 ? 'md:ml-14' : ''
                   } ${
                     activeTab === index

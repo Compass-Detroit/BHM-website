@@ -5,7 +5,7 @@ function LocationSection() {
   return (
     <section
       id="location"
-      className="relative flex h-auto items-center justify-center bg-slate-100 py-16 text-black md:py-28 dark:bg-gray-900 dark:text-white"
+      className="relative flex h-auto items-center justify-center bg-bhm-neutral-100 py-16 text-black md:py-28 dark:bg-bhm-neutral-900 dark:text-white"
       aria-labelledby="location-heading"
     >
       <div className="mx-auto flex w-full max-w-[1100px] flex-col space-y-8 px-4 sm:px-6 lg:px-8">

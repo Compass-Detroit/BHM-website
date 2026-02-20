@@ -6,7 +6,7 @@ const MembersSection = () => {
   return (
     <section
       id="members"
-      className="bg-primary-50 p-8 sm:px-10 md:px-14 lg:px-16"
+      className="bg-bhm-gold-100 p-8 sm:px-10 md:px-14 lg:px-16"
     >
       <div className="flex w-full justify-center pt-0">
         <h2 className="mb-4 w-full text-center font-biorhyme text-5xl text-bhm-neutral-900 md:text-5xl lg:text-6xl">

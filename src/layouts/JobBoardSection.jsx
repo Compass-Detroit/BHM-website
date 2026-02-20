@@ -10,7 +10,7 @@ const JobBoardSection = ({ year = new Date().getFullYear() }) => {
   return (
     <section
       id="jobboard"
-      className="relative flex flex-col justify-center bg-yellow-50 p-8 py-24 sm:px-10 md:px-14 lg:px-16"
+      className="relative flex flex-col justify-center bg-bhm-gold-50 p-8 py-24 sm:px-10 md:px-14 lg:px-16"
     >
       <SectionSkipLink href="#partners">Skip job board</SectionSkipLink>
       <div className="relative w-full pt-0">
@@ -53,7 +53,7 @@ const JobBoardSection = ({ year = new Date().getFullYear() }) => {
                   : `Visit ${company.name}'s careers page at ${company.website} (opens in a new tab)`
               }
             >
-              <div className="rounded-2xl bg-primary-200 p-12 shadow-lg transition-all duration-200 hover:scale-105 hover:shadow-xl">
+              <div className="rounded-2xl bg-bhm-gold-200 p-12 shadow-lg transition-all duration-200 hover:scale-105 hover:shadow-xl">
                 {/* Circular logo container */}
                 <div className="mx-auto mb-6 flex size-36 items-center justify-center overflow-hidden rounded-full bg-white shadow-md">
                   <img
