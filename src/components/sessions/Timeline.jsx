@@ -4,7 +4,7 @@ import EventCard from './EventCard'
 
 const Timeline = ({ schedule, compact = false }) => {
   return (
-    <div className="relative">
+    <div className="relative pb-24">
       {/* Schedule items */}
       <div className={compact ? 'space-y-8' : 'space-y-12'}>
         {schedule.map((timeSlot, timeIndex) => (
