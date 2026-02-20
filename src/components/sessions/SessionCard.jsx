@@ -70,7 +70,7 @@ function SessionCard({
           className={`grid items-center gap-5 text-left ${
             speakerAvatars?.length > 1
               ? 'grid-cols-1'
-              : 'grid-cols-1 md:grid-cols-[120px_1fr]'
+              : 'grid-cols-1 min-[401px]:grid-cols-[90px_1fr] md:grid-cols-[120px_1fr]'
           }`}
         >
           {speakerAvatars?.length && (
@@ -95,7 +95,7 @@ function SessionCard({
                   className={`${
                     speakerAvatars?.length >= 3
                       ? 'mx-auto my-1 size-[90px] justify-center rounded-full'
-                      : 'size-[120px] rounded-full'
+                      : 'size-[90px] rounded-full md:size-[120px]'
                   } object-cover`}
                 />
               ))}
