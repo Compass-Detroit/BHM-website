@@ -121,7 +121,7 @@ const SpeakersContent = ({ year, defaultExpanded }) => {
   return (
     <section
       id="speakers"
-      className="relative flex flex-col justify-center border-b border-primary bg-sky-50 p-8 sm:px-10 md:px-14 lg:px-16"
+      className="relative flex flex-col justify-center border-b border-primary bg-bhm-neutral-50 p-8 sm:px-10 md:px-14 lg:px-16"
     >
       {renderSpeakerHeader}
       {renderSpeakerDescription}
