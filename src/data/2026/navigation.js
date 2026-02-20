@@ -4,8 +4,8 @@
 export const sections = [
   { id: 'location', text: 'Location' },
   { id: 'schedule', text: 'Sessions' },
+  { id: 'membership', text: 'Membership' },
   { id: 'speakers', text: 'Speakers' },
-  { id: 'attendees', text: 'Attendees' },
   { id: 'jobboard', text: 'Job Board' },
   { id: 'partners', text: 'Partners' },
   { id: 'leadership', text: 'BHM Team' },

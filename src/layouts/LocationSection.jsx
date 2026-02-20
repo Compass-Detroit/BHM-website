@@ -68,7 +68,7 @@ function LocationSection() {
               <a
                 href="https://www.google.com/maps/dir//DTE+Energy+Headquarters+1+Energy+Plaza+Detroit,+48226"
                 target="_blank"
-                className="mb-4 mt-3 inline-flex items-center whitespace-nowrap rounded bg-sky-900 px-8 py-5 text-primary-50 shadow-xl transition delay-75 duration-100 ease-in-out hover:-translate-y-1 hover:scale-110 hover:cursor-pointer focus:outline-none focus:ring-2 focus:ring-primary-400 focus:ring-offset-2"
+                className="mb-4 mt-3 inline-flex items-center whitespace-nowrap rounded bg-sky-900 px-8 py-5 text-primary-50 shadow-xl transition delay-75 duration-100 ease-in-out hover:-translate-y-1 hover:scale-110 hover:cursor-pointer focus:outline-none focus:ring-2 focus:ring-focus-ring focus:ring-offset-2"
                 rel="noreferrer"
                 aria-label="Get directions to DTE Energy Headquarters (opens in new tab)"
               >

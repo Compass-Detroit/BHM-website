@@ -68,7 +68,7 @@ const ReturnToTopButton = () => {
         <button
           onClick={scrollToTop}
           onKeyDown={handleKeyDown}
-          className="fixed bottom-6 right-6 z-50 flex size-12 items-center justify-center rounded-full bg-primary-500 text-white shadow-lg transition-all duration-300 hover:bg-primary-600 focus:outline-none focus:ring-2 focus:ring-primary-300 focus:ring-offset-2"
+          className="fixed bottom-6 right-6 z-50 flex size-12 items-center justify-center rounded-full bg-primary-500 text-white shadow-lg transition-all duration-300 hover:bg-primary-600 focus:outline-none focus:ring-2 focus:ring-focus-ring focus:ring-offset-2"
           aria-label="Return to top of page"
           title="Return to top of page"
         >

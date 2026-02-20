@@ -25,7 +25,6 @@ const SpeakersContent = ({ year, defaultExpanded }) => {
 
   const renderSpeakerHeader = (
     <div className="flex w-full justify-between pt-0">
-      <SectionSkipLink href="#attendees">Skip speakers section</SectionSkipLink>
       <button
         aria-label={
           isExpanded
@@ -123,6 +122,7 @@ const SpeakersContent = ({ year, defaultExpanded }) => {
       id="speakers"
       className="relative flex flex-col justify-center border-b border-primary bg-bhm-neutral-50 p-8 sm:px-10 md:px-14 lg:px-16"
     >
+      <SectionSkipLink href="#jobboard">Skip speakers section</SectionSkipLink>
       {renderSpeakerHeader}
       {renderSpeakerDescription}
       <div

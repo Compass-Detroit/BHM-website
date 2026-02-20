@@ -5,7 +5,7 @@ import { FaEnvelope } from 'react-icons/fa6'
 const MembersSection = () => {
   return (
     <section
-      id="members"
+      id="membership"
       className="bg-bhm-gold-100 p-8 sm:px-10 md:px-14 lg:px-16"
     >
       <div className="flex w-full justify-center pt-0">
@@ -52,14 +52,13 @@ const MembersSection = () => {
               Ready to join?
             </p>
             <CTAButton
-              href="mailto:hello@compassdetroit.org"
+              href="mailto:hello@compassdetroit.org?subject=Compass%20Detroit%20Membership%20Inquiry"
               label="Become a Member"
-              target="_self"
               ariaLabel="Email to become a Compass Detroit member"
               className="text-xl font-semibold text-bhm-neutral-900"
               variant="secondary"
               icon={<FaEnvelope />}
-              iconPosition="right"
+              iconPosition="left"
             />
           </div>
         </div>
