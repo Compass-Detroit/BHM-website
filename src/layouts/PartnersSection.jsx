@@ -1,5 +1,5 @@
 import PropTypes from 'prop-types'
-
+import { FaEnvelope } from 'react-icons/fa6'
 import Kite from '@/assets/images/icn-kite.png'
 import CTAButton from '@/components/ui/CTAButton'
 import SectionSkipLink from '@/components/ui/SectionSkipLink'
@@ -141,9 +141,13 @@ const PartnersSection = ({ partnersData = {}, year }) => {
               </p>
               {year && isCurrentYear && (
                 <CTAButton
-                  href="mailto:sponsors@midevfest.com"
+                  href="mailto:sponsors@midevfest.com?subject=Compass%20Detroit%20Partner%20Inquiry"
                   label="Become a Partner"
-                  target="_self"
+                  ariaLabel="Join us as a partner"
+                  className="text-xl font-semibold text-bhm-neutral-900"
+                  variant="secondary"
+                  icon={<FaEnvelope />}
+                  iconPosition="left"
                 />
               )}
             </div>

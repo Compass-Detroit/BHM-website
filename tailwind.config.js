@@ -15,6 +15,8 @@ export default {
         xs: '400px',
       },
       colors: {
+        /** Dark focus ring for WCAG contrast; use via focus:ring-focus-ring */
+        'focus-ring': '#352215',
         primary: {
           50: '#fefce8',
           100: '#fffac2',

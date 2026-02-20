@@ -93,7 +93,7 @@ function CTAButton({
   }
 
   const baseStyles =
-    'flex items-center justify-center rounded px-8 py-5 font-medium transition-all delay-75 duration-100 ease-in-out hover:-translate-y-1 hover:scale-105 hover:cursor-pointer focus:outline-none focus:ring-2 focus:ring-primary-300 focus:ring-offset-2 whitespace-nowrap'
+    'flex items-center justify-center rounded px-8 py-5 font-medium transition-all delay-75 duration-100 ease-in-out hover:-translate-y-1 hover:scale-105 hover:cursor-pointer focus:outline-none focus:ring-2 focus:ring-focus-ring focus:ring-offset-2 whitespace-nowrap'
 
   return (
     <a

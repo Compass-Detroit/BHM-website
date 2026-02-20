@@ -541,7 +541,7 @@ function SpeakerDetails({
 
       <button
         onClick={goToPreviousSpeaker}
-        className="absolute left-4 top-1/2 z-20 -translate-y-1/2 rounded-full bg-white p-3 shadow-lg transition-all hover:scale-110 hover:shadow-xl focus:outline-none focus:ring-2 focus:ring-primary-500 focus:ring-offset-2"
+        className="absolute left-4 top-1/2 z-20 -translate-y-1/2 rounded-full bg-white p-3 shadow-lg transition-all hover:scale-110 hover:shadow-xl focus:outline-none focus:ring-2 focus:ring-focus-ring focus:ring-offset-2"
         aria-label="Previous speaker"
       >
         <IoChevronBack className="size-6 text-gray-600" aria-hidden="true" />
@@ -549,7 +549,7 @@ function SpeakerDetails({
 
       <button
         onClick={goToNextSpeaker}
-        className="absolute right-4 top-1/2 z-20 -translate-y-1/2 rounded-full bg-white p-3 shadow-lg transition-all hover:scale-110 hover:shadow-xl focus:outline-none focus:ring-2 focus:ring-primary-500 focus:ring-offset-2"
+        className="absolute right-4 top-1/2 z-20 -translate-y-1/2 rounded-full bg-white p-3 shadow-lg transition-all hover:scale-110 hover:shadow-xl focus:outline-none focus:ring-2 focus:ring-focus-ring focus:ring-offset-2"
         aria-label="Next speaker"
       >
         <IoChevronForward className="size-6 text-gray-600" aria-hidden="true" />

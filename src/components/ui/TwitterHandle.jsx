@@ -29,7 +29,7 @@ const TwitterHandle = ({
   const getLinkClassName = () => {
     const baseClass = getClassName()
     const focusClass =
-      'focus:outline-none focus:ring-2 focus:ring-primary-500 focus:ring-offset-2'
+      'focus:outline-none focus:ring-2 focus:ring-focus-ring focus:ring-offset-2'
     return `${baseClass} ${focusClass}`
   }
 
