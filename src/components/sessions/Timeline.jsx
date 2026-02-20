@@ -4,7 +4,7 @@ import EventCard from './EventCard'
 
 const Timeline = ({ schedule, compact = false }) => {
   return (
-    <div className="relative">
+    <div className="relative pb-24">
       {/* Schedule items */}
       <div className={compact ? 'space-y-8' : 'space-y-12'}>
         {schedule.map((timeSlot, timeIndex) => (
@@ -29,14 +29,22 @@ const Timeline = ({ schedule, compact = false }) => {
                 compact
                   ? 'left-0 size-12'
                   : 'left-0 size-16 md:left-1/2 md:-translate-x-1/2'
-              } flex items-center justify-center rounded-full bg-primary-400 text-sm font-bold text-gray-900 shadow-lg`}
+              } flex flex-col items-center justify-center rounded-full bg-primary-400 text-sm font-bold text-gray-900 shadow-lg`}
             >
               <span
                 className={`text-center ${
                   compact ? 'text-[10px]' : 'text-xs md:text-sm'
                 } leading-tight`}
               >
-                {timeSlot.time}
+                {(() => {
+                  const [t, mer] = (timeSlot.time || '').split(' ')
+                  return (
+                    <>
+                      <span>{t}</span>
+                      {mer && <span>{mer}</span>}
+                    </>
+                  )
+                })()}
               </span>
             </div>
 

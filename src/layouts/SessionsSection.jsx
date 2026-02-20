@@ -54,7 +54,7 @@ const SessionsSection = ({
   speakersData,
   year = new Date().getFullYear(),
   tracks = [],
-  defaultExpanded = false,
+  defaultExpanded = true,
 }) => {
   const [activeTab, setActiveTab] = useState(0)
   const [isExpanded, setIsExpanded] = useState(defaultExpanded)

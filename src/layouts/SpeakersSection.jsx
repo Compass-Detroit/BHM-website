@@ -6,7 +6,7 @@ import SpeakersContent from '@/components/speakers/SpeakersContent'
 const SpeakersSection = ({
   speakersData = [],
   year = new Date().getFullYear(),
-  defaultExpanded = false,
+  defaultExpanded = true,
 }) => {
   return (
     <SpeakerProvider speakersData={speakersData}>
