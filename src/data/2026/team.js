@@ -15,7 +15,7 @@ import ShugmiShumunov from '@/data/2026/assets/images/team/shugmi_shumunov-x96.w
 import SohamMhatre from '@/data/2026/assets/images/team/soham_mhatre.webp'
 import SumiaSaleh from '@/data/2026/assets/images/team/Sumia_Saleh-x96.webp'
 import TerrellMcKinney from '@/data/2026/assets/images/team/Terrell_McKinney.webp'
-import Rehanashri from '@/data/2026/assets/images/team/rehanashri-x96.webp'
+
 import DeAndre from '@/data/2026/assets/images/team/DeAndre_Boston.jpg'
 
 export const teamData = [
@@ -284,18 +284,6 @@ Today, Maridy serves as President of the Society of Hispanic Professional Engine
     role: 'Software Engineer',
     commits: null,
     avatar: TerrellMcKinney,
-  },
-  {
-    id: 18,
-    name: 'Rehanashri',
-    github: 'https://github.com/rehanashri',
-    devfest: 'devteam',
-    star: false,
-    university: 'University Of Michigan Dearborn',
-    organization: '',
-    role: 'Student',
-    commits: null,
-    avatar: Rehanashri,
   },
   {
     id: 20,
