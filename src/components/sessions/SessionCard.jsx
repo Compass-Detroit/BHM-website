@@ -117,7 +117,7 @@ function SessionCard({
                 {hasTimeInfo && (
                   <div className="flex items-center gap-2">
                     <span className="text-gray-900 dark:text-gray-100">at</span>
-                    <span className="whitespace-nowrap font-bold text-slate-500 sm:text-xl lg:text-2xl dark:text-slate-400">
+                    <span className="whitespace-nowrap font-bold text-bhm-neutral-700 sm:text-xl lg:text-2xl dark:text-bhm-neutral-200">
                       {startTime} - {endTime}
                     </span>
                   </div>
