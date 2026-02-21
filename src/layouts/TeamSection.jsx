@@ -73,7 +73,7 @@ const TeamSection = ({ teamData, year }) => {
   return (
     <section
       id="leadership"
-      className="relative bg-primary-50 p-8 sm:px-10 md:px-14 lg:px-16"
+      className="relative bg-bhm-gold-50 p-8 sm:px-10 md:px-14 lg:px-16"
     >
       <SectionSkipLink href="#page-footer">Skip to footer</SectionSkipLink>
       <div className="flex w-full justify-center pt-0">
@@ -104,7 +104,7 @@ const TeamSection = ({ teamData, year }) => {
           <ul className="mx-auto mt-20 grid max-w-2xl grid-cols-1 gap-x-8 gap-y-16 text-center  lg:mx-0 lg:max-w-none lg:grid-cols-2 xl:grid-cols-3">
             {sortedTeamData.map((dev) => {
               // Build ribbon class name - eslint-disable needed for dynamic class
-              // eslint-disable-next-line tailwindcss/no-custom-classname
+
               const ribbonClass = `ribbon-${dev.devfest}`
               return (
                 <li

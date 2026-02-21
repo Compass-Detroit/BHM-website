@@ -5,7 +5,7 @@ function LocationSection() {
   return (
     <section
       id="location"
-      className="relative flex h-auto items-center justify-center bg-slate-100 py-16 text-black md:py-28 dark:bg-gray-900 dark:text-white"
+      className="relative flex h-auto items-center justify-center bg-bhm-neutral-100 py-16 text-black md:py-28 dark:bg-bhm-neutral-900 dark:text-white"
       aria-labelledby="location-heading"
     >
       <div className="mx-auto flex w-full max-w-[1100px] flex-col space-y-8 px-4 sm:px-6 lg:px-8">
@@ -17,7 +17,7 @@ function LocationSection() {
             </div>
             <h2
               id="location-heading"
-              className="font-biorhyme text-5xl text-bhm-neutral-900 md:text-5xl lg:text-6xl"
+              className="font-biorhyme text-5xl text-bhm-neutral-900 md:text-5xl lg:text-6xl dark:text-bhm-neutral-200"
             >
               When & Where
             </h2>

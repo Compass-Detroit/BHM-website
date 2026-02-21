@@ -45,7 +45,7 @@ const trackDescriptions = {
   'Breakout Sessions':
     'Focused discussions and interactive sessions on specialized topics. Join intimate conversations with experts and peers at room 255.',
   'Map':
-    'DTE Energy Headquarters is an office complex on the west side of Downtown Detroit at I-75 and Grand River, Michigan, consisting of three interconnected buildings.',
+    'DTE Energy Headquarters is a Class A office complex on the west side of Downtown Detroit at I-75 and Grand River, Michigan, consisting of three interconnected buildings.',
   'Schedule':
     'Full-day conference featuring keynotes, breakout sessions, workshops, networking lunch, panel discussions, sponsor showcases, and techie networking.',
 }
@@ -174,7 +174,7 @@ const SessionsSection = ({
         href="https://www.papercall.io/midevfest2025"
         target="_blank"
         aria-label="Apply to speak at Michigan DevFest 2025 - opens in new tab"
-        className="flex items-center rounded bg-sky-900 px-8 py-5 text-primary-50 shadow-xl transition delay-75 duration-100 ease-in-out hover:-translate-y-1 hover:scale-110 hover:cursor-pointer focus:outline-none focus:ring-2 focus:ring-focus-ring focus:ring-offset-2"
+        className="flex items-center rounded bg-sky-900 px-8 py-5 text-bhm-gold-50 shadow-xl transition delay-75 duration-100 ease-in-out hover:-translate-y-1 hover:scale-110 hover:cursor-pointer focus:outline-none focus:ring-2 focus:ring-focus-ring focus:ring-offset-2"
         rel="noreferrer"
       >
         APPLY TO SPEAK
@@ -185,9 +185,9 @@ const SessionsSection = ({
   return (
     <section
       id="schedule"
-      className="relative flex flex-col items-center justify-start bg-primary-100 p-4 sm:px-10 md:px-14 lg:px-16"
+      className="relative flex flex-col items-center justify-start bg-bhm-gold-50 p-4 sm:px-10 md:px-14 lg:px-16"
     >
-      <SectionSkipLink href="#members">
+      <SectionSkipLink href="#membership">
         Skip sessions navigation
       </SectionSkipLink>
       <div className="flex w-full justify-between pt-0">
@@ -326,7 +326,7 @@ const SessionsSection = ({
           ) : currentTrackSessions.length > 0 ? (
             <>
               {currentSession === 'Hackathon' && <HackathonSessionHeader />}
-              <ul className="grid-cols grid w-full gap-10 py-7">
+              <ul className="grid w-full grid-cols-1 gap-10 py-7 xl:grid-cols-2">
                 {hasSessionsForTrack ? (
                   currentTrackSessions
                     .sort((a, b) => {

@@ -122,7 +122,7 @@ const EventCard = ({
   // Default mode: single or dual event display
   return (
     <div
-      className={`group relative w-full rounded-xl bg-white p-5 shadow-md transition-all hover:shadow-lg ${
+      className={`group relative w-full rounded-xl bg-white p-5 shadow-md transition-all hover:cursor-pointer hover:shadow-lg ${
         alignRight
           ? 'md:ml-auto md:w-[calc(50%-3rem)]'
           : 'md:mr-auto md:w-[calc(50%-3rem)]'
@@ -140,7 +140,7 @@ const EventCard = ({
             : 'left-0 top-full ml-4 mt-2'
         } w-72 rounded-lg border border-gray-200 bg-gray-900 p-4 shadow-xl`}
       >
-        <div className="text-sm leading-relaxed text-gray-300">
+        <div className="text-base leading-relaxed text-gray-200">
           {description}
         </div>
         {/* Arrow */}

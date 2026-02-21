@@ -11,20 +11,20 @@ function Footer() {
     <footer
       id="page-footer"
       role="contentinfo"
-      className="relative flex flex-col bg-charcoal-100 text-black dark:bg-indigo-800 dark:text-white"
+      className="relative flex flex-col bg-bhm-neutral-900  text-white"
     >
       <SectionSkipLink href="#footer-credits">
         Skip footer navigation
       </SectionSkipLink>
-      <div className="mx-auto w-full max-w-7xl px-6 py-8 md:flex md:items-center md:justify-between lg:px-8">
-        <div className="flex flex-wrap justify-center gap-x-6 gap-y-2 md:order-2">
+      <div className="mx-auto w-full max-w-7xl px-6 py-8 md:flex lg:px-8">
+        <div className="ml-3 flex flex-wrap gap-1 md:order-2">
           {sections
             .filter((section) => section.id)
             .map((section) => (
               <Link
                 key={section.id}
                 to={`/#${section.id}`}
-                className="text-sm text-gray-600 hover:text-gray-800 dark:text-gray-400 dark:hover:text-gray-200"
+                className="px-1 text-base text-bhm-neutral-50 hover:text-bhm-gold-200 hover:underline hover:underline-offset-4"
               >
                 {section.text}
               </Link>
@@ -33,26 +33,26 @@ function Footer() {
             <Link
               key={link.to}
               to={link.to}
-              className="text-sm text-gray-600 hover:text-gray-800 dark:text-gray-400 dark:hover:text-gray-200"
+              className="text-base text-bhm-neutral-50 hover:text-gray-200 hover:underline hover:underline-offset-4"
             >
               {link.text}
             </Link>
           ))}
         </div>
-        <p className="mt-8 text-center text-sm text-gray-600 md:order-1 md:mt-0 dark:text-gray-400">
+        <p className="border-r-2 pr-3 text-base text-bhm-neutral-50 hover:text-gray-200">
           © {new Date().getFullYear()} Compass Detroit. All rights reserved.
         </p>
       </div>
       <div
         id="footer-credits"
-        className="mx-auto w-full max-w-full border-t border-gray-300 bg-indigo-950 px-6 pb-24 pt-8 lg:px-8 dark:border-gray-700"
+        className="mx-auto w-full max-w-full border-t border-gray-100 bg-bhm-neutral-950 px-6 pb-24 pt-8 lg:px-8"
       >
         <div className="mx-auto max-w-7xl">
           <div className="grid grid-cols-1 gap-8 md:grid-cols-3">
             <div className="col-span-1 md:col-span-3">
               {/* Full width column */}
               <div>
-                <h3 className="mb-2 text-lg font-semibold uppercase tracking-wide text-gray-400">
+                <h3 className="mb-2 text-lg font-semibold uppercase tracking-wide text-bhm-neutral-200">
                   Brought to you by:
                 </h3>
               </div>
@@ -75,7 +75,7 @@ function Footer() {
             </div>
             <div className="grid grid-cols-1 items-center">
               {/* Right column - 1/3 width */}
-              <p className="prose text-pretty text-sm text-white">
+              <p className="prose text-pretty text-lg text-white">
                 The Compass Detroit and GDG Detroit teams are volunteers who are
                 passionate about helping the community learn and grow in the
                 field of technology.
