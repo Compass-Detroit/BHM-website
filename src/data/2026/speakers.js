@@ -494,7 +494,7 @@ export const SpeakersData = [
     twitter: null,
     linkedIn: 'https://www.linkedin.com/in/terrellmckinney',
     github: null,
-    organization: 'Aaron Douglas LLC & Angi Home Services',
+    organization: 'Aaron Douglas LLC',
     position: 'Technical Consultant & Software Engineer II',
     session: {
       title:
@@ -985,7 +985,7 @@ export const SpeakersData = [
     twitter: null,
     linkedIn: 'https://www.linkedin.com/in/terrellmckinney',
     github: null,
-    organization: 'Aaron Douglas LLC & Angi Home Services',
+    organization: 'Aaron Douglas LLC',
     position: 'Technical Consultant & Software Engineer II',
     session: {
       title: 'Tackling the Software Interview in The Age of AI',
