@@ -250,7 +250,8 @@ export const SpeakersData = [
     organization: 'Torc Robotics',
     position: 'Senior Software Engineer',
     session: {
-      title: 'Autonomous Drone Racing: How Robots See, Think, and Fly at High Speed',
+      title: 
+        'Autonomous Drone Racing: How Robots See, Think, and Fly at High Speed',
       abstract: null,
       description: `Autonomous drone racing pushes robots to operate at the edge of speed and decision-making. While it may look effortless, building drones that can see, think, and fly on their own requires solving real engineering challenges. In this session, the speaker shares hands-on experience developing autonomous racing drones and explains how these systems are designed—from perception and navigation to control. The talk highlights the key building blocks of autonomy, the practical challenges faced in real-world deployment, and why racing has become a powerful testbed for robotics and AI. Attendees will gain insight into how autonomous drones work in practice and how the lessons learned extend to broader applications like self-driving vehicles and intelligent machines.`,
       tags: ['In-person', 'Innovation'],
