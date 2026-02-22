@@ -12,7 +12,7 @@ const PreviousEvents = () => {
     <PageLayout>
       <section
         aria-labelledby="main-heading"
-        className={`bg-inherit pt-72 transition-[opacity,transform] duration-1000 ease-out ${
+        className={`mb-[-224px] bg-bhm-gold-100 pt-72 transition-[opacity,transform] duration-1000 ease-out dark:bg-bhm-gold-100 ${
           isVisible ? '-translate-y-56 opacity-100' : 'translate-y-24 opacity-0'
         }`}
       >
