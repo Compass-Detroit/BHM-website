@@ -280,7 +280,7 @@ function Navbar() {
   const desktopNavList = (
     <ul
       role="menubar"
-      className="z-50 flex flex-row flex-nowrap items-baseline justify-end gap-x-6 px-4 py-2"
+      className="z-50 flex flex-row flex-nowrap items-baseline justify-end gap-x-5 px-4 py-2"
     >
       {sections.map((section) => {
         const isRouteLink = !!section.to

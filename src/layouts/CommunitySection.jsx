@@ -1,7 +1,5 @@
 import PropTypes from 'prop-types'
 
-import Kite from '@/assets/images/icn-kite.png'
-
 const CommunitySection = ({ year = new Date().getFullYear() }) => {
   return (
     <section
@@ -13,11 +11,6 @@ const CommunitySection = ({ year = new Date().getFullYear() }) => {
           <h2 className="mb-4 w-full text-center font-biorhyme text-5xl text-bhm-neutral-900 md:text-5xl lg:text-6xl">
             {year ? `${year} ` : ''}Community
           </h2>
-          <img
-            src={Kite}
-            alt=""
-            className="absolute right-2 top-0 h-12 sm:right-10 md:right-14 md:top-0 lg:right-16 lg:top-0 lg:h-16"
-          />
         </div>
       </div>
     </section>

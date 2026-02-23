@@ -1,6 +1,5 @@
 import PropTypes from 'prop-types'
 import { FaEnvelope } from 'react-icons/fa6'
-import Kite from '@/assets/images/icn-kite.png'
 import CTAButton from '@/components/ui/CTAButton'
 import SectionSkipLink from '@/components/ui/SectionSkipLink'
 
@@ -86,12 +85,6 @@ const PartnersSection = ({ partnersData = {}, year }) => {
         <h2 className="w-full text-center font-biorhyme text-5xl text-bhm-neutral-900 md:text-5xl lg:text-6xl">
           {year ? `${year} ` : ''}Partners
         </h2>
-        <img
-          src={Kite}
-          alt="Partners"
-          className="absolute right-0 top-0 h-10 sm:h-12 md:h-14 lg:h-16"
-          loading="lazy"
-        />
       </div>
 
       <div className="mx-auto mt-6 max-w-4xl text-left">
@@ -102,7 +95,7 @@ const PartnersSection = ({ partnersData = {}, year }) => {
         </p>
       </div>
 
-      <div className="mt-8 overflow-hidden transition-all duration-500 ease-in-out sm:mt-10 md:mt-14 lg:mt-16">
+      <div className="mx-auto mt-8 w-full max-w-7xl overflow-hidden transition-all duration-500 ease-in-out sm:mt-10 md:mt-14 lg:mt-16">
         {hasPartners ? (
           <>
             {renderPartnerTier(

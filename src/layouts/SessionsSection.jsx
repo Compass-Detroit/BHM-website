@@ -6,7 +6,6 @@ import NoSessionsAvailable from '@/components/sessions/NoSessionsAvailable'
 import Schedule from '@/components/sessions/Schedule'
 import SessionCard from '@/components/sessions/SessionCard'
 import SectionSkipLink from '@/components/ui/SectionSkipLink'
-import SessionsLogo from '@/assets/images/icn-sessions.png'
 import VenueMaps from '@/components/sessions/VenueMaps'
 
 import { DIRECTION } from '@/constants/directions'
@@ -190,13 +189,13 @@ const SessionsSection = ({
       <SectionSkipLink href="#membership">
         Skip sessions navigation
       </SectionSkipLink>
-      <div className="flex w-full justify-between pt-0">
+      <div className="relative mx-auto w-full max-w-7xl justify-center pt-0">
         <button
           aria-label={
             isExpanded ? `Collapse ${year} Sessions` : `Expand ${year} Sessions`
           }
           onClick={toggleExpanded}
-          className="flex cursor-pointer items-center text-black transition-colors hover:text-gray-600"
+          className="absolute left-0 top-0 cursor-pointer items-center text-black transition-colors hover:text-gray-600"
         >
           <IoChevronDown
             className={`size-10 shrink-0 text-sky-900 sm:size-14 md:size-16 lg:size-20 ${
@@ -207,14 +206,6 @@ const SessionsSection = ({
         <h2 className="text-center font-biorhyme text-5xl text-bhm-neutral-900 md:text-5xl lg:text-6xl">
           {year} Schedule
         </h2>
-        <img
-          src={SessionsLogo}
-          alt=""
-          className="h-10 sm:h-12 md:h-14 lg:h-16"
-          width={82}
-          height={69}
-          loading="lazy"
-        />
       </div>
 
       {/* Track Description */}

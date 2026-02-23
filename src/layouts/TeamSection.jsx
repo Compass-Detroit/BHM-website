@@ -1,6 +1,5 @@
 import { useState, useEffect, useRef } from 'react'
 import PropTypes from 'prop-types'
-import DevLogo from '@/assets/images/icn-dev.png'
 import LinkedInHandle from '@/components/ui/LinkedInHandle'
 import SectionSkipLink from '@/components/ui/SectionSkipLink'
 import GithubHandle from '@/components/ui/GithubHandle'
@@ -80,13 +79,6 @@ const TeamSection = ({ teamData, year }) => {
         <h2 className="mb-4 w-full text-center font-biorhyme text-5xl text-bhm-neutral-900 md:mb-6 md:text-5xl lg:text-6xl">
           {year ? `${year} ` : ''}Leadership Team
         </h2>
-        <img
-          src={DevLogo}
-          alt=""
-          className="h-10 sm:h-12 md:h-14 lg:h-16"
-          loading="lazy"
-          aria-hidden="true"
-        />
       </div>
 
       <div className="mx-auto flex max-w-full justify-center lg:mx-0">

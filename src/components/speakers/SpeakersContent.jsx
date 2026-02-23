@@ -1,7 +1,6 @@
 import { useContext, useState } from 'react'
 import PropTypes from 'prop-types'
 
-import SpeakersLogo from '@/assets/images/icn-speakers.png'
 import SpeakerCard from '@/components/speakers/SpeakerCard'
 import SectionSkipLink from '@/components/ui/SectionSkipLink'
 
@@ -24,7 +23,7 @@ const SpeakersContent = ({ year, defaultExpanded }) => {
   }
 
   const renderSpeakerHeader = (
-    <div className="flex w-full justify-between pt-0">
+    <div className="relative mx-auto w-full max-w-7xl justify-center pt-0">
       <button
         aria-label={
           isExpanded
@@ -32,7 +31,7 @@ const SpeakersContent = ({ year, defaultExpanded }) => {
             : `Expand ${year} Compass Detroit Speakers`
         }
         onClick={toggleExpanded}
-        className="flex cursor-pointer items-center text-black transition-colors hover:text-gray-600"
+        className="absolute left-0 top-0 cursor-pointer items-center text-black transition-colors hover:text-gray-600"
       >
         <IoChevronDown
           className={`size-10 shrink-0 text-sky-900 sm:size-14 md:size-16 lg:size-20 ${
@@ -43,15 +42,6 @@ const SpeakersContent = ({ year, defaultExpanded }) => {
       <h2 className="w-full text-center font-biorhyme text-5xl text-bhm-neutral-900 md:text-5xl lg:text-6xl">
         {year} Speakers
       </h2>
-      <img
-        src={SpeakersLogo}
-        alt=""
-        className="z-0 h-8 sm:h-10 md:h-12 lg:h-12"
-        width={96}
-        height={45}
-        loading="lazy"
-        aria-hidden="true"
-      />
     </div>
   )
 

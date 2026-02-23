@@ -5,7 +5,7 @@ function LocationSection() {
   return (
     <section
       id="location"
-      className="relative flex h-auto items-center justify-center bg-bhm-neutral-100 py-16 text-black md:py-28 dark:bg-bhm-neutral-900 dark:text-white"
+      className="relative flex h-auto items-center justify-center bg-bhm-neutral-100 py-16 text-black md:py-28 dark:bg-bhm-neutral-700 dark:text-white"
       aria-labelledby="location-heading"
     >
       <div className="mx-auto flex w-full max-w-[1100px] flex-col space-y-8 px-4 sm:px-6 lg:px-8">
@@ -17,7 +17,7 @@ function LocationSection() {
             </div>
             <h2
               id="location-heading"
-              className="font-biorhyme text-5xl text-bhm-neutral-900 md:text-5xl lg:text-6xl dark:text-bhm-neutral-200"
+              className="font-biorhyme text-5xl text-bhm-neutral-900 md:text-5xl lg:text-6xl dark:text-bhm-neutral-50"
             >
               When & Where
             </h2>
@@ -52,8 +52,8 @@ function LocationSection() {
               </time>
               <dl>
                 <dt className="sr-only">Venue</dt>
-                <dd className="font-medium xl:whitespace-nowrap">
-                  <strong>DTE</strong>
+                <dd className="mt-2 text-2xl font-semibold xl:whitespace-nowrap">
+                  DTE Energy
                 </dd>
                 <dt className="sr-only">Address</dt>
                 <dd>
@@ -68,7 +68,7 @@ function LocationSection() {
               <a
                 href="https://www.google.com/maps/dir//DTE+Energy+Headquarters+1+Energy+Plaza+Detroit,+48226"
                 target="_blank"
-                className="mb-4 mt-3 inline-flex items-center whitespace-nowrap rounded bg-sky-900 px-8 py-5 text-primary-50 shadow-xl transition delay-75 duration-100 ease-in-out hover:-translate-y-1 hover:scale-110 hover:cursor-pointer focus:outline-none focus:ring-2 focus:ring-focus-ring focus:ring-offset-2"
+                className="my-6 inline-flex items-center whitespace-nowrap rounded bg-bhm-gold-300 px-8 py-5 font-bold text-bhm-neutral-950 shadow-xl transition delay-75 duration-100 ease-in-out hover:-translate-y-1 hover:scale-110 hover:cursor-pointer focus:outline-none focus:ring-2 focus:ring-focus-ring focus:ring-offset-2"
                 rel="noreferrer"
                 aria-label="Get directions to DTE Energy Headquarters (opens in new tab)"
               >

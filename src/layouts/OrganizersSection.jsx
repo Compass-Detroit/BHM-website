@@ -1,4 +1,3 @@
-import Arrow from '@/assets/images/icn-arrow.png'
 import GenericCard from '@/components/ui/GenericCard'
 import { organizersData } from '@/data/organizers'
 
@@ -12,12 +11,6 @@ function OrganizersSection() {
         <h2 className="w-full text-center font-biorhyme text-5xl text-bhm-neutral-900 md:text-5xl lg:text-6xl">
           Organizers
         </h2>
-        <img
-          src={Arrow}
-          alt="Organizers"
-          className="h-6 -scale-x-100 sm:h-8 md:h-10 lg:h-12"
-          loading="lazy"
-        />
       </div>
       <div className="my-32 grid grid-cols-1 place-items-center gap-20 sm:grid-cols-2 lg:mt-36">
         {organizersData.map((organizer) => (

@@ -1,6 +1,4 @@
 import PropTypes from 'prop-types'
-
-import Kite from '@/assets/images/icn-kite.png'
 import { jobBoardData } from '@/data/2026/jobboard'
 import SectionSkipLink from '@/components/ui/SectionSkipLink'
 
@@ -17,11 +15,6 @@ const JobBoardSection = ({ year = new Date().getFullYear() }) => {
         <h2 className="relative z-10 w-full text-center font-biorhyme text-5xl text-bhm-neutral-900 md:text-5xl lg:text-6xl">
           {year && !isCurrentYear ? `${year} ` : ''}Job Board
         </h2>
-        <img
-          src={Kite}
-          alt=""
-          className="absolute right-2 top-0 z-0 h-12 sm:right-10 md:right-14 md:top-0 lg:right-16 lg:top-0 lg:h-16"
-        />
       </div>
 
       <div className="mx-auto mb-12 max-w-4xl">
