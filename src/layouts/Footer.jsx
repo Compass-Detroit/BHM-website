@@ -39,7 +39,7 @@ function Footer() {
             </Link>
           ))}
         </div>
-        <p className="border-r-2 pr-3 text-base text-bhm-neutral-50 hover:text-gray-200">
+        <p className="mt-6 pr-0 text-base text-white md:mt-0 md:border-r-2 md:pr-3">
           © {new Date().getFullYear()} Compass Detroit. All rights reserved.
         </p>
       </div>
