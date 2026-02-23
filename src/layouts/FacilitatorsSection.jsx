@@ -1,4 +1,3 @@
-import Connector from '@/assets/images/icn-connect.png'
 import GenericCard from '@/components/ui/GenericCard'
 import { facilitatorsData } from '@/data/facilitators'
 
@@ -12,12 +11,6 @@ function FacilitatorsSection() {
         <h2 className="w-full text-center font-biorhyme text-5xl text-bhm-neutral-900 md:text-5xl lg:text-6xl">
           Facilitators
         </h2>
-        <img
-          src={Connector}
-          alt="Facilitators"
-          className="h-10 sm:h-12 md:h-14 lg:h-16"
-          loading="lazy"
-        />
       </div>
       <div className="mt-32 flex flex-wrap justify-center gap-20 sm:mt-36">
         {facilitatorsData.map((facilitator) => (
