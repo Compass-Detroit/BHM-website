@@ -24,7 +24,7 @@ function Footer() {
               <Link
                 key={section.id}
                 to={`/#${section.id}`}
-                className="px-1 text-base text-bhm-neutral-50 hover:text-bhm-gold-200 hover:underline hover:underline-offset-4"
+                className="border-r-2 border-bhm-neutral-500 pl-1 pr-2 text-base text-bhm-neutral-50 hover:text-bhm-gold-200 hover:underline hover:underline-offset-4"
               >
                 {section.text}
               </Link>
@@ -33,7 +33,7 @@ function Footer() {
             <Link
               key={link.to}
               to={link.to}
-              className="text-base text-bhm-neutral-50 hover:text-gray-200 hover:underline hover:underline-offset-4"
+              className="pl-2 pr-1 text-base text-bhm-neutral-50 hover:text-gray-200 hover:underline hover:underline-offset-4"
             >
               {link.text}
             </Link>
