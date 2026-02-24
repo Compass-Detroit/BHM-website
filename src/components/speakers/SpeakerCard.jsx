@@ -77,9 +77,14 @@ const SpeakerCard = ({
         // Restore scroll position
         window.scrollTo(0, scrollPosition.current)
 
-        // Return focus to the element that opened the modal
-        if (previousActiveElement.current) {
-          previousActiveElement.current.focus()
+        // Return focus to the element that opened the modal (only if still in DOM)
+        try {
+          const el = previousActiveElement.current
+          if (el && typeof el.focus === 'function' && document.contains(el)) {
+            el.focus()
+          }
+        } catch {
+          // Ignore focus restoration errors (e.g. detached elements)
         }
       }
     }
