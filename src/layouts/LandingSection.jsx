@@ -38,10 +38,10 @@ function LandingSection() {
               industries.
             </p>
             <p className="prose text-xl font-semibold text-bhm-gold-50 lg:text-base xl:text-lg">
-              Join local professionals, leaders and learners gather for a day of
-              learning, building, and connecting. Whether you&apos;re a seasoned
-              professional, an ambitious innovator, a learner, a leader, or a
-              creative, this is your chance to immerse yourself in
+              Join local professionals, leaders and learners as they gather for
+              a day of learning, building, and connecting. Whether you&apos;re a
+              seasoned professional, an ambitious innovator, a learner, a
+              leader, or a creative, this is your chance to immerse yourself in
               Detroit&apos;s renaissance and invest in the city&apos;s growing
               tech ecosystem.
             </p>
