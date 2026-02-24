@@ -102,6 +102,52 @@
 }
 
 @layer components {
+  /**
+   * Skip link: visually hidden until keyboard focus (focus-visible).
+   * Uses clip-path instead of off-screen positioning to avoid:
+   * - Links peeking into view at zoom/small viewports
+   * - Scrollbars or layout quirks from -9999px
+   * - Visibility on mouse click (focus vs focus-visible)
+   */
+  .skip-link {
+    position: absolute;
+    left: 6px;
+    z-index: 100;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    clip-path: inset(50%);
+    white-space: nowrap;
+    border: 0;
+    border-radius: 0.25rem;
+    background: white;
+    color: black;
+    box-shadow: 0 1px 3px 0 rgb(0 0 0 / 0.1);
+    transition: clip-path 0.15s ease;
+  }
+  .skip-link:focus-visible {
+    width: auto;
+    height: auto;
+    padding: 0.25rem 0.5rem;
+    margin: 0;
+    overflow: visible;
+    clip: auto;
+    clip-path: none;
+    top: 6px;
+    outline: none;
+    box-shadow: 0 0 0 2px #352215;
+  }
+  .dark .skip-link {
+    background: #1f2937;
+    color: white;
+  }
+  .dark .skip-link:focus-visible {
+    box-shadow: 0 0 0 2px #efb403;
+  }
+
   /* Yoda 404 animation classes */
   .yoda-float {
     animation: float 4s ease-in-out infinite;
