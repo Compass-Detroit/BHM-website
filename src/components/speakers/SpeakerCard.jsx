@@ -164,7 +164,7 @@ SpeakerCard.propTypes = {
   organization: PropTypes.string,
   position: PropTypes.string,
   sessionDescription: PropTypes.string,
-  sessionTitle: PropTypes.string.isRequired,
+  sessionTitle: PropTypes.string,
   tags: PropTypes.arrayOf(PropTypes.string),
   track: PropTypes.string,
   twitter: PropTypes.string,
