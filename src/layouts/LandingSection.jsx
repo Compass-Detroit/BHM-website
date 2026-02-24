@@ -28,14 +28,22 @@ function LandingSection() {
             </h2>
 
             <p className="prose text-xl font-bold text-bhm-gold-50 lg:text-base xl:text-lg">
-              The Detroit, Ann Arbor, Toledo, UofM Dearborn and Windsor GDGs are
-              teaming up with Compass Detroit to bring you the Compass Detroit
-              conference.
+              Compass x NSBE Detroit in partnership with SHPE Detroit, GDG
+              Detroit, Women Techmakers, DevOps Detroit, Detroit Hacker House,
+              Automation Workz, CCS, IBM, and DTE Energy are hosting a day of
+              learning, building, connecting, and celebrating Detroit&apos;s
+              tech ecosystem. This large-scale, in-person summit at DTE Energy
+              HQ will offer a full day on the latest advancements in tech and
+              transformative impact of AI and open source technologies on
+              industries.
             </p>
-            <p className="prose text-xl font-bold text-bhm-gold-50 lg:text-base xl:text-lg">
-              Join the excitement for the Compass Detroit conference. With this
-              year&apos;s event, we aim to deliver a great day of networking,
-              innovation, and knowledge sharing for all involved.
+            <p className="prose text-xl font-semibold text-bhm-gold-50 lg:text-base xl:text-lg">
+              Join local professionals, leaders and learners as they gather for
+              a day of learning, building, and connecting. Whether you&apos;re a
+              seasoned professional, an ambitious innovator, a learner, a
+              leader, or a creative, this is your chance to immerse yourself in
+              Detroit&apos;s renaissance and invest in the city&apos;s growing
+              tech ecosystem.
             </p>
             <div className="flex flex-row gap-8">
               <CTAButton

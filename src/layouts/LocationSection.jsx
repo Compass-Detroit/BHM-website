@@ -8,12 +8,15 @@ function LocationSection() {
       className="relative flex h-auto items-center justify-center bg-bhm-neutral-100 py-16 text-black md:py-28 dark:bg-bhm-neutral-700 dark:text-white"
       aria-labelledby="location-heading"
     >
-      <div className="mx-auto flex w-full max-w-[1100px] flex-col space-y-8 px-4 sm:px-6 lg:px-8">
+      <div className="mx-auto flex w-full max-w-[1200px] flex-col space-y-8 px-4 sm:px-6 lg:px-8">
         {/* When Section */}
         <div className="flex justify-center">
           <div className="flex items-center">
-            <div className="mx-2 flex size-11 items-center justify-center rounded-full bg-yellow-500">
-              <FaClock className="size-6 text-white" aria-hidden="true" />
+            <div className="mx-2 flex size-11 shrink-0 items-center justify-center rounded-full bg-yellow-500">
+              <FaClock
+                className="size-6 shrink-0 text-white"
+                aria-hidden="true"
+              />
             </div>
             <h2
               id="location-heading"
@@ -27,10 +30,10 @@ function LocationSection() {
           <div className="text-center">
             <div className="mt-2 space-y-1">
               <time
-                dateTime="2026-02-28T08:00:00-05:00/2026-02-28T17:00:00-05:00"
+                dateTime="2026-02-28T08:00:00-05:00/2026-02-28T18:00:00-05:00"
                 className="block text-xl font-semibold"
               >
-                Saturday: 8:00 AM - 5:00 PM
+                Saturday, February 28th: 8:00 AM - 6:00 PM
               </time>
             </div>
           </div>
@@ -41,44 +44,80 @@ function LocationSection() {
           {/* Saturday Location Info */}
           <div className="mb-4 flex flex-col lg:mb-0 lg:w-1/2">
             <div className="mb-4 flex items-center">
-              <div className="mx-2 flex size-11 items-center justify-center rounded-full bg-yellow-500">
-                <FaMapPin className="size-6 text-white" aria-hidden="true" />
+              <div className="mx-2 flex size-11 shrink-0 items-center justify-center rounded-full bg-yellow-500">
+                <FaMapPin
+                  className="size-6 shrink-0 text-white"
+                  aria-hidden="true"
+                />
               </div>
-              <h3 className="text-3xl font-semibold">Compass Detroit 2026</h3>
-            </div>
-            <div className="ml-16">
-              <time dateTime="2026-02-28T08:00:00-05:00/2026-02-28T17:00:00-05:00">
-                <p>Saturday, February 28th - 8:00 AM - 5:00 PM</p>
-              </time>
               <dl>
                 <dt className="sr-only">Venue</dt>
-                <dd className="mt-2 text-2xl font-semibold xl:whitespace-nowrap">
-                  DTE Energy
-                </dd>
-                <dt className="sr-only">Address</dt>
-                <dd>
-                  <address
-                    className="not-italic xl:whitespace-nowrap"
-                    aria-label="Main event venue address"
-                  >
-                    1 Energy Plaza, Detroit, MI 48226
-                  </address>
+                <dd className="m-0">
+                  <h3 className="text-3xl font-semibold">DTE Energy HQ</h3>
                 </dd>
               </dl>
+            </div>
+
+            <dl>
+              <dt className="sr-only">Address</dt>
+              <dd>
+                <address
+                  className="ml-16 mt-1 not-italic xl:whitespace-nowrap"
+                  aria-label="Main event venue address"
+                >
+                  1 Energy Plaza, Detroit, MI 48226
+                </address>
+              </dd>
+            </dl>
+
+            <div className="my-4">
               <a
                 href="https://www.google.com/maps/dir//DTE+Energy+Headquarters+1+Energy+Plaza+Detroit,+48226"
                 target="_blank"
-                className="my-6 inline-flex items-center whitespace-nowrap rounded bg-bhm-gold-300 px-8 py-5 font-bold text-bhm-neutral-950 shadow-xl transition delay-75 duration-100 ease-in-out hover:-translate-y-1 hover:scale-110 hover:cursor-pointer focus:outline-none focus:ring-2 focus:ring-focus-ring focus:ring-offset-2"
+                className="ml-16 inline-flex w-fit items-center whitespace-nowrap rounded bg-bhm-gold-300 px-8 py-5 font-bold text-bhm-neutral-950 shadow-xl transition delay-75 duration-100 ease-in-out hover:-translate-y-1 hover:scale-110 hover:cursor-pointer focus:outline-none focus:ring-2 focus:ring-focus-ring focus:ring-offset-2"
                 rel="noreferrer"
                 aria-label="Get directions to DTE Energy Headquarters (opens in new tab)"
               >
                 GET DTE DIRECTIONS
               </a>
-              <div className="relative">
-                <SectionSkipLink href="#schedule">
-                  Skip location section
-                </SectionSkipLink>
-              </div>
+            </div>
+
+            <dl>
+              <dt className="sr-only">Free parking</dt>
+              <dd className="mt-8 flex items-center">
+                <div className="mx-2 flex size-11 shrink-0 items-center justify-center rounded-full bg-yellow-500">
+                  <FaMapPin
+                    className="size-6 shrink-0 text-white"
+                    aria-hidden="true"
+                  />
+                </div>
+                <h3 className="text-2xl font-semibold">
+                  MGM Grand Detroit Self Parking (FREE)
+                </h3>
+              </dd>
+              <dd>
+                <address
+                  className="ml-16 mt-4 not-italic xl:whitespace-nowrap"
+                  aria-label="Free parking address"
+                >
+                  2199 3rd Ave, Detroit, MI 48226
+                </address>
+                <a
+                  href="https://bit.ly/dte-free-parking"
+                  target="_blank"
+                  rel="noreferrer"
+                  className="my-4 ml-16 inline-flex w-fit items-center whitespace-nowrap rounded border-4 border-bhm-neutral-950 bg-bhm-gold-200 px-8 py-5 font-bold text-bhm-neutral-950 shadow-lg transition delay-75 duration-100 ease-in-out hover:-translate-y-1 hover:scale-110 hover:cursor-pointer hover:bg-bhm-gold-50 focus:outline-none focus:ring-2 focus:ring-focus-ring focus:ring-offset-2"
+                  aria-label="Free parking information (opens in new tab)"
+                >
+                  FREE PARKING INFO
+                </a>
+              </dd>
+            </dl>
+
+            <div className="relative">
+              <SectionSkipLink href="#schedule">
+                Skip location section
+              </SectionSkipLink>
             </div>
           </div>
 

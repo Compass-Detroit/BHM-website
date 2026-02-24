@@ -435,7 +435,7 @@ function Navbar() {
           aria-label={isNavVisible ? 'Close Main Menu' : 'Open Main Menu'}
           aria-expanded={isNavVisible}
           aria-controls="mobile-navigation"
-          className={`touch-manipulation rounded border-2 p-2 transition-colors sm:px-4 xl:hidden ${
+          className={`mr-2 touch-manipulation rounded border-2 p-2 transition-colors sm:px-4 xl:hidden ${
             activeLink === 'landing' && isHomePage
               ? 'border-sky-900 hover:bg-primary-300 active:bg-primary-200'
               : 'border-gray-300 hover:bg-gray-100 active:bg-gray-200 dark:text-gray-100 dark:hover:bg-primary-400'
