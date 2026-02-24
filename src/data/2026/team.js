@@ -1,19 +1,12 @@
-import AliElSharif from '@/data/2026/assets/images/team/ali_elsharif.webp'
 import DaveKoziol from '@/data/2026/assets/images/team/dav_koziol.webp'
 import GregMiller from '@/data/2026/assets/images/team/greg_miller-x96.webp'
 import HernandoMalabet from '@/data/2026/assets/images/team/hernando_malabet.webp'
 import HodaSolati from '@/data/2026/assets/images/team/hoda_solati.webp'
-import HudaHussaini from '@/data/2026/assets/images/team/huda_hussaini.webp'
 import JennaRitten from '@/data/2026/assets/images/team/jenna_ritten.webp'
-import JingranWang from '@/data/2026/assets/images/team/Jingran_Wang-x96.webp'
-import MaridyMazaira from '@/data/2026/assets/images/team/maridy_mazaira.webp'
-import NisaSolano from '@/data/2026/assets/images/team/nisa_solano.webp'
-import RaquelEstrada from '@/data/2026/assets/images/team/raquel_estrada.webp'
 import RishirajSarkar from '@/data/2026/assets/images/team/rishiraj_sarkar.webp'
 import ShimaSolati from '@/data/2026/assets/images/team/shima_solati.webp'
 import ShugmiShumunov from '@/data/2026/assets/images/team/shugmi_shumunov-x96.webp'
 import SohamMhatre from '@/data/2026/assets/images/team/soham_mhatre.webp'
-import SumiaSaleh from '@/data/2026/assets/images/team/Sumia_Saleh-x96.webp'
 import TerrellMcKinney from '@/data/2026/assets/images/team/Terrell_McKinney.webp'
 
 import DeAndre from '@/data/2026/assets/images/team/DeAndre_Boston.jpg'
@@ -29,7 +22,7 @@ export const teamData = [
     star: true,
     university: '',
     organization: 'Little Caesars',
-    role: 'Compass Board Member + GDG Organizer',
+    role: 'Executive Director',
     commits: null,
     avatar: DaveKoziol,
   },
@@ -43,39 +36,9 @@ export const teamData = [
     star: true,
     university: '',
     organization: 'IBM',
-    role: 'Compass Board Member + GDG Organizer + Women Techmakers',
+    role: 'Secretary and GDG Chair',
     commits: null,
     avatar: JennaRitten,
-  },
-  {
-    id: 3,
-    name: 'Huda Hussaini',
-    twitter: '',
-    linkedin: 'https://www.linkedin.com/in/huda-hussaini/',
-    github: '',
-    devfest: 'organizer',
-    star: false,
-    university: '',
-    bio: `Have done a few cool AI project like Integrating AI and cybersecurity testing for automotive vehicles, Creating a Gen AI agent for your car and automating contract processing with IDP!`,
-    organization: 'Ally Financial + Women Techmakers',
-    role: 'GenAI Technical Product Owner',
-    commits: null,
-    avatar: HudaHussaini,
-  },
-  {
-    id: 4,
-    name: 'Sumia Saleh',
-    twitter: '',
-    linkedin: 'https://www.linkedin.com/in/sumia-saleh-163741263/',
-    github: 'https://github.com/Sumias',
-    devfest: 'organizer',
-    star: false,
-    university: 'University Of Michigan Dearborn',
-    bio: ``,
-    organization: '',
-    role: 'GDGC Lead',
-    commits: null,
-    avatar: SumiaSaleh,
   },
   {
     id: 5,
@@ -177,21 +140,6 @@ export const teamData = [
     avatar: HodaSolati,
   },
   {
-    id: 11,
-    name: 'Ali El Sharif',
-    twitter: '',
-    linkedin: 'https://www.linkedin.com/in/ali-el-sharif-76530222b/',
-    github: '',
-    devfest: 'organizer',
-    star: false,
-    university: '',
-    bio: `Ali El-Sharif works as a professor at St. Clair College in Windsor, where he teaches Data Analytics, Cybersecurity, and Cloud Computing. He also teaches at the University of Windsor and the University of Niagara Falls Canada.  Ali is a Google Developers Groups Windsor co-organizer and co-author of the upcoming book "Building Responsible AI with Python - Identify, explain, and mitigate bias with hands-on code examples." https://a.co/d/1O3Up6p`,
-    organization: 'St. Clair College',
-    role: 'Professor',
-    commits: null,
-    avatar: AliElSharif,
-  },
-  {
     id: 12,
     name: 'Hernando Gonzalez Malabet',
     twitter: '',
@@ -206,69 +154,6 @@ export const teamData = [
     role: 'Director of Professional Development',
     commits: null,
     avatar: HernandoMalabet,
-  },
-  {
-    id: 13,
-    name: 'Nisa Solano',
-    twitter: '',
-    linkedin: 'https://www.linkedin.com/in/nisa-solano/',
-    github: '',
-    devfest: 'organizer',
-    star: false,
-    university: 'Wayne State University',
-    bio: ``,
-    organization: 'GDGC | AWS Cloud Club | SHPE Wayne State',
-    role: 'Senior Computer Science Student',
-    commits: null,
-    avatar: NisaSolano,
-  },
-  {
-    id: 14,
-    name: 'Raquel Estrada',
-    twitter: '',
-    linkedin: 'https://www.linkedin.com/in/raquel-estrada/',
-    github: '',
-    devfest: 'organizer',
-    star: false,
-    university: '',
-    bio: `Raquel Estrada is the Vice President of Internal Relations for SHPE Detroit and a proud Salvadoran who is passionate about empowering the Hispanic community. She believes in the power of unity and collaboration to open doors for others in STEM. Raquel is a Process Transformation Manager – VP at Comerica Bank and holds three master’s degrees, along with a Bachelor’s in Industrial Engineering. With more than twelve years of international experience in financial services, consumer goods, and automotive, Raquel has built her career around driving change, leading with impact, and a deep passion for Continuous Improvement.`,
-    organization:
-      'Society of Hispanic Professional Engineers - SHPE Detroit Professional',
-    role: 'SHPE Detroit Vice President',
-    commits: null,
-    avatar: RaquelEstrada,
-  },
-  {
-    id: 15,
-    name: 'Maridy Mazaira',
-    twitter: '',
-    linkedin: 'https://www.linkedin.com/in/maridy-mazaira/',
-    github: '',
-    devfest: 'organizer',
-    star: false,
-    university: '',
-    bio: `Maridy Mazaira graduated with Distinction from the University of Michigan–Dearborn with a B.S. in Industrial and Systems Engineering. She previously served as Supervisor of Engineering Continuous Improvement at DTE Energy, where she led initiatives in Tree Trimming, Damage Claims, Emergency Preparedness and Response and more.
-Today, Maridy serves as President of the Society of Hispanic Professional Engineers – Detroit Chapter. Passionate about education and community impact, she is dedicated to creating opportunities, fostering representation, and inspiring the next generation of Hispanic students to pursue STEM careers.`,
-    organization:
-      'Society of Hispanic Professional Engineers - SHPE Detroit Professional',
-    role: 'SHPE Detroit President',
-    commits: null,
-    avatar: MaridyMazaira,
-  },
-  {
-    id: 16,
-    name: 'Jingran Wang',
-    twitter: '',
-    linkedin: 'https://www.linkedin.com/in/jingranwang/',
-    github: '',
-    devfest: 'organizer',
-    star: false,
-    university: 'University Of Michigan Dearborn',
-    bio: `Experienced community organizer, including co-organizing GDG Ann Arbor. Android/Flutter Developer passionate about UX, readable, shippable code, accessibility, and teamwork.`,
-    organization: 'Hikari Software',
-    role: 'President',
-    commits: null,
-    avatar: JingranWang,
   },
   {
     id: 17,
