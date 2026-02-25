@@ -3,7 +3,6 @@ import PropTypes from 'prop-types'
 import LinkedInHandle from '@/components/ui/LinkedInHandle'
 import SectionSkipLink from '@/components/ui/SectionSkipLink'
 import GithubHandle from '@/components/ui/GithubHandle'
-import Star from '@/assets/images/icons/star.svg'
 import TwitterHandle from '@/components/ui/TwitterHandle'
 import { FaCodeCommit } from 'react-icons/fa6'
 
@@ -12,9 +11,10 @@ const TeamSection = ({ teamData, year }) => {
   const modalRef = useRef(null)
   const closeButtonRef = useRef(null)
 
+  // Sorting disabled: use data file order (the order in teamData)
   // Sort: event runners (starred) first, then top website contributors, then everyone else
   // Within each group, sort alphabetically by name
-  const getSortTier = (dev) => {
+  /*   const getSortTier = (dev) => {
     if (dev.star) return 0 // Event runners
     if (dev.topContributor) return 1 // Top website contributors
     return 2
@@ -24,7 +24,7 @@ const TeamSection = ({ teamData, year }) => {
     const tierB = getSortTier(b)
     if (tierA !== tierB) return tierA - tierB
     return a.name.localeCompare(b.name)
-  })
+  }) */
 
   // Get ribbon color based on role
   const getRibbonColor = (role) => {
@@ -94,7 +94,7 @@ const TeamSection = ({ teamData, year }) => {
       <div className="">
         <div className="mx-auto max-w-7xl lg:px-8">
           <ul className="mx-auto mt-20 grid max-w-2xl grid-cols-1 gap-x-8 gap-y-16 text-center  lg:mx-0 lg:max-w-none lg:grid-cols-2 xl:grid-cols-3">
-            {sortedTeamData.map((dev) => {
+            {teamData.map((dev) => {
               // Build ribbon class name - eslint-disable needed for dynamic class
 
               const ribbonClass = `ribbon-${dev.devfest}`
@@ -106,14 +106,14 @@ const TeamSection = ({ teamData, year }) => {
                   {/* Content wrapper with overflow hidden for ribbon clipping */}
                   <div className="relative overflow-hidden rounded-xl p-4 pb-12">
                     {/* Star Icon - behind ribbon */}
-                    {dev.star && (
+                    {/* dev.star && (
                       <img
                         src={Star}
                         alt=""
                         className="absolute right-1 top-1 z-0 size-8 -rotate-45 opacity-80"
                         aria-hidden="true"
                       />
-                    )}
+                    ) */}
                     {/* Ribbon Label */}
                     <div
                       className={`${ribbonClass} absolute -right-10 top-6 z-[1] w-40 rotate-45 ${getRibbonColor(
