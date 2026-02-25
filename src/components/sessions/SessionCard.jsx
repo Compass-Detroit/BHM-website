@@ -49,6 +49,15 @@ function SessionCard({
   const hasTimeInfo = startTime && endTime
   const hasSessionInfo = hasTimeInfo || sessionRoom
 
+  /*
+   * Layout: responsive grid with avatar column + content column.
+   * Breakpoints: xs=400px, sm=640px, md=768px, lg=1024px, xl=1280px, 2xl=1536px
+   *
+   * Single avatar: xs and below = stacked (content first, avatar below); 401px+ = two columns
+   * 2 avatars: md+ = two columns, first column width = 120px + 80px * count
+   * 3+ avatars: lg+ = two columns; >3 avatars = wrap at lg (360px cap), no wrap at xl; below lg = stacked (content first, avatars below)
+   * Second column = minmax(0,1fr) to use remaining space; lg+ grid gets flex-1 to fill button
+   */
   return (
     <div className="rounded-xl border border-gray-200 bg-white shadow-lg transition duration-200 hover:shadow-2xl dark:border-gray-700 dark:bg-gray-800">
       <button
@@ -67,20 +76,43 @@ function SessionCard({
         className="flex w-full items-center justify-between p-3 md:px-8 lg:px-14"
       >
         <div
-          className={`grid items-center gap-5 text-left ${
+          style={
             speakerAvatars?.length > 1
-              ? 'grid-cols-1'
-              : 'grid-cols-1 min-[401px]:grid-cols-[90px_1fr] md:grid-cols-[120px_1fr]'
+              ? { '--avatar-count': speakerAvatars.length }
+              : undefined
+          }
+          className={`grid items-center gap-5 text-left lg:min-w-0 lg:flex-1 ${
+            /* 3+ avatars stacked below lg: smaller gap between title and avatars */
+            speakerAvatars?.length > 2 ? 'max-lg:gap-y-2' : ''
+          } ${
+            speakerAvatars?.length > 1
+              ? speakerAvatars.length === 2
+                ? /* 2 avatars: two columns at md */
+                  'grid-cols-1 md:grid-cols-[calc(120px+80px*var(--avatar-count))_minmax(0,1fr)]'
+                : `grid-cols-1 lg:grid-cols-[calc(120px+80px*var(--avatar-count))_minmax(0,1fr)] ${
+                    speakerAvatars.length > 3
+                      ? /* 4+ avatars: 360px cap at lg (forces wrap); auto at xl/2xl (no wrap) */
+                        'lg:grid-cols-[min(360px,calc(120px+80px*var(--avatar-count)))_minmax(0,1fr)] xl:grid-cols-[auto_minmax(0,1fr)] 2xl:grid-cols-[auto_minmax(0,1fr)]'
+                      : ''
+                  }`
+              : /* 1 avatar: two columns at 401px (90px), md (120px) */
+                'grid-cols-1 min-[401px]:grid-cols-[90px_minmax(0,1fr)] md:grid-cols-[120px_minmax(0,1fr)]'
           }`}
         >
           {speakerAvatars?.length && (
             <div
-              className={`flex flex-wrap overflow-hidden ${
+              className={`flex min-w-0 flex-wrap overflow-hidden ${
                 speakerAvatars?.length >= 3 ? 'gap-1' : 'gap-2 rounded-full'
+              } justify-start ${
+                /* 3+ avatars: content first below lg, avatar first at lg; 1 avatar: avatar below content at xs */
+                speakerAvatars?.length > 2
+                  ? 'order-2 lg:order-1'
+                  : speakerAvatars?.length === 1
+                    ? 'max-xs:order-2'
+                    : ''
               } ${
-                speakerAvatars?.length > 1
-                  ? 'justify-center'
-                  : 'justify-center sm:justify-start'
+                /* 4+ avatars: cap width at lg so avatars wrap */
+                speakerAvatars?.length > 3 ? 'lg:max-w-[360px]' : ''
               }`}
             >
               {speakerAvatars.map((avatar, index) => (
@@ -94,7 +126,7 @@ function SessionCard({
                   alt={`Headshot of ${speakers[index]}`}
                   className={`${
                     speakerAvatars?.length >= 3
-                      ? 'mx-auto my-1 size-[90px] justify-center rounded-full'
+                      ? 'mx-3 my-1 size-[90px] rounded-full'
                       : 'size-[90px] rounded-full md:size-[120px]'
                   } object-cover`}
                 />
@@ -102,7 +134,16 @@ function SessionCard({
             </div>
           )}
           <div
-            className={`min-w-0 ${!speakerAvatars?.length ? 'col-span-2' : ''}`}
+            className={`w-full min-w-0 ${
+              !speakerAvatars?.length ? 'col-span-2' : ''
+            } ${
+              /* 3+ avatars: content first below lg; 1 avatar: content first at xs */
+              speakerAvatars?.length > 2
+                ? 'order-1 lg:order-2'
+                : speakerAvatars?.length === 1
+                  ? 'max-xs:order-1'
+                  : ''
+            }`}
           >
             {sessionTitle && (
               <h3 className="text-base font-semibold text-gray-900 md:text-xl dark:text-white">
