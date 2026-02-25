@@ -22,12 +22,12 @@ SpeakersSection.propTypes = {
       name: PropTypes.string.isRequired,
       avatar: PropTypes.string.isRequired,
       session: PropTypes.shape({
-        title: PropTypes.string.isRequired,
+        title: PropTypes.string,
         description: PropTypes.string,
-        track: PropTypes.string.isRequired,
-        time: PropTypes.string.isRequired,
-        room: PropTypes.string.isRequired,
-      }).isRequired,
+        track: PropTypes.string,
+        time: PropTypes.string,
+        room: PropTypes.string,
+      }),
     })
   ).isRequired,
   year: PropTypes.number,
