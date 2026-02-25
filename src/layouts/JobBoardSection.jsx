@@ -18,7 +18,7 @@ const JobBoardSection = ({ year = new Date().getFullYear() }) => {
         </h2>
         <img
           src={Kite}
-          alt=""
+          alt="Decorative Yellow Kite"
           className="absolute right-2 top-0 z-0 hidden  h-12 sm:right-10 sm:block md:right-14 lg:right-16 lg:h-16"
         />
       </div>
