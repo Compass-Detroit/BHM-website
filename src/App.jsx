@@ -13,11 +13,8 @@ function App() {
   return (
     <Router>
       <div role="document">
-        {/* Skip Link - First element for accessibility */}
-        <a
-          className="absolute left-[6px] top-[-60px] z-[100] bg-white px-2 py-1 text-black focus:top-[6px]"
-          href="#main-content"
-        >
+        {/* Skip Link - First element for accessibility; hidden until Tab focus */}
+        <a className="skip-link" href="#main-content">
           Skip to main content
         </a>
         <Suspense
