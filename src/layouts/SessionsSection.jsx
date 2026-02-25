@@ -293,6 +293,12 @@ const SessionsSection = ({
     </div>
   )
 
+  /*
+   * Layout: collapsible schedule with track tabs and session cards.
+   * Structure: header (collapse btn + title) → tablist → track description → tabpanel (Schedule/Map/session cards)
+   * Track descriptions appear below the tablist, above the session cards.
+   * Session list: single column grid; max-w-2xl below xl, full width at xl+.
+   */
   return (
     <section
       id="schedule"
@@ -320,11 +326,13 @@ const SessionsSection = ({
         </h2>
       </div>
 
+      {/* Expandable content: tablist, track description, tabpanel */}
       <div
         className={`flex w-full flex-col overflow-hidden transition-all duration-500 ease-in-out md:overflow-x-visible ${
           isExpanded ? 'opacity-100' : 'max-h-0 opacity-0'
         }`}
       >
+        {/* Horizontal scrollable track tabs */}
         <nav aria-label="Session track navigation" aria-hidden={!isExpanded}>
           <div
             ref={navRef}
@@ -398,13 +406,14 @@ const SessionsSection = ({
           </div>
         </nav>
 
-        {/* Track Description */}
+        {/* Track description: below tablist, above session cards */}
         {isExpanded && currentSession && trackDescriptions[currentSession] && (
           <div className="mx-auto mt-6 w-full max-w-6xl px-[2.5%] md:px-[5%]">
             {trackDescriptions[currentSession]}
           </div>
         )}
 
+        {/* Tabpanel: Schedule, Map, or session cards; max-w-6xl */}
         <div
           ref={tabpanelRef}
           id="sessions-tabpanel"
@@ -412,7 +421,7 @@ const SessionsSection = ({
           aria-labelledby={`session-tab-${activeTab}`}
           aria-hidden={!isExpanded}
           tabIndex={isExpanded ? 0 : -1}
-          className={`flex w-full items-start px-[2.5%] md:px-[5%] ${
+          className={`mx-auto flex w-full max-w-6xl ${
             isExpanded ? 'max-h-none opacity-100' : 'max-h-0 opacity-0'
           } ${
             currentTrackSessions.length > 0 ? 'justify-start' : 'justify-center'
@@ -427,7 +436,9 @@ const SessionsSection = ({
           ) : currentTrackSessions.length > 0 ? (
             <>
               {currentSession === 'Hackathon' && <HackathonSessionHeader />}
-              <ul className="grid w-full grid-cols-1 gap-10 py-7 xl:grid-cols-2">
+
+              {/* Session cards: single column; max-w-7xl below xl, full width at xl+ */}
+              <ul className="grid w-full max-w-6xl grid-cols-1 gap-10 py-7 xl:max-w-none">
                 {hasSessionsForTrack ? (
                   currentTrackSessions
                     .sort((a, b) => {
