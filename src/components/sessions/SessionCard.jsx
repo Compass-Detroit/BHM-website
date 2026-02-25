@@ -124,7 +124,7 @@ function SessionCard({
                       : avatar
                   }
                   alt={`Headshot of ${speakers[index]}`}
-                  className={`${
+                  className={`border-4 border-bhm-gold-300/75 dark:border-bhm-gold-800 ${
                     speakerAvatars?.length >= 3
                       ? 'mx-3 my-1 size-[90px] rounded-full'
                       : 'size-[90px] rounded-full md:size-[120px]'
