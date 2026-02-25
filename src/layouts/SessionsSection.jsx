@@ -33,69 +33,129 @@ const convertTo24Hour = (time) => {
 const trackDescriptions = {
   'Build with AI': (
     <>
-      Explore cutting-edge AI development, from machine learning to generative
-      models. Hands-on workshops.{' '}
-      <strong>
-        Build with AI Stage located in Service Building 120 (SB 120)
-      </strong>
-      .
+      <h3
+        id="build-with-ai-heading"
+        className="mx-auto mb-4 text-center text-3xl font-semibold text-bhm-neutral-800"
+      >
+        Build with AI
+      </h3>
+      <p className="mx-auto mb-6 max-w-4xl text-pretty text-lg text-bhm-neutral-700">
+        Explore cutting-edge AI development, from machine learning to generative
+        models. Hands-on workshops.{' '}
+        <strong>
+          Build with AI Stage located in Service Building 120 (SB 120)
+        </strong>
+        .
+      </p>
     </>
   ),
   'Innovation': (
     <>
-      Discover groundbreaking ideas and emerging technologies shaping the
-      future. <strong>Go to 1st floor of Walker Crisler Bldg (WCB) 103</strong>.
-      .
+      <h3
+        id="innovation-heading"
+        className="mx-auto mb-4 text-center text-3xl font-semibold text-bhm-neutral-800"
+      >
+        Innovation
+      </h3>
+      <p className="mx-auto mb-6 max-w-4xl text-pretty text-lg text-bhm-neutral-700">
+        Discover groundbreaking ideas and emerging technologies shaping the
+        future.{' '}
+        <strong>Go to 1st floor of Walker Crisler Bldg (WCB) 103</strong>.
+      </p>
     </>
   ),
   'Level Up': (
     <>
-      Advance your career and personal growth. From mentorship to leadership,
-      explore sessions that help you level up professionally and personally in
-      tech. <strong>Level Up Stage in Town Square</strong>.
+      <h3
+        id="level-up-heading"
+        className="mx-auto mb-4 text-center text-3xl font-semibold text-bhm-neutral-800"
+      >
+        Level Up
+      </h3>
+      <p className="mx-auto mb-6 max-w-4xl text-pretty text-lg text-bhm-neutral-700">
+        Advance your career and personal growth. From mentorship to leadership,
+        explore sessions that help you level up professionally and personally in
+        tech. <strong>Level Up Stage in Town Square</strong>.
+      </p>
     </>
   ),
   'Leadership': (
     <>
-      Discover insights from founders and entrepreneurs building the next
-      generation of tech companies.{' '}
-      <strong>
-        Sessions in 2nd floor Walker Crisler Bldg (WCB) 275 and 278
-      </strong>
-      .
+      <h3
+        id="leadership-heading"
+        className="mx-auto mb-4 text-center text-3xl font-semibold text-bhm-neutral-800"
+      >
+        Leadership
+      </h3>
+      <p className="mx-auto mb-6 max-w-4xl text-pretty text-lg text-bhm-neutral-700">
+        Discover insights from founders and entrepreneurs building the next
+        generation of tech companies.{' '}
+        <strong>
+          Sessions in 2nd floor Walker Crisler Bldg (WCB) 275 and 278
+        </strong>
+        .
+      </p>
     </>
   ),
   'AI Foundations': (
     <>
-      Build your foundational knowledge of artificial intelligence.{' '}
-      <strong>
-        AI Foundations Stage located in Walker Crisler Bldg (WCB) 105
-      </strong>
-      .
+      <h3
+        id="ai-foundations-heading"
+        className="mx-auto mb-4 text-center text-3xl font-semibold text-bhm-neutral-800"
+      >
+        AI Foundations
+      </h3>
+      <p className="mx-auto mb-6 max-w-4xl text-pretty text-lg text-bhm-neutral-700">
+        Build your foundational knowledge of artificial intelligence.{' '}
+        <strong>
+          AI Foundations Stage located in Walker Crisler Bldg (WCB) 105
+        </strong>
+        .
+      </p>
     </>
   ),
   'Breakout Sessions': (
     <>
-      Focused discussions and interactive sessions on specialized topics. Join
-      conversations with experts and peers.{' '}
-      <strong>
-        Sessions on 2nd floor of Walker Crisler Building Room 255 (WCB 255)
-      </strong>
-      .
+      <h3
+        id="breakout-sessions-heading"
+        className="mx-auto mb-4 text-center text-3xl font-semibold text-bhm-neutral-800"
+      >
+        Breakout Sessions
+      </h3>
+      <p className="mx-auto mb-6 max-w-4xl text-pretty text-lg text-bhm-neutral-700">
+        Focused discussions and interactive sessions on specialized topics. Join
+        conversations with experts and peers.{' '}
+        <strong>
+          Sessions on 2nd floor of Walker Crisler Building Room 255 (WCB 255)
+        </strong>
+      </p>
     </>
   ),
   'Map': (
     <>
-      DTE Energy Headquarters is a Class A office complex on the west side of
-      Downtown Detroit at I-75 and Grand River, Michigan, consisting of three
-      interconnected buildings.
+      <h3
+        id="venue-maps-heading"
+        className="mx-auto mb-4 text-center text-3xl font-semibold text-bhm-neutral-800"
+      >
+        Black History Month Tech Summit Venue Guide
+      </h3>
+      <p className="mx-auto mb-6 max-w-4xl text-pretty text-lg text-bhm-neutral-700">
+        Use this guide to navigate the venue and find session locations.
+        Sessions are organized across two floors. Elevators and restrooms are
+        located in the Walker Crisler Building.
+      </p>
     </>
   ),
   'Schedule': (
     <>
-      Full-day conference featuring keynotes, breakout sessions, workshops,
-      networking lunch, panel discussions, sponsor showcases, and techie
-      networking.
+      <h3 className="mx-auto mb-4 text-center text-3xl font-semibold text-bhm-neutral-800">
+        Black History Month Tech Summit Schedule
+      </h3>
+      <p className="mx-auto mb-6 max-w-4xl text-pretty text-lg text-bhm-neutral-700">
+        Full-day summit running 8:00 AM to 4:30 PM, featuring wellness, keynote
+        fireside chat, breakout sessions, lunch networking, panel discussions,
+        and immersive learning experiences.
+      </p>
     </>
   ),
 }
@@ -260,15 +320,6 @@ const SessionsSection = ({
         </h2>
       </div>
 
-      {/* Track Description */}
-      {isExpanded && currentSession && trackDescriptions[currentSession] && (
-        <div className="mx-auto mt-6 w-full max-w-6xl">
-          <p className="text-left text-2xl leading-normal text-bhm-red-900">
-            {trackDescriptions[currentSession]}
-          </p>
-        </div>
-      )}
-
       <div
         className={`flex w-full flex-col overflow-hidden transition-all duration-500 ease-in-out md:overflow-x-visible ${
           isExpanded ? 'opacity-100' : 'max-h-0 opacity-0'
@@ -346,6 +397,13 @@ const SessionsSection = ({
             ))}
           </div>
         </nav>
+
+        {/* Track Description */}
+        {isExpanded && currentSession && trackDescriptions[currentSession] && (
+          <div className="mx-auto mt-6 w-full max-w-6xl px-[2.5%] md:px-[5%]">
+            {trackDescriptions[currentSession]}
+          </div>
+        )}
 
         <div
           ref={tabpanelRef}
