@@ -34,41 +34,54 @@ const trackDescriptions = {
   'Build with AI': (
     <>
       Explore cutting-edge AI development, from machine learning to generative
-      models. Hands-on workshops in <strong>Service Building (SB) 120</strong>.
+      models. Hands-on workshops.{' '}
+      <strong>
+        Build with AI Stage located in Service Building 120 (SB 120)
+      </strong>
+      .
     </>
   ),
   'Innovation': (
     <>
       Discover groundbreaking ideas and emerging technologies shaping the
-      future. <strong>Sessions in Walker Crisler Bldg (WCB) 103</strong>.
+      future. <strong>Go to 1st floor of Walker Crisler Bldg (WCB) 103</strong>.
+      .
     </>
   ),
   'Level Up': (
     <>
       Advance your career and personal growth. From mentorship to leadership,
       explore sessions that help you level up professionally and personally in
-      tech. <strong>Located in Town Square</strong>.
+      tech. <strong>Level Up Stage in Town Square</strong>.
     </>
   ),
   'Leadership': (
     <>
       Discover insights from founders and entrepreneurs building the next
-      generation of tech companies. Learn about startup strategies, funding, and
-      scaling. <strong>Sessions (WCB) 275 and 278</strong>.
+      generation of tech companies.{' '}
+      <strong>
+        Sessions in 2nd floor Walker Crisler Bldg (WCB) 275 and 278
+      </strong>
+      .
     </>
   ),
   'AI Foundations': (
     <>
-      Build your foundational knowledge of artificial intelligence. Perfect for
-      beginners and those looking to strengthen their AI fundamentals.{' '}
-      <strong>Located in Walker Crisler Bldg (WCB) 105</strong>.
+      Build your foundational knowledge of artificial intelligence.{' '}
+      <strong>
+        AI Foundations Stage located in Walker Crisler Bldg (WCB) 105
+      </strong>
+      .
     </>
   ),
   'Breakout Sessions': (
     <>
       Focused discussions and interactive sessions on specialized topics. Join
-      intimate conversations with experts and peers.{' '}
-      <strong>Located in Walker Crisler Bldg (WCB) 255</strong>.
+      conversations with experts and peers.{' '}
+      <strong>
+        Sessions on 2nd floor of Walker Crisler Building Room 255 (WCB 255)
+      </strong>
+      .
     </>
   ),
   'Map': (
