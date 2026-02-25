@@ -7,6 +7,7 @@ import PartnersSection from '@/layouts/PartnersSection'
 import JobBoardSection from '@/layouts/JobBoardSection'
 import SessionsSection from '@/layouts/SessionsSection'
 import SpeakersSection from '@/layouts/SpeakersSection'
+import AttendeeSection from '@/layouts/AttendeeSection'
 
 import { partnersData } from '@/data/2026/partners'
 import { SpeakersData as Speakers2026 } from '@/data/2026/speakers'
@@ -20,6 +21,7 @@ function Home() {
         Compass Detroit {currentYear}
       </h1>
       <LandingSection />
+      <AttendeeSection />
       <LocationSection />
       <SessionsSection
         year={currentYear}
@@ -39,7 +41,6 @@ function Home() {
       <MembersSection />
 
       <SpeakersSection year={currentYear} speakersData={Speakers2026} />
-      {/* Add attendee section */}
 
       <JobBoardSection year={currentYear} />
 
