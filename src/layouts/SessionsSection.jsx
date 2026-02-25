@@ -145,7 +145,7 @@ const SessionsSection = ({
         track: speaker.session.track,
         sessionTime: speaker.session.time,
         sessionRoom: speaker.session.room,
-        sessionDuration: speaker.session.sessionDuration || 1,
+        sessionDuration: speaker.session.sessionDuration ?? 60,
       })
     }
   })

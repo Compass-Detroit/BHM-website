@@ -3,7 +3,7 @@ import { useState } from 'react'
 import { IoChevronDown } from 'react-icons/io5'
 
 import { DIRECTION } from '@/constants/directions'
-import { addHours, format, parse } from 'date-fns'
+import { addMinutes, format, parse } from 'date-fns'
 
 function SessionCard({
   speakers,
@@ -12,7 +12,7 @@ function SessionCard({
   sessionDesc,
   sessionTime,
   sessionRoom,
-  sessionDuration = 1, // Default to 1 hour
+  sessionDuration = 60, // Duration in minutes
 }) {
   const [direction, setDirection] = useState(DIRECTION.BOTTOM)
 
@@ -36,11 +36,11 @@ function SessionCard({
       }
     }
 
-    // Otherwise, calculate end time based on duration
+    // Otherwise, calculate end time based on duration (in minutes)
     const parsedStartTime = parse(sessionTime, 'HH:mm', new Date())
     return {
       startTime: format(parsedStartTime, 'h:mm a'),
-      endTime: format(addHours(parsedStartTime, sessionDuration), 'h:mm a'),
+      endTime: format(addMinutes(parsedStartTime, sessionDuration), 'h:mm a'),
     }
   }
 
@@ -163,7 +163,7 @@ SessionCard.propTypes = {
   sessionDesc: PropTypes.string.isRequired,
   sessionTime: PropTypes.string.isRequired,
   sessionRoom: PropTypes.string.isRequired,
-  sessionDuration: PropTypes.number, // Duration in hours
+  sessionDuration: PropTypes.number, // Duration in minutes
 }
 
 export default SessionCard
