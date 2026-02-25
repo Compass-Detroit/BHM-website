@@ -60,7 +60,11 @@ const trackDescriptions = {
       <p className="mx-auto mb-6 max-w-4xl text-pretty text-lg text-bhm-neutral-700">
         Discover groundbreaking ideas and emerging technologies shaping the
         future.{' '}
-        <strong>Go to 1st floor of Walker Crisler Bldg (WCB) 103</strong>.
+        <strong>
+          Innovation Stage is located on the 1st floor of Walker Crisler
+          Building (WCB), Room 103
+        </strong>
+        .
       </p>
     </>
   ),
@@ -75,7 +79,7 @@ const trackDescriptions = {
       <p className="mx-auto mb-6 max-w-4xl text-pretty text-lg text-bhm-neutral-700">
         Advance your career and personal growth. From mentorship to leadership,
         explore sessions that help you level up professionally and personally in
-        tech. <strong>Level Up Stage in Town Square</strong>.
+        tech. <strong>Level Up Stage is located in Town Square</strong>.
       </p>
     </>
   ),
@@ -91,7 +95,8 @@ const trackDescriptions = {
         Discover insights from founders and entrepreneurs building the next
         generation of tech companies.{' '}
         <strong>
-          Sessions in 2nd floor Walker Crisler Bldg (WCB) 275 and 278
+          Leadership Stage is located on the 2nd floor of Walker Crisler
+          Building (WCB), Rooms 275 and 278
         </strong>
         .
       </p>
@@ -108,7 +113,7 @@ const trackDescriptions = {
       <p className="mx-auto mb-6 max-w-4xl text-pretty text-lg text-bhm-neutral-700">
         Build your foundational knowledge of artificial intelligence.{' '}
         <strong>
-          AI Foundations Stage located in Walker Crisler Bldg (WCB) 105
+          AI Foundations Stage is located in Walker Crisler Bldg (WCB) 105
         </strong>
         .
       </p>
@@ -126,7 +131,8 @@ const trackDescriptions = {
         Focused discussions and interactive sessions on specialized topics. Join
         conversations with experts and peers.{' '}
         <strong>
-          Sessions on 2nd floor of Walker Crisler Building Room 255 (WCB 255)
+          Breakout Sessions Stage is located on 2nd floor of Walker Crisler
+          Building Room 255 (WCB 255)
         </strong>
       </p>
     </>
