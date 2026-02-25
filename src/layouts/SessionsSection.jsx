@@ -437,7 +437,7 @@ const SessionsSection = ({
             <>
               {currentSession === 'Hackathon' && <HackathonSessionHeader />}
 
-              {/* Session cards: single column; max-w-7xl below xl, full width at xl+ */}
+              {/* Session cards: single column; max-w-6xl below xl, full width at xl+ */}
               <ul className="grid w-full max-w-6xl grid-cols-1 gap-10 py-7 xl:max-w-none">
                 {hasSessionsForTrack ? (
                   currentTrackSessions
