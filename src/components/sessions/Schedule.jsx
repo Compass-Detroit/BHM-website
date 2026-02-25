@@ -3,8 +3,8 @@ import BlackHistorySummitSchedule from './BlackHistorySummitSchedule'
 export const Schedule = () => {
   return (
     <div className="w-full py-8">
-      <div className="mx-auto max-w-7xl px-4">
-        <h3 className="mb-8 text-center text-3xl font-semibold text-bhm-neutral-800">
+      <div className="mx-auto mt-6 w-full max-w-5xl">
+        <h3 className="mx-auto mb-4 text-center text-3xl font-semibold text-bhm-neutral-800">
           Black History Month Tech Summit Schedule
         </h3>
         <p className="mx-auto mb-6 max-w-4xl text-pretty text-lg text-bhm-neutral-700">
