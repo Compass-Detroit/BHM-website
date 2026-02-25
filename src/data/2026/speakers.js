@@ -41,6 +41,7 @@ import AshleyBurton from './assets/images/speakers/AshleyBurton.webp'
 import BernadetteAtanga from './assets/images/speakers/BernadetteAtanga.webp'
 import ZipporahAbla from './assets/images/speakers/ZipporahAbla.webp'
 import StevenBenyard from './assets/images/speakers/StevenBenyard.webp'
+import JonahSmith from './assets/images/speakers/JonahSmith.webp'
 
 export const SpeakersData = [
   {
@@ -257,6 +258,7 @@ export const SpeakersData = [
       track: 'Innovation',
       time: '10:30',
       room: null,
+      sessionDuration: 1,
     },
     isWTM: false,
     isGDE: false,
@@ -472,8 +474,7 @@ export const SpeakersData = [
     organization: 'Walker-Miller',
     position: 'Chief Information Officer',
     session: {
-      title:
-        'Powering Detroits Future: AI-Driven Energy Innovation Fireside Chat with DTE x IBM',
+      title: `Powering Detroit's Future: AI-Driven Energy Innovation Fireside Chat with DTE x IBM`,
       abstract: null,
       description: `Innovation Summit Keynote - Powering Detroit's Future: AI-Driven Energy Innovation Fireside Chat with DTE x IBM Join us for an inspiring keynote conversation between two visionary Black leaders transforming how Michigan powers its future. Steven Benyard, Vice President of Electric Capital Delivery at DTE Energy, and Jason Kelley, Global Head and Managing Partner of Core Business Applications at IBM, will explore how artificial intelligence is revolutionizing the energy sector while creating unprecedented opportunities for Michigan's communities. In this dynamic fireside chat, these executives will share insights on: - The AI Revolution in Energy: How machine learning and predictive analytics are creating smarter, more resilient power grids that better serve Detroit's diverse neighborhoods - Equity Through Innovation: Ensuring AI-powered energy solutions address historical disparities and create economic opportunities in underserved communities - Climate Action Meets Community Impact: Leveraging AI to accelerate Michigan's clean energy transition while keeping energy affordable and accessible - Building Tomorrow's Workforce: How the DTE and IBM are creating pathways for Michigan's talent to lead in the AI-energy economy - From Vision to Reality: Real-world examples of AI applications already improving energy reliability, reducing outages, and empowering customers across Southeast Michigan Drawing from their extensive experience leading transformational initiatives at two of the industry's most influential companies, Benyard and Kelley will offer a rare glimpse into the future of energy infrastructure, the role of Black leadership in driving innovation, and why Michigan is uniquely positioned to become a global model for equitable, AI-powered energy systems. This conversation is essential for technology professionals, energy sector leaders, students, and anyone passionate about how emerging technologies can create a more sustainable and equitable future for our communities.`,
       tags: ['In-person', 'Level Up', 'Virtual'],
@@ -1117,6 +1118,31 @@ export const SpeakersData = [
       tags: ['In-person', 'Leadership'],
       track: 'Leadership',
       time: '15:30',
+      room: null,
+      sessionDuration: 1,
+    },
+    isWTM: false,
+    isGDE: false,
+    mastodon: null,
+  },
+  {
+    id: 46,
+    name: 'Jonah Smith',
+    email: null,
+    avatar: JonahSmith,
+    bio: ``,
+    twitter: null,
+    linkedIn: 'https://www.linkedin.com/in/jonah-smith-12b0441/',
+    github: null,
+    organization: 'IBM',
+    position: 'Vice President & Global Head Responsible Business',
+    session: {
+      title: `Powering Detroit's Future: AI-Driven Energy Innovation Fireside Chat with DTE x IBM`,
+      abstract: null,
+      description: `Innovation Summit Keynote - Powering Detroit's Future: AI-Driven Energy Innovation Fireside Chat with DTE x IBM Join us for an inspiring keynote conversation between two visionary Black leaders transforming how Michigan powers its future. Steven Benyard, Vice President of Electric Capital Delivery at DTE Energy, and Jason Kelley, Global Head and Managing Partner of Core Business Applications at IBM, will explore how artificial intelligence is revolutionizing the energy sector while creating unprecedented opportunities for Michigan's communities. In this dynamic fireside chat, these executives will share insights on: - The AI Revolution in Energy: How machine learning and predictive analytics are creating smarter, more resilient power grids that better serve Detroit's diverse neighborhoods - Equity Through Innovation: Ensuring AI-powered energy solutions address historical disparities and create economic opportunities in underserved communities - Climate Action Meets Community Impact: Leveraging AI to accelerate Michigan's clean energy transition while keeping energy affordable and accessible - Building Tomorrow's Workforce: How the DTE and IBM are creating pathways for Michigan's talent to lead in the AI-energy economy - From Vision to Reality: Real-world examples of AI applications already improving energy reliability, reducing outages, and empowering customers across Southeast Michigan Drawing from their extensive experience leading transformational initiatives at two of the industry's most influential companies, Benyard and Kelley will offer a rare glimpse into the future of energy infrastructure, the role of Black leadership in driving innovation, and why Michigan is uniquely positioned to become a global model for equitable, AI-powered energy systems. This conversation is essential for technology professionals, energy sector leaders, students, and anyone passionate about how emerging technologies can create a more sustainable and equitable future for our communities.`,
+      tags: ['In-person', 'Level Up', 'Virtual'],
+      track: 'Level Up',
+      time: '09:00',
       room: null,
     },
     isWTM: false,
