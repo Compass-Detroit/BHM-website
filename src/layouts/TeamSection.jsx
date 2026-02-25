@@ -5,7 +5,7 @@ import SectionSkipLink from '@/components/ui/SectionSkipLink'
 import GithubHandle from '@/components/ui/GithubHandle'
 import TwitterHandle from '@/components/ui/TwitterHandle'
 import { FaCodeCommit } from 'react-icons/fa6'
-//import Star from '@/assets/images/icons/star.svg'
+
 const TeamSection = ({ teamData, year }) => {
   const [selectedBio, setSelectedBio] = useState(null)
   const modalRef = useRef(null)
