@@ -12,7 +12,7 @@ import { DIRECTION } from '@/constants/directions'
 import { IoChevronDown } from 'react-icons/io5'
 
 const convertTo24Hour = (time) => {
-  if (!time) return ''
+  if (!time || typeof time !== 'string') return ''
 
   const [hour, minute] = time.split(':').map(Number)
 
@@ -201,10 +201,10 @@ const SessionsSection = ({
         speakers: [speaker.name],
         speakerAvatars: [speaker.avatar],
         sessionTitle: speaker.session.title,
-        sessionDesc: speaker.session.description,
+        sessionDesc: speaker.session.description ?? '',
         track: speaker.session.track,
-        sessionTime: speaker.session.time,
-        sessionRoom: speaker.session.room,
+        sessionTime: speaker.session.time ?? '',
+        sessionRoom: speaker.session.room ?? '',
         sessionDuration: speaker.session.sessionDuration ?? 60,
       })
     }
