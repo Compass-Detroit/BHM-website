@@ -4,7 +4,6 @@ import dteFloor2 from '@/assets/images/maps/dte-second.webp'
 function VenueMaps() {
   return (
     <section className="w-full py-8" aria-labelledby="venue-maps-heading">
-      <div className="mx-auto mt-6 w-full max-w-5xl"></div>
       <div className="grid gap-6 lg:grid-cols-2">
         <div className="rounded-2xl border-4 border-bhm-gold-500 bg-bhm-gold-100 p-4">
           <img

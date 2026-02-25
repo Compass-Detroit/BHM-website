@@ -297,7 +297,7 @@ const SessionsSection = ({
    * Layout: collapsible schedule with track tabs and session cards.
    * Structure: header (collapse btn + title) → tablist → track description → tabpanel (Schedule/Map/session cards)
    * Track descriptions appear below the tablist, above the session cards.
-   * Session list: single column grid; max-w-2xl below xl, full width at xl+.
+   * Session list: single column grid; max-w-6xl w-full for screens smaller than xl.
    */
   return (
     <section
