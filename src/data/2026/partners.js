@@ -1,159 +1,87 @@
 import CCS from '@/assets/images/sponsors/spo-ccs-logo.webp'
 import CompassDetroit from '@/assets/images/sponsors/Compass_Detroit_logo.webp'
 import DetroitHackerHouse from '@/assets/images/sponsors/Detroit_Hacker_House.png'
-import GDGAnnArbor from '@/assets/images/organizations/org-gdg-a2.webp'
 import DTE from '@/assets/images/sponsors/spo-dte-logo.webp'
-import GDGDetroit from '@/assets/images/organizations/org-gdg-detroit.webp'
-import GDGToledo from '@/assets/images/organizations/org-gdg-toledo.webp'
-import GDGUofMDearborn from '@/assets/images/organizations/org-gdg-umd.webp'
-import GDGWindsor from '@/assets/images/organizations/org-gdg-windsor.webp'
-import GDGWSU from '@/assets/images/organizations/org-gdg-wsu.webp'
-import Google from '@/assets/images/sponsors/Google_logo.webp'
-import IBM from '@/assets/images/sponsors/spo-ibm-logo.webp'
+import GDGDetroit from '@/assets/images/sponsors/GDG_Detroit.webp'
+import IBM from '@/assets/images/sponsors/IBM_logo.webp'
 import NSBEDetroit from '@/assets/images/organizations/org-nsbe-logo.webp'
 import SHPEDetroit from '@/assets/images/organizations/org-shpe-logo.webp'
-import WomenTechmakers from '@/assets/images/organizations/org-wtm-logo.webp'
-import WSU from '@/assets/images/sponsors/spo-wsu-logo.webp'
-// Partners data combining sponsors and organizations
-// Organized by tier: Platinum, Diamond, Gold, and Organizations
+import DevOpsDetroit from '@/assets/images/sponsors/DevOps_Detroit_Logo.webp'
+
+// add these if you have them (update paths to match your repo)
+import AutomationWorkz from '@/assets/images/sponsors/Automation_Workz.webp'
 
 export const partnersData = {
-  platinum: [
+  partners: [
     {
       id: 1,
-      name: 'Google',
-      logo: Google,
-      desc: `Our mission is to organize the world's information and make it universally accessible and useful.
-
-We are committed to significantly improving the lives of as many people as possible by protecting users, building belonging, expanding opportunity, responding to crises, and advancing sustainability.`,
-      url: 'https://google.com/',
-      tier: 'Platinum Sponsor',
+      name: 'DTE',
+      logo: DTE,
+      desc: 'DTE Energy (NYSE: DTE) is a Detroit-based diversified energy company involved in the development and management of energy-related businesses and services nationwide. Its operating units include an electric company serving 2.3 million customers in Southeast Michigan and a natural gas company serving 1.3 million customers in Michigan. The DTE portfolio also includes non-utility businesses focused on industrial energy services, renewable natural gas, and energy marketing and trading.',
+      url: 'https://www.dteenergy.com/',
     },
-  ],
-  diamond: [
     {
       id: 2,
       name: 'Compass Detroit',
       logo: CompassDetroit,
-      desc: `The Collective of Minority Professionals and STEAM Societies (formerly COMPES) was formed in 2000 as an initiative between the NSBE, SHPE, and SWE Detroit professional chapters. The mission of this collaborative partnership is to support the local Detroit community in upskilling, career growth, networking, and to provide access to new opportunities.`,
-      url: 'https://compass-detroit.com/',
-      tier: 'Diamond Sponsor',
+      desc: 'The Collective of Minority Professionals and STEAM Societies (formerly COMPES) was formed in 2000 as an initiative between the NSBE, SHPE, and SWE Detroit professional chapters. The mission of this collaborative partnership is to support the local Detroit community in upskilling, career growth, networking, and to provide access to new opportunities.',
+      url: 'https://gdg-summit-webiste.vercel.app/',
     },
     {
       id: 3,
-      name: 'Wayne State University',
-      logo: WSU,
-      desc: 'Wayne State University is a premier urban research university offering more than 380 academic programs through 13 schools and colleges.',
-      url: 'https://wayne.edu/',
-      tier: 'Diamond Sponsor',
+      name: 'NSBE Detroit',
+      logo: NSBEDetroit,
+      desc: 'Representing Black Engineers in Detroit. NSBE Detroit Professionals strive to increase technical awareness, encourage scholastic achievement, and stimulate enthusiasm in the black engineering community of Detroit. NSBEs mission is to increase the number of culturally responsible Black engineers who excel academically, succeed professionally and positively impact the community. The NSBE Professionals inspire the next generation of technical professionals, and serve as a catalyst for transform.',
+      url: 'https://nsbedetroitprofessionals.org/',
     },
-  ],
-  gold: [
     {
       id: 4,
       name: 'IBM',
       logo: IBM,
-      desc: 'IBM is a global technology and innovation company with expertise in hybrid cloud, AI, and consulting services.',
-      url: 'https://www.ibm.com/',
-      tier: 'Gold Sponsor',
+      desc: 'The mission of IBM is to be a catalyst that makes the world work better. We aim to have a positive impact globally, and in the communities where we operate, through business ethics, environmental commitment and responsible technology. For over a century, IBM been at the forefront of technological innovation. Beginning in the earliest days of computing, IBM has blended intelligence, innovation and science to improve business, society and the human experience.',
+      url: 'https://www.ibm.com/us-en',
     },
     {
       id: 5,
-      name: 'DTE',
-      logo: DTE,
-      desc: 'DTE Energy is a Detroit-based diversified energy company involved in the development and management of energy-related businesses and services.',
-      url: 'https://www.dteenergy.com/',
-      tier: 'Gold Sponsor',
+      name: 'GDG Detroit',
+      logo: GDGDetroit,
+      desc: 'The Detroit Google Developers Group is an inclusive group that meets monthly online and in downtown Detroit to help educate and provide networking opportunities for software developers in the Detroit area.',
+      url: 'https://gdg.community.dev/gdg-detroit/',
     },
     {
       id: 6,
-      name: 'CCS',
-      logo: CCS,
-      desc: 'College for Creative Studies is a private art and design school in Detroit, Michigan.',
-      url: 'https://www.collegeforcreativestudies.edu/',
-      tier: 'Gold Sponsor',
+      name: 'SHPE Detroit',
+      logo: SHPEDetroit,
+      desc: 'SHPE Detroit is transforming lives in Detroit by inspiring and motivating young Hispanic students to excel in STEM education through mentorship and community involvement and enhancing career opportunities for Hispanics by building a strong professional network.',
+      url: 'https://www.shpedetroit.org/',
     },
     {
       id: 7,
-      name: 'Detroit Hacker House',
-      logo: DetroitHackerHouse,
-      desc: 'Our goal is to incubate technology companies through a residential, cohort-based accelerator program in Detroit, MI. We provide room, board, mentorship and curriculum designed to remove distractions and barriers for founders to focus on building their product and business model through MVP validation.',
-      url: 'https://detroithackerhouse.com',
-      tier: 'Gold Sponsor',
+      name: 'CCS',
+      logo: CCS,
+      desc: 'CCS provides students a rigorous and innovative education aligned with industry requirements. Our graduates are innovators, problem solvers and futurists who are prepared for a career, not just a job. CCS alumni know success. They are entrepreneurs. They are working artists. Fortune 500 companies hire them. The stories you will watch here are a testament to the impact CCS alumni are making in the art/design world. All of them dared to dream big. Let their stories inspire you.',
+      url: 'https://www.ccsdetroit.edu/',
     },
-  ],
-  organizations: [
     {
       id: 8,
-      name: 'GDG Detroit',
-      logo: GDGDetroit,
-      desc: 'Google Developer Group Detroit is a community of developers interested in Google technologies.',
-      url: 'https://gdg.community.dev/gdg-detroit/',
-      tier: 'Organization',
+      name: 'DevOps Detroit',
+      logo: DevOpsDetroit,
+      desc: 'DevOps Detroit is a nonprofit organization dedicated to empowering Detroit’s tech community through collaboration, education, and innovation. Founded with the mission of making Detroit a hub for DevOps excellence, we bring together professionals, students, and enthusiasts to share knowledge, build skills, and grow careers in cloud, DevOps, security, AI, and software development.',
+      url: 'https://www.devopsdetroit.io/',
     },
     {
       id: 9,
-      name: 'GDG Ann Arbor',
-      logo: GDGAnnArbor,
-      desc: 'Google Developer Group Ann Arbor is a community of developers interested in Google technologies.',
-      url: 'https://gdg.community.dev/gdg-ann-arbor/',
-      tier: 'Organization',
+      name: 'Automation Workz',
+      logo: AutomationWorkz,
+      desc: 'Automation Workz is a post-secondary tech certification school that uses video games to train students for certification exams in IoT, Cybersecurity, Network Engineering, Linux/Python, Analytics, Digital Marketing, and Fraud Examination, leading to jobs earning $40,000 to $90,000. Automation Workz can reskill your employees to seize the $9 trillion dollar Diversity Markets through scalable, customized services designed exclusively for your organization.',
+      url: 'https://autoworkz.org/',
     },
     {
       id: 10,
-      name: 'GDG Toledo',
-      logo: GDGToledo,
-      desc: 'Google Developer Group Toledo is a community of developers interested in Google technologies.',
-      url: 'https://gdg.community.dev/gdg-toledo/',
-      tier: 'Organization',
-    },
-    {
-      id: 11,
-      name: 'GDG Windsor',
-      logo: GDGWindsor,
-      desc: 'Google Developer Group Windsor is a community of developers interested in Google technologies.',
-      url: 'https://gdg.community.dev/gdg-windsor/',
-      tier: 'Organization',
-    },
-    {
-      id: 12,
-      name: 'GDG UofM Dearborn',
-      logo: GDGUofMDearborn,
-      desc: 'Google Developer Group at University of Michigan-Dearborn is a student chapter interested in Google technologies.',
-      url: 'https://gdg.community.dev/gdg-on-campus-university-of-michigan-dearborn-dearborn-united-states/',
-      tier: 'Organization',
-    },
-    {
-      id: 13,
-      name: 'GDG Wayne State University',
-      logo: GDGWSU,
-      desc: 'Google Developer Group at Wayne State University is a student chapter interested in Google technologies.',
-      url: null,
-      tier: 'Organization',
-    },
-    {
-      id: 14,
-      name: 'Women Techmakers',
-      logo: WomenTechmakers,
-      desc: 'Women Techmakers is a global program providing visibility, community, and resources for women in technology.',
-      url: 'https://www.womentechmakers.com/',
-      tier: 'Organization',
-    },
-    {
-      id: 15,
-      name: 'NSBE Detroit',
-      logo: NSBEDetroit,
-      desc: 'National Society of Black Engineers Detroit Professional Chapter supports Black engineers and their communities.',
-      url: 'https://nsbedetroitprofessionals.org/',
-      tier: 'Organization',
-    },
-    {
-      id: 16,
-      name: 'SHPE Detroit',
-      logo: SHPEDetroit,
-      desc: 'Society of Hispanic Professional Engineers Detroit chapter empowers the Hispanic community to realize their full potential.',
-      url: 'https://www.shpedetroit.org/',
-      tier: 'Organization',
+      name: 'Detroit Hacker House',
+      logo: DetroitHackerHouse,
+      desc: 'Detroit Hacker House is where builders become founders. We run a residential accelerator and community programming designed to take you from idea to launched product.',
+      url: 'https://detroithackerhouse.com',
     },
   ],
 }
