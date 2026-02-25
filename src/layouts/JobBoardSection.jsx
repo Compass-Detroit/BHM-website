@@ -1,6 +1,5 @@
 import PropTypes from 'prop-types'
 import { jobBoardData } from '@/data/2026/jobboard'
-import Kite from '@/assets/images/icn-kite.png'
 import SectionSkipLink from '@/components/ui/SectionSkipLink'
 
 const JobBoardSection = ({ year = new Date().getFullYear() }) => {
@@ -16,11 +15,6 @@ const JobBoardSection = ({ year = new Date().getFullYear() }) => {
         <h2 className="relative z-10 w-full text-center font-biorhyme text-5xl text-bhm-neutral-900 md:text-5xl lg:text-6xl">
           {year && !isCurrentYear ? `${year} ` : ''}Job Board
         </h2>
-        <img
-          src={Kite}
-          alt="Decorative Yellow Kite"
-          className="absolute right-2 top-0 z-0 hidden  h-12 sm:right-10 sm:block md:right-14 lg:right-16 lg:h-16"
-        />
       </div>
 
       <div className="mx-auto mb-12 max-w-4xl">
@@ -51,7 +45,7 @@ const JobBoardSection = ({ year = new Date().getFullYear() }) => {
                   : `Visit ${company.name}'s careers page at ${company.website} (opens in a new tab)`
               }
             >
-              <div className="flex h-full min-h-[100px] flex-col items-center gap-6 rounded-2xl bg-yellow-200 p-8 shadow-lg transition-all duration-200 hover:scale-105 hover:shadow-xl active:scale-95 sm:flex-row">
+              <div className="flex h-full min-h-[100px] flex-col items-center gap-6 rounded-2xl bg-bhm-gold-200 p-8 shadow-lg transition-all duration-200 hover:scale-105 hover:shadow-xl active:scale-95 sm:flex-row">
                 {/* Circular logo container */}
                 <div className="flex size-36 shrink-0 items-center justify-center overflow-hidden rounded-full bg-white shadow-md">
                   <img
