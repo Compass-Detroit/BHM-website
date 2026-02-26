@@ -2,8 +2,6 @@ import React, { useState, useRef, useEffect } from 'react'
 import PropTypes from 'prop-types'
 
 import ActivityCard from '@/components/sessions/ActivityCard'
-import HackathonSessionHeader from '@/components/sessions/HackathonSessionHeader'
-import Schedule from '@/components/sessions/Schedule'
 import SessionCard from '@/components/sessions/SessionCard'
 import SectionSkipLink from '@/components/ui/SectionSkipLink'
 import VenueMaps from '@/components/sessions/VenueMaps'
@@ -199,24 +197,14 @@ const SessionsSection = ({
   })
 
   // Get sessions for current track
-  const currentTrackSessions = combinedSpeakerData.filter((session) => {
-    // Handle the Misc/Miscellaneous track name mapping
-    const normalizeSessionTrack =
-      session.track === 'Miscellaneous' ? 'Misc' : session.track
-    const normalizeCurrentSession =
-      currentSession === 'Miscellaneous' ? 'Misc' : currentSession
-
-    return normalizeSessionTrack === normalizeCurrentSession
-  })
+  const currentTrackSessions = combinedSpeakerData.filter(
+    (session) => session.track === currentSession
+  )
 
   // Get conference activities for current track (check-in, breakfast, etc.)
-  const currentTrackActivities = conferenceActivities.filter((activity) => {
-    const normalizeActivityTrack =
-      activity.track === 'Miscellaneous' ? 'Misc' : activity.track
-    const normalizeCurrentSession =
-      currentSession === 'Miscellaneous' ? 'Misc' : currentSession
-    return normalizeActivityTrack === normalizeCurrentSession
-  })
+  const currentTrackActivities = conferenceActivities.filter(
+    (activity) => activity.track === currentSession
+  )
 
   // Merge sessions and activities, sort by time
   const mergedTrackItems = [
@@ -307,7 +295,7 @@ const SessionsSection = ({
 
   /*
    * Layout: collapsible schedule with track tabs and session cards.
-   * Structure: header (collapse btn + title) → tablist → track description → tabpanel (Schedule/Map/session cards)
+   * Structure: header (collapse btn + title) → tablist → track description → tabpanel (Map/session cards)
    * Track descriptions appear below the tablist, above the session cards.
    * Session list: single column grid; max-w-6xl w-full for screens smaller than xl.
    */
@@ -379,16 +367,7 @@ const SessionsSection = ({
                   onFocus={(e) => scrollTabIntoView(e.currentTarget)}
                   onKeyDown={(e) => handleKeyDown(e, index)}
                 >
-                  {tab === 'Miscellaneous' ? (
-                    <>
-                      <span className="inline max-xs:hidden">
-                        Miscellaneous
-                      </span>
-                      <span className="hidden max-xs:inline">Misc</span>
-                    </>
-                  ) : tab === 'Hackathon' ? (
-                    <>Hackathon</>
-                  ) : tab === 'Tech+Design' ? (
+                  {tab === 'Tech+Design' ? (
                     <>Tech+Design</>
                   ) : tab === 'Level Up' ? (
                     <>Level Up</>
@@ -423,7 +402,7 @@ const SessionsSection = ({
           </div>
         )}
 
-        {/* Tabpanel: Schedule, Map, or session cards; max-w-6xl */}
+        {/* Tabpanel: Map or session cards; max-w-6xl */}
         <div
           ref={tabpanelRef}
           id="sessions-tabpanel"
@@ -433,18 +412,15 @@ const SessionsSection = ({
           tabIndex={isExpanded ? 0 : -1}
           className={`mx-auto flex w-full max-w-6xl ${
             isExpanded ? 'max-h-none opacity-100' : 'max-h-0 opacity-0'
-          } ${hasContentForTrack ? 'justify-start' : 'justify-center'}
-            ${currentSession === 'Hackathon' ? 'flex-col' : ''}
+          }             ${
+            hasContentForTrack ? 'justify-start' : 'justify-center'
+          }
           `}
         >
-          {currentSession === 'Schedule' ? (
-            <Schedule />
-          ) : currentSession === 'Map' ? (
+          {currentSession === 'Map' ? (
             <VenueMaps />
           ) : hasContentForTrack ? (
             <>
-              {currentSession === 'Hackathon' && <HackathonSessionHeader />}
-
               {/* Session cards + activity cards: single column; sorted by time */}
               <ul className="grid w-full max-w-6xl grid-cols-1 gap-10 py-7 xl:max-w-none">
                 {mergedTrackItems.map((item) =>
