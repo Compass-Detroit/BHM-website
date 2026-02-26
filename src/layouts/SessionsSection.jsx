@@ -47,7 +47,6 @@ const trackDescriptions = {
         <span className="font-bold">Build with AI Stage</span> is located in
         Service Building 120 (SB{'\u00A0'}120)
       </h3>
-      <p className="mb-6 max-w-4xl text-pretty text-center text-2xl text-bhm-neutral-700"></p>
     </>
   ),
   'Innovation': (
