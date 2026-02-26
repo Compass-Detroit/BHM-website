@@ -37,16 +37,10 @@ const trackDescriptions = {
         id="build-with-ai-heading"
         className="mx-auto mb-4 text-center text-3xl font-semibold text-bhm-neutral-800"
       >
-        Build with AI
+        <span className="font-bold">Build with AI Stage</span> is located in
+        Service Building 120 (SB{'\u00A0'}120)
       </h3>
-      <p className="mx-auto mb-6 max-w-4xl text-pretty text-lg text-bhm-neutral-700">
-        Explore cutting-edge AI development, from machine learning to generative
-        models. Hands-on workshops.{' '}
-        <strong>
-          Build with AI Stage located in Service Building 120 (SB 120)
-        </strong>
-        .
-      </p>
+      <p className="mb-6 max-w-4xl text-pretty text-center text-2xl text-bhm-neutral-700"></p>
     </>
   ),
   'Innovation': (
@@ -55,16 +49,12 @@ const trackDescriptions = {
         id="innovation-heading"
         className="mx-auto mb-4 text-center text-3xl font-semibold text-bhm-neutral-800"
       >
-        Innovation
+        <span className="font-bold">Innovation Stage</span> is located on the
+        1st floor of Walker Crisler Building (WCB), Room{'\u00A0'}103
       </h3>
-      <p className="mx-auto mb-6 max-w-4xl text-pretty text-lg text-bhm-neutral-700">
+      <p className="mb-6 max-w-4xl text-pretty text-center text-2xl text-bhm-neutral-700">
         Discover groundbreaking ideas and emerging technologies shaping the
-        future.{' '}
-        <strong>
-          Innovation Stage is located on the 1st floor of Walker Crisler
-          Building (WCB), Room 103
-        </strong>
-        .
+        future.
       </p>
     </>
   ),
@@ -72,14 +62,15 @@ const trackDescriptions = {
     <>
       <h3
         id="level-up-heading"
-        className="mx-auto mb-4 text-center text-3xl font-semibold text-bhm-neutral-800"
+        className="fontsemibold mx-auto mb-4 text-center text-3xl text-bhm-neutral-800"
       >
-        Level Up
+        <span className="font-bold">Level Up Stage</span> is located in Town
+        Square
       </h3>
-      <p className="mx-auto mb-6 max-w-4xl text-pretty text-lg text-bhm-neutral-700">
+      <p className="mb-6 max-w-4xl text-pretty text-center text-2xl text-bhm-neutral-700">
         Advance your career and personal growth. From mentorship to leadership,
         explore sessions that help you level up professionally and personally in
-        tech. <strong>Level Up Stage is located in Town Square</strong>.
+        tech.
       </p>
     </>
   ),
@@ -89,16 +80,14 @@ const trackDescriptions = {
         id="leadership-heading"
         className="mx-auto mb-4 text-center text-3xl font-semibold text-bhm-neutral-800"
       >
-        Leadership
+        <span className="font-bold">Leadership Stage</span> is located in Walker
+        Crisler Building Floor 2 Rooms 275 and 278 (WCB{'\u00A0'}275{'\u00A0'}
+        and
+        {'\u00A0'}278)
       </h3>
-      <p className="mx-auto mb-6 max-w-4xl text-pretty text-lg text-bhm-neutral-700">
+      <p className="mb-6 max-w-4xl text-pretty text-center text-2xl text-bhm-neutral-700">
         Discover insights from founders and entrepreneurs building the next
         generation of tech companies.{' '}
-        <strong>
-          Leadership Stage is located on the 2nd floor of Walker Crisler
-          Building (WCB), Rooms 275 and 278
-        </strong>
-        .
       </p>
     </>
   ),
@@ -108,14 +97,11 @@ const trackDescriptions = {
         id="ai-foundations-heading"
         className="mx-auto mb-4 text-center text-3xl font-semibold text-bhm-neutral-800"
       >
-        AI Foundations
+        <span className="font-bold">AI Foundations Stage</span> is located in
+        Walker Crisler Building Floor 1 Room 105 (WCB{'\u00A0'}105)
       </h3>
-      <p className="mx-auto mb-6 max-w-4xl text-pretty text-lg text-bhm-neutral-700">
+      <p className="mb-6 max-w-4xl text-pretty text-center text-2xl text-bhm-neutral-700">
         Build your foundational knowledge of artificial intelligence.{' '}
-        <strong>
-          AI Foundations Stage is located in Walker Crisler Bldg (WCB) 105
-        </strong>
-        .
       </p>
     </>
   ),
@@ -125,42 +111,29 @@ const trackDescriptions = {
         id="breakout-sessions-heading"
         className="mx-auto mb-4 text-center text-3xl font-semibold text-bhm-neutral-800"
       >
-        Breakout Sessions
+        <span className="font-bold">Breakout Sessions</span> is located on the
+        2nd floor of Walker Crisler Building (WCB),{'\u00A0'}Room{'\u00A0'}255
       </h3>
-      <p className="mx-auto mb-6 max-w-4xl text-pretty text-lg text-bhm-neutral-700">
+      <p className="mb-6 max-w-4xl text-pretty text-center text-2xl text-bhm-neutral-700">
         Focused discussions and interactive sessions on specialized topics. Join
-        conversations with experts and peers.{' '}
-        <strong>
-          Breakout Sessions Stage is located on 2nd floor of Walker Crisler
-          Building Room 255 (WCB 255)
-        </strong>
+        conversations with experts and peers.
       </p>
     </>
   ),
   'Map': (
     <>
       <h3
-        id="venue-maps-heading"
-        className="mx-auto mb-4 text-center text-3xl font-semibold text-bhm-neutral-800"
+        id="map-heading"
+        className="font-regular mx-auto mb-4 text-center text-3xl text-bhm-neutral-800"
       >
-        Black History Month Tech Summit Venue Guide
+        <span className="font-bold">
+          Detroit Black History Month Innovation Summit Venue Guide
+        </span>
       </h3>
-      <p className="mx-auto mb-6 max-w-4xl text-pretty text-lg text-bhm-neutral-700">
+      <p className="mb-6 max-w-4xl text-pretty text-center text-2xl text-bhm-neutral-700">
         Use this guide to navigate the venue and find session locations.
         Sessions are organized across two floors. Elevators and restrooms are
         located in the Walker Crisler Building.
-      </p>
-    </>
-  ),
-  'Schedule': (
-    <>
-      <h3 className="mx-auto mb-4 text-center text-3xl font-semibold text-bhm-neutral-800">
-        Black History Month Tech Summit Schedule
-      </h3>
-      <p className="mx-auto mb-6 max-w-4xl text-pretty text-lg text-bhm-neutral-700">
-        Full-day summit running 8:00 AM to 4:30 PM, featuring wellness, keynote
-        fireside chat, breakout sessions, lunch networking, panel discussions,
-        and immersive learning experiences.
       </p>
     </>
   ),
@@ -344,7 +317,7 @@ const SessionsSection = ({
             ref={navRef}
             role="tablist"
             id="sessions-nav"
-            className={`scrollbar-visible mt-4 flex w-full flex-nowrap items-center justify-start gap-1 overflow-x-auto overflow-y-visible rounded-md bg-black py-3 pe-4 ps-4 md:px-6 ${
+            className={`scrollbar-visible mt-4 flex w-full flex-nowrap items-center justify-center gap-1 overflow-x-auto overflow-y-visible rounded-md bg-black py-3 pe-4 ps-4 md:px-6 ${
               isExpanded ? 'max-h-none opacity-100' : 'max-h-0 opacity-0'
             }`}
           >
@@ -365,8 +338,6 @@ const SessionsSection = ({
                   id={`session-tab-${index}`}
                   tabIndex={isExpanded ? 0 : -1}
                   className={`relative shrink-0 whitespace-nowrap rounded-md p-2 text-sm font-black uppercase !leading-5 transition-colors duration-300 focus:outline-none focus:ring-2 focus:ring-focus-ring focus:ring-offset-2 focus:ring-offset-black md:min-w-20 md:px-3 md:py-2 lg:min-w-36 lg:px-4 lg:text-lg ${
-                    index === 0 ? 'md:ml-14' : ''
-                  } ${
                     activeTab === index
                       ? 'bg-primary-400 text-black after:absolute after:-bottom-3 after:left-1/2 after:block after:size-0 after:-translate-x-1/2 after:border-x-[12px] after:border-t-[12px] after:border-primary-400 after:border-x-transparent'
                       : 'bg-gray-900 text-white hover:bg-gray-800'
