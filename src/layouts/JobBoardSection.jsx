@@ -23,15 +23,14 @@ const JobBoardSection = ({ year = new Date().getFullYear() }) => {
           local Detroit organizations and regional companies to some of the
           world&apos;s best global tech companies. They voluntarily provide
           exclusive opportunities so you can grow your tech career. You can
-          share your resume online, allowing sponsors from Google Developer
-          Groups in Detroit to see your work and reach out about exciting job
-          opportunities.
+          share your resume online, allowing Compass Detroit sponsors to see
+          your work and reach out about exciting job opportunities.
         </p>
       </div>
 
       {/* Job Board Grid - 3x2 layout */}
-      <div className="mx-auto mt-8 max-w-4xl sm:mt-10 md:mt-14 lg:mt-16">
-        <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
+      <div className="mx-auto mt-8  max-w-7xl px-8 sm:mt-10 md:mt-14 lg:mt-16">
+        <div className="grid grid-cols-1 items-stretch gap-10 sm:grid-cols-2 xl:grid-cols-3">
           {/* Company Cards */}
           {jobBoardData.map((company) => (
             <a
@@ -39,16 +38,16 @@ const JobBoardSection = ({ year = new Date().getFullYear() }) => {
               href={company.website}
               target="_blank"
               rel="noopener noreferrer"
-              className="group block"
+              className="group block h-full"
               aria-label={
                 company.name === 'Resume Drop'
                   ? 'Submit your resume at https://bit.ly/midevfest-resume-drop (opens in a new tab)'
                   : `Visit ${company.name}'s careers page at ${company.website} (opens in a new tab)`
               }
             >
-              <div className="rounded-2xl bg-bhm-gold-200 p-12 shadow-lg transition-all duration-200 hover:scale-105 hover:shadow-xl">
+              <div className="flex h-full min-h-[100px] flex-col items-center gap-6 rounded-2xl bg-bhm-gold-200 p-8 shadow-lg transition-all duration-200 hover:scale-105 hover:shadow-xl active:scale-95 sm:flex-row">
                 {/* Circular logo container */}
-                <div className="mx-auto mb-6 flex size-36 items-center justify-center overflow-hidden rounded-full bg-white shadow-md">
+                <div className="flex size-36 shrink-0 items-center justify-center overflow-hidden rounded-full bg-white shadow-md">
                   <img
                     src={company.logo}
                     alt={`${company.name} logo`}
@@ -57,7 +56,7 @@ const JobBoardSection = ({ year = new Date().getFullYear() }) => {
                   />
                 </div>
                 {/* Company name */}
-                <h3 className="flex h-14 items-center justify-center text-center text-lg font-semibold text-gray-800">
+                <h3 className="min-w-0 flex-1 pr-4 text-center text-lg font-semibold text-gray-800 sm:text-left sm:text-xl">
                   {company.name}
                 </h3>
               </div>
