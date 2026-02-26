@@ -137,7 +137,7 @@ function LocationSection() {
                   href="https://www.google.com/maps/dir//Lumen+Detroit,+1903+Grand+River+Ave,+Detroit,+MI+48226/@42.3028661,-83.2398934,15z/data=!3m1!4b1!4m8!4m7!1m0!1m5!1m1!1s0x883b2d36f5ad9e7b:0xad94c0e08a2b601c!2m2!1d-83.0548734!2d42.3344991?entry=ttu&g_ep=EgoyMDI2MDIyMy4wIKXMDSoASAFQAw%3D%3D"
                   target="_blank"
                   rel="noreferrer"
-                  className="my-4 ml-16 inline-flex w-fit items-center font-bold text-bhm-red-700 underline hover:text-bhm-red-900 focus:outline-none focus:ring-2 focus:ring-focus-ring focus:ring-offset-2 dark:text-bhm-red-200"
+                  className="my-4 ml-16 inline-flex w-fit items-center font-bold text-bhm-red-700 underline hover:text-bhm-red-900 focus:outline-none focus:ring-2 focus:ring-focus-ring focus:ring-offset-2 dark:text-bhm-gold-300"
                   aria-label="Get directions to Lumen Detroit (opens in new tab)"
                 >
                   GET LUMEN DIRECTIONS
