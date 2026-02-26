@@ -1,18 +1,17 @@
 import React, { useState, useRef, useEffect } from 'react'
 import PropTypes from 'prop-types'
 
-import HackathonSessionHeader from '@/components/sessions/HackathonSessionHeader'
-import NoSessionsAvailable from '@/components/sessions/NoSessionsAvailable'
-import Schedule from '@/components/sessions/Schedule'
+import ActivityCard from '@/components/sessions/ActivityCard'
 import SessionCard from '@/components/sessions/SessionCard'
 import SectionSkipLink from '@/components/ui/SectionSkipLink'
 import VenueMaps from '@/components/sessions/VenueMaps'
 
+import { conferenceActivities } from '@/data/2026/conferenceActivities'
 import { DIRECTION } from '@/constants/directions'
 import { IoChevronDown } from 'react-icons/io5'
 
 const convertTo24Hour = (time) => {
-  if (!time) return ''
+  if (!time || typeof time !== 'string') return ''
 
   const [hour, minute] = time.split(':').map(Number)
 
@@ -29,24 +28,121 @@ const convertTo24Hour = (time) => {
     .padStart(2, '0')}`
 }
 
-// Track descriptions
+/** Normalize time to HH:mm for consistent sort comparison */
+const normalizeSortTime = (t) => {
+  if (!t) return '99:99'
+  const normalized = convertTo24Hour(t) || t
+  const [h, m] = normalized.split(':').map(Number)
+  return `${String(h).padStart(2, '0')}:${String(m || 0).padStart(2, '0')}`
+}
+
+// Track descriptions (strings or JSX for inline formatting like <strong>)
 const trackDescriptions = {
-  'Build with AI':
-    'Explore cutting-edge AI development, from machine learning to generative models. Hands-on workshops at Service Bldg (SB) 120.',
-  'Innovation':
-    'Discover groundbreaking ideas and emerging technologies shaping the future. Sessions at Walker Crisler Bldg (WCB) 103.',
-  'Level Up':
-    'Advance your career and personal growth. From mentorship to leadership, explore sessions that help you level up professionally and personally in tech. Located at Town Square.',
-  'Leadership':
-    'Discover insights from founders and entrepreneurs building the next generation of tech companies. Learn about startup strategies, funding, and scaling. Sessions at rooms 275 and 278.',
-  'AI Foundations':
-    'Build your foundational knowledge of artificial intelligence. Perfect for beginners and those looking to strengthen their AI fundamentals. Located at Walker Crisler Bldg (WCB) 105.',
-  'Breakout Sessions':
-    'Focused discussions and interactive sessions on specialized topics. Join intimate conversations with experts and peers at room 255.',
-  'Map':
-    'DTE Energy Headquarters is a Class A office complex on the west side of Downtown Detroit at I-75 and Grand River, Michigan, consisting of three interconnected buildings.',
-  'Schedule':
-    'Full-day conference featuring keynotes, breakout sessions, workshops, networking lunch, panel discussions, sponsor showcases, and techie networking.',
+  'Build with AI': (
+    <>
+      <h3
+        id="build-with-ai-heading"
+        className="mx-auto mb-4 text-center text-3xl font-semibold text-bhm-neutral-800"
+      >
+        <span className="font-bold">Build with AI Stage</span> is located in
+        Service Building 120 (SB{'\u00A0'}120)
+      </h3>
+    </>
+  ),
+  'Innovation': (
+    <>
+      <h3
+        id="innovation-heading"
+        className="mx-auto mb-4 text-center text-3xl font-semibold text-bhm-neutral-800"
+      >
+        <span className="font-bold">Innovation Stage</span> is located on the
+        1st floor of Walker Crisler Building (WCB), Room{'\u00A0'}103
+      </h3>
+      <p className="mb-6 max-w-4xl text-pretty text-center text-2xl text-bhm-neutral-700">
+        Discover groundbreaking ideas and emerging technologies shaping the
+        future.
+      </p>
+    </>
+  ),
+  'Level Up': (
+    <>
+      <h3
+        id="level-up-heading"
+        className="mx-auto mb-4 text-center text-3xl font-semibold text-bhm-neutral-800"
+      >
+        <span className="font-bold">Level Up Stage</span> is located in Town
+        Square
+      </h3>
+      <p className="mb-6 max-w-4xl text-pretty text-center text-2xl text-bhm-neutral-700">
+        Advance your career and personal growth. From mentorship to leadership,
+        explore sessions that help you level up professionally and personally in
+        tech.
+      </p>
+    </>
+  ),
+  'Leadership': (
+    <>
+      <h3
+        id="leadership-heading"
+        className="mx-auto mb-4 text-center text-3xl font-semibold text-bhm-neutral-800"
+      >
+        <span className="font-bold">Leadership Stage</span> is located in Walker
+        Crisler Building Floor 2 Rooms 275 and 278 (WCB{'\u00A0'}275{'\u00A0'}
+        and
+        {'\u00A0'}278)
+      </h3>
+      <p className="mb-6 max-w-4xl text-pretty text-center text-2xl text-bhm-neutral-700">
+        Discover insights from founders and entrepreneurs building the next
+        generation of tech companies.{' '}
+      </p>
+    </>
+  ),
+  'AI Foundations': (
+    <>
+      <h3
+        id="ai-foundations-heading"
+        className="mx-auto mb-4 text-center text-3xl font-semibold text-bhm-neutral-800"
+      >
+        <span className="font-bold">AI Foundations Stage</span> is located in
+        Walker Crisler Building Floor 1 Room 105 (WCB{'\u00A0'}105)
+      </h3>
+      <p className="mb-6 max-w-4xl text-pretty text-center text-2xl text-bhm-neutral-700">
+        Build your foundational knowledge of artificial intelligence.{' '}
+      </p>
+    </>
+  ),
+  'Breakout Sessions': (
+    <>
+      <h3
+        id="breakout-sessions-heading"
+        className="mx-auto mb-4 text-center text-3xl font-semibold text-bhm-neutral-800"
+      >
+        <span className="font-bold">Breakout Sessions</span> is located on the
+        2nd floor of Walker Crisler Building (WCB),{'\u00A0'}Room{'\u00A0'}255
+      </h3>
+      <p className="mb-6 max-w-4xl text-pretty text-center text-2xl text-bhm-neutral-700">
+        Focused discussions and interactive sessions on specialized topics. Join
+        conversations with experts and peers.
+      </p>
+    </>
+  ),
+  'Map': (
+    <>
+      <h3
+        id="map-heading"
+        className="font-regular mx-auto mb-4 text-center text-3xl text-bhm-neutral-800"
+      >
+        <span className="font-bold">
+          Detroit Black History Month Innovation Summit Venue Guide
+        </span>
+      </h3>
+      <p className="mb-6 max-w-4xl text-pretty text-center text-2xl text-bhm-neutral-700">
+        Use this guide to navigate the venue and find session locations.
+        Sessions are organized across two floors. Elevators and restrooms are
+        located in the Walker Crisler Building.
+      </p>
+    </>
+  ),
 }
 
 const SessionsSection = ({
@@ -90,27 +186,41 @@ const SessionsSection = ({
         speakers: [speaker.name],
         speakerAvatars: [speaker.avatar],
         sessionTitle: speaker.session.title,
-        sessionDesc: speaker.session.description,
+        sessionDesc: speaker.session.description ?? '',
         track: speaker.session.track,
-        sessionTime: speaker.session.time,
-        sessionRoom: speaker.session.room,
-        sessionDuration: speaker.session.sessionDuration || 1,
+        sessionTime: speaker.session.time ?? '',
+        sessionRoom: speaker.session.room ?? '',
+        sessionDuration: speaker.session.sessionDuration ?? 60,
       })
     }
   })
 
   // Get sessions for current track
-  const currentTrackSessions = combinedSpeakerData.filter((session) => {
-    // Handle the Misc/Miscellaneous track name mapping
-    const normalizeSessionTrack =
-      session.track === 'Miscellaneous' ? 'Misc' : session.track
-    const normalizeCurrentSession =
-      currentSession === 'Miscellaneous' ? 'Misc' : currentSession
+  const currentTrackSessions = combinedSpeakerData.filter(
+    (session) => session.track === currentSession
+  )
 
-    return normalizeSessionTrack === normalizeCurrentSession
-  })
+  // Get conference activities for current track (check-in, breakfast, etc.)
+  const currentTrackActivities = conferenceActivities.filter(
+    (activity) => activity.track === currentSession
+  )
 
-  const hasSessionsForTrack = currentTrackSessions.length > 0
+  // Merge sessions and activities, sort by time
+  const mergedTrackItems = [
+    ...currentTrackSessions.map((s) => ({
+      type: 'session',
+      sortTime: normalizeSortTime(s.sessionTime),
+      ...s,
+    })),
+    ...currentTrackActivities.map((a) => ({
+      type: 'activity',
+      sortTime: normalizeSortTime(a.time),
+      ...a,
+    })),
+  ].sort((a, b) => (a.sortTime < b.sortTime ? -1 : 1))
+
+  const hasContentForTrack =
+    currentTrackSessions.length > 0 || currentTrackActivities.length > 0
 
   const scrollTabIntoView = (button) => {
     if (!button || !navRef.current) return
@@ -182,10 +292,16 @@ const SessionsSection = ({
     </div>
   )
 
+  /*
+   * Layout: collapsible schedule with track tabs and session cards.
+   * Structure: header (collapse btn + title) → tablist → track description → tabpanel (Map/session cards)
+   * Track descriptions appear below the tablist, above the session cards.
+   * Session list: single column grid; max-w-6xl w-full for screens smaller than xl.
+   */
   return (
     <section
       id="schedule"
-      className="relative flex flex-col items-center justify-start bg-bhm-gold-50 p-4 sm:px-10 md:px-14 lg:px-16"
+      className="relative flex flex-col items-center justify-start bg-bhm-gold-50 p-4 pb-24 pt-16 sm:px-10 md:px-14 lg:px-16"
     >
       <SectionSkipLink href="#membership">
         Skip sessions navigation
@@ -204,31 +320,24 @@ const SessionsSection = ({
             } transition-transform duration-100 ease-linear`}
           />
         </button>
-        <h2 className="text-center font-biorhyme text-5xl text-bhm-neutral-900 md:text-5xl lg:text-6xl">
+        <h2 className="my-8 text-center font-biorhyme text-5xl text-bhm-neutral-900 md:text-5xl lg:text-6xl">
           {year} Schedule
         </h2>
       </div>
 
-      {/* Track Description */}
-      {isExpanded && currentSession && trackDescriptions[currentSession] && (
-        <div className="mx-auto mt-6 w-full max-w-4xl">
-          <p className="text-left text-base leading-relaxed text-gray-700 md:text-lg">
-            {trackDescriptions[currentSession]}
-          </p>
-        </div>
-      )}
-
+      {/* Expandable content: tablist, track description, tabpanel */}
       <div
         className={`flex w-full flex-col overflow-hidden transition-all duration-500 ease-in-out md:overflow-x-visible ${
           isExpanded ? 'opacity-100' : 'max-h-0 opacity-0'
         }`}
       >
+        {/* Horizontal scrollable track tabs */}
         <nav aria-label="Session track navigation" aria-hidden={!isExpanded}>
           <div
             ref={navRef}
             role="tablist"
             id="sessions-nav"
-            className={`scrollbar-visible mt-4 flex w-full flex-nowrap items-center justify-start gap-1 overflow-x-auto overflow-y-visible rounded-md bg-black py-3 pe-4 ps-4 md:px-6 ${
+            className={`scrollbar-visible mt-4 flex w-full flex-nowrap items-center justify-center gap-1 overflow-x-auto overflow-y-visible rounded-md bg-black py-3 pe-4 ps-4 md:px-6 ${
               isExpanded ? 'max-h-none opacity-100' : 'max-h-0 opacity-0'
             }`}
           >
@@ -249,8 +358,6 @@ const SessionsSection = ({
                   id={`session-tab-${index}`}
                   tabIndex={isExpanded ? 0 : -1}
                   className={`relative shrink-0 whitespace-nowrap rounded-md p-2 text-sm font-black uppercase !leading-5 transition-colors duration-300 focus:outline-none focus:ring-2 focus:ring-focus-ring focus:ring-offset-2 focus:ring-offset-black md:min-w-20 md:px-3 md:py-2 lg:min-w-36 lg:px-4 lg:text-lg ${
-                    index === 0 ? 'md:ml-14' : ''
-                  } ${
                     activeTab === index
                       ? 'bg-primary-400 text-black after:absolute after:-bottom-3 after:left-1/2 after:block after:size-0 after:-translate-x-1/2 after:border-x-[12px] after:border-t-[12px] after:border-primary-400 after:border-x-transparent'
                       : 'bg-gray-900 text-white hover:bg-gray-800'
@@ -259,16 +366,7 @@ const SessionsSection = ({
                   onFocus={(e) => scrollTabIntoView(e.currentTarget)}
                   onKeyDown={(e) => handleKeyDown(e, index)}
                 >
-                  {tab === 'Miscellaneous' ? (
-                    <>
-                      <span className="inline max-xs:hidden">
-                        Miscellaneous
-                      </span>
-                      <span className="hidden max-xs:inline">Misc</span>
-                    </>
-                  ) : tab === 'Hackathon' ? (
-                    <>Hackathon</>
-                  ) : tab === 'Tech+Design' ? (
+                  {tab === 'Tech+Design' ? (
                     <>Tech+Design</>
                   ) : tab === 'Level Up' ? (
                     <>Level Up</>
@@ -296,6 +394,14 @@ const SessionsSection = ({
           </div>
         </nav>
 
+        {/* Track description: below tablist, above session cards */}
+        {isExpanded && currentSession && trackDescriptions[currentSession] && (
+          <div className="mx-auto mt-6 w-full max-w-6xl px-[2.5%] md:px-[5%]">
+            {trackDescriptions[currentSession]}
+          </div>
+        )}
+
+        {/* Tabpanel: Map or session cards; max-w-6xl */}
         <div
           ref={tabpanelRef}
           id="sessions-tabpanel"
@@ -303,44 +409,41 @@ const SessionsSection = ({
           aria-labelledby={`session-tab-${activeTab}`}
           aria-hidden={!isExpanded}
           tabIndex={isExpanded ? 0 : -1}
-          className={`flex w-full items-start px-[2.5%] md:px-[5%] ${
+          className={`mx-auto flex w-full max-w-6xl ${
             isExpanded ? 'max-h-none opacity-100' : 'max-h-0 opacity-0'
-          } ${
-            currentTrackSessions.length > 0 ? 'justify-start' : 'justify-center'
+          }             ${
+            hasContentForTrack ? 'justify-start' : 'justify-center'
           }
-            ${currentSession === 'Hackathon' ? 'flex-col' : ''}
           `}
         >
-          {currentSession === 'Schedule' ? (
-            <Schedule />
-          ) : currentSession === 'Map' ? (
+          {currentSession === 'Map' ? (
             <VenueMaps />
-          ) : currentTrackSessions.length > 0 ? (
+          ) : hasContentForTrack ? (
             <>
-              {currentSession === 'Hackathon' && <HackathonSessionHeader />}
-              <ul className="grid w-full grid-cols-1 gap-10 py-7 xl:grid-cols-2">
-                {hasSessionsForTrack ? (
-                  currentTrackSessions
-                    .sort((a, b) => {
-                      const timeA = convertTo24Hour(a.sessionTime)
-                      const timeB = convertTo24Hour(b.sessionTime)
-                      return timeA < timeB ? -1 : 1
-                    })
-                    .map((session) => (
-                      <li key={session.id} className="w-full">
-                        <SessionCard
-                          speakers={session.speakers}
-                          speakerAvatars={session.speakerAvatars}
-                          sessionTitle={session.sessionTitle}
-                          sessionDesc={session.sessionDesc}
-                          sessionTime={session.sessionTime}
-                          sessionRoom={session.sessionRoom}
-                          sessionDuration={session.sessionDuration}
-                        />
-                      </li>
-                    ))
-                ) : (
-                  <NoSessionsAvailable currentSession={currentSession} />
+              {/* Session cards + activity cards: single column; sorted by time */}
+              <ul className="grid w-full max-w-6xl grid-cols-1 gap-10 py-7 xl:max-w-none">
+                {mergedTrackItems.map((item) =>
+                  item.type === 'session' ? (
+                    <li key={item.id} className="w-full">
+                      <SessionCard
+                        speakers={item.speakers}
+                        speakerAvatars={item.speakerAvatars}
+                        sessionTitle={item.sessionTitle}
+                        sessionDesc={item.sessionDesc}
+                        sessionTime={item.sessionTime}
+                        sessionRoom={item.sessionRoom}
+                        sessionDuration={item.sessionDuration}
+                      />
+                    </li>
+                  ) : (
+                    <li key={item.id} className="w-full">
+                      <ActivityCard
+                        title={item.title}
+                        time={item.time}
+                        timeEnd={item.timeEnd}
+                      />
+                    </li>
+                  )
                 )}
               </ul>
             </>

@@ -23,27 +23,22 @@ function LandingSection() {
 
         <div className="relative z-10 flex w-full flex-col justify-between bg-bhm-black-950/70 lg:w-1/2">
           <div className="flex grow flex-col items-center justify-center space-y-8 px-16 py-20 opacity-100 lg:mt-14">
-            <h2 className="font-biorhyme text-5xl text-bhm-gold-200 md:text-5xl lg:text-6xl">
+            <h2 className="font-biorhyme text-5xl text-bhm-gold-200 ">
               February 28, 2026
             </h2>
 
-            <p className="prose text-xl font-bold text-bhm-gold-50 lg:text-base xl:text-lg">
+            <p className="prose text-2xl font-semibold text-bhm-gold-50">
               Compass x NSBE Detroit in partnership with SHPE Detroit, GDG
               Detroit, Women Techmakers, DevOps Detroit, Detroit Hacker House,
               Automation Workz, CCS, IBM, and DTE Energy are hosting a day of
               learning, building, connecting, and celebrating Detroit&apos;s
-              tech ecosystem. This large-scale, in-person summit at DTE Energy
-              HQ will offer a full day on the latest advancements in tech and
-              transformative impact of AI and open source technologies on
-              industries.
-            </p>
-            <p className="prose text-xl font-semibold text-bhm-gold-50 lg:text-base xl:text-lg">
-              Join local professionals, leaders and learners as they gather for
-              a day of learning, building, and connecting. Whether you&apos;re a
-              seasoned professional, an ambitious innovator, a learner, a
-              leader, or a creative, this is your chance to immerse yourself in
-              Detroit&apos;s renaissance and invest in the city&apos;s growing
               tech ecosystem.
+            </p>
+            <p className="font-regular prose text-xl text-bhm-gold-50">
+              Whether you&apos;re a seasoned professional, an ambitious
+              innovator, a learner, a leader, or a creative, this is your chance
+              to immerse yourself in Detroit&apos;s renaissance and invest in
+              the city&apos;s growing tech ecosystem.
             </p>
             <div className="flex flex-row gap-8">
               <CTAButton
