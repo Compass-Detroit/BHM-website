@@ -103,7 +103,7 @@ function LocationSection() {
                   2199 3rd Ave, Detroit, MI 48226
                 </address>
                 <a
-                  href="https://bit.ly/dte-free-parking"
+                  href="https://bit.ly/mgm-self-parking"
                   target="_blank"
                   rel="noreferrer"
                   className="my-4 ml-16 inline-flex w-fit items-center whitespace-nowrap rounded bg-bhm-gold-300 px-8 py-5 font-bold text-bhm-neutral-950 shadow-xl transition delay-75 duration-100 ease-in-out hover:-translate-y-1 hover:scale-110 hover:cursor-pointer focus:outline-none focus:ring-2 focus:ring-focus-ring focus:ring-offset-2"
