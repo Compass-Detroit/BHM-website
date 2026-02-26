@@ -44,7 +44,7 @@ const PartnersSection = ({ partnersData = {}, year }) => {
         {hasPartners ? (
           <>
             {/* Single Partners Grid */}
-            <div className="grid grid-cols-1 justify-items-center gap-8 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
+            <div className="mx-auto mt-10 grid w-full max-w-6xl grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-3">
               {allPartners.map((partner) => (
                 <button
                   key={partner.id}
@@ -88,7 +88,7 @@ const PartnersSection = ({ partnersData = {}, year }) => {
               </p>
               {year && isCurrentYear && (
                 <CTAButton
-                  href="mailto:sponsors@midevfest.com?subject=Compass%20Detroit%20Partner%20Inquiry"
+                  href="mailto:whatupdoe@compass-detroit.com"
                   label="Become a Partner"
                   ariaLabel="Join us as a partner"
                   className="text-xl font-semibold text-bhm-neutral-900"
