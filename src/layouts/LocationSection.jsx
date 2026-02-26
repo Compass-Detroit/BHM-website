@@ -106,7 +106,7 @@ function LocationSection() {
                   href="https://bit.ly/mgm-self-parking"
                   target="_blank"
                   rel="noreferrer"
-                  className="my-4 ml-16 inline-flex w-fit items-center whitespace-nowrap rounded bg-bhm-gold-300 px-8 py-5 font-bold text-bhm-neutral-950 shadow-xl transition delay-75 duration-100 ease-in-out hover:-translate-y-1 hover:scale-110 hover:cursor-pointer focus:outline-none focus:ring-2 focus:ring-focus-ring focus:ring-offset-2"
+                  className="my-4 ml-16 inline-flex w-fit items-center font-bold text-bhm-red-700 underline hover:text-bhm-red-900 focus:outline-none focus:ring-2 focus:ring-focus-ring focus:ring-offset-2 dark:text-bhm-red-200"
                   aria-label="Free parking information (opens in new tab)"
                 >
                   FREE PARKING INFO
@@ -155,10 +155,10 @@ function LocationSection() {
           {/* Saturday Map */}
           <div className="mx-2 w-full max-w-full overflow-hidden lg:w-1/2">
             <h4 className="mb-2 text-sm font-semibold text-gray-700 dark:text-white">
-              Saturday - DTE Location
+              Saturday - Free Parking
             </h4>
             <p className="mb-2 text-lg font-semibold">
-              DTE Energy Headquarters
+              MGM Grand Detroit Self Parking
             </p>
             <div
               className="rounded-2xl border-4 border-blue-500 bg-white p-1"
@@ -174,7 +174,7 @@ function LocationSection() {
                   width: '100%',
                   boxSizing: 'border-box',
                 }}
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1610!2d-83.0603389!3d42.3337713!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x883b2d363de9d8eb%3A0xb42701b85d37b41d!2sDTE%20Energy%20Headquarters!5e1!3m2!1sen!2sus!4v1706832000000!5m2!1sen!2sus"
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d737.3372447776826!2d-83.06011360377427!3d42.33508251131216!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x883b2d49be82ef77%3A0xfe82f1372017dff8!2s2199%203rd%20Ave%2C%20Detroit%2C%20MI%2048226!5e0!3m2!1sen!2sus!4v1772077742474!5m2!1sen!2sus"
                 allowFullScreen
                 loading="lazy"
                 sandbox="allow-scripts allow-same-origin allow-popups allow-popups-to-escape-sandbox"
