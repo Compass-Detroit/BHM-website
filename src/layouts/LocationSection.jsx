@@ -166,8 +166,8 @@ function LocationSection() {
               aria-label="Saturday location map"
             >
               <iframe
-                title="DTE Energy Headquarters"
-                aria-label="Map showing DTE Energy Headquarters location"
+                title="MGM Grand Detroit Self Parking"
+                aria-label="Map showing MGM Grand Detroit Self Parking location"
                 className="aspect-[4/3] rounded-xl border-4 border-white"
                 style={{
                   maxWidth: '100%',
@@ -180,9 +180,10 @@ function LocationSection() {
                 sandbox="allow-scripts allow-same-origin allow-popups allow-popups-to-escape-sandbox"
               >
                 <p>
-                  Interactive map showing DTE Energy Headquarters location.
+                  Interactive map showing MGM Grand Detroit Self Parking
+                  location.
                   <a
-                    href="https://www.google.com/maps/dir//DTE+Energy+Headquarters+1+Energy+Plaza+Detroit,+48226"
+                    href="https://bit.ly/mgm-self-parking"
                     target="_blank"
                     rel="noopener noreferrer"
                   >
