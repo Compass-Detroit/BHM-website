@@ -15,6 +15,7 @@ import RonaldFrohman from '@/data/2026/assets/images/team/roland_frohman.webp'
 import TylerMcbeath from '@/data/2026/assets/images/team/tyler_mcbeath.webp'
 import JeseekiaVaughn from '@/data/2026/assets/images/team/jeseekia_vaughn.webp'
 import BrandonWelch from '@/data/2026/assets/images/team/brandon_welch.webp'
+import Rehanashri from '@/data/2026/assets/images/team/rehanashri.webp'
 
 export const teamData = [
   {
@@ -242,6 +243,37 @@ export const teamData = [
   },
   {
     id: 16,
+    name: 'Rehanashri',
+    twitter: '',
+    linkedin: 'https://www.linkedin.com/in/rehanashri',
+    github: 'https://github.com/Rehanashri',
+    devfest: 'devteam',
+    star: false,
+    topContributor: true,
+    university: 'University of Michigan Dearborn',
+    bio: `Software Engineering graduate student with experience in IT audits, compliance, and risk governance. With a foundation in software systems and web technologies, I bring a technical lens to risk and control processes - bridging the gap between developers and compliance requirements.
+    I actively volunteer at tech events like DevFest and community hackathons, and I enjoy collaborating with diverse teams and learning new technologies and contributing to build secure, inclusive, and well-governed tech solutions.`,
+    organization: null,
+    role: 'Student + GDGC Dearborn',
+    avatar: Rehanashri,
+  },
+  {
+    id: 17,
+    name: 'Kate Shenton',
+    twitter: '',
+    linkedin: 'https://www.linkedin.com/in/kate-shenton/',
+    github: 'https://github.com/kateshent',
+    devfest: 'devteam',
+    star: false,
+    topContributor: true,
+    university: 'University of Michigan',
+    bio: `Kate is a computer science graduate from the University of Michigan with experience in web development, cloud platforms, and machine learning. She recently built a full-stack web application for SHPE Detroit to streamline college fair raffle management and developed an “HR Agent” personal project using Twilio and an LLM to automate multilingual PTO requests via SMS. She is currently preparing for AWS certification and is seeking a full-time role where she can continue learning and building meaningful technology.`,
+    organization: 'Compass Detroit + SWE Detroit',
+    role: 'Software Developer',
+    avatar: SohamMhatre,
+  },
+  {
+    id: 18,
     name: 'Terrell McKinney',
     twitter: '',
     linkedin: 'https://www.linkedin.com/in/terrellmckinney/',
@@ -256,7 +288,7 @@ export const teamData = [
     avatar: TerrellMcKinney,
   },
   {
-    id: 17,
+    id: 19,
     name: 'DeAndre Boston',
     github: 'https://github.com/dboston528',
     devfest: 'devteam',
