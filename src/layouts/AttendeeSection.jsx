@@ -11,7 +11,7 @@ function AttendeeSection() {
 
   useEffect(() => {
     // Vite-friendly import of all attendee images
-    const logos = import.meta.glob('@/data/2026/assets/attendees/*.png', {
+    const logos = import.meta.glob('@/data/2026/assets/attendees/*.webp', {
       eager: true,
       import: 'default',
     })
@@ -57,7 +57,7 @@ function AttendeeSection() {
         <Marquee
           speed={80}
           pauseOnHover={true}
-          pauseOnClick={false} // controlled by our button
+          pauseOnClick={false} // controlled by button
           gradient={false}
           play={isPlaying}
         >
@@ -67,7 +67,7 @@ function AttendeeSection() {
                 src={img.src}
                 alt={img.name}
                 loading="lazy"
-                className="h-[70px] object-contain saturate-50 transition duration-300 hover:saturate-100 sm:h-[90px] md:h-[110px]"
+                className="h-[70px] object-contain saturate-0 transition duration-300 hover:saturate-100 sm:h-[90px] md:h-[110px]"
               />
             </div>
           ))}
