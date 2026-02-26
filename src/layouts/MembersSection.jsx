@@ -5,19 +5,19 @@ const MembersSection = () => {
   return (
     <section
       id="membership"
-      className="bg-bhm-gold-100 p-8 sm:px-10 md:px-14 lg:px-16"
+      className="bg-bhm-gold-100 p-8 pb-24 pt-16 sm:px-10 md:px-14 lg:px-16"
     >
       <div className="flex w-full justify-center pt-0">
-        <h2 className="mb-4 w-full text-center font-biorhyme text-5xl text-bhm-neutral-900 md:text-5xl lg:text-6xl">
+        <h2 className="my-4 w-full text-center font-biorhyme text-5xl text-bhm-neutral-900 md:text-5xl lg:text-6xl">
           Membership
         </h2>
       </div>
 
       <div className="mx-auto max-w-4xl">
         <p className="prose mt-6  text-lg leading-8 text-gray-600 [text-wrap:pretty]">
-          Join Compass Detroit and connect with developers, designers, and
-          technologists across the region. Membership is free and open to anyone
-          who wants to learn, share, and grow with the community.
+          Join Compass Detroit and connect with STEAM learners and professionals
+          across the region. Membership is free and open to anyone who wants to
+          learn, share, and grow with the community.
         </p>
 
         <div className="mt-6 grid w-full grid-cols-1 gap-8 md:grid-cols-3">
@@ -26,8 +26,11 @@ const MembersSection = () => {
             <h3 className="mb-4 font-biorhyme text-4xl text-gray-900">
               Why join?
             </h3>
+
             <ul className="list-inside list-disc space-y-2 text-base leading-relaxed text-gray-700">
-              <li>Access to workshops, talks, and networking events</li>
+              <li>
+                Access to innovation summits, talks, workshops, and networking
+              </li>
               <li>Connect with local tech leaders and peers</li>
               <li>
                 Early access to event registration and volunteer opportunities
@@ -44,10 +47,12 @@ const MembersSection = () => {
               Ready to join?
             </p>
             <CTAButton
-              href="mailto:hello@compassdetroit.org?subject=Compass%20Detroit%20Membership%20Inquiry"
+              href="https://bit.ly/compass2026"
               label="Become a Member"
-              ariaLabel="Email to become a Compass Detroit member"
+              ariaLabel="Join Compass Detroit as a member - opens in new tab"
               className="text-xl font-semibold text-bhm-neutral-900"
+              target="_blank"
+              rel="noreferrer"
               variant="secondary"
               icon={<FaEnvelope />}
               iconPosition="left"

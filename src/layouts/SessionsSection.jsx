@@ -314,7 +314,7 @@ const SessionsSection = ({
   return (
     <section
       id="schedule"
-      className="relative flex flex-col items-center justify-start bg-bhm-gold-50 p-4 sm:px-10 md:px-14 lg:px-16"
+      className="relative flex flex-col items-center justify-start bg-bhm-gold-50 p-4 pb-24 pt-16 sm:px-10 md:px-14 lg:px-16"
     >
       <SectionSkipLink href="#membership">
         Skip sessions navigation
@@ -333,7 +333,7 @@ const SessionsSection = ({
             } transition-transform duration-100 ease-linear`}
           />
         </button>
-        <h2 className="text-center font-biorhyme text-5xl text-bhm-neutral-900 md:text-5xl lg:text-6xl">
+        <h2 className="my-8 text-center font-biorhyme text-5xl text-bhm-neutral-900 md:text-5xl lg:text-6xl">
           {year} Schedule
         </h2>
       </div>
