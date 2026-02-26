@@ -106,7 +106,7 @@ function LocationSection() {
                   href="https://bit.ly/mgm-self-parking"
                   target="_blank"
                   rel="noreferrer"
-                  className="my-4 ml-16 inline-flex w-fit items-center whitespace-nowrap rounded border-4 border-bhm-neutral-950 bg-bhm-gold-200 px-8 py-5 font-bold text-bhm-neutral-950 shadow-lg transition delay-75 duration-100 ease-in-out hover:-translate-y-1 hover:scale-110 hover:cursor-pointer hover:bg-bhm-gold-50 focus:outline-none focus:ring-2 focus:ring-focus-ring focus:ring-offset-2 dark:border-bhm-gold-200 dark:bg-transparent dark:text-bhm-neutral-50"
+                  className="my-4 ml-16 inline-flex w-fit items-center whitespace-nowrap rounded border-4 border-bhm-neutral-950 bg-bhm-gold-200 px-8 py-5 font-bold text-bhm-neutral-950 shadow-lg transition delay-75 duration-100 ease-in-out hover:-translate-y-1 hover:scale-110 hover:cursor-pointer hover:bg-bhm-gold-50 focus:outline-none focus:ring-2 focus:ring-focus-ring focus:ring-offset-2 dark:border-bhm-gold-200 dark:bg-transparent dark:text-bhm-neutral-50 dark:hover:bg-transparent"
                   aria-label="Free parking information (opens in new tab)"
                 >
                   FREE PARKING INFO
@@ -137,7 +137,7 @@ function LocationSection() {
                   href="https://www.google.com/maps/dir//Lumen+Detroit,+1903+Grand+River+Ave,+Detroit,+MI+48226/@42.3028661,-83.2398934,15z/data=!3m1!4b1!4m8!4m7!1m0!1m5!1m1!1s0x883b2d36f5ad9e7b:0xad94c0e08a2b601c!2m2!1d-83.0548734!2d42.3344991?entry=ttu&g_ep=EgoyMDI2MDIyMy4wIKXMDSoASAFQAw%3D%3D"
                   target="_blank"
                   rel="noreferrer"
-                  className="my-4 ml-16 inline-flex w-fit items-center font-bold text-bhm-red-700 underline hover:text-bhm-red-900 focus:outline-none focus:ring-2 focus:ring-focus-ring focus:ring-offset-2 dark:text-bhm-gold-300"
+                  className="my-4 ml-16 inline-flex w-fit items-center font-bold text-bhm-red-700 underline hover:text-bhm-red-900 focus:outline-none focus:ring-2 focus:ring-focus-ring focus:ring-offset-2 dark:text-bhm-gold-200 dark:hover:text-bhm-gold-400"
                   aria-label="Get directions to Lumen Detroit (opens in new tab)"
                 >
                   GET LUMEN DIRECTIONS
