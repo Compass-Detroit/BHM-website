@@ -106,10 +106,41 @@ function LocationSection() {
                   href="https://bit.ly/dte-free-parking"
                   target="_blank"
                   rel="noreferrer"
-                  className="my-4 ml-16 inline-flex w-fit items-center whitespace-nowrap rounded border-4 border-bhm-neutral-950 bg-bhm-gold-200 px-8 py-5 font-bold text-bhm-neutral-950 shadow-lg transition delay-75 duration-100 ease-in-out hover:-translate-y-1 hover:scale-110 hover:cursor-pointer hover:bg-bhm-gold-50 focus:outline-none focus:ring-2 focus:ring-focus-ring focus:ring-offset-2"
+                  className="my-4 ml-16 inline-flex w-fit items-center whitespace-nowrap rounded bg-bhm-gold-300 px-8 py-5 font-bold text-bhm-neutral-950 shadow-xl transition delay-75 duration-100 ease-in-out hover:-translate-y-1 hover:scale-110 hover:cursor-pointer focus:outline-none focus:ring-2 focus:ring-focus-ring focus:ring-offset-2"
                   aria-label="Free parking information (opens in new tab)"
                 >
                   FREE PARKING INFO
+                </a>
+              </dd>
+            </dl>
+
+            <dl>
+              <dt className="sr-only">Tech Hour &amp; Networking venue</dt>
+              <dd className="mt-8 flex items-center">
+                <div className="mx-2 flex size-11 shrink-0 items-center justify-center rounded-full bg-yellow-500">
+                  <FaMapPin
+                    className="size-6 shrink-0 text-white"
+                    aria-hidden="true"
+                  />
+                </div>
+                <h3 className="text-2xl font-semibold">Lumen Detroit</h3>
+              </dd>
+              <dd>
+                <address
+                  className="ml-16 mt-4 not-italic xl:whitespace-nowrap"
+                  aria-label="Lumen Detroit address"
+                >
+                  1903 Grand River Ave, Detroit, MI 48226
+                </address>
+
+                <a
+                  href="https://www.google.com/maps/dir//1903+Grand+River+Ave+Detroit+MI+48226"
+                  target="_blank"
+                  rel="noreferrer"
+                  className="my-4 ml-16 inline-flex w-fit items-center whitespace-nowrap rounded bg-bhm-gold-300 px-8 py-5 font-bold text-bhm-neutral-950 shadow-xl transition delay-75 duration-100 ease-in-out hover:-translate-y-1 hover:scale-110 hover:cursor-pointer focus:outline-none focus:ring-2 focus:ring-focus-ring focus:ring-offset-2"
+                  aria-label="Get directions to Lumen Detroit (opens in new tab)"
+                >
+                  GET LUMEN DIRECTIONS
                 </a>
               </dd>
             </dl>

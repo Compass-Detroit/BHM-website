@@ -92,7 +92,7 @@ const blackHistorySummitSchedule = [
     time: '4:30 PM',
     events: [
       {
-        title: 'Techie Hour & Networking',
+        title: 'Tech Hour & Networking at Lumen Detroit',
         description:
           'In-person session. Wind down the day with networking and connect with fellow tech professionals.',
       },
