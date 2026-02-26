@@ -1,13 +1,14 @@
 import React, { useState, useRef, useEffect } from 'react'
 import PropTypes from 'prop-types'
 
+import ActivityCard from '@/components/sessions/ActivityCard'
 import HackathonSessionHeader from '@/components/sessions/HackathonSessionHeader'
-import NoSessionsAvailable from '@/components/sessions/NoSessionsAvailable'
 import Schedule from '@/components/sessions/Schedule'
 import SessionCard from '@/components/sessions/SessionCard'
 import SectionSkipLink from '@/components/ui/SectionSkipLink'
 import VenueMaps from '@/components/sessions/VenueMaps'
 
+import { conferenceActivities } from '@/data/2026/conferenceActivities'
 import { DIRECTION } from '@/constants/directions'
 import { IoChevronDown } from 'react-icons/io5'
 
@@ -27,6 +28,14 @@ const convertTo24Hour = (time) => {
   return `${hour.toString().padStart(2, '0')}:${minute
     .toString()
     .padStart(2, '0')}`
+}
+
+/** Normalize time to HH:mm for consistent sort comparison */
+const normalizeSortTime = (t) => {
+  if (!t) return '99:99'
+  const normalized = convertTo24Hour(t) || t
+  const [h, m] = normalized.split(':').map(Number)
+  return `${String(h).padStart(2, '0')}:${String(m || 0).padStart(2, '0')}`
 }
 
 // Track descriptions (strings or JSX for inline formatting like <strong>)
@@ -62,7 +71,7 @@ const trackDescriptions = {
     <>
       <h3
         id="level-up-heading"
-        className="fontsemibold mx-auto mb-4 text-center text-3xl text-bhm-neutral-800"
+        className="mx-auto mb-4 text-center text-3xl font-semibold text-bhm-neutral-800"
       >
         <span className="font-bold">Level Up Stage</span> is located in Town
         Square
@@ -200,7 +209,31 @@ const SessionsSection = ({
     return normalizeSessionTrack === normalizeCurrentSession
   })
 
-  const hasSessionsForTrack = currentTrackSessions.length > 0
+  // Get conference activities for current track (check-in, breakfast, etc.)
+  const currentTrackActivities = conferenceActivities.filter((activity) => {
+    const normalizeActivityTrack =
+      activity.track === 'Miscellaneous' ? 'Misc' : activity.track
+    const normalizeCurrentSession =
+      currentSession === 'Miscellaneous' ? 'Misc' : currentSession
+    return normalizeActivityTrack === normalizeCurrentSession
+  })
+
+  // Merge sessions and activities, sort by time
+  const mergedTrackItems = [
+    ...currentTrackSessions.map((s) => ({
+      type: 'session',
+      sortTime: normalizeSortTime(s.sessionTime),
+      ...s,
+    })),
+    ...currentTrackActivities.map((a) => ({
+      type: 'activity',
+      sortTime: normalizeSortTime(a.time),
+      ...a,
+    })),
+  ].sort((a, b) => (a.sortTime < b.sortTime ? -1 : 1))
+
+  const hasContentForTrack =
+    currentTrackSessions.length > 0 || currentTrackActivities.length > 0
 
   const scrollTabIntoView = (button) => {
     if (!button || !navRef.current) return
@@ -400,9 +433,7 @@ const SessionsSection = ({
           tabIndex={isExpanded ? 0 : -1}
           className={`mx-auto flex w-full max-w-6xl ${
             isExpanded ? 'max-h-none opacity-100' : 'max-h-0 opacity-0'
-          } ${
-            currentTrackSessions.length > 0 ? 'justify-start' : 'justify-center'
-          }
+          } ${hasContentForTrack ? 'justify-start' : 'justify-center'}
             ${currentSession === 'Hackathon' ? 'flex-col' : ''}
           `}
         >
@@ -410,34 +441,34 @@ const SessionsSection = ({
             <Schedule />
           ) : currentSession === 'Map' ? (
             <VenueMaps />
-          ) : currentTrackSessions.length > 0 ? (
+          ) : hasContentForTrack ? (
             <>
               {currentSession === 'Hackathon' && <HackathonSessionHeader />}
 
-              {/* Session cards: single column; max-w-6xl below xl, full width at xl+ */}
+              {/* Session cards + activity cards: single column; sorted by time */}
               <ul className="grid w-full max-w-6xl grid-cols-1 gap-10 py-7 xl:max-w-none">
-                {hasSessionsForTrack ? (
-                  currentTrackSessions
-                    .sort((a, b) => {
-                      const timeA = convertTo24Hour(a.sessionTime)
-                      const timeB = convertTo24Hour(b.sessionTime)
-                      return timeA < timeB ? -1 : 1
-                    })
-                    .map((session) => (
-                      <li key={session.id} className="w-full">
-                        <SessionCard
-                          speakers={session.speakers}
-                          speakerAvatars={session.speakerAvatars}
-                          sessionTitle={session.sessionTitle}
-                          sessionDesc={session.sessionDesc}
-                          sessionTime={session.sessionTime}
-                          sessionRoom={session.sessionRoom}
-                          sessionDuration={session.sessionDuration}
-                        />
-                      </li>
-                    ))
-                ) : (
-                  <NoSessionsAvailable currentSession={currentSession} />
+                {mergedTrackItems.map((item) =>
+                  item.type === 'session' ? (
+                    <li key={item.id} className="w-full">
+                      <SessionCard
+                        speakers={item.speakers}
+                        speakerAvatars={item.speakerAvatars}
+                        sessionTitle={item.sessionTitle}
+                        sessionDesc={item.sessionDesc}
+                        sessionTime={item.sessionTime}
+                        sessionRoom={item.sessionRoom}
+                        sessionDuration={item.sessionDuration}
+                      />
+                    </li>
+                  ) : (
+                    <li key={item.id} className="w-full">
+                      <ActivityCard
+                        title={item.title}
+                        time={item.time}
+                        timeEnd={item.timeEnd}
+                      />
+                    </li>
+                  )
                 )}
               </ul>
             </>
