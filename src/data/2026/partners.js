@@ -7,6 +7,7 @@ import IBM from '@/assets/images/sponsors/IBM_logo.webp'
 import NSBEDetroit from '@/assets/images/organizations/org-nsbe-logo.webp'
 import SHPEDetroit from '@/assets/images/organizations/org-shpe-logo.webp'
 import DevOpsDetroit from '@/assets/images/sponsors/DevOps_Detroit_Logo.webp'
+import AED from '@/assets/images/sponsors/AED.webp'
 
 // add these if you have them (update paths to match your repo)
 import AutomationWorkz from '@/assets/images/sponsors/Automation_Workz.webp'
@@ -82,6 +83,13 @@ export const partnersData = {
       logo: DetroitHackerHouse,
       desc: 'Detroit Hacker House is where builders become founders. We run a residential accelerator and community programming designed to take you from idea to launched product.',
       url: 'https://detroithackerhouse.com',
+    },
+    {
+      id: 11,
+      name: 'Audio Engineers of Detroit',
+      logo: AED,
+      desc: 'Audio Engineers of Detroit provides many different audio recording services, including Commercial voice over, Audiobooks recording & Mastering, Podcast recording, Music recording, Stereo mixing, 7.1.4 Dolby Atmos Mixing, Audio mastering, Audio restoration, Location audio recording and audio-visual services.',
+      url: 'https://aedetroit.com/',
     },
   ],
 }
