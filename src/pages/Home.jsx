@@ -26,13 +26,12 @@ function Home() {
         speakersData={Speakers2026}
         tracks={[
           'Map',
-          'Schedule',
-          'Level Up',
           'Build with AI',
+          'Level Up',
           'Leadership',
+          'Breakout Sessions',
           'Innovation',
           'AI Foundations',
-          'Breakout Sessions',
         ]}
       />
 
