@@ -16,6 +16,7 @@ import TylerMcbeath from '@/data/2026/assets/images/team/tyler_mcbeath.webp'
 import JeseekiaVaughn from '@/data/2026/assets/images/team/jeseekia_vaughn.webp'
 import BrandonWelch from '@/data/2026/assets/images/team/brandon_welch.webp'
 import Rehanashri from '@/data/2026/assets/images/team/rehanashri.webp'
+import KateShenton from '@/data/2026/assets/images/team/kate_shenton.webp'
 
 export const teamData = [
   {
@@ -266,11 +267,11 @@ export const teamData = [
     devfest: 'devteam',
     star: false,
     topContributor: true,
-    university: 'University of Michigan',
+    university: 'University of Michigan Ann Arbor',
     bio: `Kate is a computer science graduate from the University of Michigan with experience in web development, cloud platforms, and machine learning. She recently built a full-stack web application for SHPE Detroit to streamline college fair raffle management and developed an “HR Agent” personal project using Twilio and an LLM to automate multilingual PTO requests via SMS. She is currently preparing for AWS certification and is seeking a full-time role where she can continue learning and building meaningful technology.`,
     organization: 'Compass Detroit + SWE Detroit',
     role: 'Software Developer',
-    avatar: SohamMhatre,
+    avatar: KateShenton,
   },
   {
     id: 18,
