@@ -67,7 +67,7 @@ function AttendeeSection() {
                 src={img.src}
                 alt={img.name}
                 loading="lazy"
-                className="h-[70px] object-contain saturate-0 transition duration-300 hover:saturate-100 sm:h-[90px] md:h-[110px]"
+                className="h-[70px] object-contain saturate-0 transition duration-300 hover:saturate-100"
               />
             </div>
           ))}
