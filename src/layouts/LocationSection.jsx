@@ -107,7 +107,7 @@ function LocationSection() {
                   target="_blank"
                   rel="noreferrer"
                   className="my-4 ml-16 inline-flex w-fit items-center whitespace-nowrap rounded border-4 border-bhm-neutral-950 bg-bhm-gold-200 px-8 py-5 font-bold text-bhm-neutral-950 shadow-lg transition delay-75 duration-100 ease-in-out hover:-translate-y-1 hover:scale-110 hover:cursor-pointer hover:bg-bhm-gold-50 focus:outline-none focus:ring-2 focus:ring-focus-ring focus:ring-offset-2 dark:border-bhm-gold-200 dark:bg-transparent dark:text-bhm-neutral-50 dark:hover:bg-transparent"
-                  aria-label="Free parking information (opens in new tab)"
+                  aria-label="Information about parking for free (opens in new tab)"
                 >
                   PARKING FREE &mdash; INFO
                 </a>
