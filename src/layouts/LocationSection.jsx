@@ -112,36 +112,12 @@ function LocationSection() {
                   PARKING FREE &mdash; INFO
                 </a>
               </dd>
-            </dl>
-
-            <dl>
-              <dt className="sr-only">Tech Hour &amp; Networking venue</dt>
-              <dd className="mt-8 flex items-center">
-                <div className="mx-2 flex size-11 shrink-0 items-center justify-center rounded-full bg-yellow-500">
-                  <FaMapPin
-                    className="size-6 shrink-0 text-white"
-                    aria-hidden="true"
-                  />
-                </div>
-                <h3 className="text-2xl font-semibold">Lumen Detroit</h3>
-              </dd>
-              <dd>
-                <address
-                  className="ml-16 mt-4 not-italic xl:whitespace-nowrap"
-                  aria-label="Lumen Detroit address"
-                >
-                  1903 Grand River Ave, Detroit, MI 48226
-                </address>
-
-                <a
-                  href="https://www.google.com/maps/dir//Lumen+Detroit,+1903+Grand+River+Ave,+Detroit,+MI+48226/@42.3028661,-83.2398934,15z/data=!3m1!4b1!4m8!4m7!1m0!1m5!1m1!1s0x883b2d36f5ad9e7b:0xad94c0e08a2b601c!2m2!1d-83.0548734!2d42.3344991?entry=ttu&g_ep=EgoyMDI2MDIyMy4wIKXMDSoASAFQAw%3D%3D"
-                  target="_blank"
-                  rel="noreferrer"
-                  className="my-4 ml-16 inline-flex w-fit items-center font-bold text-bhm-red-700 underline hover:text-bhm-red-900 focus:outline-none focus:ring-2 focus:ring-focus-ring focus:ring-offset-2 dark:text-bhm-gold-200 dark:hover:text-bhm-gold-400"
-                  aria-label="Get directions to Lumen Detroit (opens in new tab)"
-                >
-                  GET LUMEN DIRECTIONS
-                </a>
+              <dd className="ml-16 mt-4">
+                <ul className="w-fit list-inside list-disc rounded-lg border-2 border-dashed border-bhm-neutral-400 p-4 font-semibold text-bhm-neutral-900">
+                  <li>Park on Floors 2-5</li>
+                  <li>Use SE elevators closest to Third Ave</li>
+                  <li>Enter DTE on Floor 2</li>
+                </ul>
               </dd>
             </dl>
 
@@ -193,6 +169,40 @@ function LocationSection() {
               </iframe>
             </div>
           </div>
+        </div>
+
+        {/* Lumen Detroit Row */}
+        <div className="flex w-full flex-col items-center md:items-start">
+          <dl className="flex w-full flex-col items-center md:items-start">
+            <dt className="sr-only">Tech Hour &amp; Networking venue</dt>
+            <dd className="flex items-center justify-center md:justify-start">
+              <div className="mx-2 flex size-11 shrink-0 items-center justify-center rounded-full bg-yellow-500">
+                <FaMapPin
+                  className="size-6 shrink-0 text-white"
+                  aria-hidden="true"
+                />
+              </div>
+              <h3 className="text-2xl font-semibold">Lumen Detroit</h3>
+            </dd>
+            <dd className="mt-4 flex flex-col items-center md:items-start">
+              <address
+                className="text-center not-italic md:ml-16 md:text-left xl:whitespace-nowrap"
+                aria-label="Lumen Detroit address"
+              >
+                1903 Grand River Ave, Detroit, MI 48226
+              </address>
+
+              <a
+                href="https://www.google.com/maps/dir/?api=1&origin=1+Energy+Plaza,+Detroit,+MI+48226&destination=Lumen+Detroit,+1903+Grand+River+Ave,+Detroit,+MI+48226&travelmode=walking"
+                target="_blank"
+                rel="noreferrer"
+                className="my-4 inline-flex w-fit items-center font-bold text-bhm-red-700 underline underline-offset-4 hover:text-bhm-red-900 focus:outline-none focus:ring-2 focus:ring-focus-ring focus:ring-offset-2 md:ml-16 dark:text-bhm-gold-200 dark:hover:text-bhm-gold-400"
+                aria-label="Get walking directions to Lumen Detroit (opens in new tab)"
+              >
+                GET LUMEN DIRECTIONS
+              </a>
+            </dd>
+          </dl>
         </div>
       </div>
     </section>
