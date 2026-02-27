@@ -111,6 +111,17 @@ const trackDescriptions = {
       </p>
     </>
   ),
+  'Careers': (
+    <>
+      <h3
+        id="careers-heading"
+        className="mx-auto mb-4 text-center text-3xl font-semibold text-bhm-neutral-800"
+      >
+        <span className="font-bold">Careers Stage</span> is located in Walker
+        Crisler Building Floor 1
+      </h3>
+    </>
+  ),
   'Breakout Sessions': (
     <>
       <h3
@@ -337,7 +348,7 @@ const SessionsSection = ({
             ref={navRef}
             role="tablist"
             id="sessions-nav"
-            className={`scrollbar-visible mt-4 flex w-full flex-nowrap items-center justify-center gap-1 overflow-x-auto overflow-y-visible rounded-md bg-black py-3 pe-4 ps-4 md:px-6 ${
+            className={`scrollbar-visible mt-4 flex w-full flex-nowrap items-start justify-start gap-1 overflow-x-auto overflow-y-visible rounded-md bg-black py-3 pe-4 ps-4 md:px-6 2xl:items-center 2xl:justify-center ${
               isExpanded ? 'max-h-none opacity-100' : 'max-h-0 opacity-0'
             }`}
           >
@@ -439,8 +450,11 @@ const SessionsSection = ({
                     <li key={item.id} className="w-full">
                       <ActivityCard
                         title={item.title}
+                        content={item.content ?? null}
+                        cta={item.cta ?? null}
                         time={item.time}
                         timeEnd={item.timeEnd}
+                        room={item.room}
                       />
                     </li>
                   )

@@ -20,7 +20,7 @@ const PartnersSection = ({ partnersData = {}, year }) => {
   return (
     <section
       id="partners"
-      className="relative flex flex-col justify-center bg-white p-8 sm:px-10 md:px-14 lg:px-16"
+      className="relative flex flex-col justify-center bg-white px-8 py-24 sm:px-10 md:px-14 lg:px-16"
     >
       <SectionSkipLink href="#leadership">
         Skip partners section

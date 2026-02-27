@@ -23,7 +23,7 @@ const SpeakersContent = ({ year, defaultExpanded }) => {
   }
 
   const renderSpeakerHeader = (
-    <div className="relative mx-auto w-full max-w-7xl justify-center pt-0">
+    <div className="relative mx-auto w-full max-w-7xl justify-center pb-24 pt-16">
       <button
         aria-label={
           isExpanded

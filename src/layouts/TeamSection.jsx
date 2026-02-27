@@ -72,7 +72,7 @@ const TeamSection = ({ teamData, year }) => {
   return (
     <section
       id="leadership"
-      className="relative bg-bhm-gold-50 p-8 sm:px-10 md:px-14 lg:px-16"
+      className="relative bg-bhm-gold-50 px-8 py-24 sm:px-10 md:px-14 lg:px-16"
     >
       <SectionSkipLink href="#page-footer">Skip to footer</SectionSkipLink>
       <div className="flex w-full justify-center pt-0">

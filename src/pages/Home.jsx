@@ -34,12 +34,13 @@ function Home() {
           'Breakout Sessions',
           'Innovation',
           'AI Foundations',
+          'Careers',
         ]}
       />
 
-      <MembersSection />
-
       <SpeakersSection year={currentYear} speakersData={Speakers2026} />
+
+      <MembersSection />
 
       <JobBoardSection year={currentYear} />
 
