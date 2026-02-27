@@ -9,7 +9,7 @@ export const sections = [
   { id: 'jobboard', text: 'Job Board' },
   { id: 'partners', text: 'Partners' },
   { id: 'leadership', text: 'BHM Team' },
-  { to: '/past-events', text: 'Past Events' },
+  // { to: '/past-events', text: 'Past Events' },
 ]
 
 // Flat list of route-based links (used in Footer)
