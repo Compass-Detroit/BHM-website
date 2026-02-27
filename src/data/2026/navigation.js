@@ -4,12 +4,12 @@
 export const sections = [
   { id: 'location', text: 'Location' },
   { id: 'schedule', text: 'Sessions' },
-  { id: 'membership', text: 'Membership' },
   { id: 'speakers', text: 'Speakers' },
+  { id: 'membership', text: 'Membership' },
   { id: 'jobboard', text: 'Job Board' },
   { id: 'partners', text: 'Partners' },
   { id: 'leadership', text: 'BHM Team' },
-  { to: '/previous-events', text: 'Previous Events' },
+  { to: '/past-events', text: 'Past Events' },
 ]
 
 // Flat list of route-based links (used in Footer)
