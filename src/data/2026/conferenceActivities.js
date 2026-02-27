@@ -23,7 +23,7 @@ export const conferenceActivities = [
     room: 'Town Square',
   },
   {
-    id: 'careers-resume-review1',
+    id: 'careers-review',
     track: 'Careers',
     title: 'Resume Review & Mock Interviews',
     content: 'Sign Up Here:',
@@ -38,7 +38,7 @@ export const conferenceActivities = [
     room: '(WBC 110-112)',
   },
   {
-    id: 'careers-resume-review2',
+    id: 'careers-resume-review',
     track: 'Careers',
     title: 'Resume Review & Mock Interviews',
     content: 'Sign Up Here:',
@@ -53,7 +53,7 @@ export const conferenceActivities = [
     room: '(WBC 110-112)',
   },
   {
-    id: 'careers-resume-mentorship1',
+    id: 'careers-mentoring',
     track: 'Careers',
     title: 'Career Mentorship',
     content: 'Sign Up Here:',
@@ -67,7 +67,7 @@ export const conferenceActivities = [
     room: '(WBC 110-112)',
   },
   {
-    id: 'careers-mentorship2',
+    id: 'careers-mentorship',
     track: 'Careers',
     title: 'Career Mentorship',
     content: 'Sign Up Here:',
