@@ -12,8 +12,8 @@
     -webkit-overflow-scrolling: touch;
   }
 
-  /* WCAG 1.4.10 Reflow: un-stick the header at high zoom/small height */
-  @media (max-width: 480px), (max-height: 400px) {
+  /* WCAG 1.4.10 Reflow: un-stick the header at extreme zoom / tiny viewports */
+  @media (max-width: 320px) and (max-height: 400px) {
     .site-header {
       position: absolute;
       width: 100%;
@@ -170,9 +170,10 @@
 
   html {
     scroll-padding-top: var(--header-height, 80px);
+    width: 100%;
+    max-width: 100%;
   }
 
-  html,
   body {
     width: 100%;
     max-width: 100%;
@@ -195,7 +196,6 @@
     min-width: 320px;
     min-height: 100vh;
   }
-
 }
 
 /* Orbitron Variable Font */

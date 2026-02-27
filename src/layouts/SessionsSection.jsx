@@ -1,4 +1,4 @@
-import React, { useState, useRef, useEffect } from 'react'
+import React, { useState, useRef, useEffect, useCallback } from 'react'
 import PropTypes from 'prop-types'
 
 import ActivityCard from '@/components/sessions/ActivityCard'
@@ -8,7 +8,7 @@ import VenueMaps from '@/components/sessions/VenueMaps'
 
 import { conferenceActivities } from '@/data/2026/conferenceActivities'
 import { DIRECTION } from '@/constants/directions'
-import { IoChevronDown } from 'react-icons/io5'
+import { IoChevronDown, IoChevronForward, IoChevronBack } from 'react-icons/io5'
 
 const convertTo24Hour = (time) => {
   if (!time || typeof time !== 'string') return ''
@@ -141,7 +141,7 @@ const trackDescriptions = {
     <>
       <h3
         id="map-heading"
-        className="font-regular mx-auto mb-4 text-center text-3xl text-bhm-neutral-800"
+        className="mx-auto mb-4 text-center text-3xl font-normal text-bhm-neutral-800"
       >
         <span className="font-bold">
           Detroit Black History Month Innovation Summit Venue Guide
@@ -170,6 +170,8 @@ const SessionsSection = ({
   const navRef = useRef(null)
   const buttonRefs = useRef([])
   const tabpanelRef = useRef(null)
+  const [canScrollLeft, setCanScrollLeft] = useState(false)
+  const [canScrollRight, setCanScrollRight] = useState(false)
 
   const tabs = [...tracks]
   const currentSession = tabs[activeTab]
@@ -232,6 +234,29 @@ const SessionsSection = ({
 
   const hasContentForTrack =
     currentTrackSessions.length > 0 || currentTrackActivities.length > 0
+
+  // Update gradients based on scroll position
+  const updateScrollIndicators = useCallback(() => {
+    const nav = navRef.current
+    if (!nav) return
+    const { scrollLeft, scrollWidth, clientWidth } = nav
+    setCanScrollLeft(scrollLeft > 2)
+    setCanScrollRight(scrollLeft + clientWidth < scrollWidth - 2)
+  }, [])
+
+  // Scroll & resize listeners for gradient indicators
+  useEffect(() => {
+    const nav = navRef.current
+    if (!nav) return
+    updateScrollIndicators()
+    nav.addEventListener('scroll', updateScrollIndicators, { passive: true })
+    const observer = new ResizeObserver(updateScrollIndicators)
+    observer.observe(nav)
+    return () => {
+      nav.removeEventListener('scroll', updateScrollIndicators)
+      observer.disconnect()
+    }
+  }, [updateScrollIndicators, isExpanded, tabs.length])
 
   const scrollTabIntoView = (button) => {
     if (!button || !navRef.current) return
@@ -344,65 +369,101 @@ const SessionsSection = ({
       >
         {/* Horizontal scrollable track tabs */}
         <nav aria-label="Session track navigation" aria-hidden={!isExpanded}>
-          <div
-            ref={navRef}
-            role="tablist"
-            id="sessions-nav"
-            className={`scrollbar-visible mt-4 flex w-full flex-nowrap items-start justify-start gap-1 overflow-x-auto overflow-y-visible rounded-md bg-black py-3 pe-4 ps-4 md:px-6 2xl:items-center 2xl:justify-center ${
-              isExpanded ? 'max-h-none opacity-100' : 'max-h-0 opacity-0'
-            }`}
-          >
-            {tabs.map((tab, index) => (
-              <React.Fragment key={tab}>
-                {index !== 0 && ![activeTab, activeTab + 1].includes(index) && (
-                  <div className="hidden h-5 w-0 shrink-0 bg-primary-400 sm:w-0.5 md:mx-2 md:block md:w-1 lg:mx-3" />
-                )}
+          <div className="relative mt-4">
+            {/* Left fade gradient */}
+            <div
+              className={`pointer-events-none absolute inset-y-0 left-0 z-10 w-8 rounded-l-md bg-gradient-to-r from-black/80 to-transparent transition-opacity duration-300 ${
+                canScrollLeft ? 'opacity-100' : 'opacity-0'
+              }`}
+              aria-hidden="true"
+            />
+            {/* Right fade gradient */}
+            <div
+              className={`pointer-events-none absolute inset-y-0 right-0 z-10 w-8 rounded-r-md bg-gradient-to-l from-black/80 to-transparent transition-opacity duration-300 ${
+                canScrollRight ? 'opacity-100' : 'opacity-0'
+              }`}
+              aria-hidden="true"
+            />
+            <div
+              ref={navRef}
+              role="tablist"
+              id="sessions-nav"
+              className={`scrollbar-visible flex w-full flex-nowrap items-start justify-start gap-1 overflow-x-auto overflow-y-visible rounded-md bg-black py-3 pe-4 ps-4 md:px-6 2xl:items-center 2xl:justify-center ${
+                isExpanded ? 'max-h-none opacity-100' : 'max-h-0 opacity-0'
+              }`}
+            >
+              {tabs.map((tab, index) => (
+                <React.Fragment key={tab}>
+                  {index !== 0 &&
+                    ![activeTab, activeTab + 1].includes(index) && (
+                      <div className="hidden h-5 w-0 shrink-0 bg-primary-400 sm:w-0.5 md:mx-2 md:block md:w-1 lg:mx-3" />
+                    )}
 
-                <button
-                  key={tab}
-                  ref={(el) => {
-                    buttonRefs.current[index] = el
-                  }}
-                  role="tab"
-                  aria-selected={activeTab === index}
-                  aria-controls="sessions-tabpanel"
-                  id={`session-tab-${index}`}
-                  tabIndex={isExpanded ? 0 : -1}
-                  className={`relative shrink-0 whitespace-nowrap rounded-md p-2 text-sm font-black uppercase !leading-5 transition-colors duration-300 focus:outline-none focus:ring-2 focus:ring-focus-ring focus:ring-offset-2 focus:ring-offset-black md:min-w-20 md:px-3 md:py-2 lg:min-w-36 lg:px-4 lg:text-lg ${
-                    activeTab === index
-                      ? 'bg-primary-400 text-black after:absolute after:-bottom-3 after:left-1/2 after:block after:size-0 after:-translate-x-1/2 after:border-x-[12px] after:border-t-[12px] after:border-primary-400 after:border-x-transparent'
-                      : 'bg-gray-900 text-white hover:bg-gray-800'
-                  }`}
-                  onClick={() => activateTab(index, false)}
-                  onFocus={(e) => scrollTabIntoView(e.currentTarget)}
-                  onKeyDown={(e) => handleKeyDown(e, index)}
-                >
-                  {tab === 'Tech+Design' ? (
-                    <>Tech+Design</>
-                  ) : tab === 'Level Up' ? (
-                    <>Level Up</>
-                  ) : tab === 'Leadership' ? (
-                    <>Leadership</>
-                  ) : tab === 'Build with AI' ? (
-                    <>Build with AI</>
-                  ) : tab === 'Workshops' ? (
-                    <>Workshops</>
-                  ) : tab === 'AI Foundations' ? (
-                    <>AI Foundations</>
-                  ) : tab === 'Breakout Sessions' ? (
-                    <>
-                      <span className="inline max-xs:hidden">
-                        Breakout Sessions
-                      </span>
-                      <span className="hidden max-xs:inline">Breakout</span>
-                    </>
-                  ) : (
-                    tab
-                  )}
-                </button>
-              </React.Fragment>
-            ))}
+                  <button
+                    key={tab}
+                    ref={(el) => {
+                      buttonRefs.current[index] = el
+                    }}
+                    role="tab"
+                    aria-selected={activeTab === index}
+                    aria-controls="sessions-tabpanel"
+                    id={`session-tab-${index}`}
+                    tabIndex={isExpanded ? 0 : -1}
+                    className={`relative shrink-0 whitespace-nowrap rounded-md p-2 text-sm font-black uppercase !leading-5 transition-colors duration-300 focus:outline-none focus:ring-2 focus:ring-focus-ring focus:ring-offset-2 focus:ring-offset-black md:min-w-20 md:px-3 md:py-2 lg:min-w-36 lg:px-4 lg:text-lg ${
+                      activeTab === index
+                        ? 'bg-primary-400 text-black after:absolute after:-bottom-3 after:left-1/2 after:block after:size-0 after:-translate-x-1/2 after:border-x-[12px] after:border-t-[12px] after:border-primary-400 after:border-x-transparent'
+                        : 'bg-gray-900 text-white hover:bg-gray-800'
+                    }`}
+                    onClick={() => activateTab(index, false)}
+                    onFocus={(e) => scrollTabIntoView(e.currentTarget)}
+                    onKeyDown={(e) => handleKeyDown(e, index)}
+                  >
+                    {tab === 'Tech+Design' ? (
+                      <>Tech+Design</>
+                    ) : tab === 'Level Up' ? (
+                      <>Level Up</>
+                    ) : tab === 'Leadership' ? (
+                      <>Leadership</>
+                    ) : tab === 'Build with AI' ? (
+                      <>Build with AI</>
+                    ) : tab === 'Workshops' ? (
+                      <>Workshops</>
+                    ) : tab === 'AI Foundations' ? (
+                      <>AI Foundations</>
+                    ) : tab === 'Breakout Sessions' ? (
+                      <>
+                        <span className="inline max-xs:hidden">
+                          Breakout Sessions
+                        </span>
+                        <span className="hidden max-xs:inline">Breakout</span>
+                      </>
+                    ) : (
+                      tab
+                    )}
+                  </button>
+                </React.Fragment>
+              ))}
+            </div>
           </div>
+          {/* Scroll hint for mobile */}
+          {(canScrollLeft || canScrollRight) && (
+            <p
+              className={`mt-2 flex items-center gap-1 text-sm text-bhm-neutral-600 xl:hidden ${
+                canScrollRight ? 'justify-end' : 'justify-start'
+              }`}
+              aria-hidden="true"
+            >
+              {!canScrollRight && (
+                <IoChevronBack className="size-4 animate-pulse" />
+              )}
+              {canScrollRight
+                ? 'Swipe for more tracks'
+                : 'Swipe to explore earlier tracks'}
+              {canScrollRight && (
+                <IoChevronForward className="size-4 animate-pulse" />
+              )}
+            </p>
+          )}
         </nav>
 
         {/* Track description: below tablist, above session cards */}
