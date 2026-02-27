@@ -1,6 +1,5 @@
 import WScottRichardson from './assets/images/speakers/W.ScottRichardson.webp'
 import JennaRitten2 from './assets/images/speakers/jennaphoto.webp'
-import BreonaClawson from './assets/images/speakers/BreonaClawson.webp'
 import JCEscalante from './assets/images/speakers/JCEscalante.webp'
 import IdaByrdHill from './assets/images/speakers/IdaByrd-Hill.webp'
 import AnthonyJohnson from './assets/images/speakers/AnthonyJohnson.webp'
@@ -12,7 +11,6 @@ import LynnHakim from './assets/images/speakers/LynnHakim.webp'
 import MerlindaLorianeSewavi from './assets/images/speakers/Merlinda-LorianeSewavi.webp'
 import GinaGrant from './assets/images/speakers/GinaGrant.webp'
 import HafeezJimoh from './assets/images/speakers/HafeezJimoh.webp'
-import WinstonRoberts from './assets/images/speakers/WinstonRoberts.webp'
 import TabiceWard from './assets/images/speakers/TabiceWard.webp'
 import TerrellMcKinney from './assets/images/speakers/TerrellMcKinney.webp'
 import DeanHendricks from './assets/images/speakers/DeanHendricks.webp'
@@ -137,31 +135,7 @@ export const SpeakersData = [
     isGDE: true,
     mastodon: null,
   },
-  {
-    id: 4,
-    name: 'Breona Clawson',
-    email: 'breona@eloquentdigitalmarketing.net',
-    avatar: BreonaClawson,
-    bio: `Breona Clawson is the Founder of Eloquent Digital Marketing, a systems-first digital marketing and operations agency based in Metro Detroit. With over six years of experience supporting entrepreneurs, nonprofits, and community-driven organizations, she specializes in helping non-technical professionals simplify digital tools, streamline workflows, and build sustainable systems without burnout. Breona is also a community builder, workshop facilitator, and speaker who regularly leads sessions on digital tools, AI-assisted workflows, personal branding, and operational clarity. Her work sits at the intersection of technology, accessibility, and real-world application — translating complex tools into practical, everyday use.`,
-    twitter: null,
-    linkedIn: 'https://www.linkedin.com/in/breonaclawson',
-    github: null,
-    organization: 'Eloquent Digital Marketing',
-    position: 'Founder & Digital Operations Strategist',
-    session: {
-      title: null,
-      abstract: null,
-      description: null,
-      tags: ['In-person', 'AI Foundations'],
-      track: null,
-      time: null,
-      room: null,
-      sessionDuration: 60,
-    },
-    isWTM: false,
-    isGDE: false,
-    mastodon: null,
-  },
+
   {
     id: 5,
     name: 'JC Escalante',
@@ -440,31 +414,6 @@ export const SpeakersData = [
       time: '11:00',
       room: 'Town Square',
       sessionDuration: 30,
-    },
-    isWTM: false,
-    isGDE: false,
-    mastodon: null,
-  },
-  {
-    id: 16,
-    name: 'Winston Roberts',
-    email: 'winstonroberts@teacherinasuit.com',
-    avatar: WinstonRoberts,
-    bio: `Winston Roberts is the AI Innovation Lead at Foundation Academies and founder of Teacher in a Suit, a firm delivering AI training tailored for educators.He has trained over 1,000 educators nationwide and delivered keynotes and workshops at conferences including SXSW EDU, ASU+GSV, and ISTE. His work has been featured in The Economist, Psychology Today, EdTech Magazine, and TEACH Magazine.Now in his 10th year in the classroom, Winston teaches high school financial literacy, holds a master’s in Education Entrepreneurship from the University of Pennsylvania, and is a proud graduate of Morehouse College.A devoted husband and father of two young daughters, Winston’s vision for the future of education is shaped by watching them grow up alongside the rise of AI. He is committed to ensuring no student is locked out of the future by outdated systems—and that schools reclaim their role as engines of relevance, empowerment, and innovation in an AI-driven world.`,
-    twitter: null,
-    linkedIn: 'https://www.linkedin.com/in/winston-roberts-74232552',
-    github: null,
-    organization: 'Foundation Academies',
-    position: 'AI Innovation Lead',
-    session: {
-      title: 'AI for the Home Office: Turning Prompts into Practical Workflows',
-      abstract: null,
-      description: `Many professionals have experimented with AI tools like ChatGPT—but few feel confident using them in a way that meaningfully improves the quality, speed, and clarity of their work. This hands-on session helps participants move beyond surface-level experimentation and learn how to use AI as a reliable thinking partner for real workplace tasks. Through a creative warm-up activity and a transferable prompting framework, attendees will learn how to generate higher-quality outputs, evaluate responses critically, and adapt AI to their specific role and workflows. Participants will practice using structured prompts to tackle real-world challenges such as drafting correspondence, brainstorming campaigns, summarizing complex information, and planning strategic work. The session emphasizes iteration, judgment, and human oversight—showing how professionals can use AI to save time without sacrificing quality or integrity. Attendees will leave with a practical framework, reusable prompts, and a clearer understanding of when AI works well, when it doesn’t, and how to apply it responsibly in their day-to-day work.`,
-      tags: ['In-person', 'Level Up', 'Virtual'],
-      track: 'Level Up',
-      time: '11:30',
-      room: 'Town Square',
-      sessionDuration: 60,
     },
     isWTM: false,
     isGDE: false,
