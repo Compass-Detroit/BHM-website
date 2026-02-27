@@ -39,11 +39,11 @@ function LocationSection() {
           </div>
         </div>
 
-        {/* Saturday Location Row */}
-        <div className="flex w-full max-w-full flex-col lg:flex-row lg:space-x-6">
-          {/* Saturday Location Info */}
-          <div className="mb-4 flex flex-col lg:mb-0 lg:w-1/2">
-            <div className="mb-4 flex items-center">
+        {/* Saturday Location Row - center both columns on mobile (<1024), side-by-side on lg */}
+        <div className="flex w-full max-w-full flex-col items-center lg:flex-row lg:items-stretch lg:space-x-6">
+          {/* Saturday Location Info - centered on mobile, left on lg */}
+          <div className="mb-4 flex flex-col items-center lg:mb-0 lg:w-1/2 lg:items-start">
+            <div className="mb-4 flex items-center justify-center lg:justify-start">
               <div className="mx-2 flex size-11 shrink-0 items-center justify-center rounded-full bg-yellow-500">
                 <FaMapPin
                   className="size-6 shrink-0 text-white"
@@ -53,16 +53,18 @@ function LocationSection() {
               <dl>
                 <dt className="sr-only">Venue</dt>
                 <dd className="m-0">
-                  <h3 className="text-3xl font-semibold">DTE Energy HQ</h3>
+                  <h3 className="text-center text-3xl font-semibold lg:text-left">
+                    DTE Energy HQ
+                  </h3>
                 </dd>
               </dl>
             </div>
 
-            <dl>
+            <dl className="flex w-full flex-col items-center lg:items-start">
               <dt className="sr-only">Address</dt>
               <dd>
                 <address
-                  className="ml-16 mt-1 not-italic xl:whitespace-nowrap"
+                  className="mt-1 text-center not-italic lg:ml-16 lg:text-left xl:whitespace-nowrap"
                   aria-label="Main event venue address"
                 >
                   1 Energy Plaza, Detroit, MI 48226
@@ -70,11 +72,11 @@ function LocationSection() {
               </dd>
             </dl>
 
-            <div className="my-4">
+            <div className="my-4 flex justify-center lg:justify-start">
               <a
                 href="https://www.google.com/maps/dir//DTE+Energy+Headquarters+1+Energy+Plaza+Detroit,+48226"
                 target="_blank"
-                className="ml-16 inline-flex w-fit items-center whitespace-nowrap rounded bg-bhm-gold-300 px-8 py-5 font-bold text-bhm-neutral-950 shadow-xl transition delay-75 duration-100 ease-in-out hover:-translate-y-1 hover:scale-110 hover:cursor-pointer focus:outline-none focus:ring-2 focus:ring-focus-ring focus:ring-offset-2"
+                className="inline-flex w-fit items-center whitespace-nowrap rounded bg-bhm-gold-300 px-8 py-5 font-bold text-bhm-neutral-950 shadow-xl transition delay-75 duration-100 ease-in-out hover:-translate-y-1 hover:scale-110 hover:cursor-pointer focus:outline-none focus:ring-2 focus:ring-focus-ring focus:ring-offset-2 lg:ml-16"
                 rel="noreferrer"
                 aria-label="Get directions to DTE Energy Headquarters (opens in new tab)"
               >
@@ -82,22 +84,22 @@ function LocationSection() {
               </a>
             </div>
 
-            <dl>
+            <dl className="flex w-full flex-col items-center lg:items-start">
               <dt className="sr-only">Free parking</dt>
-              <dd className="mt-8 flex items-center">
+              <dd className="mt-8 flex items-center justify-center lg:justify-start">
                 <div className="mx-2 flex size-11 shrink-0 items-center justify-center rounded-full bg-yellow-500">
                   <FaMapPin
                     className="size-6 shrink-0 text-white"
                     aria-hidden="true"
                   />
                 </div>
-                <h3 className="text-2xl font-semibold">
+                <h3 className="text-center text-2xl font-semibold lg:text-left">
                   MGM Grand Detroit Self Parking (FREE)
                 </h3>
               </dd>
-              <dd>
+              <dd className="mt-4 flex flex-col items-center lg:items-start">
                 <address
-                  className="ml-16 mt-4 not-italic xl:whitespace-nowrap"
+                  className="text-center not-italic lg:ml-16 lg:text-left xl:whitespace-nowrap"
                   aria-label="Free parking address"
                 >
                   2199 3rd Ave, Detroit, MI 48226
@@ -106,13 +108,13 @@ function LocationSection() {
                   href="https://bit.ly/mgm-self-parking"
                   target="_blank"
                   rel="noreferrer"
-                  className="my-4 ml-16 inline-flex w-fit items-center whitespace-nowrap rounded border-4 border-bhm-neutral-950 bg-bhm-gold-200 px-8 py-5 font-bold text-bhm-neutral-950 shadow-lg transition delay-75 duration-100 ease-in-out hover:-translate-y-1 hover:scale-110 hover:cursor-pointer hover:bg-bhm-gold-50 focus:outline-none focus:ring-2 focus:ring-focus-ring focus:ring-offset-2 dark:border-bhm-gold-200 dark:bg-transparent dark:text-bhm-neutral-50 dark:hover:bg-transparent"
+                  className="my-4 inline-flex w-fit items-center whitespace-nowrap rounded border-4 border-bhm-neutral-950 bg-bhm-gold-200 px-8 py-5 font-bold text-bhm-neutral-950 shadow-lg transition delay-75 duration-100 ease-in-out hover:-translate-y-1 hover:scale-110 hover:cursor-pointer hover:bg-bhm-gold-50 focus:outline-none focus:ring-2 focus:ring-focus-ring focus:ring-offset-2 lg:ml-16 dark:border-bhm-gold-200 dark:bg-transparent dark:text-bhm-neutral-50 dark:hover:bg-transparent"
                   aria-label="Information about parking for free (opens in new tab)"
                 >
-                  PARKING FREE &mdash; INFO
+                  FREE PARKING &mdash; INFO
                 </a>
               </dd>
-              <dd className="ml-16 mt-4">
+              <dd className="mt-4 flex justify-center lg:ml-16 lg:justify-start">
                 <ul className="w-fit list-inside list-disc rounded-lg border-2 border-dashed border-bhm-neutral-400 p-4 font-semibold text-bhm-neutral-900 dark:border-bhm-neutral-500 dark:text-bhm-neutral-100">
                   <li>Park on Floors 2-5</li>
                   <li>Use SE elevators closest to Third Ave</li>
@@ -128,12 +130,12 @@ function LocationSection() {
             </div>
           </div>
 
-          {/* Saturday Map */}
-          <div className="mx-2 w-full max-w-full overflow-hidden lg:w-1/2">
-            <h4 className="mb-2 text-sm font-semibold text-gray-700 dark:text-white">
+          {/* Saturday Map - centered on mobile, left on lg */}
+          <div className="mx-2 flex w-full max-w-full flex-col items-center overflow-hidden lg:w-1/2 lg:items-stretch">
+            <h4 className="mb-2 text-center text-sm font-semibold text-gray-700 lg:text-left dark:text-white">
               Saturday - Free Parking
             </h4>
-            <p className="mb-2 text-lg font-semibold">
+            <p className="mb-2 text-center text-lg font-semibold lg:text-left">
               MGM Grand Detroit Self Parking
             </p>
             <div
@@ -171,11 +173,11 @@ function LocationSection() {
           </div>
         </div>
 
-        {/* Lumen Detroit Row */}
-        <div className="flex w-full flex-col items-center md:items-start">
-          <dl className="flex w-full flex-col items-center md:items-start">
+        {/* Lumen Detroit Row - center on mobile (<1024), left on lg */}
+        <div className="flex w-full flex-col items-center lg:items-start">
+          <dl className="flex w-full flex-col items-center lg:items-start">
             <dt className="sr-only">Tech Hour &amp; Networking venue</dt>
-            <dd className="flex items-center justify-center md:justify-start">
+            <dd className="flex items-center justify-center lg:justify-start">
               <div className="mx-2 flex size-11 shrink-0 items-center justify-center rounded-full bg-yellow-500">
                 <FaMapPin
                   className="size-6 shrink-0 text-white"
@@ -184,9 +186,9 @@ function LocationSection() {
               </div>
               <h3 className="text-2xl font-semibold">Lumen Detroit</h3>
             </dd>
-            <dd className="mt-4 flex flex-col items-center md:items-start">
+            <dd className="mt-4 flex flex-col items-center lg:items-start">
               <address
-                className="text-center not-italic md:ml-16 md:text-left xl:whitespace-nowrap"
+                className="text-center not-italic lg:ml-16 lg:text-left xl:whitespace-nowrap"
                 aria-label="Lumen Detroit address"
               >
                 1903 Grand River Ave, Detroit, MI 48226
@@ -196,7 +198,7 @@ function LocationSection() {
                 href="https://www.google.com/maps/dir/?api=1&origin=1+Energy+Plaza,+Detroit,+MI+48226&destination=Lumen+Detroit,+1903+Grand+River+Ave,+Detroit,+MI+48226&travelmode=walking"
                 target="_blank"
                 rel="noreferrer"
-                className="my-4 inline-flex w-fit items-center font-bold text-bhm-red-700 underline underline-offset-4 hover:text-bhm-red-900 focus:outline-none focus:ring-2 focus:ring-focus-ring focus:ring-offset-2 md:ml-16 dark:text-bhm-gold-200 dark:hover:text-bhm-gold-400"
+                className="my-4 inline-flex w-fit items-center font-bold text-bhm-red-700 underline underline-offset-4 hover:text-bhm-red-900 focus:outline-none focus:ring-2 focus:ring-focus-ring focus:ring-offset-2 lg:ml-16 dark:text-bhm-gold-200 dark:hover:text-bhm-gold-400"
                 aria-label="Get walking directions to Lumen Detroit (opens in new tab)"
               >
                 GET LUMEN DIRECTIONS
