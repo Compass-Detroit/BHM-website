@@ -58,7 +58,7 @@ function ActivityCard({ title, content, cta, time, timeEnd, room }) {
             )}
             {room && (
               <span className="text-bhm-neutral-700 dark:text-bhm-neutral-200">
-                in {room}
+                {room}
               </span>
             )}
           </div>
