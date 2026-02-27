@@ -38,7 +38,7 @@ function AttendeeSection() {
       <SectionSkipLink href="#location">Skip attendees section</SectionSkipLink>
 
       {/* Section Title */}
-      <h2 className="w-full text-center font-biorhyme text-5xl text-bhm-neutral-900 md:text-5xl lg:text-6xl">
+      <h2 className="mb-8 w-full text-center font-biorhyme text-5xl text-bhm-neutral-900 md:text-5xl lg:text-6xl">
         Attendees
       </h2>
 
