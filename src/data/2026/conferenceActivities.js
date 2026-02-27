@@ -2,6 +2,8 @@
  * Conference activities (non-speaker events) shown in track schedules.
  * Use 24-hour time format (e.g. "08:00", "13:00") for sorting.
  * Track names must match SessionsSection tracks exactly.
+ * Adding in or at to the room here instead of forcing 'in' in the ActivityCard component.
+ * example: room: 'in (WBC 110-112)' or 'at Lumen Detroit'
  */
 export const conferenceActivities = [
   {
@@ -11,7 +13,7 @@ export const conferenceActivities = [
     content: null,
     time: '08:00',
     timeEnd: '09:00',
-    room: 'Town Square',
+    room: 'in Town Square',
   },
   {
     id: 'level-up-networking',
@@ -20,7 +22,7 @@ export const conferenceActivities = [
     content: null,
     time: '16:30',
     timeEnd: '18:00',
-    room: 'Town Square',
+    room: 'at Lumen Detroit',
   },
   {
     id: 'careers-review',
@@ -35,7 +37,7 @@ export const conferenceActivities = [
     },
     time: '10:00',
     timeEnd: '12:00',
-    room: '(WBC 110-112)',
+    room: 'in (WBC 110-112)',
   },
   {
     id: 'careers-resume-review',
@@ -50,7 +52,7 @@ export const conferenceActivities = [
     },
     time: '14:00',
     timeEnd: '16:00',
-    room: '(WBC 110-112)',
+    room: 'in (WBC 110-112)',
   },
   {
     id: 'careers-mentoring',
@@ -64,7 +66,7 @@ export const conferenceActivities = [
     },
     time: '10:00',
     timeEnd: '12:00',
-    room: '(WBC 110-112)',
+    room: 'in (WBC 110-112)',
   },
   {
     id: 'careers-mentorship',
@@ -78,6 +80,6 @@ export const conferenceActivities = [
     },
     time: '14:00',
     timeEnd: '16:00',
-    room: '(WBC 104 & 113)',
+    room: 'in (WBC 104 & 113)',
   },
 ]

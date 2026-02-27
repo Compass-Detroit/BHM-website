@@ -23,7 +23,7 @@ const SpeakersContent = ({ year, defaultExpanded }) => {
   }
 
   const renderSpeakerHeader = (
-    <div className="relative mx-auto w-full max-w-7xl justify-center pb-24 pt-16">
+    <div className="relative mx-auto w-full max-w-7xl justify-center py-8">
       <button
         aria-label={
           isExpanded
@@ -110,7 +110,7 @@ const SpeakersContent = ({ year, defaultExpanded }) => {
   return (
     <section
       id="speakers"
-      className="relative flex flex-col justify-center border-b border-primary bg-bhm-neutral-50 p-8 sm:px-10 md:px-14 lg:px-16"
+      className="relative flex flex-col justify-center border-b border-primary bg-bhm-neutral-50 p-8 pb-24 pt-16 sm:px-10 md:px-14 lg:px-16"
     >
       <SectionSkipLink href="#jobboard">Skip speakers section</SectionSkipLink>
       {renderSpeakerHeader}

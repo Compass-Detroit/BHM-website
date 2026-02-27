@@ -1,6 +1,5 @@
 import WScottRichardson from './assets/images/speakers/W.ScottRichardson.webp'
 import JennaRitten2 from './assets/images/speakers/jennaphoto.webp'
-import BreonaClawson from './assets/images/speakers/BreonaClawson.webp'
 import JCEscalante from './assets/images/speakers/JCEscalante.webp'
 import IdaByrdHill from './assets/images/speakers/IdaByrd-Hill.webp'
 import AnthonyJohnson from './assets/images/speakers/AnthonyJohnson.webp'
@@ -12,7 +11,6 @@ import LynnHakim from './assets/images/speakers/LynnHakim.webp'
 import MerlindaLorianeSewavi from './assets/images/speakers/Merlinda-LorianeSewavi.webp'
 import GinaGrant from './assets/images/speakers/GinaGrant.webp'
 import HafeezJimoh from './assets/images/speakers/HafeezJimoh.webp'
-import WinstonRoberts from './assets/images/speakers/WinstonRoberts.webp'
 import TabiceWard from './assets/images/speakers/TabiceWard.webp'
 import TerrellMcKinney from './assets/images/speakers/TerrellMcKinney.webp'
 import DeanHendricks from './assets/images/speakers/DeanHendricks.webp'
@@ -64,14 +62,13 @@ export const SpeakersData = [
     name: 'W. Scott Richardson',
     email: 'zurielseven@gmail.com',
     avatar: WScottRichardson,
-    bio: `W. Scott Richardson is a Senior Specialist in Training Development for Altair Engineering with a focus on digital simulation solvers for structural analysis and optimization. Scott also has professional experience with Altair in application engineer and product design roles for aerospace and defense, automotive, and general consumer products. Scott is a co-founder of ABERN, Altair's Black Employee Resource Network and currently serves as the ERG's Community Outreach chair and a member of ABERN's global steering committee. He has a passion for developing STEM courses and experiences for students that strengthen and support them in their STEM-related career goals..`,
+    bio: `W. Scott Richardson is an Aerospace Engineer, working for Siemens Digital Industries SW as an Information Product Architect. Scott's early exposure to STEM programming has been the driving force behind his passion drawing young people into STEM career opportunities. Scott co-founded the ABERN ERG at Altair Engineering, developing programming and events for Global Community Outreach over five years, engaging companies like Oracle, Google, GE Aerospace, Microsoft, and the United States Environmental Protection Agency to illuminate STEM roles for young students. In addition to his volunteer ERG activities, Scott is also highly active with the National Society of Black Engineers (NSBE) through the Metro Detroit chapter and national connections.`,
     twitter: null,
     linkedIn: 'https://www.linkedin.com/in/zurielseven',
-    organization: 'Altair Engineering',
+    organization: 'Siemens Digital Industries SW',
     position: 'Senior Specialist - Training Development',
     session: {
-      title:
-        'Catalysts and Change Agents: Extending the Impact of Your Tech Leadership',
+      title: 'Information Product Architect',
       abstract:
         "Ever thought about expanding on your software skills with hardware? Let's start with a Make-and-Take with lasers and microcontrollers! We'll teach some basics of electronics in a hands-on workshop while building and coding a light detector. Time to find your new maker path! (Laptop required)",
       description: `Innovation Summit Panel Discussion - Catalysts and Change Agents: Extending the Impact of Your Tech Leadership Join Sylvester Hester, Justin Turk, W. Scott Richardson, and Will Hill for a panel on bridging the gap between technical excellence and social responsibility moderated by Angela Richardson. This session offers a "system architecture" for repeatable community impact, teaching early- and mid-career professionals and tech leaders across industries how to draw on executive and managerial frameworks to strengthen the communities they serve. Learn to maximize your influence while eliminating the "scope creep" of burnout and overcommitment.`,
@@ -137,31 +134,7 @@ export const SpeakersData = [
     isGDE: true,
     mastodon: null,
   },
-  {
-    id: 4,
-    name: 'Breona Clawson',
-    email: 'breona@eloquentdigitalmarketing.net',
-    avatar: BreonaClawson,
-    bio: `Breona Clawson is the Founder of Eloquent Digital Marketing, a systems-first digital marketing and operations agency based in Metro Detroit. With over six years of experience supporting entrepreneurs, nonprofits, and community-driven organizations, she specializes in helping non-technical professionals simplify digital tools, streamline workflows, and build sustainable systems without burnout. Breona is also a community builder, workshop facilitator, and speaker who regularly leads sessions on digital tools, AI-assisted workflows, personal branding, and operational clarity. Her work sits at the intersection of technology, accessibility, and real-world application — translating complex tools into practical, everyday use.`,
-    twitter: null,
-    linkedIn: 'https://www.linkedin.com/in/breonaclawson',
-    github: null,
-    organization: 'Eloquent Digital Marketing',
-    position: 'Founder & Digital Operations Strategist',
-    session: {
-      title: null,
-      abstract: null,
-      description: null,
-      tags: ['In-person', 'AI Foundations'],
-      track: null,
-      time: null,
-      room: null,
-      sessionDuration: 60,
-    },
-    isWTM: false,
-    isGDE: false,
-    mastodon: null,
-  },
+
   {
     id: 5,
     name: 'JC Escalante',
@@ -446,31 +419,6 @@ export const SpeakersData = [
     mastodon: null,
   },
   {
-    id: 16,
-    name: 'Winston Roberts',
-    email: 'winstonroberts@teacherinasuit.com',
-    avatar: WinstonRoberts,
-    bio: `Winston Roberts is the AI Innovation Lead at Foundation Academies and founder of Teacher in a Suit, a firm delivering AI training tailored for educators.He has trained over 1,000 educators nationwide and delivered keynotes and workshops at conferences including SXSW EDU, ASU+GSV, and ISTE. His work has been featured in The Economist, Psychology Today, EdTech Magazine, and TEACH Magazine.Now in his 10th year in the classroom, Winston teaches high school financial literacy, holds a master’s in Education Entrepreneurship from the University of Pennsylvania, and is a proud graduate of Morehouse College.A devoted husband and father of two young daughters, Winston’s vision for the future of education is shaped by watching them grow up alongside the rise of AI. He is committed to ensuring no student is locked out of the future by outdated systems—and that schools reclaim their role as engines of relevance, empowerment, and innovation in an AI-driven world.`,
-    twitter: null,
-    linkedIn: 'https://www.linkedin.com/in/winston-roberts-74232552',
-    github: null,
-    organization: 'Foundation Academies',
-    position: 'AI Innovation Lead',
-    session: {
-      title: 'AI for the Home Office: Turning Prompts into Practical Workflows',
-      abstract: null,
-      description: `Many professionals have experimented with AI tools like ChatGPT—but few feel confident using them in a way that meaningfully improves the quality, speed, and clarity of their work. This hands-on session helps participants move beyond surface-level experimentation and learn how to use AI as a reliable thinking partner for real workplace tasks. Through a creative warm-up activity and a transferable prompting framework, attendees will learn how to generate higher-quality outputs, evaluate responses critically, and adapt AI to their specific role and workflows. Participants will practice using structured prompts to tackle real-world challenges such as drafting correspondence, brainstorming campaigns, summarizing complex information, and planning strategic work. The session emphasizes iteration, judgment, and human oversight—showing how professionals can use AI to save time without sacrificing quality or integrity. Attendees will leave with a practical framework, reusable prompts, and a clearer understanding of when AI works well, when it doesn’t, and how to apply it responsibly in their day-to-day work.`,
-      tags: ['In-person', 'Level Up', 'Virtual'],
-      track: 'Level Up',
-      time: '11:30',
-      room: 'Town Square',
-      sessionDuration: 60,
-    },
-    isWTM: false,
-    isGDE: false,
-    mastodon: null,
-  },
-  {
     id: 17,
     name: 'Steven Benyard',
     email: null,
@@ -679,11 +627,12 @@ export const SpeakersData = [
     name: 'Angela Richardson',
     email: 'angela.rene.richardson@gmail.com',
     avatar: AngelaRichardson,
-    bio: `Angela Richardson, CAE, is a strategic governance and programs executive with more than 20 years of experience leading national industry councils, executive peer networks, and board-driven organizations. She has facilitated high-trust national conversations for Fortune 1000 ESG, CSR, and social media executives, guiding dialogue on accountability, reputational risk, and long-term institutional impact. She currently directs three national councils within the automotive sector, partnering with volunteer leaders to align strategy, strengthen member engagement, and shape long-range priorities.Angela brings a governance and executive accountability perspective to emerging technology, engaging with AI and cybersecurity through the lens of institutional risk and long-term leadership responsibility. A member of the Michigan Council of Women in Technology and recent graduate of its Reignite! program, she is committed to ensuring mid-career women have a seat at the table shaping the future of tech.`,
+    bio: `Angela Richardson, CAE, is a strategic governance and programs executive with more than 20 years of experience leading national industry councils, executive peer networks, and board-driven organizations. She has facilitated high-trust national conversations for Fortune 1000 ESG, CSR, and social media executives, guiding dialogue on accountability, reputational risk, and long-term institutional impact. She currently directs three national councils within the automotive sector, partnering with volunteer leaders to align strategy, strengthen member engagement, and shape long-range priorities.
+    Angela brings a governance and executive accountability perspective to emerging technology, engaging with AI and cybersecurity through the lens of institutional risk and long-term leadership responsibility. A member of the Michigan Council of Women in Technology and recent graduate of its Reignite! program, she is committed to ensuring mid-career women have a seat at the table shaping the future of tech.`,
     twitter: null,
     linkedIn: 'https://www.linkedin.com/in/angelamrichardson',
     github: null,
-    organization: 'SEMA',
+    organization: null,
     position: 'Governance & Executive Engagement Leader',
     session: {
       title:
