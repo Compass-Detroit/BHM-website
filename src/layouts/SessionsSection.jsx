@@ -8,7 +8,7 @@ import VenueMaps from '@/components/sessions/VenueMaps'
 
 import { conferenceActivities } from '@/data/2026/conferenceActivities'
 import { DIRECTION } from '@/constants/directions'
-import { IoChevronDown, IoChevronForward } from 'react-icons/io5'
+import { IoChevronDown, IoChevronForward, IoChevronBack } from 'react-icons/io5'
 
 const convertTo24Hour = (time) => {
   if (!time || typeof time !== 'string') return ''
@@ -446,13 +446,22 @@ const SessionsSection = ({
             </div>
           </div>
           {/* Scroll hint for mobile */}
-          {canScrollRight && (
+          {(canScrollLeft || canScrollRight) && (
             <p
-              className="mt-2 flex items-center justify-end gap-1 text-sm text-bhm-neutral-600 xl:hidden"
+              className={`mt-2 flex items-center gap-1 text-sm text-bhm-neutral-600 xl:hidden ${
+                canScrollRight ? 'justify-end' : 'justify-start'
+              }`}
               aria-hidden="true"
             >
-              Swipe for more tracks
-              <IoChevronForward className="size-4 animate-pulse" />
+              {!canScrollRight && (
+                <IoChevronBack className="size-4 animate-pulse" />
+              )}
+              {canScrollRight
+                ? 'Swipe for more tracks'
+                : 'Swipe to explore earlier tracks'}
+              {canScrollRight && (
+                <IoChevronForward className="size-4 animate-pulse" />
+              )}
             </p>
           )}
         </nav>
