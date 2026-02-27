@@ -34,6 +34,7 @@ function App() {
             <Route path="/connections" element={<ConnectionsPage />} />
             <Route path="/media" element={<MediaPage />} />
             <Route path="/previous-events" element={<PreviousEvents />} />
+            <Route path="/past-events" element={<PreviousEvents />} />
             <Route path="*" element={<NotFound />} />
           </Routes>
         </Suspense>
