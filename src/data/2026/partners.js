@@ -2,7 +2,9 @@ import CCS from '@/assets/images/sponsors/spo-ccs-logo.webp'
 import CompassDetroit from '@/assets/images/sponsors/Compass_Detroit_logo.webp'
 import DetroitHackerHouse from '@/assets/images/sponsors/Detroit_Hacker_House.png'
 import DTE from '@/assets/images/sponsors/spo-dte-logo.webp'
-import GDGDetroit from '@/assets/images/sponsors/GDG_Detroit.webp'
+import GDGDetroit from '@/assets/images/sponsors/org-gdg-detroit.webp'
+import GDGToledo from '@/assets/images/sponsors/org-gdg-toledo.webp'
+import GDGWindsor from '@/assets/images/sponsors/org-gdg-windsor.webp'
 import IBM from '@/assets/images/sponsors/IBM_logo.webp'
 import NSBEDetroit from '@/assets/images/organizations/org-nsbe-logo.webp'
 import SHPEDetroit from '@/assets/images/organizations/org-shpe-logo.webp'
@@ -90,6 +92,20 @@ export const partnersData = {
       logo: AED,
       desc: 'Audio Engineers of Detroit provides many different audio recording services, including Commercial voice over, Audiobooks recording & Mastering, Podcast recording, Music recording, Stereo mixing, 7.1.4 Dolby Atmos Mixing, Audio mastering, Audio restoration, Location audio recording and audio-visual services.',
       url: 'https://aedetroit.com/',
+    },
+    {
+      id: 12,
+      name: 'GDG Toledo',
+      logo: GDGToledo,
+      desc: 'Google Developer Group Toledo is a community of developers interested in Google technologies.',
+      url: 'https://gdg.community.dev/gdg-toledo/',
+    },
+    {
+      id: 13,
+      name: 'GDG Windsor',
+      logo: GDGWindsor,
+      desc: 'Google Developer Group Windsor is a community of developers interested in Google technologies.',
+      url: 'https://gdg.community.dev/gdg-windsor/',
     },
   ],
 }
