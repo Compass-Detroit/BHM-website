@@ -170,9 +170,10 @@
 
   html {
     scroll-padding-top: var(--header-height, 80px);
+    width: 100%;
+    max-width: 100%;
   }
 
-  html,
   body {
     width: 100%;
     max-width: 100%;
@@ -195,7 +196,6 @@
     min-width: 320px;
     min-height: 100vh;
   }
-
 }
 
 /* Orbitron Variable Font */
