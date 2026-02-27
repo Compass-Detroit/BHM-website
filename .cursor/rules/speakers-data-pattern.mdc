@@ -1,0 +1,23 @@
+---
+description: Speakers data pattern - duplicate entries by name are intentional
+globs: src/data/**/speakers.js
+alwaysApply: false
+---
+
+# Speakers Data: Duplicate Entries by Name
+
+Duplicate speaker records (same person, different sessions) are **intentional** in `speakers.js`.
+
+## When This Happens
+
+The same people may appear in multiple sessions (e.g., Opening Remarks and Closing Remarks). Each session needs its own speaker record so both sessions appear correctly in the schedule.
+
+## How It Works
+
+- **SessionsSection**: Uses the full speaker list; each record contributes its session to the schedule.
+- **SpeakerProvider**: De-duplicates by `name`, keeping the first occurrence. The Speakers section shows each person once.
+- **Session shown in Speakers**: The first occurrence wins (e.g., Opening Remarks). This is acceptable for opening/closing hosts.
+
+## Do Not Suggest
+
+Do not suggest refactoring to "model multiple sessions per speaker" or "attach multiple speakers to a session" for this use case. The current flat structure with duplicates is the chosen approach.

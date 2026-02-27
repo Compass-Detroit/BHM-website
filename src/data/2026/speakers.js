@@ -53,6 +53,11 @@ import RishirajSarkar from './assets/images/speakers/RishirajSarkar.webp'
 import HernandoGonzalezMalabet from './assets/images/speakers/HernandoGonzalezMalabet.webp'
 import JeseekiaVaughn from './assets/images/speakers/JeseekiaVaughn.webp'
 
+/**
+ * Duplicate speaker entries by name (e.g., same 6 people in Opening + Closing Remarks)
+ * are intentional. SpeakerProvider de-duplicates for the Speakers section; SessionsSection
+ * uses all entries so both sessions appear in the schedule.
+ */
 export const SpeakersData = [
   {
     id: 1,
