@@ -451,6 +451,7 @@ const SessionsSection = ({
                       <ActivityCard
                         title={item.title}
                         content={item.content ?? null}
+                        cta={item.cta ?? null}
                         time={item.time}
                         timeEnd={item.timeEnd}
                         room={item.room}

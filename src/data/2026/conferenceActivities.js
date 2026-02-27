@@ -26,8 +26,13 @@ export const conferenceActivities = [
     id: 'careers-resume-review1',
     track: 'Careers',
     title: 'Resume Review & Mock Interviews',
-    content:
-      'Sign Up Here: <a href="https://bit.ly/bhm-26-signup" target="_blank" rel="noopener noreferrer" aria-label="Sign up for resume review and mock interviews -- Link opens in new tab">Get an appointment with a professional</a>',
+    content: 'Sign Up Here:',
+    cta: {
+      url: 'https://bit.ly/bhm-26-signup',
+      text: 'Get an appointment with a professional',
+      ariaLabel:
+        'Sign up for resume review and mock interviews -- Link opens in new tab',
+    },
     time: '10:00',
     timeEnd: '12:00',
     room: '(WBC 110-112)',
@@ -36,8 +41,13 @@ export const conferenceActivities = [
     id: 'careers-resume-review2',
     track: 'Careers',
     title: 'Resume Review & Mock Interviews',
-    content:
-      'Sign Up Here: <a href="https://bit.ly/bhm-26-signup" target="_blank" rel="noopener noreferrer" aria-label="Sign up for resume review and mock interviews -- Link opens in new tab">Get an appointment with a professional</a><br />',
+    content: 'Sign Up Here:',
+    cta: {
+      url: 'https://bit.ly/bhm-26-signup',
+      text: 'Get an appointment with a professional',
+      ariaLabel:
+        'Sign up for resume review and mock interviews -- Link opens in new tab',
+    },
     time: '14:00',
     timeEnd: '16:00',
     room: '(WBC 110-112)',
@@ -46,8 +56,12 @@ export const conferenceActivities = [
     id: 'careers-resume-mentorship1',
     track: 'Careers',
     title: 'Career Mentorship',
-    content:
-      'Sign Up Here: <a href="https://bit.ly/bhm-26-signup" target="_blank" rel="noopener noreferrer" aria-label="Sign up for mentorship -- Link opens in new tab">Get an appointment with a mentor</a>',
+    content: 'Sign Up Here:',
+    cta: {
+      url: 'https://bit.ly/bhm-26-signup',
+      text: 'Get an appointment with a mentor',
+      ariaLabel: 'Sign up for mentorship -- Link opens in new tab',
+    },
     time: '10:00',
     timeEnd: '12:00',
     room: '(WBC 110-112)',
@@ -56,8 +70,12 @@ export const conferenceActivities = [
     id: 'careers-mentorship2',
     track: 'Careers',
     title: 'Career Mentorship',
-    content:
-      'Sign Up Here: <a href="https://bit.ly/bhm-26-signup" target="_blank" rel="noopener noreferrer" aria-label="Sign up for a mentor session -- Link opens in new tab">Get an appointment with a mentor</a><br />',
+    content: 'Sign Up Here:',
+    cta: {
+      url: 'https://bit.ly/bhm-26-signup',
+      text: 'Get an appointment with a mentor',
+      ariaLabel: 'Sign up for a mentor session -- Link opens in new tab',
+    },
     time: '14:00',
     timeEnd: '16:00',
     room: '(WBC 104 & 113)',
