@@ -37,7 +37,7 @@ export const conferenceActivities = [
     track: 'Careers',
     title: 'Resume Review & Mock Interviews',
     content:
-      'Sign Up Here: <a href="https://bit.ly/bhm-26-signup" target="_blank" rel="noopener noreferrer" aria-label="Sign up for resume review and mock interviews -- Link opens in new tab">Get an appointment with an professional</a><br />',
+      'Sign Up Here: <a href="https://bit.ly/bhm-26-signup" target="_blank" rel="noopener noreferrer" aria-label="Sign up for resume review and mock interviews -- Link opens in new tab">Get an appointment with a professional</a><br />',
     time: '14:00',
     timeEnd: '16:00',
     room: '(WBC 110-112)',
