@@ -1,5 +1,5 @@
 import WScottRichardson from './assets/images/speakers/W.ScottRichardson.webp'
-import JennaRitten from './assets/images/speakers/JennaRitten.webp'
+import JennaRitten2 from './assets/images/speakers/jennaphoto.webp'
 import BreonaClawson from './assets/images/speakers/BreonaClawson.webp'
 import JCEscalante from './assets/images/speakers/JCEscalante.webp'
 import IdaByrdHill from './assets/images/speakers/IdaByrd-Hill.webp'
@@ -48,6 +48,10 @@ import GerardoLopez from './assets/images/speakers/GerardoLopez.webp'
 import WilliamMcLean from './assets/images/speakers/WilliamMcLean.webp'
 import KamilleTynes from './assets/images/speakers/KamilleTynes.webp'
 import MarilynNash from './assets/images/speakers/MarilynNash.webp'
+import JamalLongwoodSsriemi from './assets/images/speakers/JamalLongwoodSsriemi.webp'
+import RishirajSarkar from './assets/images/speakers/RishirajSarkar.webp'
+import HernandoGonzalezMalabet from './assets/images/speakers/HernandoGonzalezMalabet.webp'
+import JeseekiaVaughn from './assets/images/speakers/JeseekiaVaughn.webp'
 
 export const SpeakersData = [
   {
@@ -105,22 +109,24 @@ export const SpeakersData = [
     id: 3,
     name: 'Jenna Ritten',
     email: 'jritten@umich.edu',
-    avatar: JennaRitten,
+    avatar: JennaRitten2,
     bio: `Jenna is the visionary behind Detroit's Innovation Summit series and Founding Executive Director of Compass (Collective of Minority Professionals and STEAM Societies), the organization bringing together Michigan's diverse tech talent to combat brain drain and create local opportunities. As Chief Developer Advocate & Architect at IBM Research, she leads IBM's technical community while scaling their global developer ecosystem from 2 million to 9 million members.A cornerstone of Michigan's tech renaissance, Jenna serves as Co-Leader of Google Developer Group Detroit, lead organizer of Michigan DevFest (1,000+ attendees), and board member of Automation Workz. As a local leader in Michigan's tech ecosystem since 2018, she pioneered hackathon culture in the region by introducing the first hackathons to both the AfroTech Conference in 2023 and Michigan DevFest in 2025, creating hands-on opportunities for developers to showcase their skills and solve real-world challenges.Through Compass' partnerships with NSBE Detroit, SHPE Detroit, IBM, Google, DTE Energy, and other leading organizations, Jenna is building bridges between corporate innovation and community empowerment. Her mission: ensuring Michigan's next generation of Black technologists not only have opportunities to excel but can do so without leaving the state they call home.Connect with Jenna to learn how Compass is transforming Michigan's tech ecosystem, one community at a time.`,
     twitter: 'jritten',
     linkedIn: 'https://www.linkedin.com/in/jritten/',
     github: 'https://github.com/jritten',
-    organization: 'IBM',
-    position: 'Chief Developer Advocate & Senior Architect',
+    organization: 'IBM Research',
+    position:
+      'Summit Organizer & Founding Executive Director @ Compass | Chief Developer Advocate & Architect',
     session: {
-      title: null,
+      title: 'Welcome & Opening Remarks',
       abstract: null,
-      description: null,
+      description:
+        'Welcome and Opening Remarks by Compass Detroit, NSBE Detroit, GDG Detroit, SHPE Detroit, DevOps Detroit, and Detroit Hacker House.',
       tags: [],
-      track: null,
-      time: null,
-      room: null,
-      sessionDuration: 60,
+      track: 'Level Up',
+      time: '09:00',
+      room: 'Town Square',
+      sessionDuration: 10,
     },
     isWTM: true,
     isGDE: true,
@@ -1510,6 +1516,347 @@ She speaks on innovation, systems transformation, leadership psychology, and pro
       track: 'Innovation',
       time: '15:30',
       room: 'Room 103',
+      sessionDuration: 30,
+    },
+    isWTM: false,
+    isGDE: false,
+    mastodon: null,
+  },
+  {
+    id: 58,
+    name: 'Jamal Longwood-Ssriemi',
+    email: null,
+    avatar: JamalLongwoodSsriemi,
+    bio: null,
+    twitter: null,
+    linkedIn: null,
+    url: null,
+    organization: 'General Motors',
+    position: 'Thermal Development Engineer',
+    session: {
+      title: 'Welcome & Opening Remarks',
+      abstract: ``,
+      description: `Welcome and Opening Remarks by Compass Detroit, NSBE Detroit, GDG Detroit, SHPE Detroit, DevOps Detroit, and Detroit Hacker House.`,
+      tags: [],
+      track: 'Level Up',
+      time: '09:00',
+      room: 'Town Square',
+      sessionDuration: 10,
+    },
+    isWTM: false,
+    isGDE: false,
+    mastodon: null,
+  },
+  {
+    id: 59,
+    name: 'Rishiraj Sarkar',
+    email: null,
+    avatar: RishirajSarkar,
+    bio: `Experience in working with Network security, Trustworthy ML development, Hardware and Wifi security across various platforms and Cloud.Current Graduate student in University of Michigan, studying Cybersecurity and information assurance with focus on Network security, Cloud Security, Trustworthy AI and Security by design architecturesEx - Cyber strategy consultant at Deloitte, facilitating data and privacy services to multi-national clients.Cybersecurity enthusiast with experience in Kali Linux, Python, SQL and SIEM tools. Well versed in privacy policies like GDPR, CPRA and more.Trained in Enterprise tools like ServiceNow and Aravo.Two years experience in Web development.Motivated to integrate security by design systems across the industry and drive growth towards trustworthy ML.`,
+    twitter: null,
+    linkedIn: 'https://www.linkedin.com/in/risarkar/',
+    url: null,
+    organization: 'GDG Detroit',
+    position: 'Co-Leader',
+    session: {
+      title: 'Welcome & Opening Remarks',
+      abstract: ``,
+      description: `Welcome and Opening Remarks by Compass Detroit, NSBE Detroit, GDG Detroit, SHPE Detroit, DevOps Detroit, and Detroit Hacker House.`,
+      tags: [],
+      track: 'Level Up',
+      time: '09:00',
+      room: 'Town Square',
+      sessionDuration: 10,
+    },
+    isWTM: false,
+    isGDE: false,
+    mastodon: null,
+  },
+  {
+    id: 60,
+    name: 'Hernando Gonzalez Malabet',
+    email: null,
+    avatar: HernandoGonzalezMalabet,
+    bio: `Ph.D. Mechanical Engineering with a focus in R&D, specifically: energy conversion and storage devices (Li-ion Batteries), production processes, 5S implantation, economic analysis, and evaluation of projects. 5 years of R&D and 6 years of industrial working experience. Proficient in fabrication, testing, and electrochemical analysis for Lithium-ion and Sodium-ion batteries. Adept in using material characterization laboratory equipment (X-ray diffraction (XRD), Scanning electron microscope (SEM), Brunauer-Emmett-Teller (BET)), along with data analysis using synchrotron X-ray and neutron imaging. Aptitude for working in an interdisciplinary environment and designing experiments performed at industrial plants and national research labs. Experience in personnel management, managing interpersonal skills, and teamwork; tolerance while working under pressure.`,
+    twitter: null,
+    linkedIn: 'https://www.linkedin.com/in/hernando-gonzalez-malabet-baa03625/',
+    url: null,
+    organization: 'GM',
+    position: 'Battery Thermal-Electrochemical Interactions Researcher',
+    session: {
+      title: 'Welcome & Opening Remarks',
+      abstract: ``,
+      description: `Welcome and Opening Remarks by Compass Detroit, NSBE Detroit, GDG Detroit, SHPE Detroit, DevOps Detroit, and Detroit Hacker House.`,
+      tags: [],
+      track: 'Level Up',
+      time: '09:00',
+      room: 'Town Square',
+      sessionDuration: 10,
+    },
+    isWTM: false,
+    isGDE: false,
+    mastodon: null,
+  },
+  {
+    id: 61,
+    name: 'Umelo Onyejiaka',
+    email: 'umelo.onyejiaka@gmail.com',
+    avatar: UmeloOnyejiaka,
+    bio: `Umelo Onyejiaka is a cloud and DevOps engineer, community builder, and the founder of DevOps Detroit. He holds multiple industry certifications including AWS Certified Solutions Architect – Professional, AWS Certified DevOps Engineer – Professional, Certified Kubernetes Administrator (CKA), and Terraform Associate.Beyond certifications, Umelo’s work focuses on how people actually grow skills in the real world. He believes meaningful skill development happens faster and more sustainably in community through shared learning, mentorship, and exposure rather than in isolation.Through DevOps Detroit, he creates spaces where individuals can build practical technical skills, gain confidence, and see what’s possible by learning alongside others on similar journeys. His approach centers on the idea that when people grow together, the entire ecosystem benefits.At the Detroit Black History Month Innovation Summit, Umelo will speak on how community driven learning accelerates skill development, creates opportunity, and turns individual potential into collective impact.`,
+    twitter: null,
+    linkedIn: 'https://www.linkedin.com/in/umelo-onyejiaka-84213524b',
+    github: null,
+    organization: 'DevOps Detroit',
+    position: 'Cloud Solutions Engineer',
+    session: {
+      title: 'Welcome & Opening Remarks',
+      abstract: ``,
+      description: `Welcome and Opening Remarks by Compass Detroit, NSBE Detroit, GDG Detroit, SHPE Detroit, DevOps Detroit, and Detroit Hacker House.`,
+      tags: [],
+      track: 'Level Up',
+      time: '09:00',
+      room: 'Town Square',
+      sessionDuration: 10,
+    },
+    isWTM: false,
+    isGDE: false,
+    mastodon: null,
+  },
+  {
+    id: 62,
+    name: 'Jeseekia Vaughn',
+    email: null,
+    avatar: JeseekiaVaughn,
+    bio: `Software Engineer with a passion for growing the community through teaching/promoting STEM education, youth mentoring, and entrepreneurship.
+
+Over the years I have transitioned from front end web development to full stack software engineering including API development and vehicle connectivity.
+
+My longstanding interest has been in AI/ML, however, until now most of my work took me into the opposite direction technically.
+
+Moving forward I am studying and pursuing a full time focus in AI/ML both as a Machine Learning Engineer in the short-term and as a Ph.D in the long-term.
+
+I currently live stream my AI/ML studies and projects M-F (amongst other tech projects and educational content).
+
+I produce and co-host the new trainX.ai podcast focused on encouraging Developers to understand and integrate with AI/ML tools.
+
+Outside of my personal focus, I am very involved in educating future and early-career Devs/SWEs through boot camps, and non-profits like Girl Develop It.
+
+I am based in Detroit where I was born and raised. Here I take part in the growth of our tech community as a co-founder of Detroit Black Tech and our annual Hacking With The Homies Developer Conference.
+
+As a community organizer I have extensive experience planning, executing, and speaking at Meetups or tech/engineering conferences including serving as the 2019 NSBE Convention Vice-Chair hosting ~15000 in Downtown Detroit.
+
+I believe in helping others traverse this career path with fewer obstacles and barriers than I’ve experienced and am always open to supporting/mentoring others.
+
+Soon, I will be launching my independent educational materials as MetaDevWorld and look forward to many more years of growth as a maker, doer, and supporter!`,
+    twitter: null,
+    linkedIn: 'https://www.linkedin.com/in/jeseekiavaughn/',
+    url: null,
+    organization: 'TechTown Detroit',
+    position: 'Tech Strategist',
+    session: {
+      title: 'Welcome & Opening Remarks',
+      abstract: ``,
+      description: `Welcome and Opening Remarks by Compass Detroit, NSBE Detroit, GDG Detroit, SHPE Detroit, DevOps Detroit, and Detroit Hacker House.`,
+      tags: [],
+      track: 'Level Up',
+      time: '09:00',
+      room: 'Town Square',
+      sessionDuration: 10,
+    },
+    isWTM: false,
+    isGDE: false,
+    mastodon: null,
+  },
+  {
+    id: 63,
+    name: 'Jenna Ritten',
+    email: 'jritten@umich.edu',
+    avatar: JennaRitten2,
+    bio: `Jenna is the visionary behind Detroit's Innovation Summit series and Founding Executive Director of Compass (Collective of Minority Professionals and STEAM Societies), the organization bringing together Michigan's diverse tech talent to combat brain drain and create local opportunities. As Chief Developer Advocate & Architect at IBM Research, she leads IBM's technical community while scaling their global developer ecosystem from 2 million to 9 million members.A cornerstone of Michigan's tech renaissance, Jenna serves as Co-Leader of Google Developer Group Detroit, lead organizer of Michigan DevFest (1,000+ attendees), and board member of Automation Workz. As a local leader in Michigan's tech ecosystem since 2018, she pioneered hackathon culture in the region by introducing the first hackathons to both the AfroTech Conference in 2023 and Michigan DevFest in 2025, creating hands-on opportunities for developers to showcase their skills and solve real-world challenges.Through Compass' partnerships with NSBE Detroit, SHPE Detroit, IBM, Google, DTE Energy, and other leading organizations, Jenna is building bridges between corporate innovation and community empowerment. Her mission: ensuring Michigan's next generation of Black technologists not only have opportunities to excel but can do so without leaving the state they call home.Connect with Jenna to learn how Compass is transforming Michigan's tech ecosystem, one community at a time.`,
+    twitter: 'jritten',
+    linkedIn: 'https://www.linkedin.com/in/jritten/',
+    github: 'https://github.com/jritten',
+    organization: 'IBM Research',
+    position:
+      'Summit Organizer & Founding Executive Director @ Compass | Chief Developer Advocate & Architect',
+    session: {
+      title: 'Closing Remarks & Scholarships',
+      abstract: ``,
+      description: `Welcome and Opening Remarks by Compass Detroit, NSBE Detroit, GDG Detroit, SHPE Detroit, DevOps Detroit, and Detroit Hacker House.`,
+      tags: [],
+      track: 'Level Up',
+      time: '16:00',
+      room: 'Town Square',
+      sessionDuration: 30,
+    },
+    isWTM: true,
+    isGDE: true,
+    mastodon: null,
+  },
+  {
+    id: 64,
+    name: 'Jamal Longwood-Ssriemi',
+    email: null,
+    avatar: JamalLongwoodSsriemi,
+    bio: null,
+    twitter: null,
+    linkedIn: null,
+    url: null,
+    organization: 'General Motors',
+    position: 'Thermal Development Engineer',
+    session: {
+      title: 'Closing Remarks & Scholarships',
+      abstract: ``,
+      description: `Welcome and Opening Remarks by Compass Detroit, NSBE Detroit, GDG Detroit, SHPE Detroit, DevOps Detroit, and Detroit Hacker House.`,
+      tags: [],
+      track: 'Level Up',
+      time: '16:00',
+      room: 'Town Square',
+      sessionDuration: 30,
+    },
+    isWTM: false,
+    isGDE: false,
+    mastodon: null,
+  },
+  {
+    id: 65,
+    name: 'Rishiraj Sarkar',
+    email: null,
+    avatar: RishirajSarkar,
+    bio: `Experience in working with Network security, Trustworthy ML development, Hardware and Wifi security across various platforms and Cloud.Current Graduate student in University of Michigan, studying Cybersecurity and information assurance with focus on Network security, Cloud Security, Trustworthy AI and Security by design architecturesEx - Cyber strategy consultant at Deloitte, facilitating data and privacy services to multi-national clients.Cybersecurity enthusiast with experience in Kali Linux, Python, SQL and SIEM tools. Well versed in privacy policies like GDPR, CPRA and more.Trained in Enterprise tools like ServiceNow and Aravo.Two years experience in Web development.Motivated to integrate security by design systems across the industry and drive growth towards trustworthy ML.`,
+    twitter: null,
+    linkedIn: 'https://www.linkedin.com/in/risarkar/',
+    url: null,
+    organization: 'GDG Detroit',
+    position: 'Co-Leader',
+    session: {
+      title: 'Closing Remarks & Scholarships',
+      abstract: ``,
+      description: `Welcome and Opening Remarks by Compass Detroit, NSBE Detroit, GDG Detroit, SHPE Detroit, DevOps Detroit, and Detroit Hacker House.`,
+      tags: [],
+      track: 'Level Up',
+      time: '16:00',
+      room: 'Town Square',
+      sessionDuration: 30,
+    },
+    isWTM: false,
+    isGDE: false,
+    mastodon: null,
+  },
+  {
+    id: 66,
+    name: 'Hernando Gonzalez Malabet',
+    email: null,
+    avatar: HernandoGonzalezMalabet,
+    bio: `Ph.D. Mechanical Engineering with a focus in R&D, specifically: energy conversion and storage devices (Li-ion Batteries), production processes, 5S implantation, economic analysis, and evaluation of projects. 5 years of R&D and 6 years of industrial working experience. Proficient in fabrication, testing, and electrochemical analysis for Lithium-ion and Sodium-ion batteries. Adept in using material characterization laboratory equipment (X-ray diffraction (XRD), Scanning electron microscope (SEM), Brunauer-Emmett-Teller (BET)), along with data analysis using synchrotron X-ray and neutron imaging. Aptitude for working in an interdisciplinary environment and designing experiments performed at industrial plants and national research labs. Experience in personnel management, managing interpersonal skills, and teamwork; tolerance while working under pressure.`,
+    twitter: null,
+    linkedIn: 'https://www.linkedin.com/in/hernando-gonzalez-malabet-baa03625/',
+    url: null,
+    organization: 'GM',
+    position: 'Battery Thermal-Electrochemical Interactions Researcher',
+    session: {
+      title: 'Closing Remarks & Scholarships',
+      abstract: ``,
+      description: `Welcome and Opening Remarks by Compass Detroit, NSBE Detroit, GDG Detroit, SHPE Detroit, DevOps Detroit, and Detroit Hacker House.`,
+      tags: [],
+      track: 'Level Up',
+      time: '16:00',
+      room: 'Town Square',
+      sessionDuration: 30,
+    },
+    isWTM: false,
+    isGDE: false,
+    mastodon: null,
+  },
+  {
+    id: 67,
+    name: 'Umelo Onyejiaka',
+    email: 'umelo.onyejiaka@gmail.com',
+    avatar: UmeloOnyejiaka,
+    bio: `Umelo Onyejiaka is a cloud and DevOps engineer, community builder, and the founder of DevOps Detroit. He holds multiple industry certifications including AWS Certified Solutions Architect – Professional, AWS Certified DevOps Engineer – Professional, Certified Kubernetes Administrator (CKA), and Terraform Associate.Beyond certifications, Umelo’s work focuses on how people actually grow skills in the real world. He believes meaningful skill development happens faster and more sustainably in community through shared learning, mentorship, and exposure rather than in isolation.Through DevOps Detroit, he creates spaces where individuals can build practical technical skills, gain confidence, and see what’s possible by learning alongside others on similar journeys. His approach centers on the idea that when people grow together, the entire ecosystem benefits.At the Detroit Black History Month Innovation Summit, Umelo will speak on how community driven learning accelerates skill development, creates opportunity, and turns individual potential into collective impact.`,
+    twitter: null,
+    linkedIn: 'https://www.linkedin.com/in/umelo-onyejiaka-84213524b',
+    github: null,
+    organization: 'DevOps Detroit',
+    position: 'Cloud Solutions Engineer',
+    session: {
+      title: 'Closing Remarks & Scholarships',
+      abstract: ``,
+      description: `Welcome and Opening Remarks by Compass Detroit, NSBE Detroit, GDG Detroit, SHPE Detroit, DevOps Detroit, and Detroit Hacker House.`,
+      tags: [],
+      track: 'Level Up',
+      time: '16:00',
+      room: 'Town Square',
+      sessionDuration: 30,
+    },
+    isWTM: false,
+    isGDE: false,
+    mastodon: null,
+  },
+  {
+    id: 68,
+    name: 'Jeseekia Vaughn',
+    email: null,
+    avatar: JeseekiaVaughn,
+    bio: `Software Engineer with a passion for growing the community through teaching/promoting STEM education, youth mentoring, and entrepreneurship.
+
+Over the years I have transitioned from front end web development to full stack software engineering including API development and vehicle connectivity.
+
+My longstanding interest has been in AI/ML, however, until now most of my work took me into the opposite direction technically.
+
+Moving forward I am studying and pursuing a full time focus in AI/ML both as a Machine Learning Engineer in the short-term and as a Ph.D in the long-term.
+
+I currently live stream my AI/ML studies and projects M-F (amongst other tech projects and educational content).
+
+I produce and co-host the new trainX.ai podcast focused on encouraging Developers to understand and integrate with AI/ML tools.
+
+Outside of my personal focus, I am very involved in educating future and early-career Devs/SWEs through boot camps, and non-profits like Girl Develop It.
+
+I am based in Detroit where I was born and raised. Here I take part in the growth of our tech community as a co-founder of Detroit Black Tech and our annual Hacking With The Homies Developer Conference.
+
+As a community organizer I have extensive experience planning, executing, and speaking at Meetups or tech/engineering conferences including serving as the 2019 NSBE Convention Vice-Chair hosting ~15000 in Downtown Detroit.
+
+I believe in helping others traverse this career path with fewer obstacles and barriers than I’ve experienced and am always open to supporting/mentoring others.
+
+Soon, I will be launching my independent educational materials as MetaDevWorld and look forward to many more years of growth as a maker, doer, and supporter!`,
+    twitter: null,
+    linkedIn: 'https://www.linkedin.com/in/jeseekiavaughn/',
+    url: null,
+    organization: 'TechTown Detroit',
+    position: 'Tech Strategist',
+    session: {
+      title: 'Closing Remarks & Scholarships',
+      abstract: ``,
+      description: `Welcome and Opening Remarks by Compass Detroit, NSBE Detroit, GDG Detroit, SHPE Detroit, DevOps Detroit, and Detroit Hacker House.`,
+      tags: [],
+      track: 'Level Up',
+      time: '16:00',
+      room: 'Town Square',
+      sessionDuration: 30,
+    },
+    isWTM: false,
+    isGDE: false,
+    mastodon: null,
+  },
+  {
+    id: 69,
+    name: 'William Bowen',
+    email: 'wbowen05@gmail.com',
+    avatar: WilliamBowen,
+    bio: `William Bowen is an IT Specialist with the US Army, where he focuses on supporting secure, reliable desktop environments and helping teams adapt to evolving technologies. Drawing on years of hands-on experience with operating systems, end-user support, and infrastructure modernization, William is passionate about making technical change approachable for everyone. Outside of his military role, he mentors colleagues and community members on practical ways to transition to Linux and other alternative operating systems, emphasizing clear communication, step-by-step guidance, and long-term sustainability. He brings that same mindset to personal wellness, advocating for small, consistent habits that lead to meaningful change over time.`,
+    twitter: null,
+    linkedIn: 'https://www.linkedin.com/in/william-bowen-a7216610/',
+    github: null,
+    organization: 'US Army',
+    position: 'IT Specialist',
+    session: {
+      title: 'Morning Mindfulness & Meditative Yoga',
+      abstract: null,
+      description: `Start your summit day grounded and energized. William Bowen brings a unique blend of technical expertise and fitness passion to everything he does — from managing enterprise IT systems and mentoring students through NSBE and the Cyber Patriot program, to competing in powerlifting with UPA and USAPL and teaching boot camp classes across Metro Detroit. This session is designed to help you arrive present, focused, and ready to engage with the day's conversations on AI, energy, and innovation. All levels welcome — come as you are.`,
+      tags: ['In-person', 'Level Up'],
+      track: 'Level Up',
+      time: '08:15',
+      room: 'Town Square',
       sessionDuration: 30,
     },
     isWTM: false,
