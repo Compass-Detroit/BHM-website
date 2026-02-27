@@ -113,7 +113,7 @@ function LocationSection() {
                 </a>
               </dd>
               <dd className="ml-16 mt-4">
-                <ul className="w-fit list-inside list-disc rounded-lg border-2 border-dashed border-bhm-neutral-400 p-4 font-semibold text-bhm-neutral-900">
+                <ul className="w-fit list-inside list-disc rounded-lg border-2 border-dashed border-bhm-neutral-400 p-4 font-semibold text-bhm-neutral-900 dark:border-bhm-neutral-500 dark:text-bhm-neutral-100">
                   <li>Park on Floors 2-5</li>
                   <li>Use SE elevators closest to Third Ave</li>
                   <li>Enter DTE on Floor 2</li>
