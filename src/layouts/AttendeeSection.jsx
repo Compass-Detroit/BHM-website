@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react'
 import Marquee from 'react-fast-marquee'
+import { FaPause, FaPlay } from 'react-icons/fa6'
 import SectionSkipLink from '@/components/ui/SectionSkipLink'
 
 function AttendeeSection() {
@@ -47,9 +48,13 @@ function AttendeeSection() {
         onClick={togglePlay}
         aria-pressed={isPlaying}
         aria-label={isPlaying ? 'Pause marquee' : 'Play marquee'}
-        className="absolute right-6 top-6 z-10 rounded-md bg-black px-3 py-1 text-white"
+        className="absolute right-6 top-6 z-10 flex items-center justify-center rounded-3xl border-2 border-bhm-gold-500 bg-transparent p-2 text-bhm-neutral-900 transition-all duration-300 hover:bg-bhm-gold-500 hover:text-bhm-neutral-50"
       >
-        {isPlaying ? 'Pause' : 'Play'}
+        {isPlaying ? (
+          <FaPause className="size-5" />
+        ) : (
+          <FaPlay className="size-5" />
+        )}
       </button>
 
       {/* Marquee Logos */}
