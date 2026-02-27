@@ -64,14 +64,13 @@ export const SpeakersData = [
     name: 'W. Scott Richardson',
     email: 'zurielseven@gmail.com',
     avatar: WScottRichardson,
-    bio: `W. Scott Richardson is a Senior Specialist in Training Development for Altair Engineering with a focus on digital simulation solvers for structural analysis and optimization. Scott also has professional experience with Altair in application engineer and product design roles for aerospace and defense, automotive, and general consumer products. Scott is a co-founder of ABERN, Altair's Black Employee Resource Network and currently serves as the ERG's Community Outreach chair and a member of ABERN's global steering committee. He has a passion for developing STEM courses and experiences for students that strengthen and support them in their STEM-related career goals..`,
+    bio: `W. Scott Richardson is an Aerospace Engineer, working for Siemens Digital Industries SW as an Information Product Architect. Scott's early exposure to STEM programming has been the driving force behind his passion drawing young people into STEM career opportunities. Scott co-founded the ABERN ERG at Altair Engineering, developing programming and events for Global Community Outreach over five years, engaging companies like Oracle, Google, GE Aerospace, Microsoft, and the United States Environmental Protection Agency to illuminate STEM roles for young students. In addition to his volunteer ERG activities, Scott is also highly active with the National Society of Black Engineers (NSBE) through the Metro Detroit chapter and national connections.`,
     twitter: null,
     linkedIn: 'https://www.linkedin.com/in/zurielseven',
-    organization: 'Altair Engineering',
+    organization: 'Siemens Digital Industries SW',
     position: 'Senior Specialist - Training Development',
     session: {
-      title:
-        'Catalysts and Change Agents: Extending the Impact of Your Tech Leadership',
+      title: 'Information Product Architect',
       abstract:
         "Ever thought about expanding on your software skills with hardware? Let's start with a Make-and-Take with lasers and microcontrollers! We'll teach some basics of electronics in a hands-on workshop while building and coding a light detector. Time to find your new maker path! (Laptop required)",
       description: `Innovation Summit Panel Discussion - Catalysts and Change Agents: Extending the Impact of Your Tech Leadership Join Sylvester Hester, Justin Turk, W. Scott Richardson, and Will Hill for a panel on bridging the gap between technical excellence and social responsibility moderated by Angela Richardson. This session offers a "system architecture" for repeatable community impact, teaching early- and mid-career professionals and tech leaders across industries how to draw on executive and managerial frameworks to strengthen the communities they serve. Learn to maximize your influence while eliminating the "scope creep" of burnout and overcommitment.`,
@@ -679,11 +678,12 @@ export const SpeakersData = [
     name: 'Angela Richardson',
     email: 'angela.rene.richardson@gmail.com',
     avatar: AngelaRichardson,
-    bio: `Angela Richardson, CAE, is a strategic governance and programs executive with more than 20 years of experience leading national industry councils, executive peer networks, and board-driven organizations. She has facilitated high-trust national conversations for Fortune 1000 ESG, CSR, and social media executives, guiding dialogue on accountability, reputational risk, and long-term institutional impact. She currently directs three national councils within the automotive sector, partnering with volunteer leaders to align strategy, strengthen member engagement, and shape long-range priorities.Angela brings a governance and executive accountability perspective to emerging technology, engaging with AI and cybersecurity through the lens of institutional risk and long-term leadership responsibility. A member of the Michigan Council of Women in Technology and recent graduate of its Reignite! program, she is committed to ensuring mid-career women have a seat at the table shaping the future of tech.`,
+    bio: `Angela Richardson, CAE, is a strategic governance and programs executive with more than 20 years of experience leading national industry councils, executive peer networks, and board-driven organizations. She has facilitated high-trust national conversations for Fortune 1000 ESG, CSR, and social media executives, guiding dialogue on accountability, reputational risk, and long-term institutional impact. She currently directs three national councils within the automotive sector, partnering with volunteer leaders to align strategy, strengthen member engagement, and shape long-range priorities.
+    Angela brings a governance and executive accountability perspective to emerging technology, engaging with AI and cybersecurity through the lens of institutional risk and long-term leadership responsibility. A member of the Michigan Council of Women in Technology and recent graduate of its Reignite! program, she is committed to ensuring mid-career women have a seat at the table shaping the future of tech.`,
     twitter: null,
     linkedIn: 'https://www.linkedin.com/in/angelamrichardson',
     github: null,
-    organization: 'SEMA',
+    organization: null,
     position: 'Governance & Executive Engagement Leader',
     session: {
       title:
