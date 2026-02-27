@@ -43,7 +43,7 @@ export const conferenceActivities = [
     room: '(WBC 110-112)',
   },
   {
-    id: 'careers-resume-review1',
+    id: 'careers-resume-mentorship1',
     track: 'Careers',
     title: 'Career Mentorship',
     content:
