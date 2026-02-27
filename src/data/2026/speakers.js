@@ -1687,7 +1687,7 @@ Soon, I will be launching my independent educational materials as MetaDevWorld a
     session: {
       title: 'Closing Remarks & Scholarships',
       abstract: ``,
-      description: `Welcome and Opening Remarks by Compass Detroit, NSBE Detroit, GDG Detroit, SHPE Detroit, DevOps Detroit, and Detroit Hacker House.`,
+      description: `Closing Remarks and Scholarships by Compass Detroit, NSBE Detroit, GDG Detroit, SHPE Detroit, DevOps Detroit, and Detroit Hacker House.`,
       tags: [],
       track: 'Level Up',
       time: '16:00',
@@ -1712,7 +1712,7 @@ Soon, I will be launching my independent educational materials as MetaDevWorld a
     session: {
       title: 'Closing Remarks & Scholarships',
       abstract: ``,
-      description: `Welcome and Opening Remarks by Compass Detroit, NSBE Detroit, GDG Detroit, SHPE Detroit, DevOps Detroit, and Detroit Hacker House.`,
+      description: `Closing Remarks and Scholarships by Compass Detroit, NSBE Detroit, GDG Detroit, SHPE Detroit, DevOps Detroit, and Detroit Hacker House.`,
       tags: [],
       track: 'Level Up',
       time: '16:00',
@@ -1737,7 +1737,7 @@ Soon, I will be launching my independent educational materials as MetaDevWorld a
     session: {
       title: 'Closing Remarks & Scholarships',
       abstract: ``,
-      description: `Welcome and Opening Remarks by Compass Detroit, NSBE Detroit, GDG Detroit, SHPE Detroit, DevOps Detroit, and Detroit Hacker House.`,
+      description: `Closing Remarks and Scholarships by Compass Detroit, NSBE Detroit, GDG Detroit, SHPE Detroit, DevOps Detroit, and Detroit Hacker House.`,
       tags: [],
       track: 'Level Up',
       time: '16:00',
@@ -1762,7 +1762,7 @@ Soon, I will be launching my independent educational materials as MetaDevWorld a
     session: {
       title: 'Closing Remarks & Scholarships',
       abstract: ``,
-      description: `Welcome and Opening Remarks by Compass Detroit, NSBE Detroit, GDG Detroit, SHPE Detroit, DevOps Detroit, and Detroit Hacker House.`,
+      description: `Closing Remarks and Scholarships by Compass Detroit, NSBE Detroit, GDG Detroit, SHPE Detroit, DevOps Detroit, and Detroit Hacker House.`,
       tags: [],
       track: 'Level Up',
       time: '16:00',
@@ -1787,7 +1787,7 @@ Soon, I will be launching my independent educational materials as MetaDevWorld a
     session: {
       title: 'Closing Remarks & Scholarships',
       abstract: ``,
-      description: `Welcome and Opening Remarks by Compass Detroit, NSBE Detroit, GDG Detroit, SHPE Detroit, DevOps Detroit, and Detroit Hacker House.`,
+      description: `Closing Remarks and Scholarships by Compass Detroit, NSBE Detroit, GDG Detroit, SHPE Detroit, DevOps Detroit, and Detroit Hacker House.`,
       tags: [],
       track: 'Level Up',
       time: '16:00',
@@ -1832,7 +1832,7 @@ Soon, I will be launching my independent educational materials as MetaDevWorld a
     session: {
       title: 'Closing Remarks & Scholarships',
       abstract: ``,
-      description: `Welcome and Opening Remarks by Compass Detroit, NSBE Detroit, GDG Detroit, SHPE Detroit, DevOps Detroit, and Detroit Hacker House.`,
+      description: `Closing Remarks and Scholarships by Compass Detroit, NSBE Detroit, GDG Detroit, SHPE Detroit, DevOps Detroit, and Detroit Hacker House.`,
       tags: [],
       track: 'Level Up',
       time: '16:00',
