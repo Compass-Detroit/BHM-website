@@ -34,7 +34,7 @@ function LandingSection() {
               learning, building, connecting, and celebrating Detroit&apos;s
               tech ecosystem.
             </p>
-            <p className="font-regular prose text-xl text-bhm-gold-50">
+            <p className="prose text-xl font-normal text-bhm-gold-50">
               Whether you&apos;re a seasoned professional, an ambitious
               innovator, a learner, a leader, or a creative, this is your chance
               to immerse yourself in Detroit&apos;s renaissance and invest in

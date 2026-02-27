@@ -141,7 +141,7 @@ const trackDescriptions = {
     <>
       <h3
         id="map-heading"
-        className="font-regular mx-auto mb-4 text-center text-3xl text-bhm-neutral-800"
+        className="mx-auto mb-4 text-center text-3xl font-normal text-bhm-neutral-800"
       >
         <span className="font-bold">
           Detroit Black History Month Innovation Summit Venue Guide
