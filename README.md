@@ -264,7 +264,7 @@ The site is deployed on [Vercel](https://vercel.com) and uses Vercel Analytics a
 
 **Vercel configuration**:
 
-- `vercel.json` – SPA rewrites so client-side routes (e.g. `/previous-events`) resolve correctly
+- `vercel.json` – SPA rewrites so client-side routes (e.g. `/past-events`) resolve correctly
 - `base: './'` in Vite config – Output works with Vercel’s static hosting
 
 **To deploy manually** (e.g. from a fork):

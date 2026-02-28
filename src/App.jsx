@@ -1,5 +1,10 @@
 import { lazy, Suspense } from 'react'
-import { Route, BrowserRouter as Router, Routes } from 'react-router-dom'
+import {
+  Navigate,
+  Route,
+  BrowserRouter as Router,
+  Routes,
+} from 'react-router-dom'
 
 import Home from '@/pages/Home'
 
@@ -33,8 +38,11 @@ function App() {
             <Route path="/careers-hub" element={<CareersHub />} />
             <Route path="/connections" element={<ConnectionsPage />} />
             <Route path="/media" element={<MediaPage />} />
-            <Route path="/previous-events" element={<PreviousEvents />} />
             <Route path="/past-events" element={<PreviousEvents />} />
+            <Route
+              path="/previous-events"
+              element={<Navigate to="/past-events" replace />}
+            />
             <Route path="*" element={<NotFound />} />
           </Routes>
         </Suspense>

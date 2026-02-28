@@ -9,6 +9,4 @@ export const sections = [
   { id: 'devteam', text: 'DevFest Team' },
 ]
 
-export const externalLinks = [
-  { to: '/previous-events', text: 'Previous Events' },
-]
+export const externalLinks = [{ to: '/past-events', text: 'Past Events' }]
