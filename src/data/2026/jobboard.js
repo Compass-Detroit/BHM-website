@@ -4,7 +4,7 @@ import dteLogo from '@/data/2026/assets/images/job-board/dte-logo.webp'
 import grandCircusLogo from '@/data/2026/assets/images/job-board/grand-circus-logo.webp'
 import compassLogo from '@/data/2026/assets/images/job-board/compass-logo.webp'
 import googleLogo from '@/data/2026/assets/images/job-board/google-logo.webp'
-import ibmLogo from '@/data/2026/assets/images/job-board/ibm-logo.webp'
+import ibmLogo from '@/assets/images/sponsors/IBM_logo.webp'
 
 export const jobBoardData = [
   {
@@ -41,6 +41,6 @@ export const jobBoardData = [
     id: 6,
     name: 'Resume Drop',
     logo: compassLogo,
-    website: 'https://bit.ly/midevfest-resume-drop',
+    website: 'https://bit.ly/compass2026-resume-drop',
   },
 ]
