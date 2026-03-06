@@ -38,6 +38,12 @@ function SessionCard({
       : isSaved
         ? '\u2713 Added'
         : '+ Add to Schedule'
+  const scheduleButtonClasses =
+    scheduleActionMode === 'remove'
+      ? 'border border-red-300/40 text-red-100 hover:bg-red-300/10 hover:border-red-200/60 focus:ring-red-200'
+      : isSaved
+        ? 'border border-emerald-600 bg-emerald-800 text-white hover:bg-emerald-900 focus:ring-emerald-300'
+        : 'border border-white/25 bg-transparent text-white hover:bg-white/10 hover:border-white/40 focus:ring-white/70'
 
   /*
    * Layout: responsive grid with avatar column + content column.
@@ -184,17 +190,11 @@ function SessionCard({
         </div>
       )}
       {showScheduleAction && (
-        <div className="border-t border-gray-200 px-3 py-4 md:px-8 lg:px-14 dark:border-gray-700">
+        <div className="border-t border-bhm-neutral-700 bg-bhm-neutral-900 p-3 md:px-8 lg:px-14">
           <button
             type="button"
             onClick={onToggleSchedule}
-            className={`rounded-md px-4 py-2 text-sm font-semibold transition-colors focus:outline-none focus:ring-2 focus:ring-focus-ring focus:ring-offset-2 ${
-              scheduleActionMode === 'remove'
-                ? 'border border-red-700 text-red-700 hover:bg-red-50 dark:border-red-300 dark:text-red-300 dark:hover:bg-red-900/20'
-                : isSaved
-                  ? 'border border-green-700 bg-green-700 text-white hover:bg-green-600'
-                  : 'border border-sky-900 bg-sky-900 text-bhm-gold-50 hover:bg-sky-800'
-            }`}
+            className={`rounded-lg px-3.5 py-1.5 text-[0.9rem] font-semibold tracking-wide transition-[background-color,border-color,transform] duration-200 ease-out hover:-translate-y-px focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-bhm-neutral-900 ${scheduleButtonClasses}`}
             aria-label={`${scheduleButtonLabel} for ${sessionTitle}`}
           >
             {scheduleButtonLabel}

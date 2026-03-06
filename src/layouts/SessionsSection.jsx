@@ -1,6 +1,6 @@
 import React, { useState, useRef, useEffect, useCallback } from 'react'
 import PropTypes from 'prop-types'
-import { Link } from 'react-router-dom'
+import { Link, useLocation } from 'react-router-dom'
 
 import ActivityCard from '@/components/sessions/ActivityCard'
 import SessionCard from '@/components/sessions/SessionCard'
@@ -140,6 +140,7 @@ const SessionsSection = ({
   mySchedule = [],
   onToggleSchedule = () => {},
 }) => {
+  const location = useLocation()
   const [activeTab, setActiveTab] = useState(0)
   const [isExpanded, setIsExpanded] = useState(defaultExpanded)
   const [direction, setDirection] = useState(
@@ -154,6 +155,8 @@ const SessionsSection = ({
   const tabs = [...tracks]
   const currentSession = tabs[activeTab]
   const savedSessionIds = new Set(mySchedule.map((session) => session.id))
+  const scheduleCount = mySchedule.length
+  const isMyScheduleRoute = location.pathname === '/schedule'
 
   const toggleExpanded = () => {
     setIsExpanded(!isExpanded)
@@ -359,14 +362,6 @@ const SessionsSection = ({
         <h2 className="my-8 text-center font-biorhyme text-5xl text-bhm-neutral-900 md:text-5xl lg:text-6xl">
           {year} Schedule
         </h2>
-        <div className="flex justify-center pb-6">
-          <Link
-            to="/my-schedule"
-            className="rounded-md border border-sky-900 bg-sky-900 px-5 py-2 text-sm font-semibold text-bhm-gold-50 transition-colors hover:bg-sky-800 focus:outline-none focus:ring-2 focus:ring-focus-ring focus:ring-offset-2"
-          >
-            View My Schedule ({mySchedule.length})
-          </Link>
-        </div>
       </div>
 
       {/* Expandable content: tablist, track description, tabpanel */}
@@ -451,6 +446,25 @@ const SessionsSection = ({
                   </button>
                 </React.Fragment>
               ))}
+
+              {tabs.length > 0 && (
+                <div className="hidden h-5 w-0 shrink-0 bg-primary-400 sm:w-0.5 md:mx-2 md:block md:w-1 lg:mx-3" />
+              )}
+              <Link
+                to="/schedule"
+                role="tab"
+                aria-selected={isMyScheduleRoute}
+                aria-current={isMyScheduleRoute ? 'page' : undefined}
+                className={`relative shrink-0 whitespace-nowrap rounded-md p-2 text-sm font-black uppercase !leading-5 transition-colors duration-300 focus:outline-none focus:ring-2 focus:ring-focus-ring focus:ring-offset-2 focus:ring-offset-black md:min-w-20 md:px-3 md:py-2 lg:min-w-36 lg:px-4 lg:text-lg ${
+                  isMyScheduleRoute
+                    ? 'bg-primary-400 text-black after:absolute after:-bottom-3 after:left-1/2 after:block after:size-0 after:-translate-x-1/2 after:border-x-[12px] after:border-t-[12px] after:border-primary-400 after:border-x-transparent'
+                    : 'bg-gray-900 text-white hover:bg-gray-800'
+                }`}
+              >
+                {scheduleCount > 0
+                  ? `MY SCHEDULE (${scheduleCount})`
+                  : 'MY SCHEDULE'}
+              </Link>
             </div>
           </div>
           {/* Scroll hint for mobile */}

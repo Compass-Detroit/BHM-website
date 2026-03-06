@@ -69,13 +69,17 @@ function App() {
               }
             />
             <Route
-              path="/my-schedule"
+              path="/schedule"
               element={
                 <MySchedule
                   mySchedule={mySchedule}
                   onRemoveSession={removeSessionFromSchedule}
                 />
               }
+            />
+            <Route
+              path="/my-schedule"
+              element={<Navigate to="/schedule" replace />}
             />
             <Route path="/careers-hub" element={<CareersHub />} />
             <Route path="/connections" element={<ConnectionsPage />} />
