@@ -3,7 +3,7 @@ import { useState } from 'react'
 import { IoChevronDown } from 'react-icons/io5'
 
 import { DIRECTION } from '@/constants/directions'
-import { addMinutes, format, parse } from 'date-fns'
+import { getSessionTimes } from '@/utils/sessionTime'
 
 function SessionCard({
   speakers,
@@ -13,6 +13,10 @@ function SessionCard({
   sessionTime,
   sessionRoom,
   sessionDuration = 60, // Duration in minutes
+  showScheduleAction = false,
+  isSaved = false,
+  onToggleSchedule,
+  scheduleActionMode = 'toggle',
 }) {
   const [direction, setDirection] = useState(DIRECTION.BOTTOM)
 
@@ -24,30 +28,16 @@ function SessionCard({
     }
   }
 
-  const getSessionTimes = () => {
-    if (!sessionTime) return { startTime: '', endTime: '' }
-
-    // If time range is explicitly provided (e.g., "10:00 - 12:00")
-    if (sessionTime.includes('-')) {
-      const [startStr, endStr] = sessionTime.split('-').map((str) => str.trim())
-      return {
-        startTime: format(parse(startStr, 'HH:mm', new Date()), 'h:mm a'),
-        endTime: format(parse(endStr, 'HH:mm', new Date()), 'h:mm a'),
-      }
-    }
-
-    // Otherwise, calculate end time based on duration (in minutes)
-    const parsedStartTime = parse(sessionTime, 'HH:mm', new Date())
-    return {
-      startTime: format(parsedStartTime, 'h:mm a'),
-      endTime: format(addMinutes(parsedStartTime, sessionDuration), 'h:mm a'),
-    }
-  }
-
-  const { startTime, endTime } = getSessionTimes()
+  const { startTime, endTime } = getSessionTimes(sessionTime, sessionDuration)
   const isExpanded = direction === DIRECTION.TOP
   const hasTimeInfo = startTime && endTime
   const hasSessionInfo = hasTimeInfo || sessionRoom
+  const scheduleButtonLabel =
+    scheduleActionMode === 'remove'
+      ? 'Remove from Schedule'
+      : isSaved
+        ? '\u2713 Added'
+        : '+ Add to Schedule'
 
   /*
    * Layout: responsive grid with avatar column + content column.
@@ -193,6 +183,24 @@ function SessionCard({
           </p>
         </div>
       )}
+      {showScheduleAction && (
+        <div className="border-t border-gray-200 px-3 py-4 md:px-8 lg:px-14 dark:border-gray-700">
+          <button
+            type="button"
+            onClick={onToggleSchedule}
+            className={`rounded-md px-4 py-2 text-sm font-semibold transition-colors focus:outline-none focus:ring-2 focus:ring-focus-ring focus:ring-offset-2 ${
+              scheduleActionMode === 'remove'
+                ? 'border border-red-700 text-red-700 hover:bg-red-50 dark:border-red-300 dark:text-red-300 dark:hover:bg-red-900/20'
+                : isSaved
+                  ? 'border border-green-700 bg-green-700 text-white hover:bg-green-600'
+                  : 'border border-sky-900 bg-sky-900 text-bhm-gold-50 hover:bg-sky-800'
+            }`}
+            aria-label={`${scheduleButtonLabel} for ${sessionTitle}`}
+          >
+            {scheduleButtonLabel}
+          </button>
+        </div>
+      )}
     </div>
   )
 }
@@ -201,10 +209,14 @@ SessionCard.propTypes = {
   speakers: PropTypes.arrayOf(PropTypes.string).isRequired,
   speakerAvatars: PropTypes.arrayOf(PropTypes.string).isRequired,
   sessionTitle: PropTypes.string.isRequired,
-  sessionDesc: PropTypes.string.isRequired,
-  sessionTime: PropTypes.string.isRequired,
-  sessionRoom: PropTypes.string.isRequired,
+  sessionDesc: PropTypes.string,
+  sessionTime: PropTypes.string,
+  sessionRoom: PropTypes.string,
   sessionDuration: PropTypes.number, // Duration in minutes
+  showScheduleAction: PropTypes.bool,
+  isSaved: PropTypes.bool,
+  onToggleSchedule: PropTypes.func,
+  scheduleActionMode: PropTypes.oneOf(['toggle', 'remove']),
 }
 
 export default SessionCard

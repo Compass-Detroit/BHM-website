@@ -1,3 +1,5 @@
+import PropTypes from 'prop-types'
+
 import { PageLayout } from '@/layouts/PageLayout'
 import TeamSection from '@/layouts/TeamSection'
 import LandingSection from '@/layouts/LandingSection'
@@ -13,7 +15,7 @@ import { partnersData } from '@/data/2026/partners'
 import { SpeakersData as Speakers2026 } from '@/data/2026/speakers'
 import { teamData } from '@/data/2026/team'
 
-function Home() {
+function Home({ mySchedule = [], onToggleSchedule = () => {} }) {
   const currentYear = new Date().getFullYear()
   return (
     <PageLayout>
@@ -26,6 +28,8 @@ function Home() {
       <SessionsSection
         year={currentYear}
         speakersData={Speakers2026}
+        mySchedule={mySchedule}
+        onToggleSchedule={onToggleSchedule}
         tracks={[
           'Map',
           'Build with AI',
@@ -48,6 +52,11 @@ function Home() {
       <TeamSection year={currentYear} teamData={teamData} />
     </PageLayout>
   )
+}
+
+Home.propTypes = {
+  mySchedule: PropTypes.arrayOf(PropTypes.object),
+  onToggleSchedule: PropTypes.func,
 }
 
 export default Home

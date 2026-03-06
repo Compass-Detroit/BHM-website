@@ -1,5 +1,6 @@
 import React, { useState, useRef, useEffect, useCallback } from 'react'
 import PropTypes from 'prop-types'
+import { Link } from 'react-router-dom'
 
 import ActivityCard from '@/components/sessions/ActivityCard'
 import SessionCard from '@/components/sessions/SessionCard'
@@ -8,33 +9,8 @@ import VenueMaps from '@/components/sessions/VenueMaps'
 
 import { conferenceActivities } from '@/data/2026/conferenceActivities'
 import { DIRECTION } from '@/constants/directions'
+import { getSessionTimes, normalizeSortTime } from '@/utils/sessionTime'
 import { IoChevronDown, IoChevronForward, IoChevronBack } from 'react-icons/io5'
-
-const convertTo24Hour = (time) => {
-  if (!time || typeof time !== 'string') return ''
-
-  const [hour, minute] = time.split(':').map(Number)
-
-  if (hour === 12) {
-    return `12:${minute.toString().padStart(2, '0')}`
-  }
-  if (hour >= 1 && hour <= 5) {
-    return `${(hour + 12).toString().padStart(2, '0')}:${minute
-      .toString()
-      .padStart(2, '0')}`
-  }
-  return `${hour.toString().padStart(2, '0')}:${minute
-    .toString()
-    .padStart(2, '0')}`
-}
-
-/** Normalize time to HH:mm for consistent sort comparison */
-const normalizeSortTime = (t) => {
-  if (!t) return '99:99'
-  const normalized = convertTo24Hour(t) || t
-  const [h, m] = normalized.split(':').map(Number)
-  return `${String(h).padStart(2, '0')}:${String(m || 0).padStart(2, '0')}`
-}
 
 // Track descriptions (strings or JSX for inline formatting like <strong>)
 const trackDescriptions = {
@@ -161,6 +137,8 @@ const SessionsSection = ({
   year = new Date().getFullYear(),
   tracks = [],
   defaultExpanded = true,
+  mySchedule = [],
+  onToggleSchedule = () => {},
 }) => {
   const [activeTab, setActiveTab] = useState(0)
   const [isExpanded, setIsExpanded] = useState(defaultExpanded)
@@ -175,6 +153,7 @@ const SessionsSection = ({
 
   const tabs = [...tracks]
   const currentSession = tabs[activeTab]
+  const savedSessionIds = new Set(mySchedule.map((session) => session.id))
 
   const toggleExpanded = () => {
     setIsExpanded(!isExpanded)
@@ -234,6 +213,27 @@ const SessionsSection = ({
 
   const hasContentForTrack =
     currentTrackSessions.length > 0 || currentTrackActivities.length > 0
+
+  const toScheduleSession = (session) => {
+    const { endTime } = getSessionTimes(
+      session.sessionTime,
+      session.sessionDuration
+    )
+
+    return {
+      id: session.id,
+      title: session.sessionTitle,
+      speaker: session.speakers.join(' & '),
+      start: session.sessionTime,
+      end: endTime,
+      track: session.track,
+      location: session.sessionRoom,
+      description: session.sessionDesc,
+      speakers: session.speakers,
+      speakerAvatars: session.speakerAvatars,
+      sessionDuration: session.sessionDuration,
+    }
+  }
 
   // Update gradients based on scroll position
   const updateScrollIndicators = useCallback(() => {
@@ -359,6 +359,14 @@ const SessionsSection = ({
         <h2 className="my-8 text-center font-biorhyme text-5xl text-bhm-neutral-900 md:text-5xl lg:text-6xl">
           {year} Schedule
         </h2>
+        <div className="flex justify-center pb-6">
+          <Link
+            to="/my-schedule"
+            className="rounded-md border border-sky-900 bg-sky-900 px-5 py-2 text-sm font-semibold text-bhm-gold-50 transition-colors hover:bg-sky-800 focus:outline-none focus:ring-2 focus:ring-focus-ring focus:ring-offset-2"
+          >
+            View My Schedule ({mySchedule.length})
+          </Link>
+        </div>
       </div>
 
       {/* Expandable content: tablist, track description, tabpanel */}
@@ -505,6 +513,11 @@ const SessionsSection = ({
                         sessionTime={item.sessionTime}
                         sessionRoom={item.sessionRoom}
                         sessionDuration={item.sessionDuration}
+                        showScheduleAction={true}
+                        isSaved={savedSessionIds.has(item.id)}
+                        onToggleSchedule={() =>
+                          onToggleSchedule(toScheduleSession(item))
+                        }
                       />
                     </li>
                   ) : (
@@ -549,6 +562,8 @@ SessionsSection.propTypes = {
   year: PropTypes.number,
   tracks: PropTypes.arrayOf(PropTypes.string),
   defaultExpanded: PropTypes.bool,
+  mySchedule: PropTypes.arrayOf(PropTypes.object),
+  onToggleSchedule: PropTypes.func,
 }
 
 export default SessionsSection
