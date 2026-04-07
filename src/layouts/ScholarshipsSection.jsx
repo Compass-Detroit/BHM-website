@@ -2,19 +2,6 @@ import PropTypes from 'prop-types'
 import { FaArrowUpRightFromSquare } from 'react-icons/fa6'
 import SectionSkipLink from '@/components/ui/SectionSkipLink'
 
-/**
- * Returns up to two initials from a full name.
- * e.g. "Mattalyn Darden" → "MD"
- */
-const getInitials = (name) => {
-  return name
-    .split(' ')
-    .filter(Boolean)
-    .slice(0, 2)
-    .map((part) => part[0].toUpperCase())
-    .join('')
-}
-
 const WinnerCard = ({ awardee }) => {
   const {
     name,
@@ -30,20 +17,11 @@ const WinnerCard = ({ awardee }) => {
     <article className="flex h-full flex-col items-center rounded-2xl bg-white p-6 text-center shadow-lg ring-1 ring-gray-200">
       {/* Avatar */}
       <div className="mb-4 flex size-28 shrink-0 items-center justify-center overflow-hidden rounded-full ring-4 ring-bhm-gold-300">
-        {photo ? (
-          <img
-            src={photo}
-            alt={`Headshot of ${name}`}
-            className="size-full object-cover"
-          />
-        ) : (
-          <span
-            className="flex size-full items-center justify-center bg-bhm-gold-300 text-3xl font-bold text-bhm-neutral-900"
-            aria-hidden="true"
-          >
-            {getInitials(name)}
-          </span>
-        )}
+        <img
+          src={photo}
+          alt={`Headshot of ${name}`}
+          className="size-full object-cover"
+        />
       </div>
 
       {/* Name & bio */}
