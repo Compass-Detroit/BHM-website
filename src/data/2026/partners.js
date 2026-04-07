@@ -28,7 +28,7 @@ export const partnersData = {
       name: 'Compass Detroit',
       logo: CompassDetroit,
       desc: 'The Collective of Minority Professionals and STEAM Societies (formerly COMPES) was formed in 2000 as an initiative between the NSBE, SHPE, and SWE Detroit professional chapters. The mission of this collaborative partnership is to support the local Detroit community in upskilling, career growth, networking, and to provide access to new opportunities.',
-      url: 'https://gdg-summit-webiste.vercel.app/',
+      url: 'https://compass-detroit.com/',
     },
     {
       id: 3,

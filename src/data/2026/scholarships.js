@@ -47,7 +47,7 @@ export const scholarshipOrgs = [
     id: 1,
     name: 'Compass Detroit',
     logo: CompassDetroit,
-    url: 'https://gdg-summit-webiste.vercel.app/',
+    url: 'https://compass-detroit.com/',
   },
   {
     id: 2,
