@@ -59,6 +59,6 @@ export const scholarshipOrgs = [
     id: 3,
     name: 'DevOps Detroit',
     logo: DevOpsDetroit,
-    url: 'https://www.devopsdetroit.com/',
+    url: 'https://www.devopsdetroit.io/',
   },
 ]
