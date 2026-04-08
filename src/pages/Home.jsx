@@ -8,8 +8,13 @@ import JobBoardSection from '@/layouts/JobBoardSection'
 import SessionsSection from '@/layouts/SessionsSection'
 import SpeakersSection from '@/layouts/SpeakersSection'
 import AttendeeSection from '@/layouts/AttendeeSection'
+import ScholarshipsSection from '@/layouts/ScholarshipsSection'
 
 import { partnersData } from '@/data/2026/partners'
+import {
+  scholarshipOrganizations,
+  scholarshipWinners,
+} from '@/data/2026/scholarships'
 import { SpeakersData as Speakers2026 } from '@/data/2026/speakers'
 import { teamData } from '@/data/2026/team'
 
@@ -45,6 +50,12 @@ function Home() {
       <JobBoardSection year={currentYear} />
 
       <PartnersSection year={currentYear} partnersData={partnersData} />
+
+      <ScholarshipsSection
+        winners={scholarshipWinners}
+        organizations={scholarshipOrganizations}
+      />
+
       <TeamSection year={currentYear} teamData={teamData} />
     </PageLayout>
   )
