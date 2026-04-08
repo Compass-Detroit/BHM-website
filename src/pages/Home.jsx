@@ -11,7 +11,10 @@ import AttendeeSection from '@/layouts/AttendeeSection'
 import ScholarshipsSection from '@/layouts/ScholarshipsSection'
 
 import { partnersData } from '@/data/2026/partners'
-import { scholarshipAwardees, scholarshipOrgs } from '@/data/2026/scholarships'
+import {
+  scholarshipOrganizations,
+  scholarshipWinners,
+} from '@/data/2026/scholarships'
 import { SpeakersData as Speakers2026 } from '@/data/2026/speakers'
 import { teamData } from '@/data/2026/team'
 
@@ -49,8 +52,8 @@ function Home() {
       <PartnersSection year={currentYear} partnersData={partnersData} />
 
       <ScholarshipsSection
-        awardees={scholarshipAwardees}
-        orgs={scholarshipOrgs}
+        winners={scholarshipWinners}
+        organizations={scholarshipOrganizations}
       />
 
       <TeamSection year={currentYear} teamData={teamData} />

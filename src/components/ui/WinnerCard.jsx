@@ -1,7 +1,7 @@
 import { FaArrowUpRightFromSquare } from 'react-icons/fa6'
-import { awardeeShape } from '@/data/2026/scholarships'
+import { scholarshipWinnerShape } from '@/types/scholarships'
 
-const WinnerCard = ({ awardee }) => {
+const WinnerCard = ({ winner }) => {
   const {
     name,
     position,
@@ -10,7 +10,7 @@ const WinnerCard = ({ awardee }) => {
     conferenceUrl,
     awardedBy,
     photo,
-  } = awardee
+  } = winner
 
   return (
     <article className="flex h-full flex-col items-center rounded-2xl bg-white p-6 text-center shadow-lg ring-1 ring-gray-200">
@@ -20,13 +20,14 @@ const WinnerCard = ({ awardee }) => {
           src={photo}
           alt={`Headshot of ${name}`}
           className="size-full object-cover"
+          loading="lazy"
         />
       </div>
 
       {/* Name & bio */}
       <h3 className="text-xl font-semibold text-bhm-neutral-900">{name}</h3>
       <p className="mt-1 text-sm font-medium text-blue-700">{position}</p>
-      <p className="mt-0.5 text-xs text-gray-500">{organization}</p>
+      <p className="mt-0.5 text-xs text-gray-600">{organization}</p>
 
       {/* Conference link */}
       <a
@@ -44,7 +45,7 @@ const WinnerCard = ({ awardee }) => {
       </a>
 
       {/* Awarded by */}
-      <p className="mt-4 text-xs text-gray-400">
+      <p className="mt-4 text-xs text-gray-600">
         Scholarship awarded by{' '}
         <span className="font-semibold text-bhm-neutral-800">{awardedBy}</span>
       </p>
@@ -53,7 +54,7 @@ const WinnerCard = ({ awardee }) => {
 }
 
 WinnerCard.propTypes = {
-  awardee: awardeeShape.isRequired,
+  winner: scholarshipWinnerShape.isRequired,
 }
 
 export default WinnerCard

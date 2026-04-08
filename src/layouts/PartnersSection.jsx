@@ -22,7 +22,7 @@ const PartnersSection = ({ partnersData = {}, year }) => {
       id="partners"
       className="relative flex flex-col justify-center bg-white px-8 py-24 sm:px-10 md:px-14 lg:px-16"
     >
-      <SectionSkipLink href="#leadership">
+      <SectionSkipLink href="#scholarships">
         Skip partners section
       </SectionSkipLink>
 
